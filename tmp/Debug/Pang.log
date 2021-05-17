@@ -1,0 +1,6 @@
+﻿  Mundo.cpp
+  Pang.cpp
+C:\Users\Usuario\source\repos\Juego\Pang.cpp(69,24): warning C4305: 'argumento': truncamiento de 'double' a 'float'
+  Protagonista.cpp
+  Generando código...
+  Pang.vcxproj -> C:\Users\Usuario\source\repos\Juego\bin\Pang.exe
