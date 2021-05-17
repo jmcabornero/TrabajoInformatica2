@@ -61,7 +61,20 @@ void Mundo::tecla(unsigned char key)
 
 void Mundo::teclaEspecial(unsigned char key)
 {
-	switch (key)
+	
+	if (key == GLUT_KEY_LEFT) { velocidad_ojo.x = -1.0; velocidad_ojo.y = 0; }
+	
+	if (key == GLUT_KEY_RIGHT) { velocidad_ojo.x = 1.0; velocidad_ojo.y = 0; }
+	
+	if (key == GLUT_KEY_DOWN) { velocidad_ojo.x = 0; velocidad_ojo.y = -1.0; }
+	
+	if (key == GLUT_KEY_UP) { velocidad_ojo.x = 0; velocidad_ojo.y = 1.0; }
+
+
+
+
+
+	/*switch (key)
 	{
 	case GLUT_KEY_LEFT:
 		velocidad_ojo.x = -1.0;
@@ -74,9 +87,9 @@ void Mundo::teclaEspecial(unsigned char key)
 		break;
 	case GLUT_KEY_UP:
 		velocidad_ojo.y = 1.0;
-		break;
-	}
+		break;*/
 }
+
 
 void Mundo::MueveCamara(float t)
 {
