@@ -17,6 +17,7 @@ private:
 		void dibuja();
 		void tecla(unsigned char key);
 		void teclaEspecial(unsigned char key);
+		void teclaEspecialUp(unsigned char key);
 		void MueveCamara(float t);
 		virtual ~Mundo();
 };
