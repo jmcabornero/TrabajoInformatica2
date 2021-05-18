@@ -10,7 +10,7 @@ private:
 	Vector2D posicion, velocidad;
 public:
 	Protagonista();
-	SpriteSequence sprite{ "imagenes/pangPlayer.png", 2 };
+	SpriteSequence sprite{ "imagenes/pangPlayer.png", 5 };
 	void Dibuja(float x, float y);
 	void Mueve(float t);
 	void setTam(float anchura, float altura);
