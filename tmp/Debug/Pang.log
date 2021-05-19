@@ -1,5 +1,10 @@
-﻿  Mundo.cpp
-  Pang.cpp
-C:\Users\Usuario\Desktop\UNIVERSIDAD\3º\2º cuatrimestre\Informatica\TRABAJO\GitHub\TrabajoInformatica2\Pang.cpp(72,24): warning C4305: 'argumento': truncamiento de 'double' a 'float'
-  Generando código...
+﻿  EscenarioTiles.cpp
+C:\Users\Usuario\Desktop\UNIVERSIDAD\3º\2º cuatrimestre\Informatica\TRABAJO\GitHub\TrabajoInformatica2\EscenarioTiles.cpp(58,39): warning C4244: 'argumento': conversión de 'int' a 'GLfloat'; posible pérdida de datos
+C:\Users\Usuario\Desktop\UNIVERSIDAD\3º\2º cuatrimestre\Informatica\TRABAJO\GitHub\TrabajoInformatica2\EscenarioTiles.cpp(58,36): warning C4244: 'argumento': conversión de 'int' a 'GLfloat'; posible pérdida de datos
+C:\Users\Usuario\Desktop\UNIVERSIDAD\3º\2º cuatrimestre\Informatica\TRABAJO\GitHub\TrabajoInformatica2\EscenarioTiles.cpp(59,43): warning C4244: 'argumento': conversión de 'int' a 'GLfloat'; posible pérdida de datos
+C:\Users\Usuario\Desktop\UNIVERSIDAD\3º\2º cuatrimestre\Informatica\TRABAJO\GitHub\TrabajoInformatica2\EscenarioTiles.cpp(59,38): warning C4244: 'argumento': conversión de 'int' a 'GLfloat'; posible pérdida de datos
+C:\Users\Usuario\Desktop\UNIVERSIDAD\3º\2º cuatrimestre\Informatica\TRABAJO\GitHub\TrabajoInformatica2\EscenarioTiles.cpp(60,45): warning C4244: 'argumento': conversión de 'int' a 'GLfloat'; posible pérdida de datos
+C:\Users\Usuario\Desktop\UNIVERSIDAD\3º\2º cuatrimestre\Informatica\TRABAJO\GitHub\TrabajoInformatica2\EscenarioTiles.cpp(60,38): warning C4244: 'argumento': conversión de 'int' a 'GLfloat'; posible pérdida de datos
+C:\Users\Usuario\Desktop\UNIVERSIDAD\3º\2º cuatrimestre\Informatica\TRABAJO\GitHub\TrabajoInformatica2\EscenarioTiles.cpp(61,41): warning C4244: 'argumento': conversión de 'int' a 'GLfloat'; posible pérdida de datos
+C:\Users\Usuario\Desktop\UNIVERSIDAD\3º\2º cuatrimestre\Informatica\TRABAJO\GitHub\TrabajoInformatica2\EscenarioTiles.cpp(61,36): warning C4244: 'argumento': conversión de 'int' a 'GLfloat'; posible pérdida de datos
   Pang.vcxproj -> C:\Users\Usuario\Desktop\UNIVERSIDAD\3º\2º cuatrimestre\Informatica\TRABAJO\GitHub\TrabajoInformatica2\bin\Pang.exe

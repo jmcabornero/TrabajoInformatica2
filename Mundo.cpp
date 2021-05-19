@@ -18,7 +18,7 @@ void Mundo::dibuja()
 		posicion_ojo.x, posicion_ojo.y, 0.0, //NOTESE QUE HEMOS CAMBIADO ESTO
 		0.0, 1.0, 0.0); //PARA MIRAR AL CENTRO DE LA ESCENA
 	protagonista.Dibuja(posicion_ojo.x, posicion_ojo.y);
-	escenariotiles.Dibuja();
+	escenariotiles.mapa();
 }
 
 void Mundo::mueve()
@@ -31,6 +31,7 @@ void Mundo::inicializa()
 	posicion_ojo.x = 0;
 	posicion_ojo.y = 0;
 	z_ojo = 10;
+	
 
 	protagonista.setTam(1, 1);
 }
