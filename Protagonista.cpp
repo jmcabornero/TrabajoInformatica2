@@ -6,13 +6,13 @@ Protagonista::Protagonista()
 {
 	sprite.setCenter(1, 0);
 	sprite.setSize(1, 1);
-	posicion.x = 0;posicion.y = 0;velocidad = 0;velocidad = 0;
+	posicion.x = 5;posicion.y = 5;velocidad = 0;velocidad = 0;
 }
 
-void Protagonista::Dibuja(float x, float y)
+void Protagonista::Dibuja()
 {
 	glPushMatrix();
-	glTranslatef(x, y, 1);
+	glTranslatef(posicion.x, posicion.y, 1);
 	glColor3f(1.0f, 0.0f, 0.0f);
 	//glutSolidSphere(altura, 20, 20);
 //gestion de direccion y animacion
@@ -28,6 +28,7 @@ void Protagonista::Dibuja(float x, float y)
 
 void Protagonista::Mueve(float t)
 {
+	posicion = posicion + velocidad * t;
 	sprite.loop();
 }
 
@@ -40,5 +41,15 @@ void Protagonista::setTam(float anchura, float altura)
 void Protagonista::setVel(float vx, float vy)
 {
 	velocidad.x = vx;
+	velocidad.y = vy;
+}
+
+void Protagonista::setVelx(float vx)
+{
+	velocidad.x = vx;
+}
+
+void Protagonista::setVely(float vy)
+{
 	velocidad.y = vy;
 }

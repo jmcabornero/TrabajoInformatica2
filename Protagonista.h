@@ -11,9 +11,11 @@ private:
 public:
 	Protagonista();
 	SpriteSequence sprite{ "imagenes/pangPlayer.png", 5 };
-	void Dibuja(float x, float y);
+	void Dibuja();
 	void Mueve(float t);
 	void setTam(float anchura, float altura);
 	void setVel(float vx, float vy);
+	void setVelx(float vx);
+	void setVely(float vy);
 }; 
 
