@@ -19,15 +19,20 @@
     </ProjectConfiguration>
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="Caja.cpp" />
     <ClCompile Include="EscenarioTiles.cpp" />
     <ClCompile Include="Mundo.cpp" />
     <ClCompile Include="Pang.cpp" />
+    <ClCompile Include="Pared.cpp" />
     <ClCompile Include="Protagonista.cpp" />
     <ClCompile Include="Vector2D.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="Caja.h" />
+    <ClInclude Include="ColorRGB.h" />
     <ClInclude Include="EscenarioTiles.h" />
     <ClInclude Include="Mundo.h" />
+    <ClInclude Include="Pared.h" />
     <ClInclude Include="Protagonista.h" />
     <ClInclude Include="Vector2D.h" />
   </ItemGroup>
