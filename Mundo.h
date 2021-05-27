@@ -13,6 +13,7 @@ private:
 	Caja caja;
 
 	public:
+		Mundo(float x=0);
 		void inicializa();
 		//void rotarOjo();
 		void mueve();
@@ -20,6 +21,7 @@ private:
 		void tecla(unsigned char key);
 		void teclaEspecial(unsigned char key);
 		void teclaEspecialUp(unsigned char key);
+		void setPos(float x, float y);
 		virtual ~Mundo();
 };
 

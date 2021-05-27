@@ -21,7 +21,9 @@
   <ItemGroup>
     <ClCompile Include="Caja.cpp" />
     <ClCompile Include="EscenarioTiles.cpp" />
+    <ClCompile Include="ListaObstaculos.cpp" />
     <ClCompile Include="Mundo.cpp" />
+    <ClCompile Include="Obstaculos.cpp" />
     <ClCompile Include="Pang.cpp" />
     <ClCompile Include="Pared.cpp" />
     <ClCompile Include="Protagonista.cpp" />
@@ -31,7 +33,9 @@
     <ClInclude Include="Caja.h" />
     <ClInclude Include="ColorRGB.h" />
     <ClInclude Include="EscenarioTiles.h" />
+    <ClInclude Include="ListaObstaculos.h" />
     <ClInclude Include="Mundo.h" />
+    <ClInclude Include="Obstaculos.h" />
     <ClInclude Include="Pared.h" />
     <ClInclude Include="Protagonista.h" />
     <ClInclude Include="Vector2D.h" />
@@ -42,6 +46,7 @@
     <ProjectGuid>{e575fade-b6eb-4154-a1ed-8067a12eae98}</ProjectGuid>
     <RootNamespace>Pang</RootNamespace>
     <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
+    <ProjectName>Juego</ProjectName>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">

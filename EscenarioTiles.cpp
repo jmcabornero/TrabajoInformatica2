@@ -1,6 +1,10 @@
 #include "EscenarioTiles.h"
 #include <windows.h>
 
+EscenarioTiles::EscenarioTiles(int x, int y)
+{
+	x = coordenada_x; y= coordenada_y;
+}
 /*void EscenarioTiles::Dibuja()
 {
 	int filas = (sizeof(MatrizMapa) / sizeof(MatrizMapa[0]));
@@ -33,14 +37,14 @@ void EscenarioTiles::mapa()
 	{
 	string line;
 	ifstream myfile; //myfile es el fichero (puntero)
-	myfile.open("C:/Users/Usuario/source/repos/Juego/bin/imagenes/MapaPequeno.csv");
+	myfile.open("imagenes/estrellas.csv");
 	if (myfile.is_open())
 	{
 		//cout << "putamadre";
 		int i = 0, j, num;
 		while (getline(myfile, line)) // line es una str con la siguiente linea
 		{
-			std::string delimiter = ",";//
+			std::string delimiter = ",";
 			size_t pos = 0;
 			std::string token;
 			j = 0;
@@ -48,20 +52,23 @@ void EscenarioTiles::mapa()
 				token = line.substr(0, pos);
 				num = stoi(token);
 				glEnable(GL_TEXTURE_2D);
-				if (num == 193)
-					glBindTexture(GL_TEXTURE_2D, ETSIDI::getTexture("C:/Users/Usuario/source/repos/Juego/bin/imagenes/HierbaCentro.png").id);
-				if (num == 435)
-					glBindTexture(GL_TEXTURE_2D, ETSIDI::getTexture("C:/Users/Usuario/source/repos/Juego/bin/imagenes/HierbaAux.png").id);
-				glDisable(GL_LIGHTING);
-				glBegin(GL_POLYGON);
-				glColor3f(1, 1, 1);
-				glTexCoord2d(0, 1); glVertex2f(j, i); //abajo izq
-				glTexCoord2d(1, 1); glVertex2f(j + 1, i);	//abajo drcha
-				glTexCoord2d(1, 0); glVertex2f(j + 1, i + 1);	//arriba drcha
-				glTexCoord2d(0, 0); glVertex2f(j, i + 1);	//arriba izq
-				glEnd();
-				glEnable(GL_LIGHTING);
-				glDisable(GL_TEXTURE_2D);
+				if (num == 478)
+				{
+					//glBindTexture(GL_TEXTURE_2D, ETSIDI::getTexture("imagenes/HierbaAux.png").id);
+					//if (num == 1763);
+					listaobstaculos.Agregar(new Obstaculos(j,i));
+					/*glDisable(GL_LIGHTING);
+					glBegin(GL_POLYGON);
+					glColor3f(1, 1, 1);
+					glTexCoord2d(0, 1); glVertex2f(j, i); //abajo izq
+					glTexCoord2d(1, 1); glVertex2f(j + 1, i);	//abajo drcha
+					glTexCoord2d(1, 0); glVertex2f(j + 1, i + 1);	//arriba drcha
+					glTexCoord2d(0, 0); glVertex2f(j, i + 1);	//arriba izq
+					glEnd();
+					glEnable(GL_LIGHTING);
+					glDisable(GL_TEXTURE_2D);*/
+				}
+					
 
 				line.erase(0, pos + delimiter.length());
 				j++;
