@@ -22,7 +22,7 @@ void Caja::Dibuja()
 	//pared_dcha.Dibuja();
 	//dibujo del fondo
 	glEnable(GL_TEXTURE_2D);
-	glBindTexture(GL_TEXTURE_2D, ETSIDI::getTexture("C:/Users/Usuario/source/repos/Juego/bin/imagenes/MapaPrueba.png").id);
+	glBindTexture(GL_TEXTURE_2D, ETSIDI::getTexture("imagenes/MapaPrueba.png").id);
 	glDisable(GL_LIGHTING);
 	glBegin(GL_POLYGON);
 	glColor3f(1, 1, 1);

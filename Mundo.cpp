@@ -2,7 +2,10 @@
 #include "freeglut.h"
 #include <math.h>
 
-
+Mundo::Mundo(float x)
+{
+	z_ojo = x;
+}
 /*void Mundo::rotarOjo()
 {
 	float dist = sqrt(x_ojo * x_ojo + z_ojo * z_ojo);
@@ -18,8 +21,8 @@ void Mundo::dibuja()
 		posicion_ojo.x, posicion_ojo.y, 0.0, //NOTESE QUE HEMOS CAMBIADO ESTO
 		0.0, 1.0, 0.0); //PARA MIRAR AL CENTRO DE LA ESCENA
 	protagonista.Dibuja();
-	caja.Dibuja();
-	//escenariotiles.mapa();
+	//caja.Dibuja();
+	escenariotiles.mapa();
 }
 
 void Mundo::mueve()
@@ -31,10 +34,16 @@ void Mundo::inicializa()
 {
 	posicion_ojo.x = 10.0f;
 	posicion_ojo.y = 7.5f;
-	z_ojo = 20.5f;
+	z_ojo = 40.5f;
 	
 
 	protagonista.setTam(1, 1);
+}
+
+void Mundo::setPos(float x, float y)
+{
+	posicion_ojo.x = x;
+	posicion_ojo.y = y;
 }
 
 void Mundo::tecla(unsigned char key)
