@@ -2,6 +2,7 @@
 #include "Protagonista.h"
 #include "EscenarioTiles.h"
 #include "Caja.h"
+#include "ListaObstaculos.h"
 
 class Mundo
 {
@@ -10,10 +11,12 @@ private:
 	Vector2D posicion_ojo, velocidad_ojo;
 	Protagonista protagonista;
 	EscenarioTiles escenariotiles;
+	ListaObstaculos listaobstaculos;
 	Caja caja;
 
 	public:
 		Mundo(float x=0);
+		void dibObstaculos();
 		void inicializa();
 		//void rotarOjo();
 		void mueve();

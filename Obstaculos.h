@@ -5,7 +5,7 @@
 class Obstaculos
 {
 private:
-	int i, j;
+	int j, i;
 public:
 	Obstaculos(int x=0, int y=0);
 	void Dibuja();

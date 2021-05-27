@@ -55,7 +55,6 @@ void EscenarioTiles::mapa()
 				if (num == 478)
 				{
 					//glBindTexture(GL_TEXTURE_2D, ETSIDI::getTexture("imagenes/HierbaAux.png").id);
-					//if (num == 1763);
 					listaobstaculos.Agregar(new Obstaculos(j,i));
 					/*glDisable(GL_LIGHTING);
 					glBegin(GL_POLYGON);

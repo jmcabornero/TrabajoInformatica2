@@ -21,6 +21,7 @@
   <ItemGroup>
     <ClCompile Include="Caja.cpp" />
     <ClCompile Include="EscenarioTiles.cpp" />
+    <ClCompile Include="Interaccion.cpp" />
     <ClCompile Include="ListaObstaculos.cpp" />
     <ClCompile Include="Mundo.cpp" />
     <ClCompile Include="Obstaculos.cpp" />
@@ -33,6 +34,7 @@
     <ClInclude Include="Caja.h" />
     <ClInclude Include="ColorRGB.h" />
     <ClInclude Include="EscenarioTiles.h" />
+    <ClInclude Include="Interaccion.h" />
     <ClInclude Include="ListaObstaculos.h" />
     <ClInclude Include="Mundo.h" />
     <ClInclude Include="Obstaculos.h" />
