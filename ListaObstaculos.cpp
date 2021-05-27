@@ -28,11 +28,21 @@ bool ListaObstaculos::Agregar(Obstaculos* o)
 	else
 		return false;
 	return true;
-
 }
 
 void ListaObstaculos::Dibuja()
 {
 	for (int i = 0;i < numero;i++)
 		lista[i]->Dibuja();
+}
+
+void ListaObstaculos::Colision(Protagonista p)
+{
+	for (int i = 0;i < numero;i++)
+	{
+		Interaccion inter;
+		if (inter.colision(p, *(lista[i])))
+			cout << "bruhsdf";
+			//p.setVel(0.0f, 0.0f);
+	}
 }
