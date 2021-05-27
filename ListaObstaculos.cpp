@@ -1,4 +1,5 @@
 #include "ListaObstaculos.h"
+#include <iostream>
 
 ListaObstaculos::ListaObstaculos()
 {
@@ -20,10 +21,14 @@ bool ListaObstaculos::Agregar(Obstaculos* o)
 			return false;
 	}
 	if (numero < MAX_OBSTACULOS)
+		{
 		lista[numero++] = o;
+	}
+		
 	else
 		return false;
 	return true;
+
 }
 
 void ListaObstaculos::Dibuja()

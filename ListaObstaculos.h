@@ -1,6 +1,7 @@
 #pragma once
 #define MAX_OBSTACULOS 99999
 #include "Obstaculos.h"
+#include "ETSIDI.h"
 
 class ListaObstaculos
 {
