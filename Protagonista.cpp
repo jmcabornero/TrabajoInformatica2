@@ -53,3 +53,11 @@ void Protagonista::setVely(float vy)
 {
 	velocidad.y = vy;
 }
+
+Vector2D Protagonista::GetPos()
+{
+	Vector2D vec;
+	vec.x = posicion.x;
+	vec.y = posicion.y;
+	return vec;
+}

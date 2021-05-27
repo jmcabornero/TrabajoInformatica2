@@ -25,7 +25,7 @@ void Mundo::dibuja()
 		0.0, 1.0, 0.0); //PARA MIRAR AL CENTRO DE LA ESCENA
 	protagonista.Dibuja();
 	
-	caja.Dibuja();
+	//caja.Dibuja();
 	
 	listaobstaculos.Dibuja();
 }
@@ -33,6 +33,7 @@ void Mundo::dibuja()
 void Mundo::mueve()
 {
 	protagonista.Mueve(0.15f);
+	listaobstaculos.Colision(protagonista);
 }
 
 void Mundo::inicializa()

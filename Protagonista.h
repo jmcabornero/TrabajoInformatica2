@@ -17,5 +17,6 @@ public:
 	void setVel(float vx, float vy);
 	void setVelx(float vx);
 	void setVely(float vy);
+	Vector2D GetPos();
 }; 
 
