@@ -40,7 +40,6 @@ void EscenarioTiles::mapa()
 	myfile.open("imagenes/estrellas.csv");
 	if (myfile.is_open())
 	{
-		//cout << "putamadre";
 		int i = 0, j, num;
 		while (getline(myfile, line)) // line es una str con la siguiente linea
 		{
@@ -67,8 +66,6 @@ void EscenarioTiles::mapa()
 					glEnable(GL_LIGHTING);
 					glDisable(GL_TEXTURE_2D);*/
 				}
-					
-
 				line.erase(0, pos + delimiter.length());
 				j++;
 			}

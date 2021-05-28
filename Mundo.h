@@ -25,6 +25,7 @@ private:
 		void teclaEspecial(unsigned char key);
 		void teclaEspecialUp(unsigned char key);
 		void setPos(float x, float y);
+		void CambioCamara();
 		virtual ~Mundo();
 };
 

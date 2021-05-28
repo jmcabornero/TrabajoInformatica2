@@ -6,17 +6,6 @@ Mundo::Mundo(float x)
 {
 	z_ojo = x;
 }
-/*void Mundo::rotarOjo()
-{
-	float dist = sqrt(x_ojo * x_ojo + z_ojo * z_ojo);
-	float ang = atan2(z_ojo, x_ojo);
-	ang += 0.05f;
-	x_ojo = dist * cos(ang);
-	z_ojo = dist * sin(ang);
-}*/
-
-
-
 
 void Mundo::dibuja()
 {
@@ -34,12 +23,13 @@ void Mundo::mueve()
 {
 	protagonista.Mueve(0.15f);
 	listaobstaculos.Colision(&protagonista);
+	CambioCamara();
 }
 
 void Mundo::inicializa()
 {
 	dibObstaculos();
-	posicion_ojo.x = 10.25f;          
+	posicion_ojo.x = 10.25f;    
 	posicion_ojo.y = 7.5f;             
 	z_ojo = 21.0f;               
 	protagonista.setTam(1, 1);
@@ -144,6 +134,20 @@ void Mundo::dibObstaculos()
 	}
 	else cout << "Unable to open file";
 }
+
+void Mundo::CambioCamara()
+	{
+	Vector2D prota = protagonista.GetPos();
+	if (prota.x > (posicion_ojo.x + 10.25))
+		posicion_ojo.x += 20.5f;
+	if (prota.x < (posicion_ojo.x - 10.25))
+		posicion_ojo.x -= 20.5f;
+	if (prota.y > (posicion_ojo.y+ 7.5))
+		posicion_ojo.y += 15.0f;
+	if (prota.y < (posicion_ojo.y - 7.5))
+		posicion_ojo.y -= 15.0f;
+	}
+
 
 Mundo::~Mundo()
 {
