@@ -20,8 +20,10 @@
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Caja.cpp" />
+    <ClCompile Include="Disparo.cpp" />
     <ClCompile Include="EscenarioTiles.cpp" />
     <ClCompile Include="Interaccion.cpp" />
+    <ClCompile Include="ListaDisparos.cpp" />
     <ClCompile Include="ListaObstaculos.cpp" />
     <ClCompile Include="Mundo.cpp" />
     <ClCompile Include="Obstaculos.cpp" />
@@ -32,8 +34,10 @@
   <ItemGroup>
     <ClInclude Include="Caja.h" />
     <ClInclude Include="ColorRGB.h" />
+    <ClInclude Include="Disparo.h" />
     <ClInclude Include="EscenarioTiles.h" />
     <ClInclude Include="Interaccion.h" />
+    <ClInclude Include="ListaDisparos.h" />
     <ClInclude Include="ListaObstaculos.h" />
     <ClInclude Include="Mundo.h" />
     <ClInclude Include="Obstaculos.h" />
