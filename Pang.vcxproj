@@ -26,7 +26,6 @@
     <ClCompile Include="Mundo.cpp" />
     <ClCompile Include="Obstaculos.cpp" />
     <ClCompile Include="Pang.cpp" />
-    <ClCompile Include="Pared.cpp" />
     <ClCompile Include="Protagonista.cpp" />
     <ClCompile Include="Vector2D.cpp" />
   </ItemGroup>
@@ -38,7 +37,6 @@
     <ClInclude Include="ListaObstaculos.h" />
     <ClInclude Include="Mundo.h" />
     <ClInclude Include="Obstaculos.h" />
-    <ClInclude Include="Pared.h" />
     <ClInclude Include="Protagonista.h" />
     <ClInclude Include="Vector2D.h" />
   </ItemGroup>

@@ -44,6 +44,12 @@ void Protagonista::setVel(float vx, float vy)
 	velocidad.y = vy;
 }
 
+void Protagonista::setPos(float x, float y)
+{
+	posicion.x = x;
+	posicion.y = y;
+}
+
 void Protagonista::setVelx(float vx)
 {
 	velocidad.x = vx;
@@ -59,5 +65,13 @@ Vector2D Protagonista::GetPos()
 	Vector2D vec;
 	vec.x = posicion.x;
 	vec.y = posicion.y;
+	return vec;
+}
+
+Vector2D Protagonista::GetVel()
+{
+	Vector2D vec;
+	vec.x = velocidad.x;
+	vec.y = velocidad.y;
 	return vec;
 }

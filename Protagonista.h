@@ -15,8 +15,10 @@ public:
 	void Mueve(float t);
 	void setTam(float anchura, float altura);
 	void setVel(float vx, float vy);
+	void setPos(float x, float y);
 	void setVelx(float vx);
 	void setVely(float vy);
 	Vector2D GetPos();
+	Vector2D GetVel();
 }; 
 
