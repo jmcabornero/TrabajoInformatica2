@@ -8,7 +8,6 @@ bool Interaccion::colision(Protagonista p, Obstaculos &o)
 	//cout <<esquina.x<< " "<<  esquina.y << " ";
 	if (((esquina.x <= prota.x) && (prota.x <= (esquina.x+1))) && ((esquina.y <= prota.y) && (prota.y <= (esquina.y+1))))
 	{
-		cout << "lol";
 		return true;
 	}
 	else

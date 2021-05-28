@@ -6,7 +6,7 @@
 class Obstaculos
 {
 private:
-	int j, i;
+	float j, i;
 public:
 	Obstaculos(int x=0, int y=0);
 	void Dibuja();

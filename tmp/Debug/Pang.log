@@ -1,13 +1,6 @@
 ﻿C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\MSBuild\Microsoft\VC\v160\Microsoft.CppBuild.targets(519,5): warning MSB8028: El directorio intermedio (tmp\Debug\) contiene archivos compartidos de otro proyecto (Pang.vcxproj). Esto puede dar lugar a un comportamiento incorrecto de limpieza y recompilación.
-  Obstaculos.cpp
-C:\Users\Usuario\Desktop\UNIVERSIDAD\3º\2º cuatrimestre\Informatica\TRABAJO\GitHub\TrabajoInformatica2\Obstaculos.cpp(14,36): warning C4244: 'argumento': conversión de 'int' a 'GLfloat'; posible pérdida de datos
-C:\Users\Usuario\Desktop\UNIVERSIDAD\3º\2º cuatrimestre\Informatica\TRABAJO\GitHub\TrabajoInformatica2\Obstaculos.cpp(14,33): warning C4244: 'argumento': conversión de 'int' a 'GLfloat'; posible pérdida de datos
-C:\Users\Usuario\Desktop\UNIVERSIDAD\3º\2º cuatrimestre\Informatica\TRABAJO\GitHub\TrabajoInformatica2\Obstaculos.cpp(15,40): warning C4244: 'argumento': conversión de 'int' a 'GLfloat'; posible pérdida de datos
-C:\Users\Usuario\Desktop\UNIVERSIDAD\3º\2º cuatrimestre\Informatica\TRABAJO\GitHub\TrabajoInformatica2\Obstaculos.cpp(15,35): warning C4244: 'argumento': conversión de 'int' a 'GLfloat'; posible pérdida de datos
-C:\Users\Usuario\Desktop\UNIVERSIDAD\3º\2º cuatrimestre\Informatica\TRABAJO\GitHub\TrabajoInformatica2\Obstaculos.cpp(16,42): warning C4244: 'argumento': conversión de 'int' a 'GLfloat'; posible pérdida de datos
-C:\Users\Usuario\Desktop\UNIVERSIDAD\3º\2º cuatrimestre\Informatica\TRABAJO\GitHub\TrabajoInformatica2\Obstaculos.cpp(16,35): warning C4244: 'argumento': conversión de 'int' a 'GLfloat'; posible pérdida de datos
-C:\Users\Usuario\Desktop\UNIVERSIDAD\3º\2º cuatrimestre\Informatica\TRABAJO\GitHub\TrabajoInformatica2\Obstaculos.cpp(17,38): warning C4244: 'argumento': conversión de 'int' a 'GLfloat'; posible pérdida de datos
-C:\Users\Usuario\Desktop\UNIVERSIDAD\3º\2º cuatrimestre\Informatica\TRABAJO\GitHub\TrabajoInformatica2\Obstaculos.cpp(17,33): warning C4244: 'argumento': conversión de 'int' a 'GLfloat'; posible pérdida de datos
-C:\Users\Usuario\Desktop\UNIVERSIDAD\3º\2º cuatrimestre\Informatica\TRABAJO\GitHub\TrabajoInformatica2\Obstaculos.cpp(26,10): warning C4244: '=': conversión de 'int' a 'float'; posible pérdida de datos
-C:\Users\Usuario\Desktop\UNIVERSIDAD\3º\2º cuatrimestre\Informatica\TRABAJO\GitHub\TrabajoInformatica2\Obstaculos.cpp(27,10): warning C4244: '=': conversión de 'int' a 'float'; posible pérdida de datos
+  Mundo.cpp
+C:\Users\Usuario\Desktop\UNIVERSIDAD\3º\2º cuatrimestre\Informatica\TRABAJO\GitHub\TrabajoInformatica2\Mundo.cpp(132,15): warning C4244: '=': conversión de 'int' a 'float'; posible pérdida de datos
+C:\Users\Usuario\Desktop\UNIVERSIDAD\3º\2º cuatrimestre\Informatica\TRABAJO\GitHub\TrabajoInformatica2\Mundo.cpp(136,53): warning C4244: 'argumento': conversión de 'float' a 'int'; posible pérdida de datos
+C:\Users\Usuario\Desktop\UNIVERSIDAD\3º\2º cuatrimestre\Informatica\TRABAJO\GitHub\TrabajoInformatica2\Mundo.cpp(136,47): warning C4244: 'argumento': conversión de 'float' a 'int'; posible pérdida de datos
   Pang.vcxproj -> C:\Users\Usuario\Desktop\UNIVERSIDAD\3º\2º cuatrimestre\Informatica\TRABAJO\GitHub\TrabajoInformatica2\bin\Juego.exe
