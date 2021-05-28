@@ -36,13 +36,39 @@ void ListaObstaculos::Dibuja()
 		lista[i]->Dibuja();
 }
 
-void ListaObstaculos::Colision(Protagonista p)
+void ListaObstaculos::Colision(Protagonista* p)
 {
+	Interaccion inter;
+	Vector2D pos = (*p).GetPos();
+	Vector2D vel = (*p).GetVel();
 	for (int i = 0;i < numero;i++)
 	{
-		Interaccion inter;
-		if (inter.colision(p, *(lista[i])))
-			cout << "bruhsdf";
-			//p.setVel(0.0f, 0.0f);
+		if (inter.colision((*p), *(lista[i])))
+		{
+			if (vel.x>0)
+				(*p).setPos(pos.x-0.15, pos.y);
+			if (vel.x < 0)
+				(*p).setPos(pos.x + 0.15, pos.y);
+			if (vel.y > 0)
+				(*p).setPos(pos.x, pos.y-0.15);
+			if (vel.y < 0)
+				(*p).setPos(pos.x, pos.y + 0.15);
+			if ((vel.x > 0) && (vel.y > 0))
+			{
+				(*p).setPos(pos.x-0.15, pos.y - 0.15);
+			}
+			if ((vel.x > 0) && (vel.y < 0))
+			{
+				(*p).setPos(pos.x-0.15, pos.y + 0.15);
+			}	
+			if ((vel.x < 0) && (vel.y > 0))
+			{
+				(*p).setPos(pos.x + 0.15, pos.y - 0.15);
+			}
+			if ((vel.x < 0) && (vel.y < 0))
+			{
+				(*p).setPos(pos.x + 0.15, pos.y + 0.15);
+			}
+		}
 	}
 }

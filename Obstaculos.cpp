@@ -5,14 +5,6 @@ Obstaculos::Obstaculos(int x, int y)
 	i = x;j = y;
 }
 
-Vector2D Obstaculos::GetEsquina()
-{
-	Vector2D vec;
-	vec.x = i;
-	vec.y = j;
-	return vec;
-}
-
 void Obstaculos::Dibuja()
 {
 	glBindTexture(GL_TEXTURE_2D, ETSIDI::getTexture("imagenes/HierbaAux.png").id);
@@ -26,4 +18,12 @@ void Obstaculos::Dibuja()
 	glEnd();
 	glEnable(GL_LIGHTING);
 	glDisable(GL_TEXTURE_2D);
+}
+
+Vector2D Obstaculos::GetEsquina()
+{
+	Vector2D vec;
+	vec.x = j;
+	vec.y = i;
+	return vec;
 }
