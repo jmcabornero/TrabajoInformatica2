@@ -7,6 +7,7 @@ Obstaculos::Obstaculos(int x, int y)
 
 void Obstaculos::Dibuja()
 {
+	glEnable(GL_TEXTURE_2D);
 	glBindTexture(GL_TEXTURE_2D, ETSIDI::getTexture("imagenes/HierbaAux.png").id);
 	glDisable(GL_LIGHTING);
 	glBegin(GL_POLYGON);

@@ -39,9 +39,9 @@ void Mundo::mueve()
 void Mundo::inicializa()
 {
 	dibObstaculos();
-	posicion_ojo.x = 20.f;           //10.0f;
-	posicion_ojo.y = 15.f;              //7.5f;
-	z_ojo = 50;                 //20.5f;
+	posicion_ojo.x = 10.25f;          
+	posicion_ojo.y = 7.5f;             
+	z_ojo = 20.5f;               
 	protagonista.setTam(1, 1);
 }
 
@@ -120,7 +120,7 @@ void Mundo::dibObstaculos()
 	myfile.open("imagenes/estrellas.csv");
 	if (myfile.is_open())
 	{
-		int i = 0, j, num;
+		float i = 0, j, num;
 		while (getline(myfile, line)) // line es una str con la siguiente linea
 		{
 			std::string delimiter = ",";
@@ -133,18 +133,7 @@ void Mundo::dibObstaculos()
 				glEnable(GL_TEXTURE_2D);
 				if (num == 478)
 				{
-					//glBindTexture(GL_TEXTURE_2D, ETSIDI::getTexture("imagenes/HierbaAux.png").id);
 					listaobstaculos.Agregar(new Obstaculos(-i+29, j+1));
-					/*glDisable(GL_LIGHTING);
-					glBegin(GL_POLYGON);
-					glColor3f(1, 1, 1);
-					glTexCoord2d(0, 1); glVertex2f(j, i); //abajo izq
-					glTexCoord2d(1, 1); glVertex2f(j + 1, i);	//abajo drcha
-					glTexCoord2d(1, 0); glVertex2f(j + 1, i + 1);	//arriba drcha
-					glTexCoord2d(0, 0); glVertex2f(j, i + 1);	//arriba izq
-					glEnd();
-					glEnable(GL_LIGHTING);
-					glDisable(GL_TEXTURE_2D);*/
 				}
 				line.erase(0, pos + delimiter.length());
 				j++;
