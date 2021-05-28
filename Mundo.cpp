@@ -41,7 +41,7 @@ void Mundo::inicializa()
 	dibObstaculos();
 	posicion_ojo.x = 10.25f;          
 	posicion_ojo.y = 7.5f;             
-	z_ojo = 20.5f;               
+	z_ojo = 21.0f;               
 	protagonista.setTam(1, 1);
 }
 
