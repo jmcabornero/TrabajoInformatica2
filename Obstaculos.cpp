@@ -27,5 +27,3 @@ Vector2D Obstaculos::GetEsquina()
 	vec.y = i;
 	return vec;
 }
-
-//juanmi payaso

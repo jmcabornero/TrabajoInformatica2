@@ -36,6 +36,9 @@ int main(int argc, char* argv[])
 	glutSpecialFunc(onSpecialKeyboardDown); //gestion de los cursores pulsados
 	glutSpecialUpFunc(onSpecialKeyboardUp); //gestion de los cursores que se dejan de pulsar
 
+	for (int i = 0; i < 12; i++) {
+		std::cout << "hola mundo" << endl;
+	}
 	mundo.inicializa();
 
 	//pasarle el control a GLUT,que llamara a los callbacks
