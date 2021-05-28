@@ -11,5 +11,4 @@ public:
 	virtual ~Caja();
 
 	friend class Interaccion;
-	int a;
 };
