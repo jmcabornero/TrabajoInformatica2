@@ -39,9 +39,9 @@ void Mundo::mueve()
 void Mundo::inicializa()
 {
 	dibObstaculos();
-	posicion_ojo.x = 10.0f;
-	posicion_ojo.y = 7.5f;
-	z_ojo = 20.5f;
+	posicion_ojo.x = 20.f;           //10.0f;
+	posicion_ojo.y = 15.f;              //7.5f;
+	z_ojo = 50;                 //20.5f;
 	protagonista.setTam(1, 1);
 }
 
@@ -134,7 +134,7 @@ void Mundo::dibObstaculos()
 				if (num == 478)
 				{
 					//glBindTexture(GL_TEXTURE_2D, ETSIDI::getTexture("imagenes/HierbaAux.png").id);
-					listaobstaculos.Agregar(new Obstaculos(i, j));
+					listaobstaculos.Agregar(new Obstaculos(-i+29, j+1));
 					/*glDisable(GL_LIGHTING);
 					glBegin(GL_POLYGON);
 					glColor3f(1, 1, 1);
@@ -146,8 +146,6 @@ void Mundo::dibObstaculos()
 					glEnable(GL_LIGHTING);
 					glDisable(GL_TEXTURE_2D);*/
 				}
-
-
 				line.erase(0, pos + delimiter.length());
 				j++;
 			}
