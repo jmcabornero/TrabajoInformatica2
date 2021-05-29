@@ -13,6 +13,7 @@ void Mundo::dibuja()
 		posicion_ojo.x, posicion_ojo.y, 0.0, //NOTESE QUE HEMOS CAMBIADO ESTO
 		0.0, 1.0, 0.0); //PARA MIRAR AL CENTRO DE LA ESCENA
 	protagonista.Dibuja();
+	disparo.dibuja();
 	
 	caja.Dibuja();
 	
@@ -24,6 +25,7 @@ void Mundo::mueve()
 	protagonista.Mueve(0.15f);
 	listaobstaculos.Colision(&protagonista);
 	CambioCamara();
+	disparo.mueve(0.025f);
 }
 
 void Mundo::inicializa()
