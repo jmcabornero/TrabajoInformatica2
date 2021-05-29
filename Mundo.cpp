@@ -17,12 +17,14 @@ void Mundo::dibuja()
 	caja.Dibuja();
 	
 	listaobstaculos.Dibuja();
+	disparos.dibuja();
 }
 
 void Mundo::mueve()
 {
 	protagonista.Mueve(0.15f);
 	listaobstaculos.Colision(&protagonista);
+	disparos.mueve(0.025f);
 	CambioCamara();
 }
 
@@ -45,21 +47,25 @@ void Mundo::tecla(unsigned char key)
 {
 	switch (key)
 	{
-	case '1':
-		
+	/*case 'w':
+		protagonista.setVely(1.0f);
 		break;
-	case '2':
-		
+	case 's':
+		protagonista.setVely(-1.0f);
 		break;
-	case '3':
-		
+	case 'a':
+		protagonista.setVelx(-1.0f);
 		break;
-	case '4':
-		
-		break;
+	case 'd':
+		protagonista.setVelx(1.0f);
+		break;*/
 	case ' ':
 	{
-		
+		Vector2D h_pos = protagonista.GetPos();
+		Disparo* d = new Disparo();
+		d->setPos(h_pos.x, h_pos.y);
+		d->setVel(5, 0);
+		disparos.agregar(d);
 		break;
 	}
 	}
@@ -151,6 +157,6 @@ void Mundo::CambioCamara()
 
 Mundo::~Mundo()
 {
-	
+	disparos.destruirContenido();
 }
 
