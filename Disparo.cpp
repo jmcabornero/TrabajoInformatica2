@@ -5,7 +5,7 @@ Disparo::Disparo() {
 	sprite.setCenter(0.5, 0.5);
 	sprite.setSize(1, 1);
 	setPos(5, 5);
-	setVel(5, 5);
+	setVel(5, 0);
 	setRadio(0.25);
 }
 
