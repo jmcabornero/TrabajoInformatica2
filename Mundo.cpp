@@ -31,7 +31,7 @@ void Mundo::inicializa()
 	dibObstaculos();
 	posicion_ojo.x = 10.25f;    
 	posicion_ojo.y = 7.5f;             
-	z_ojo = 21.0f;               
+	z_ojo = 50.0f;               
 	protagonista.setTam(1, 1);
 }
 
@@ -107,7 +107,7 @@ void Mundo::dibObstaculos()
 {
 	string line;
 	ifstream myfile; //myfile es el fichero (puntero)
-	myfile.open("imagenes/estrellas.csv");
+	myfile.open("imagenes/estrellas_OBSTACULOS.csv");
 	if (myfile.is_open())
 	{
 		float i = 0, j, num;
@@ -123,7 +123,7 @@ void Mundo::dibObstaculos()
 				glEnable(GL_TEXTURE_2D);
 				if (num == 478)
 				{
-					listaobstaculos.Agregar(new Obstaculos(-i+29, j+1));
+					listaobstaculos.Agregar(new Obstaculos(-i+29, j));
 				}
 				line.erase(0, pos + delimiter.length());
 				j++;
@@ -139,9 +139,9 @@ void Mundo::CambioCamara()
 	{
 	Vector2D prota = protagonista.GetPos();
 	if (prota.x > (posicion_ojo.x + 10.25))
-		posicion_ojo.x += 20.5f;
+		posicion_ojo.x += 20.0f;
 	if (prota.x < (posicion_ojo.x - 10.25))
-		posicion_ojo.x -= 20.5f;
+		posicion_ojo.x -= 20.0f;
 	if (prota.y > (posicion_ojo.y+ 7.5))
 		posicion_ojo.y += 15.0f;
 	if (prota.y < (posicion_ojo.y - 7.5))
