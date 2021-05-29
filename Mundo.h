@@ -3,7 +3,7 @@
 #include "EscenarioTiles.h"
 #include "Caja.h"
 #include "ListaObstaculos.h"
-#include "Disparo.h"
+#include "ListaDisparos.h"
 
 class Mundo
 {
@@ -14,7 +14,7 @@ private:
 	EscenarioTiles escenariotiles;
 	ListaObstaculos listaobstaculos;
 	Caja caja;
-	Disparo disparo;
+	ListaDisparos disparos;
 
 	public:
 		Mundo(float x=0);
