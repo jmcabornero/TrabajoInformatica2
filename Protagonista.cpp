@@ -11,6 +11,7 @@ Protagonista::Protagonista()
 	spriteL.setCenter(1, 0);
 	spriteL.setSize(1, 1);
 	posicion.x = 5;posicion.y = 5;velocidad = 0;velocidad = 0;
+	setVida(3);
 }
 
 void Protagonista::Dibuja()
@@ -28,7 +29,7 @@ void Protagonista::Dibuja()
 
 void Protagonista::Mueve(float t)
 {
-	posicion = posicion + velocidad * t;
+	ObjetosMovimiento::mueve(t);
 	sprite.loop();
 	spriteR.loop();
 	spriteL.loop();
@@ -42,42 +43,4 @@ void Protagonista::setTam(float anchura, float altura)
 	spriteR.setSize(anchura, altura);
 	spriteL.setCenter(1, 0);
 	spriteL.setSize(anchura, altura);
-}
-
-void Protagonista::setVel(float vx, float vy)
-{
-	velocidad.x = vx;
-	velocidad.y = vy;
-}
-
-void Protagonista::setPos(float x, float y)
-{
-	posicion.x = x;
-	posicion.y = y;
-}
-
-void Protagonista::setVelx(float vx)
-{
-	velocidad.x = vx;
-}
-
-void Protagonista::setVely(float vy)
-{
-	velocidad.y = vy;
-}
-
-Vector2D Protagonista::GetPos()
-{
-	Vector2D vec;
-	vec.x = posicion.x;
-	vec.y = posicion.y;
-	return vec;
-}
-
-Vector2D Protagonista::GetVel()
-{
-	Vector2D vec;
-	vec.x = velocidad.x;
-	vec.y = velocidad.y;
-	return vec;
 }
