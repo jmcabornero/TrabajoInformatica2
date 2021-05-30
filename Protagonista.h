@@ -14,9 +14,12 @@ private:
 	char direccion;
 public:
 	Protagonista();
-	SpriteSequence sprite{ "imagenes/Player_reposo.png", 5 };
-	SpriteSequence spriteR{ "imagenes/Player_derecha.png", 5 };
-	SpriteSequence spriteL{ "imagenes/Player_izquierda.png", 5 };
+	SpriteSequence sprite{ "imagenes/Player_reposo.png", 12 };
+	SpriteSequence spriteR{ "imagenes/Player_derecha.png", 12 };
+	SpriteSequence spriteL{ "imagenes/Player_izquierda.png", 12 };
+	SpriteSequence spriteUp{ "imagenes/Player_arriba.png", 12 };
+	SpriteSequence spriteDown{ "imagenes/Player_abajo.png", 12 };
+
 	char getDir() { return direccion; }
 	void setDir(char d) { direccion = d; }
 	void Dibuja();
