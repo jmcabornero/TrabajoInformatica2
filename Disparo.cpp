@@ -21,7 +21,7 @@ Disparo::~Disparo() {
 
 void Disparo::dibuja() {
 	glPushMatrix();
-	glTranslatef(posicion.x, posicion.y, 1);
+	glTranslatef(posicion.x-0.25, posicion.y-0.25, 1);
 	glColor3f(1.0f, 0.0f, 0.0f);
 	//glutSolidSphere(radio, 20, 20);
 	if (velocidad.x > 0.01)disparo_dcha.draw();

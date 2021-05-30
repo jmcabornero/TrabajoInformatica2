@@ -17,13 +17,15 @@ void Mundo::dibuja()
 	
 	caja.Dibuja();
 
-	disparos.colision(enemigo1);
+	
+	enemigos.dibuja();
+
 	
 	listaobstaculos.Dibuja();
+
 	disparos.dibuja();
 
-	enemigo1.Dibuja();
-
+	
 }
 
 void Mundo::mueve()
@@ -32,6 +34,11 @@ void Mundo::mueve()
 	listaobstaculos.Colision(&protagonista);
 	disparos.mueve(0.025f);
 	CambioCamara();
+	for (int i = 0; i < enemigos.getNumero(); i++)
+	{
+		disparos.colision(enemigos[i]);
+	}
+	enemigos.dano();
 }
 
 void Mundo::inicializa()
@@ -41,6 +48,13 @@ void Mundo::inicializa()
 	posicion_ojo.y = 7.5f;             
 	z_ojo = 20.5f;               
 	protagonista.setTam(1, 1);
+
+	for (int i = 0; i < 8; i++)
+	{
+		Enemigo* aux = new Enemigo(i+2,7);
+		enemigos.agregar(aux);
+	}
+
 }
 
 void Mundo::setPos(float x, float y)

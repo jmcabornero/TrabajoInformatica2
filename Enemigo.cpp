@@ -1,9 +1,12 @@
 #include "Enemigo.h"
 
+
+
+
 Enemigo::~Enemigo(){}
 
 
-Enemigo::Enemigo()
+Enemigo::Enemigo(float x, float y)
 {
 	setDir('d');
 	sprite.setCenter(1, 0);
@@ -12,7 +15,7 @@ Enemigo::Enemigo()
 	spriteR.setSize(1, 1);
 	spriteL.setCenter(1, 0);
 	spriteL.setSize(1, 1);
-	posicion.x = 5; posicion.y = 8; velocidad = 0; velocidad = 0;
+	posicion.x = x; posicion.y = y; velocidad = 0; velocidad = 0;
 }
 
 void Enemigo::Dibuja()
@@ -51,9 +54,4 @@ void Enemigo::setTam(float anchura, float altura)
 void Enemigo::ModVida(int m)
 {
 	vida.ModVida(m);
-	if (vida.getVida() <= 0)
-	{
-		Enemigo::~Enemigo();
-	}
-
 }
