@@ -1,6 +1,8 @@
 #pragma once
 #include "Disparo.h"
 #define MAX_DISPAROS 20
+#include "enemigo.h"
+#include "Interaccion.h"
 
 class ListaDisparos
 {
@@ -15,6 +17,8 @@ public:
 
 	void elimina(int index);
 	void elimina(Disparo* d);
+
+	void colision(Enemigo &e);
 
 	//void colision();
 private:
