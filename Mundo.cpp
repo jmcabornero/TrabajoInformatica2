@@ -16,9 +16,14 @@ void Mundo::dibuja()
 	protagonista.Dibuja();
 	
 	caja.Dibuja();
+
+	disparos.colision(enemigo1);
 	
 	listaobstaculos.Dibuja();
 	disparos.dibuja();
+
+	enemigo1.Dibuja();
+
 }
 
 void Mundo::mueve()

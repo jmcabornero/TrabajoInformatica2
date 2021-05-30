@@ -12,7 +12,6 @@ Protagonista::Protagonista()
 	spriteL.setCenter(1, 0);
 	spriteL.setSize(1, 1);
 	posicion.x = 5;posicion.y = 5;velocidad = 0;velocidad = 0;
-	setVida(3);
 }
 
 void Protagonista::Dibuja()
