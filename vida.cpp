@@ -15,5 +15,6 @@ float Vida::getVida()
 void Vida::ModVida(int m)
 {
 	Ps = Ps + m;
+	cout << Ps;
 }
 

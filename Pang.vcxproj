@@ -25,6 +25,7 @@
     <ClCompile Include="EscenarioTiles.cpp" />
     <ClCompile Include="Interaccion.cpp" />
     <ClCompile Include="ListaDisparos.cpp" />
+    <ClCompile Include="ListaEnemigos.cpp" />
     <ClCompile Include="ListaObstaculos.cpp" />
     <ClCompile Include="Mundo.cpp" />
     <ClCompile Include="ObjetosMovimiento.cpp" />
@@ -42,6 +43,7 @@
     <ClInclude Include="EscenarioTiles.h" />
     <ClInclude Include="Interaccion.h" />
     <ClInclude Include="ListaDisparos.h" />
+    <ClInclude Include="ListaEnemigos.h" />
     <ClInclude Include="ListaObstaculos.h" />
     <ClInclude Include="Mundo.h" />
     <ClInclude Include="ObjetosMovimiento.h" />
