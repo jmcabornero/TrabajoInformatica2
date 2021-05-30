@@ -4,6 +4,7 @@
 
 Protagonista::Protagonista()
 {
+	setDir('d');
 	sprite.setCenter(1, 0);
 	sprite.setSize(1, 1);
 	spriteR.setCenter(1, 0);
