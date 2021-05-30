@@ -12,9 +12,12 @@ void Mundo::dibuja()
 	gluLookAt(posicion_ojo.x, posicion_ojo.y, z_ojo,
 		posicion_ojo.x, posicion_ojo.y, 0.0, //NOTESE QUE HEMOS CAMBIADO ESTO
 		0.0, 1.0, 0.0); //PARA MIRAR AL CENTRO DE LA ESCENA
-	protagonista.Dibuja();
 	
+	
+	protagonista.Dibuja();
+	caja2.Dibuja2();
 	caja.Dibuja();
+	
 	
 	listaobstaculos.Dibuja();
 	disparos.dibuja();
@@ -33,7 +36,7 @@ void Mundo::inicializa()
 	dibObstaculos();
 	posicion_ojo.x = 10.25f;    
 	posicion_ojo.y = 7.5f;             
-	z_ojo = 50.0f;               
+	z_ojo = 50.0f;  //20.5             
 	protagonista.setTam(1, 1);
 }
 
