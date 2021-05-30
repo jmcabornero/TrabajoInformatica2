@@ -2,13 +2,15 @@
 #include "Vector2D.h"
 #include "ETSIDI.h"
 #include "ObjetosMovimiento.h"
+#include "vida.h"
+
 
 using ETSIDI::SpriteSequence;
 
 class Protagonista:public ObjetosMovimiento
 {
-private: 
-	int vida;
+private:
+	Vida vida;
 	char direccion;
 public:
 	Protagonista();
@@ -20,6 +22,4 @@ public:
 	void Dibuja();
 	void Mueve(float t);
 	void setTam(float anchura, float altura);
-	void setVida(int n) { vida = n; }
-	int getVida() { return vida; }
 };
