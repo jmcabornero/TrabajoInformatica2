@@ -14,3 +14,17 @@ bool Interaccion::colision(Protagonista p, Obstaculos &o)
 		return false;
 	}		
 }
+
+bool Interaccion::colision(Disparo &d, Enemigo &e)
+{
+	Vector2D aux = (d.GetPos() - e.GetPos());
+	float distancia = aux.modulo();
+
+	if (distancia <= 0.6)
+	{
+		return true;
+	}
+	else
+		return false;
+}
+
