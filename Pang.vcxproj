@@ -21,9 +21,11 @@
   <ItemGroup>
     <ClCompile Include="Caja.cpp" />
     <ClCompile Include="Disparo.cpp" />
+    <ClCompile Include="Enemigo.cpp" />
     <ClCompile Include="EscenarioTiles.cpp" />
     <ClCompile Include="Interaccion.cpp" />
     <ClCompile Include="ListaDisparos.cpp" />
+    <ClCompile Include="ListaEnemigos.cpp" />
     <ClCompile Include="ListaObstaculos.cpp" />
     <ClCompile Include="Mundo.cpp" />
     <ClCompile Include="ObjetosMovimiento.cpp" />
@@ -31,20 +33,24 @@
     <ClCompile Include="Pang.cpp" />
     <ClCompile Include="Protagonista.cpp" />
     <ClCompile Include="Vector2D.cpp" />
+    <ClCompile Include="vida.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Caja.h" />
     <ClInclude Include="ColorRGB.h" />
     <ClInclude Include="Disparo.h" />
+    <ClInclude Include="Enemigo.h" />
     <ClInclude Include="EscenarioTiles.h" />
     <ClInclude Include="Interaccion.h" />
     <ClInclude Include="ListaDisparos.h" />
+    <ClInclude Include="ListaEnemigos.h" />
     <ClInclude Include="ListaObstaculos.h" />
     <ClInclude Include="Mundo.h" />
     <ClInclude Include="ObjetosMovimiento.h" />
     <ClInclude Include="Obstaculos.h" />
     <ClInclude Include="Protagonista.h" />
     <ClInclude Include="Vector2D.h" />
+    <ClInclude Include="vida.h" />
   </ItemGroup>
   <PropertyGroup Label="Globals">
     <VCProjectVersion>16.0</VCProjectVersion>
