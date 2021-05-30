@@ -1,6 +1,7 @@
 #include "Mundo.h"
 #include "freeglut.h"
 #include <math.h>
+#include <iostream>
 
 Mundo::Mundo(float x)
 {
@@ -33,7 +34,7 @@ void Mundo::inicializa()
 	dibObstaculos();
 	posicion_ojo.x = 10.25f;    
 	posicion_ojo.y = 7.5f;             
-	z_ojo = 50.0f;               
+	z_ojo = 20.5f;               
 	protagonista.setTam(1, 1);
 }
 
@@ -64,7 +65,20 @@ void Mundo::tecla(unsigned char key)
 		Vector2D h_pos = protagonista.GetPos();
 		Disparo* d = new Disparo();
 		d->setPos(h_pos.x, h_pos.y);
-		d->setVel(5, 0);
+		switch (protagonista.getDir()) {
+		case 'd':
+			d->setVel(10, 0);
+			break;
+		case 'a':
+			d->setVel(-10, 0);
+			break;
+		case 'w':
+			d->setVel(0, 10);
+			break;
+		case 's':
+			d->setVel(0, -10);
+			break;
+		}
 		disparos.agregar(d);
 		break;
 	}
@@ -77,17 +91,22 @@ void Mundo::teclaEspecial(unsigned char key) //al pulsar la tecla
 	{
 	case GLUT_KEY_LEFT:
 		protagonista.setVelx(-1.0f);
+		protagonista.setDir('a');
 		break;
 	case GLUT_KEY_RIGHT:
 		protagonista.setVelx(1.0f);
+		protagonista.setDir('d');
 		break;
 	case GLUT_KEY_DOWN:
 		protagonista.setVely(-1.0f);
+		protagonista.setDir('s');
 		break;
 	case GLUT_KEY_UP:
 		protagonista.setVely(1.0f);
+		protagonista.setDir('w');
 		break;
 	}
+	//std::cout << protagonista.getDir() << std::endl;
 }
 
 void Mundo::teclaEspecialUp(unsigned char key)  //al dejar de pulsar la tecla

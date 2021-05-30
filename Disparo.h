@@ -8,7 +8,10 @@ using ETSIDI::SpriteSequence;
 class Disparo:public ObjetosMovimiento
 {
 public:
-	SpriteSequence sprite{ "imagenes/Disparo1.png", 3 };
+	SpriteSequence disparo_dcha{ "imagenes/disparo1_derecha.png", 3 };
+	SpriteSequence disparo_izda{ "imagenes/disparo1_izquierda.png", 3 };
+	SpriteSequence disparo_up{ "imagenes/disparo1_arriba.png", 3 };
+	SpriteSequence disparo_down{ "imagenes/disparo1_abajo.png", 3 };
 	//SpriteSequence estela;
 	Disparo();
 	virtual ~Disparo();
