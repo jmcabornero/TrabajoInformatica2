@@ -2,8 +2,4 @@
   Disparo.cpp
 C:\Users\Carlos\Desktop\TrabajoInformatica2\Disparo.cpp(24,42): warning C4244: 'argumento': conversión de 'double' a 'GLfloat'; posible pérdida de datos
 C:\Users\Carlos\Desktop\TrabajoInformatica2\Disparo.cpp(24,25): warning C4244: 'argumento': conversión de 'double' a 'GLfloat'; posible pérdida de datos
-  ListaEnemigos.cpp
-C:\Users\Carlos\Desktop\TrabajoInformatica2\Enemigo.h(26,37): warning C4244: 'return': conversión de 'float' a 'int'; posible pérdida de datos
-  Generando código...
-  LINK : no se encontró C:\Users\Carlos\Desktop\TrabajoInformatica2\bin\Juego.exe o no lo generó el último vínculo incremental; ejecutando vínculo completo
   Pang.vcxproj -> C:\Users\Carlos\Desktop\TrabajoInformatica2\bin\Juego.exe
