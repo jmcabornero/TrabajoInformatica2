@@ -1,4 +1,5 @@
 #include "ListaDisparos.h"
+#include "Enemigo.h"
 #include <iostream>
 
 ListaDisparos::ListaDisparos() {
@@ -46,5 +47,19 @@ void ListaDisparos::elimina(Disparo* d) {
 			elimina(i);
 			return;
 		}
+	}
+}
+
+void ListaDisparos::colision(Enemigo *e)
+{
+	for (int i = 0; i < num; i++)
+	{
+			bool x;
+			x = Interaccion::colision(*(Lista[i]), *e);
+			if (x == 1)
+			{
+				elimina(Lista[i]);
+				(*e).ModVida(-20);
+			}
 	}
 }
