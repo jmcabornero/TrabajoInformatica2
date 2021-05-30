@@ -4,6 +4,8 @@
 #include "Caja.h"
 #include "ListaObstaculos.h"
 #include "ListaDisparos.h"
+#include "Enemigo.h"
+#include "ListaEnemigos.h"
 
 class Mundo
 {
@@ -15,6 +17,7 @@ private:
 	ListaObstaculos listaobstaculos;
 	Caja caja,caja2;
 	ListaDisparos disparos;
+	ListaEnemigos enemigos;
 
 	public:
 		Mundo(float x=0);
