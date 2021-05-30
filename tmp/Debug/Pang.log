@@ -1,6 +1,32 @@
-﻿C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\MSBuild\Microsoft\VC\v160\Microsoft.CppBuild.targets(519,5): warning MSB8028: El directorio intermedio (tmp\Debug\) contiene archivos compartidos de otro proyecto (Pang.vcxproj). Esto puede dar lugar a un comportamiento incorrecto de limpieza y recompilación.
+﻿C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\MSBuild\Microsoft\VC\v160\Microsoft.CppBuild.targets(491,5): warning MSB8028: El directorio intermedio (tmp\Debug\) contiene archivos compartidos de otro proyecto (Pang.vcxproj). Esto puede dar lugar a un comportamiento incorrecto de limpieza y recompilación.
+  Caja.cpp
+  Disparo.cpp
+  EscenarioTiles.cpp
+  Interaccion.cpp
+  ListaDisparos.cpp
+  ListaObstaculos.cpp
+C:\Users\jvgm4\Desktop\Carrera\3Carrera\2CUATRIMESTRE\Informatica_Industrial\TrabajoInformatica2\ListaObstaculos.cpp(49,22): warning C4244: 'argumento': conversión de 'double' a 'float'; posible pérdida de datos
+C:\Users\jvgm4\Desktop\Carrera\3Carrera\2CUATRIMESTRE\Informatica_Industrial\TrabajoInformatica2\ListaObstaculos.cpp(51,23): warning C4244: 'argumento': conversión de 'double' a 'float'; posible pérdida de datos
+C:\Users\jvgm4\Desktop\Carrera\3Carrera\2CUATRIMESTRE\Informatica_Industrial\TrabajoInformatica2\ListaObstaculos.cpp(53,29): warning C4244: 'argumento': conversión de 'double' a 'float'; posible pérdida de datos
+C:\Users\jvgm4\Desktop\Carrera\3Carrera\2CUATRIMESTRE\Informatica_Industrial\TrabajoInformatica2\ListaObstaculos.cpp(55,30): warning C4244: 'argumento': conversión de 'double' a 'float'; posible pérdida de datos
+C:\Users\jvgm4\Desktop\Carrera\3Carrera\2CUATRIMESTRE\Informatica_Industrial\TrabajoInformatica2\ListaObstaculos.cpp(58,35): warning C4244: 'argumento': conversión de 'double' a 'float'; posible pérdida de datos
+C:\Users\jvgm4\Desktop\Carrera\3Carrera\2CUATRIMESTRE\Informatica_Industrial\TrabajoInformatica2\ListaObstaculos.cpp(58,22): warning C4244: 'argumento': conversión de 'double' a 'float'; posible pérdida de datos
+C:\Users\jvgm4\Desktop\Carrera\3Carrera\2CUATRIMESTRE\Informatica_Industrial\TrabajoInformatica2\ListaObstaculos.cpp(62,35): warning C4244: 'argumento': conversión de 'double' a 'float'; posible pérdida de datos
+C:\Users\jvgm4\Desktop\Carrera\3Carrera\2CUATRIMESTRE\Informatica_Industrial\TrabajoInformatica2\ListaObstaculos.cpp(62,22): warning C4244: 'argumento': conversión de 'double' a 'float'; posible pérdida de datos
+C:\Users\jvgm4\Desktop\Carrera\3Carrera\2CUATRIMESTRE\Informatica_Industrial\TrabajoInformatica2\ListaObstaculos.cpp(66,37): warning C4244: 'argumento': conversión de 'double' a 'float'; posible pérdida de datos
+C:\Users\jvgm4\Desktop\Carrera\3Carrera\2CUATRIMESTRE\Informatica_Industrial\TrabajoInformatica2\ListaObstaculos.cpp(66,23): warning C4244: 'argumento': conversión de 'double' a 'float'; posible pérdida de datos
+C:\Users\jvgm4\Desktop\Carrera\3Carrera\2CUATRIMESTRE\Informatica_Industrial\TrabajoInformatica2\ListaObstaculos.cpp(70,37): warning C4244: 'argumento': conversión de 'double' a 'float'; posible pérdida de datos
+C:\Users\jvgm4\Desktop\Carrera\3Carrera\2CUATRIMESTRE\Informatica_Industrial\TrabajoInformatica2\ListaObstaculos.cpp(70,23): warning C4244: 'argumento': conversión de 'double' a 'float'; posible pérdida de datos
   Mundo.cpp
-C:\Users\Usuario\Desktop\UNIVERSIDAD\3º\2º cuatrimestre\Informatica\TRABAJO\GitHub\TrabajoInformatica2\Mundo.cpp(122,15): warning C4244: '=': conversión de 'int' a 'float'; posible pérdida de datos
-C:\Users\Usuario\Desktop\UNIVERSIDAD\3º\2º cuatrimestre\Informatica\TRABAJO\GitHub\TrabajoInformatica2\Mundo.cpp(126,52): warning C4244: 'argumento': conversión de 'float' a 'int'; posible pérdida de datos
-C:\Users\Usuario\Desktop\UNIVERSIDAD\3º\2º cuatrimestre\Informatica\TRABAJO\GitHub\TrabajoInformatica2\Mundo.cpp(126,47): warning C4244: 'argumento': conversión de 'float' a 'int'; posible pérdida de datos
-  Pang.vcxproj -> C:\Users\Usuario\Desktop\UNIVERSIDAD\3º\2º cuatrimestre\Informatica\TRABAJO\GitHub\TrabajoInformatica2\bin\Juego.exe
+C:\Users\jvgm4\Desktop\Carrera\3Carrera\2CUATRIMESTRE\Informatica_Industrial\TrabajoInformatica2\Mundo.cpp(128,15): warning C4244: '=': conversión de 'int' a 'float'; posible pérdida de datos
+C:\Users\jvgm4\Desktop\Carrera\3Carrera\2CUATRIMESTRE\Informatica_Industrial\TrabajoInformatica2\Mundo.cpp(132,52): warning C4244: 'argumento': conversión de 'float' a 'int'; posible pérdida de datos
+C:\Users\jvgm4\Desktop\Carrera\3Carrera\2CUATRIMESTRE\Informatica_Industrial\TrabajoInformatica2\Mundo.cpp(132,47): warning C4244: 'argumento': conversión de 'float' a 'int'; posible pérdida de datos
+  ObjetosMovimiento.cpp
+  Obstaculos.cpp
+C:\Users\jvgm4\Desktop\Carrera\3Carrera\2CUATRIMESTRE\Informatica_Industrial\TrabajoInformatica2\Obstaculos.cpp(5,6): warning C4244: '=': conversión de 'int' a 'float'; posible pérdida de datos
+C:\Users\jvgm4\Desktop\Carrera\3Carrera\2CUATRIMESTRE\Informatica_Industrial\TrabajoInformatica2\Obstaculos.cpp(5,12): warning C4244: '=': conversión de 'int' a 'float'; posible pérdida de datos
+  Pang.cpp
+  Protagonista.cpp
+  Vector2D.cpp
+  Generando código...
+  Pang.vcxproj -> C:\Users\jvgm4\Desktop\Carrera\3Carrera\2CUATRIMESTRE\Informatica_Industrial\TrabajoInformatica2\bin\Juego.exe
