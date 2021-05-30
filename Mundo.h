@@ -13,7 +13,7 @@ private:
 	Protagonista protagonista;
 	EscenarioTiles escenariotiles;
 	ListaObstaculos listaobstaculos;
-	Caja caja;
+	Caja caja,caja2;
 	ListaDisparos disparos;
 
 	public:
