@@ -1,6 +1,7 @@
 #include "Mundo.h"
 #include "freeglut.h"
 #include <math.h>
+#include <iostream>
 
 Mundo::Mundo(float x)
 {
@@ -12,15 +13,19 @@ void Mundo::dibuja()
 	gluLookAt(posicion_ojo.x, posicion_ojo.y, z_ojo,
 		posicion_ojo.x, posicion_ojo.y, 0.0, //NOTESE QUE HEMOS CAMBIADO ESTO
 		0.0, 1.0, 0.0); //PARA MIRAR AL CENTRO DE LA ESCENA
-	
-	
 	protagonista.Dibuja();
-	caja2.Dibuja2();
-	caja.Dibuja();
 	
+	caja.Dibuja();
+
+	
+	enemigos.dibuja();
+
 	
 	listaobstaculos.Dibuja();
+
 	disparos.dibuja();
+
+	
 }
 
 void Mundo::mueve()
@@ -29,6 +34,11 @@ void Mundo::mueve()
 	listaobstaculos.Colision(&protagonista);
 	disparos.mueve(0.025f);
 	CambioCamara();
+	for (int i = 0; i < enemigos.getNumero(); i++)
+	{
+		disparos.colision(enemigos[i]);
+	}
+	enemigos.dano();
 }
 
 void Mundo::inicializa()
@@ -36,8 +46,15 @@ void Mundo::inicializa()
 	dibObstaculos();
 	posicion_ojo.x = 10.25f;    
 	posicion_ojo.y = 7.5f;             
-	z_ojo = 50.0f;  //20.5             
+	z_ojo = 20.5f;               
 	protagonista.setTam(1, 1);
+
+	for (int i = 0; i < 8; i++)
+	{
+		Enemigo* aux = new Enemigo(i+2,7);
+		enemigos.agregar(aux);
+	}
+
 }
 
 void Mundo::setPos(float x, float y)
@@ -67,7 +84,20 @@ void Mundo::tecla(unsigned char key)
 		Vector2D h_pos = protagonista.GetPos();
 		Disparo* d = new Disparo();
 		d->setPos(h_pos.x, h_pos.y);
-		d->setVel(5, 0);
+		switch (protagonista.getDir()) {
+		case 'd':
+			d->setVel(10, 0);
+			break;
+		case 'a':
+			d->setVel(-10, 0);
+			break;
+		case 'w':
+			d->setVel(0, 10);
+			break;
+		case 's':
+			d->setVel(0, -10);
+			break;
+		}
 		disparos.agregar(d);
 		break;
 	}
@@ -80,17 +110,22 @@ void Mundo::teclaEspecial(unsigned char key) //al pulsar la tecla
 	{
 	case GLUT_KEY_LEFT:
 		protagonista.setVelx(-1.0f);
+		protagonista.setDir('a');
 		break;
 	case GLUT_KEY_RIGHT:
 		protagonista.setVelx(1.0f);
+		protagonista.setDir('d');
 		break;
 	case GLUT_KEY_DOWN:
 		protagonista.setVely(-1.0f);
+		protagonista.setDir('s');
 		break;
 	case GLUT_KEY_UP:
 		protagonista.setVely(1.0f);
+		protagonista.setDir('w');
 		break;
 	}
+	//std::cout << protagonista.getDir() << std::endl;
 }
 
 void Mundo::teclaEspecialUp(unsigned char key)  //al dejar de pulsar la tecla

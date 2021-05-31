@@ -15,7 +15,7 @@ private:
 	Protagonista protagonista;
 	EscenarioTiles escenariotiles;
 	ListaObstaculos listaobstaculos;
-	Caja caja,caja2;
+	Caja caja;
 	ListaDisparos disparos;
 	ListaEnemigos enemigos;
 
