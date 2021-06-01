@@ -29,7 +29,7 @@ void ListaEnemigos::dano()
 {
 	for (int i = 0; i < numero; i++)
 	{
-		if (lista[i]->GetVida() <= 0)
+		if (lista[i]->getVida() <= 0)
 		{
 			eliminar(i);
 		}

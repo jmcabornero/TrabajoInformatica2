@@ -13,7 +13,7 @@ stats::stats()
 
 void stats::ModVida(float ataque, int i)
 {
-	float dano;
+	float dano=0;
 	if (i == 1)
 	dano = (25.0 * ataque) / defensa;
 	if (i == 2)
@@ -26,3 +26,4 @@ void stats::ModVida(float ataque, int i)
 	vida = vida - dano;
 	cout << vida;
 }
+

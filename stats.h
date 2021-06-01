@@ -23,6 +23,6 @@ public:
 	void modDef(float m);
 	void modAtack(float m);
 	void modVel(float m);
-	void ModVida(float ataque, int i);
+	void ModVida(float ataque=1, int i=1);
 };
 
