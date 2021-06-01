@@ -4,6 +4,7 @@
 #include "enemigo.h"
 #include "Interaccion.h"
 #include "ListaEnemigos.h"
+#include "Obstaculos.h"
 
 class ListaDisparos
 {
@@ -20,8 +21,7 @@ public:
 	void elimina(Disparo* d);
 
 	void colision(Enemigo *e);
-
-	//void colision();
+	void colision(Obstaculos* o);
 private:
 	Disparo* Lista[MAX_DISPAROS];
 	int num;

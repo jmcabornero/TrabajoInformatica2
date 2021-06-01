@@ -8,6 +8,7 @@
 #include "Enemigo.h"
 #include "Disparo.h"
 #include "Vida.h"
+#include "Caja.h"
 
 using namespace std;
 
@@ -17,5 +18,6 @@ class Interaccion
 public:
 	static bool colision(Protagonista p, Obstaculos &o);
 	static bool colision(Disparo &d, Enemigo &e);
+	static bool colision(Disparo& d, Obstaculos &o);
 };
 
