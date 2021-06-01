@@ -17,7 +17,8 @@ public:
 	bool Agregar(Obstaculos* o);
 	void Dibuja();
 	void Colision(Protagonista* p);
-
+	Obstaculos* operator[](int i);
+	int getNumero() { return numero; };
 
 };
 

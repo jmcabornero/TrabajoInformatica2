@@ -28,3 +28,18 @@ bool Interaccion::colision(Disparo &d, Enemigo &e)
 		return false;
 }
 
+
+bool Interaccion::colision(Disparo& d, Obstaculos& o)
+{
+	Vector2D esquina = o.GetEsquina();
+	Vector2D disp = d.GetPos();
+	if ((((esquina.x + 0.3) <= disp.x) && (disp.x <= (esquina.x + 1.8f))) && (((esquina.y - 0.9f) <= disp.y) && (disp.y <= (esquina.y + 0.9f))))
+	{
+		cout << "colision";
+		return true;
+	}
+	else
+	{
+		return false;
+	}
+}

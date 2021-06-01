@@ -63,3 +63,16 @@ void ListaDisparos::colision(Enemigo *e)
 			}
 	}
 }
+
+void ListaDisparos::colision(Obstaculos* o)
+{
+	for (int i = 0; i < num; i++)
+	{
+		bool x;
+		x = Interaccion::colision(*(Lista[i]), *o);
+		if (x == 1)
+		{
+			elimina(Lista[i]);
+		}
+	}
+}

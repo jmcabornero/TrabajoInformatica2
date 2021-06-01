@@ -44,3 +44,4 @@ void Protagonista::setTam(float anchura, float altura)
 	spriteL.setCenter(1, 0);
 	spriteL.setSize(anchura, altura);
 }
+

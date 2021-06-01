@@ -39,6 +39,11 @@ void Mundo::mueve()
 		disparos.colision(enemigos[i]);
 	}
 	enemigos.dano();
+
+	for (int i = 0; i < listaobstaculos.getNumero(); i++)
+	{
+		disparos.colision(listaobstaculos[i]);
+	}
 }
 
 void Mundo::inicializa()
