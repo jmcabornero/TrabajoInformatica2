@@ -3,14 +3,13 @@
 #include "ETSIDI.h"
 #include "ObjetosMovimiento.h"
 #include "vida.h"
-
+#include "stats.h"
 
 using ETSIDI::SpriteSequence;
 
-class Protagonista:public ObjetosMovimiento
+class Protagonista:public ObjetosMovimiento, public stats
 {
 private:
-	Vida vida;
 	char direccion;
 public:
 	Protagonista();

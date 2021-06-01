@@ -59,7 +59,7 @@ void ListaDisparos::colision(Enemigo *e)
 			if (x == 1)
 			{
 				elimina(Lista[i]);
-				(*e).ModVida(-20);
+				(*e).ModVida();
 			}
 	}
 }

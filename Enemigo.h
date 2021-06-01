@@ -3,13 +3,13 @@
 #include "ETSIDI.h"
 #include "ObjetosMovimiento.h"
 #include "vida.h"
+#include "stats.h"
 
 using ETSIDI::SpriteSequence;
 
-class Enemigo :public ObjetosMovimiento
+class Enemigo :public ObjetosMovimiento, public stats
 {
 private:
-	Vida vida;
 	char direccion;
 public:
 	Enemigo(float x, float y);
@@ -22,8 +22,6 @@ public:
 	void Dibuja();
 	void Mueve(float t);
 	void setTam(float anchura, float altura);
-	void ModVida(int m);
-	int GetVida() { return vida.getVida(); };
 	friend class Interaccion;
 };
 
