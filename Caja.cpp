@@ -31,8 +31,10 @@ void Caja::Dibuja()
 
 }
 
-/*void Caja::Dibuja2()
+void Caja::Dibuja2()
 {
+	glEnable(GL_BLEND);
+	glBlendFunc(GL_SRC_ALPHA, GL_ONE_MINUS_SRC_ALPHA);
 	//dibujo del fondo
 	glEnable(GL_TEXTURE_2D);
 	glBindTexture(GL_TEXTURE_2D, ETSIDI::getTexture("imagenes/Skele_War.png").id);
@@ -50,7 +52,7 @@ void Caja::Dibuja()
 	glEnd();
 	glEnable(GL_LIGHTING);
 	glDisable(GL_TEXTURE_2D);
-}*/
+}
 
 Caja:: ~Caja()
 {
