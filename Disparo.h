@@ -17,10 +17,13 @@ public:
 	virtual ~Disparo();
 private:
 	float radio;
+	int ident;
 public:
 	void setRadio(float r) { radio = r; }
 	float getRadio() { return radio; }
 	void dibuja();
 	void mueve(float t);
+	int getIdent() { return ident; };
+	void modIdent(int i);
 };
 

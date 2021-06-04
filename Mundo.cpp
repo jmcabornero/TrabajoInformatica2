@@ -2,7 +2,7 @@
 #include "freeglut.h"
 #include <math.h>
 #include <iostream>
-
+#include <time.h>
 Mundo::Mundo(float x)
 {
 	z_ojo = x;
@@ -16,7 +16,7 @@ void Mundo::dibuja()
 	protagonista.Dibuja();
 	
 	caja.Dibuja();
-
+	caja.Dibuja2();
 	
 	enemigos.dibuja();
 
@@ -44,6 +44,8 @@ void Mundo::mueve()
 	{
 		disparos.colision(listaobstaculos[i]);
 	}
+
+	disparos.Cooldawn();
 }
 
 void Mundo::inicializa()
@@ -51,7 +53,7 @@ void Mundo::inicializa()
 	dibObstaculos();
 	posicion_ojo.x = 10.25f;    
 	posicion_ojo.y = 7.5f;             
-	z_ojo = 20.5f;               
+	z_ojo = 20.5f; //20.5f              
 	protagonista.setTam(1, 1);
 
 	for (int i = 0; i < 8; i++)
@@ -86,26 +88,31 @@ void Mundo::tecla(unsigned char key)
 		break;*/
 	case ' ':
 	{
-		Vector2D h_pos = protagonista.GetPos();
-		Disparo* d = new Disparo();
-		d->setPos(h_pos.x, h_pos.y);
-		switch (protagonista.getDir()) {
-		case 'd':
-			d->setVel(10, 0);
-			break;
-		case 'a':
-			d->setVel(-10, 0);
-			break;
-		case 'w':
-			d->setVel(0, 10);
-			break;
-		case 's':
-			d->setVel(0, -10);
-			break;
-		}
-		disparos.agregar(d);
-		break;
+		if (disparos.flag == 0)
+		{
+			Vector2D h_pos = protagonista.GetPos();
+			Disparo* d = new Disparo();
+			d->setPos(h_pos.x, h_pos.y);
+			
+			switch (protagonista.getDir()) {
+			case 'd':
+				d->setVel(10, 0);
+				break;
+			case 'a':
+				d->setVel(-10, 0);
+				break;
+			case 'w':
+				d->setVel(0, 10);
+				break;
+			case 's':
+				d->setVel(0, -10);
+				break;
+			}
+			
+			disparos.agregar(d);
+		};		
 	}
+	break;
 	}
 }
 
@@ -156,7 +163,7 @@ void Mundo::dibObstaculos()
 {
 	string line;
 	ifstream myfile; //myfile es el fichero (puntero)
-	myfile.open("imagenes/estrellas_OBSTACULOS.csv");
+	myfile.open("imagenes/Mapa/estrellas_OBSTACULOS.csv");
 	if (myfile.is_open())
 	{
 		float i = 0, j, num;
@@ -172,7 +179,7 @@ void Mundo::dibObstaculos()
 				glEnable(GL_TEXTURE_2D);
 				if (num == 478)
 				{
-					listaobstaculos.Agregar(new Obstaculos(-i+29, j));
+					listaobstaculos.Agregar(new Obstaculos(-i+134, j));
 				}
 				line.erase(0, pos + delimiter.length());
 				j++;
@@ -210,4 +217,6 @@ Mundo::~Mundo()
 {
 	disparos.destruirContenido();
 }
+
+//float t1 = time();
 

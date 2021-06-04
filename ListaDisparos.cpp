@@ -1,19 +1,21 @@
 #include "ListaDisparos.h"
 #include "Enemigo.h"
 #include <iostream>
+#include <windows.h>
 
 ListaDisparos::ListaDisparos() {
 	for (int i = 0; i < MAX_DISPAROS; i++)Lista[i] = 0;
 	num = 0;
+	flag = 0;
+	cooldawn = 2.0;
 }
 
-ListaDisparos::~ListaDisparos() {
-
-}
+ListaDisparos::~ListaDisparos() {}
 
 bool ListaDisparos::agregar(Disparo *d) {
 	if (num < MAX_DISPAROS) {
 		Lista[num++] = d;
+		flag = 1;
 		return true;
 	}
 	else {
@@ -58,8 +60,8 @@ void ListaDisparos::colision(Enemigo *e)
 			x = Interaccion::colision(*(Lista[i]), *e);
 			if (x == 1)
 			{
+				(*e).ModVida(1, Lista[i]->getIdent());
 				elimina(Lista[i]);
-				(*e).ModVida();
 			}
 	}
 }
@@ -74,5 +76,19 @@ void ListaDisparos::colision(Obstaculos* o)
 		{
 			elimina(Lista[i]);
 		}
+	}
+}
+void ListaDisparos::Cooldawn() 
+{
+	if (flag==1)
+	{
+		Sleep(0.025);
+		cooldawn = cooldawn - 0.050;
+		if (cooldawn <= 0)
+		{
+			flag = 0;
+			cooldawn = 1.0;
+		}
+		cout <<"-"<<cooldawn<<"-";
 	}
 }
