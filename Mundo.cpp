@@ -46,6 +46,7 @@ void Mundo::mueve()
 	}
 
 	disparos.Cooldawn();
+	protagonista.FuncionTeletransporte();
 }
 
 void Mundo::inicializa()

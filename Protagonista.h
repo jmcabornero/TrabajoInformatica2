@@ -21,4 +21,6 @@ public:
 	void Dibuja();
 	void Mueve(float t);
 	void setTam(float anchura, float altura);
+	void FuncionTeletransporte();
+	void Teletransporte(float inicio_x, float inicio_y, float final_x, float final_y);
 };
