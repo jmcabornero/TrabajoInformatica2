@@ -35,4 +35,3 @@ private:
 		void CambioCamara();
 		virtual ~Mundo();
 };
-
