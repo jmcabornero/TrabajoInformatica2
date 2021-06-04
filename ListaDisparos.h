@@ -22,9 +22,12 @@ public:
 
 	void colision(Enemigo *e);
 	void colision(Obstaculos* o);
+	void Cooldawn();
+	bool flag;
 private:
 	Disparo* Lista[MAX_DISPAROS];
 	int num;
-
+	float cooldawn;
+	
 };
 
