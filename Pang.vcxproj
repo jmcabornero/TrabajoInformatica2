@@ -30,6 +30,7 @@
     <ClCompile Include="Mundo.cpp" />
     <ClCompile Include="ObjetosMovimiento.cpp" />
     <ClCompile Include="Obstaculos.cpp" />
+    <ClCompile Include="OpenGL.cpp" />
     <ClCompile Include="Pang.cpp" />
     <ClCompile Include="Protagonista.cpp" />
     <ClCompile Include="stats.cpp" />
@@ -49,6 +50,7 @@
     <ClInclude Include="Mundo.h" />
     <ClInclude Include="ObjetosMovimiento.h" />
     <ClInclude Include="Obstaculos.h" />
+    <ClInclude Include="OpenGL.h" />
     <ClInclude Include="Protagonista.h" />
     <ClInclude Include="stats.h" />
     <ClInclude Include="Vector2D.h" />

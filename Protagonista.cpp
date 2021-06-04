@@ -11,13 +11,13 @@ Protagonista::Protagonista()
 	spriteR.setSize(1, 1);
 	spriteL.setCenter(1, 0);
 	spriteL.setSize(1, 1);
-	posicion.x = 5;posicion.y = 5;velocidad = 0;velocidad = 0;
+	posicion.x = 5;posicion.y = 126;velocidad = 0;velocidad = 0;
 }
 
 void Protagonista::Dibuja()
 {
 	glPushMatrix();
-	glTranslatef(posicion.x, posicion.y, 1);
+	glTranslatef(posicion.x, posicion.y, 0.1);
 	glColor3f(1.0f, 0.0f, 0.0f);
 	//glutSolidSphere(altura, 20, 20);
 //gestion de direccion y animacion
