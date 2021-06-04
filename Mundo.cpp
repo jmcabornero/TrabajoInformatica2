@@ -16,7 +16,7 @@ void Mundo::dibuja()
 	protagonista.Dibuja();
 	
 	caja.Dibuja();
-
+	//caja.Dibuja2();
 	
 	enemigos.dibuja();
 
@@ -53,7 +53,7 @@ void Mundo::inicializa()
 	dibObstaculos();
 	posicion_ojo.x = 10.25f;    
 	posicion_ojo.y = 7.5f;             
-	z_ojo = 20.5f;               
+	z_ojo = 20.5f; //20.5f              
 	protagonista.setTam(1, 1);
 
 	for (int i = 0; i < 8; i++)
@@ -163,7 +163,7 @@ void Mundo::dibObstaculos()
 {
 	string line;
 	ifstream myfile; //myfile es el fichero (puntero)
-	myfile.open("imagenes/estrellas_OBSTACULOS.csv");
+	myfile.open("imagenes/Mapa/estrellas_OBSTACULOS.csv");
 	if (myfile.is_open())
 	{
 		float i = 0, j, num;
@@ -179,7 +179,7 @@ void Mundo::dibObstaculos()
 				glEnable(GL_TEXTURE_2D);
 				if (num == 478)
 				{
-					listaobstaculos.Agregar(new Obstaculos(-i+29, j));
+					listaobstaculos.Agregar(new Obstaculos(-i+134, j));
 				}
 				line.erase(0, pos + delimiter.length());
 				j++;
