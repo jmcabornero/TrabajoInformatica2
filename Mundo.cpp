@@ -16,7 +16,7 @@ void Mundo::dibuja()
 	protagonista.Dibuja();
 	
 	caja.Dibuja();
-	caja.Dibuja2();
+	//caja.Dibuja2();
 	
 	enemigos.dibuja();
 
