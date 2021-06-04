@@ -25,7 +25,7 @@ void Mundo::dibuja()
 
 	disparos.dibuja();
 
-	
+	hud.dibuja();
 }
 
 void Mundo::mueve()
@@ -191,17 +191,25 @@ void Mundo::dibObstaculos()
 	else cout << "Unable to open file";
 }
 
-void Mundo::CambioCamara()
+void Mundo::CambioCamara()//cambio HUD
 	{
 	Vector2D prota = protagonista.GetPos();
-	if (prota.x > (posicion_ojo.x + 10.25))
+	if (prota.x > (posicion_ojo.x + 10.25)) {
 		posicion_ojo.x += 20.0f;
-	if (prota.x < (posicion_ojo.x - 10.25))
+		hud.setPos(hud.getPos().x + 20.0f, hud.getPos().y);
+	}
+	if (prota.x < (posicion_ojo.x - 10.25)) {
 		posicion_ojo.x -= 20.0f;
-	if (prota.y > (posicion_ojo.y+ 7.5))
-		posicion_ojo.y += 15.0f;
-	if (prota.y < (posicion_ojo.y - 7.5))
-		posicion_ojo.y -= 15.0f;
+		hud.setPos(hud.getPos().x - 20.0f, hud.getPos().y);
+	}	
+		if (prota.y > (posicion_ojo.y + 7.5)) {
+			posicion_ojo.y += 15.0f;
+			hud.setPos(hud.getPos().x, hud.getPos().y + 15.0f);
+	}
+		if (prota.y < (posicion_ojo.y - 7.5)) {
+			posicion_ojo.y -= 15.0f;
+			hud.setPos(hud.getPos().x, hud.getPos().y - 15.0f);
+	}
 	}
 
 
