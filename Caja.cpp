@@ -31,7 +31,7 @@ void Caja::Dibuja()
 
 }
 
-void Caja::Dibuja2()
+void Caja::Dibuja2() //dibuaj encima cabeza
 {
 	glEnable(GL_BLEND);
 	glBlendFunc(GL_SRC_ALPHA, GL_ONE_MINUS_SRC_ALPHA);
