@@ -17,7 +17,7 @@ Protagonista::Protagonista()
 void Protagonista::Dibuja()
 {
 	glPushMatrix();
-	glTranslatef(posicion.x, posicion.y, 0.1);
+	glTranslatef(posicion.x, posicion.y, 0.01);
 	glColor3f(1.0f, 0.0f, 0.0f);
 	//glutSolidSphere(altura, 20, 20);
 //gestion de direccion y animacion
