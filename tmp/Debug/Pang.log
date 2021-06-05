@@ -1,7 +1,56 @@
 ﻿C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\MSBuild\Microsoft\VC\v160\Microsoft.CppBuild.targets(519,5): warning MSB8028: El directorio intermedio (tmp\Debug\) contiene archivos compartidos de otro proyecto (Pang.vcxproj). Esto puede dar lugar a un comportamiento incorrecto de limpieza y recompilación.
+  Caja.cpp
+  Disparo.cpp
+C:\Users\Usuario\Desktop\UNIVERSIDAD\3º\2º cuatrimestre\Informatica\TRABAJO\GitHub\TrabajoInformatica2\Disparo.cpp(24,42): warning C4244: 'argumento': conversión de 'double' a 'GLfloat'; posible pérdida de datos
+C:\Users\Usuario\Desktop\UNIVERSIDAD\3º\2º cuatrimestre\Informatica\TRABAJO\GitHub\TrabajoInformatica2\Disparo.cpp(24,25): warning C4244: 'argumento': conversión de 'double' a 'GLfloat'; posible pérdida de datos
+  Enemigo.cpp
+  EscenarioTiles.cpp
+  HUD.cpp
+C:\Users\Usuario\Desktop\UNIVERSIDAD\3º\2º cuatrimestre\Informatica\TRABAJO\GitHub\TrabajoInformatica2\HUD.cpp(20,24): warning C4267: 'inicializando': conversión de 'size_t' a 'int'; posible pérdida de datos
+C:\Users\Usuario\Desktop\UNIVERSIDAD\3º\2º cuatrimestre\Informatica\TRABAJO\GitHub\TrabajoInformatica2\HUD.cpp(22,18): warning C4244: 'argumento': conversión de 'int' a 'GLfloat'; posible pérdida de datos
+C:\Users\Usuario\Desktop\UNIVERSIDAD\3º\2º cuatrimestre\Informatica\TRABAJO\GitHub\TrabajoInformatica2\HUD.cpp(22,15): warning C4244: 'argumento': conversión de 'int' a 'GLfloat'; posible pérdida de datos
+C:\Users\Usuario\Desktop\UNIVERSIDAD\3º\2º cuatrimestre\Informatica\TRABAJO\GitHub\TrabajoInformatica2\HUD.cpp(22,12): warning C4244: 'argumento': conversión de 'int' a 'GLfloat'; posible pérdida de datos
+C:\Users\Usuario\Desktop\UNIVERSIDAD\3º\2º cuatrimestre\Informatica\TRABAJO\GitHub\TrabajoInformatica2\HUD.cpp(30,19): warning C4305: 'inicializando': truncamiento de 'double' a 'float'
+  Interaccion.cpp
+  ListaDisparos.cpp
+C:\Users\Usuario\Desktop\UNIVERSIDAD\3º\2º cuatrimestre\Informatica\TRABAJO\GitHub\TrabajoInformatica2\ListaDisparos.cpp(85,9): warning C4244: 'argumento': conversión de 'double' a 'DWORD'; posible pérdida de datos
+C:\Users\Usuario\Desktop\UNIVERSIDAD\3º\2º cuatrimestre\Informatica\TRABAJO\GitHub\TrabajoInformatica2\ListaDisparos.cpp(86,23): warning C4244: '=': conversión de 'double' a 'float'; posible pérdida de datos
+  ListaEnemigos.cpp
+  ListaObstaculos.cpp
+C:\Users\Usuario\Desktop\UNIVERSIDAD\3º\2º cuatrimestre\Informatica\TRABAJO\GitHub\TrabajoInformatica2\ListaObstaculos.cpp(49,22): warning C4244: 'argumento': conversión de 'double' a 'float'; posible pérdida de datos
+C:\Users\Usuario\Desktop\UNIVERSIDAD\3º\2º cuatrimestre\Informatica\TRABAJO\GitHub\TrabajoInformatica2\ListaObstaculos.cpp(51,23): warning C4244: 'argumento': conversión de 'double' a 'float'; posible pérdida de datos
+C:\Users\Usuario\Desktop\UNIVERSIDAD\3º\2º cuatrimestre\Informatica\TRABAJO\GitHub\TrabajoInformatica2\ListaObstaculos.cpp(53,29): warning C4244: 'argumento': conversión de 'double' a 'float'; posible pérdida de datos
+C:\Users\Usuario\Desktop\UNIVERSIDAD\3º\2º cuatrimestre\Informatica\TRABAJO\GitHub\TrabajoInformatica2\ListaObstaculos.cpp(55,30): warning C4244: 'argumento': conversión de 'double' a 'float'; posible pérdida de datos
+C:\Users\Usuario\Desktop\UNIVERSIDAD\3º\2º cuatrimestre\Informatica\TRABAJO\GitHub\TrabajoInformatica2\ListaObstaculos.cpp(58,35): warning C4244: 'argumento': conversión de 'double' a 'float'; posible pérdida de datos
+C:\Users\Usuario\Desktop\UNIVERSIDAD\3º\2º cuatrimestre\Informatica\TRABAJO\GitHub\TrabajoInformatica2\ListaObstaculos.cpp(58,22): warning C4244: 'argumento': conversión de 'double' a 'float'; posible pérdida de datos
+C:\Users\Usuario\Desktop\UNIVERSIDAD\3º\2º cuatrimestre\Informatica\TRABAJO\GitHub\TrabajoInformatica2\ListaObstaculos.cpp(62,35): warning C4244: 'argumento': conversión de 'double' a 'float'; posible pérdida de datos
+C:\Users\Usuario\Desktop\UNIVERSIDAD\3º\2º cuatrimestre\Informatica\TRABAJO\GitHub\TrabajoInformatica2\ListaObstaculos.cpp(62,22): warning C4244: 'argumento': conversión de 'double' a 'float'; posible pérdida de datos
+C:\Users\Usuario\Desktop\UNIVERSIDAD\3º\2º cuatrimestre\Informatica\TRABAJO\GitHub\TrabajoInformatica2\ListaObstaculos.cpp(66,37): warning C4244: 'argumento': conversión de 'double' a 'float'; posible pérdida de datos
+C:\Users\Usuario\Desktop\UNIVERSIDAD\3º\2º cuatrimestre\Informatica\TRABAJO\GitHub\TrabajoInformatica2\ListaObstaculos.cpp(66,23): warning C4244: 'argumento': conversión de 'double' a 'float'; posible pérdida de datos
+C:\Users\Usuario\Desktop\UNIVERSIDAD\3º\2º cuatrimestre\Informatica\TRABAJO\GitHub\TrabajoInformatica2\ListaObstaculos.cpp(70,37): warning C4244: 'argumento': conversión de 'double' a 'float'; posible pérdida de datos
+C:\Users\Usuario\Desktop\UNIVERSIDAD\3º\2º cuatrimestre\Informatica\TRABAJO\GitHub\TrabajoInformatica2\ListaObstaculos.cpp(70,23): warning C4244: 'argumento': conversión de 'double' a 'float'; posible pérdida de datos
   Mundo.cpp
-C:\Users\jesus\Documents\GitHub\TrabajoInformatica2\Mundo.cpp(62,31): warning C4244: 'argumento': conversión de 'int' a 'float'; posible pérdida de datos
-C:\Users\jesus\Documents\GitHub\TrabajoInformatica2\Mundo.cpp(179,15): warning C4244: '=': conversión de 'int' a 'float'; posible pérdida de datos
-C:\Users\jesus\Documents\GitHub\TrabajoInformatica2\Mundo.cpp(183,53): warning C4244: 'argumento': conversión de 'float' a 'int'; posible pérdida de datos
-C:\Users\jesus\Documents\GitHub\TrabajoInformatica2\Mundo.cpp(183,47): warning C4244: 'argumento': conversión de 'float' a 'int'; posible pérdida de datos
-  Pang.vcxproj -> C:\Users\jesus\Documents\GitHub\TrabajoInformatica2\bin\Juego.exe
+C:\Users\Usuario\Desktop\UNIVERSIDAD\3º\2º cuatrimestre\Informatica\TRABAJO\GitHub\TrabajoInformatica2\Mundo.cpp(62,31): warning C4244: 'argumento': conversión de 'int' a 'float'; posible pérdida de datos
+C:\Users\Usuario\Desktop\UNIVERSIDAD\3º\2º cuatrimestre\Informatica\TRABAJO\GitHub\TrabajoInformatica2\Mundo.cpp(179,15): warning C4244: '=': conversión de 'int' a 'float'; posible pérdida de datos
+C:\Users\Usuario\Desktop\UNIVERSIDAD\3º\2º cuatrimestre\Informatica\TRABAJO\GitHub\TrabajoInformatica2\Mundo.cpp(183,53): warning C4244: 'argumento': conversión de 'float' a 'int'; posible pérdida de datos
+C:\Users\Usuario\Desktop\UNIVERSIDAD\3º\2º cuatrimestre\Informatica\TRABAJO\GitHub\TrabajoInformatica2\Mundo.cpp(183,47): warning C4244: 'argumento': conversión de 'float' a 'int'; posible pérdida de datos
+  ObjetosMovimiento.cpp
+  Obstaculos.cpp
+C:\Users\Usuario\Desktop\UNIVERSIDAD\3º\2º cuatrimestre\Informatica\TRABAJO\GitHub\TrabajoInformatica2\Obstaculos.cpp(5,6): warning C4244: '=': conversión de 'int' a 'float'; posible pérdida de datos
+C:\Users\Usuario\Desktop\UNIVERSIDAD\3º\2º cuatrimestre\Informatica\TRABAJO\GitHub\TrabajoInformatica2\Obstaculos.cpp(5,12): warning C4244: '=': conversión de 'int' a 'float'; posible pérdida de datos
+  OpenGL.cpp
+  Pang.cpp
+  Protagonista.cpp
+C:\Users\Usuario\Desktop\UNIVERSIDAD\3º\2º cuatrimestre\Informatica\TRABAJO\GitHub\TrabajoInformatica2\Protagonista.cpp(23,43): warning C4305: 'argumento': truncamiento de 'double' a 'GLfloat'
+C:\Users\Usuario\Desktop\UNIVERSIDAD\3º\2º cuatrimestre\Informatica\TRABAJO\GitHub\TrabajoInformatica2\Protagonista.cpp(82,47): warning C4244: 'argumento': conversión de 'int' a 'float'; posible pérdida de datos
+C:\Users\Usuario\Desktop\UNIVERSIDAD\3º\2º cuatrimestre\Informatica\TRABAJO\GitHub\TrabajoInformatica2\Protagonista.cpp(83,50): warning C4244: 'argumento': conversión de 'int' a 'float'; posible pérdida de datos
+C:\Users\Usuario\Desktop\UNIVERSIDAD\3º\2º cuatrimestre\Informatica\TRABAJO\GitHub\TrabajoInformatica2\Protagonista.cpp(84,50): warning C4244: 'argumento': conversión de 'int' a 'float'; posible pérdida de datos
+  stats.cpp
+C:\Users\Usuario\Desktop\UNIVERSIDAD\3º\2º cuatrimestre\Informatica\TRABAJO\GitHub\TrabajoInformatica2\stats.cpp(18,25): warning C4244: '=': conversión de 'double' a 'float'; posible pérdida de datos
+C:\Users\Usuario\Desktop\UNIVERSIDAD\3º\2º cuatrimestre\Informatica\TRABAJO\GitHub\TrabajoInformatica2\stats.cpp(20,26): warning C4244: '=': conversión de 'double' a 'float'; posible pérdida de datos
+C:\Users\Usuario\Desktop\UNIVERSIDAD\3º\2º cuatrimestre\Informatica\TRABAJO\GitHub\TrabajoInformatica2\stats.cpp(22,26): warning C4244: '=': conversión de 'double' a 'float'; posible pérdida de datos
+  Vector2D.cpp
+  vida.cpp
+C:\Users\Usuario\Desktop\UNIVERSIDAD\3º\2º cuatrimestre\Informatica\TRABAJO\GitHub\TrabajoInformatica2\vida.cpp(12,9): warning C4244: 'return': conversión de 'int' a 'float'; posible pérdida de datos
+  Generando código...
+  Pang.vcxproj -> C:\Users\Usuario\Desktop\UNIVERSIDAD\3º\2º cuatrimestre\Informatica\TRABAJO\GitHub\TrabajoInformatica2\bin\Juego.exe
