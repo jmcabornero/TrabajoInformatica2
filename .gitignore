@@ -1,3 +1,4 @@
 *.ipch
-tmp
-vs
+*.obj
+tmp/
+.vs/
