@@ -2,6 +2,10 @@
 #include "freeglut.h"
 #include <string.h>
 
+#define capa1 0.03f
+#define capa2 0.04f
+#define capa3 0.05f
+
 HUD::HUD() {
 	setAlto(2);
 	setAncho(5);
@@ -11,6 +15,7 @@ HUD::HUD() {
 HUD::~HUD() {
 
 }
+
 void displayText(float x, float y, float z, int r, int g, int b, const char* string) {
 	int j = strlen(string);
 
@@ -23,9 +28,6 @@ void displayText(float x, float y, float z, int r, int g, int b, const char* str
 
 void HUD::dibuja() {
 	float marco = 0.2;
-	float capa1 = 0.01;
-	float capa2 = 0.02;
-	float capa3 = 0.03;
 	float h = getAlto();
 	float a = getAncho();
 	Vector2D p = getPos();
@@ -43,7 +45,7 @@ void HUD::dibuja() {
 	glVertex3d(p.x - a / 2, p.y - h / 2, capa2);
 	glVertex3d(p.x - a / 2, p.y + h / 2, capa2);
 	glEnd();
-	displayText(p.x - a/2 + marco, p.y + h/2 - 2*marco, capa3, 255, 255, 255, "hello world");
+	displayText(p.x - a/2 + marco, p.y + h/2 - 4*marco, capa3, 255, 255, 255, "hello world");
 }
 
 void HUD::mueve() {
