@@ -14,7 +14,7 @@ Protagonista::Protagonista()
 	spriteDown.setCenter(1, 0);
 	spriteDown.setSize(1, 1);
 
-	posicion.x = 50;posicion.y = 109;velocidad = 0;velocidad = 0;
+	posicion.x = 7;posicion.y = 122;velocidad = 0;velocidad = 0;
 }
 
 void Protagonista::Dibuja()
@@ -90,4 +90,13 @@ void Protagonista::Teletransporte(float inicio_x, float inicio_y, float final_x,
 	{
 		setPos(final_x+1, final_y);
 	}
+}
+
+bool Protagonista::MensajeBuda(float inicio_x, float final_x, float inicio_y)
+{
+	if ((((inicio_x + 0.3) <= posicion.x) && (posicion.x <= (final_x + 1.8f))) && (((inicio_y - 0.9f) <= posicion.y) && (posicion.y <= (inicio_y + 0.9f))))
+	{
+		return true;
+	}
+	else return false;
 }

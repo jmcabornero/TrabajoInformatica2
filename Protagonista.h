@@ -23,5 +23,6 @@ public:
 	void Mueve(float t);
 	void setTam(float anchura, float altura);
 	void FuncionTeletransporte();
+	bool MensajeBuda(float inicio_x, float final_x, float inicio_y);
 	void Teletransporte(float inicio_x, float inicio_y, float final_x, float final_y);
 };

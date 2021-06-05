@@ -20,12 +20,14 @@ void Mundo::dibuja()
 	
 	enemigos.dibuja();
 
-	
 	listaobstaculos.Dibuja();
 
 	disparos.dibuja();
 
 	hud.dibuja();
+
+	DibujaMensajes();
+	
 }
 
 void Mundo::mueve()
@@ -39,12 +41,10 @@ void Mundo::mueve()
 		disparos.colision(enemigos[i]);
 	}
 	enemigos.dano();
-
 	for (int i = 0; i < listaobstaculos.getNumero(); i++)
 	{
 		disparos.colision(listaobstaculos[i]);
 	}
-
 	disparos.Cooldawn();
 	protagonista.FuncionTeletransporte();
 }
@@ -62,7 +62,6 @@ void Mundo::inicializa()
 		Enemigo* aux = new Enemigo(i+2,7);
 		enemigos.agregar(aux);
 	}
-
 }
 
 void Mundo::setPos(float x, float y)
@@ -75,18 +74,6 @@ void Mundo::tecla(unsigned char key)
 {
 	switch (key)
 	{
-	/*case 'w':
-		protagonista.setVely(1.0f);
-		break;
-	case 's':
-		protagonista.setVely(-1.0f);
-		break;
-	case 'a':
-		protagonista.setVelx(-1.0f);
-		break;
-	case 'd':
-		protagonista.setVelx(1.0f);
-		break;*/
 	case ' ':
 	{
 		if (disparos.flag == 0)
@@ -109,7 +96,6 @@ void Mundo::tecla(unsigned char key)
 				d->setVel(0, -10);
 				break;
 			}
-			
 			disparos.agregar(d);
 		};		
 	}
@@ -122,19 +108,19 @@ void Mundo::teclaEspecial(unsigned char key) //al pulsar la tecla
 	switch (key)
 	{
 	case GLUT_KEY_LEFT:
-		protagonista.setVelx(-2.0f);
+		protagonista.setVelx(-1.0f);
 		protagonista.setDir('a');
 		break;
 	case GLUT_KEY_RIGHT:
-		protagonista.setVelx(2.0f);
+		protagonista.setVelx(1.0f);
 		protagonista.setDir('d');
 		break;
 	case GLUT_KEY_DOWN:
-		protagonista.setVely(-2.0f);
+		protagonista.setVely(-1.0f);
 		protagonista.setDir('s');
 		break;
 	case GLUT_KEY_UP:
-		protagonista.setVely(2.0f);
+		protagonista.setVely(1.0f);
 		protagonista.setDir('w');
 		break;
 	}
@@ -213,11 +199,21 @@ void Mundo::CambioCamara()//cambio HUD
 	}
 	}
 
+void Mundo::DibujaMensajes()
+{
+	Vector2D prota = protagonista.GetPos();
+	if (protagonista.MensajeBuda(8, 11, 129))
+	{
+		mensaje1.setPos(posicion_ojo.x, posicion_ojo.y-6);
+		mensaje1.dibuja();
+	}
+}
 
 Mundo::~Mundo()
 {
 	disparos.destruirContenido();
 }
+
 
 //float t1 = time();
 

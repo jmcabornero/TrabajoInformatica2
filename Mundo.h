@@ -19,7 +19,7 @@ private:
 	Caja caja;
 	ListaDisparos disparos;
 	ListaEnemigos enemigos;
-	HUD hud;
+	HUD hud, mensaje1, mensaje2, mensaje3, mensaje4, mensaje5, mensajelibro;
 
 	public:
 		Mundo(float x=0);
@@ -33,5 +33,6 @@ private:
 		void teclaEspecialUp(unsigned char key);
 		void setPos(float x, float y);
 		void CambioCamara();
+		void DibujaMensajes();
 		virtual ~Mundo();
 };
