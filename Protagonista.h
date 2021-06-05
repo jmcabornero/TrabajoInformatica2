@@ -13,12 +13,15 @@ private:
 	char direccion;
 public:
 	Protagonista();
-	SpriteSequence sprite{ "imagenes/Player_reposo.png", 5 };
-	SpriteSequence spriteR{ "imagenes/Player_derecha.png", 5 };
-	SpriteSequence spriteL{ "imagenes/Player_izquierda.png", 5 };
+	SpriteSequence spriteR{ "imagenes/Player_derecha.png", 3 };
+	SpriteSequence spriteL{ "imagenes/Player_izquierda.png", 3 };
+	SpriteSequence spriteUp{ "imagenes/Player_arriba.png", 3 };
+	SpriteSequence spriteDown{ "imagenes/Player_abajo.png", 3 };
 	char getDir() { return direccion; }
 	void setDir(char d) { direccion = d; }
 	void Dibuja();
 	void Mueve(float t);
 	void setTam(float anchura, float altura);
+	void FuncionTeletransporte();
+	void Teletransporte(float inicio_x, float inicio_y, float final_x, float final_y);
 };

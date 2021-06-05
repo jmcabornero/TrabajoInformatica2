@@ -16,7 +16,7 @@ void Mundo::dibuja()
 	protagonista.Dibuja();
 	
 	caja.Dibuja();
-	//caja.Dibuja2();
+	caja.Dibuja2();
 	
 	enemigos.dibuja();
 
@@ -25,7 +25,7 @@ void Mundo::dibuja()
 
 	disparos.dibuja();
 
-	
+	hud.dibuja();
 }
 
 void Mundo::mueve()
@@ -46,6 +46,7 @@ void Mundo::mueve()
 	}
 
 	disparos.Cooldawn();
+	protagonista.FuncionTeletransporte();
 }
 
 void Mundo::inicializa()
@@ -121,19 +122,19 @@ void Mundo::teclaEspecial(unsigned char key) //al pulsar la tecla
 	switch (key)
 	{
 	case GLUT_KEY_LEFT:
-		protagonista.setVelx(-1.0f);
+		protagonista.setVelx(-2.0f);
 		protagonista.setDir('a');
 		break;
 	case GLUT_KEY_RIGHT:
-		protagonista.setVelx(1.0f);
+		protagonista.setVelx(2.0f);
 		protagonista.setDir('d');
 		break;
 	case GLUT_KEY_DOWN:
-		protagonista.setVely(-1.0f);
+		protagonista.setVely(-2.0f);
 		protagonista.setDir('s');
 		break;
 	case GLUT_KEY_UP:
-		protagonista.setVely(1.0f);
+		protagonista.setVely(2.0f);
 		protagonista.setDir('w');
 		break;
 	}
@@ -191,17 +192,25 @@ void Mundo::dibObstaculos()
 	else cout << "Unable to open file";
 }
 
-void Mundo::CambioCamara()
+void Mundo::CambioCamara()//cambio HUD
 	{
 	Vector2D prota = protagonista.GetPos();
-	if (prota.x > (posicion_ojo.x + 10.25))
+	if (prota.x > (posicion_ojo.x + 10.25)) {
 		posicion_ojo.x += 20.0f;
-	if (prota.x < (posicion_ojo.x - 10.25))
+		hud.setPos(hud.getPos().x + 20.0f, hud.getPos().y);
+	}
+	if (prota.x < (posicion_ojo.x - 10.25)) {
 		posicion_ojo.x -= 20.0f;
-	if (prota.y > (posicion_ojo.y+ 7.5))
-		posicion_ojo.y += 15.0f;
-	if (prota.y < (posicion_ojo.y - 7.5))
-		posicion_ojo.y -= 15.0f;
+		hud.setPos(hud.getPos().x - 20.0f, hud.getPos().y);
+	}	
+		if (prota.y > (posicion_ojo.y + 7.5)) {
+			posicion_ojo.y += 15.0f;
+			hud.setPos(hud.getPos().x, hud.getPos().y + 15.0f);
+	}
+		if (prota.y < (posicion_ojo.y - 7.5)) {
+			posicion_ojo.y -= 15.0f;
+			hud.setPos(hud.getPos().x, hud.getPos().y - 15.0f);
+	}
 	}
 
 

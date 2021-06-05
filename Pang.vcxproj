@@ -23,6 +23,7 @@
     <ClCompile Include="Disparo.cpp" />
     <ClCompile Include="Enemigo.cpp" />
     <ClCompile Include="EscenarioTiles.cpp" />
+    <ClCompile Include="HUD.cpp" />
     <ClCompile Include="Interaccion.cpp" />
     <ClCompile Include="ListaDisparos.cpp" />
     <ClCompile Include="ListaEnemigos.cpp" />
@@ -43,6 +44,7 @@
     <ClInclude Include="Disparo.h" />
     <ClInclude Include="Enemigo.h" />
     <ClInclude Include="EscenarioTiles.h" />
+    <ClInclude Include="HUD.h" />
     <ClInclude Include="Interaccion.h" />
     <ClInclude Include="ListaDisparos.h" />
     <ClInclude Include="ListaEnemigos.h" />
