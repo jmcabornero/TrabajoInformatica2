@@ -29,3 +29,5 @@ void Coordinador::Tecla(unsigned char key)
 {
 
 };
+
+//vicen cabron
