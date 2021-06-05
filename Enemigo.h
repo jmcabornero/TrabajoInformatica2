@@ -14,9 +14,9 @@ private:
 public:
 	Enemigo(float x, float y);
 	virtual ~Enemigo();
-	SpriteSequence sprite{ "imagenes/Player_reposo.png", 5 };
-	SpriteSequence spriteR{ "imagenes/Player_derecha.png", 5 };
-	SpriteSequence spriteL{ "imagenes/Player_izquierda.png", 5 };
+	SpriteSequence sprite{ "imagenes/Player_arriba.png", 3 };
+	SpriteSequence spriteR{ "imagenes/Player_derecha.png", 3 };
+	SpriteSequence spriteL{ "imagenes/Player_izquierda.png", 3 };
 	char getDir() { return direccion; }
 	void setDir(char d) { direccion = d; }
 	void Dibuja();

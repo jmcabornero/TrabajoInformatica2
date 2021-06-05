@@ -122,19 +122,19 @@ void Mundo::teclaEspecial(unsigned char key) //al pulsar la tecla
 	switch (key)
 	{
 	case GLUT_KEY_LEFT:
-		protagonista.setVelx(-1.0f);
+		protagonista.setVelx(-2.0f);
 		protagonista.setDir('a');
 		break;
 	case GLUT_KEY_RIGHT:
-		protagonista.setVelx(1.0f);
+		protagonista.setVelx(2.0f);
 		protagonista.setDir('d');
 		break;
 	case GLUT_KEY_DOWN:
-		protagonista.setVely(-1.0f);
+		protagonista.setVely(-2.0f);
 		protagonista.setDir('s');
 		break;
 	case GLUT_KEY_UP:
-		protagonista.setVely(1.0f);
+		protagonista.setVely(2.0f);
 		protagonista.setDir('w');
 		break;
 	}
