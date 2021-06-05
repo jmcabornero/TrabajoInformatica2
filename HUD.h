@@ -1,5 +1,8 @@
 #pragma once
 #include "Vector2D.h"
+#include <iostream>
+#include <fstream>
+using namespace std;
 class HUD
 {
 public:
@@ -19,7 +22,7 @@ public:
 	float getAncho() { return ancho; }
 	Vector2D getPos() { return pos; }
 	//dibujo y movimiento en la pantalla
-	void dibuja();
+	void dibuja(char* mensaje);
 	void mueve();
 
 };

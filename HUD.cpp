@@ -26,7 +26,7 @@ void displayText(float x, float y, float z, int r, int g, int b, const char* str
 	}
 }
 
-void HUD::dibuja() {
+void HUD::dibuja(char* mensaje) {
 	float marco = 0.2;
 	float h = getAlto();
 	float a = getAncho();
@@ -45,7 +45,7 @@ void HUD::dibuja() {
 	glVertex3d(p.x - a / 2, p.y - h / 2, capa2);
 	glVertex3d(p.x - a / 2, p.y + h / 2, capa2);
 	glEnd();
-	displayText(p.x - a/2 + marco, p.y + h/2 - 4*marco, capa3, 255, 255, 255, "hello world");
+	displayText(p.x - a/2 + marco, p.y + h/2 - 4*marco, capa3, 255, 255, 255, mensaje);
 }
 
 void HUD::mueve() {

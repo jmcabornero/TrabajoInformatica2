@@ -3,6 +3,7 @@
 #include <math.h>
 #include <iostream>
 #include <time.h>
+#define MAX_LENMENSAJE 1000
 Mundo::Mundo(float x)
 {
 	z_ojo = x;
@@ -24,7 +25,7 @@ void Mundo::dibuja()
 
 	disparos.dibuja();
 
-	hud.dibuja();
+	//hud.dibuja("hello");
 
 	DibujaMensajes();
 	
@@ -202,10 +203,24 @@ void Mundo::CambioCamara()//cambio HUD
 void Mundo::DibujaMensajes()
 {
 	Vector2D prota = protagonista.GetPos();
+	string mensaje="";
+	char* char_arr;
 	if (protagonista.MensajeBuda(8, 11, 129))
 	{
 		mensaje1.setPos(posicion_ojo.x, posicion_ojo.y-6);
-		mensaje1.dibuja();
+		string line;
+		ifstream myfile("textos/Texto1.txt");
+		if (myfile.is_open())
+		{
+			while (getline(myfile, line))
+			{
+				mensaje.append(line);
+			}
+			myfile.close();
+		}
+		else cout << "Unable to open file";
+		char_arr = &mensaje[0];
+		mensaje1.dibuja(char_arr);
 	}
 }
 
