@@ -1,1 +1,6 @@
 *.ipch
+*.obj
+*.suo
+*.db
+*.tlog
+*.log

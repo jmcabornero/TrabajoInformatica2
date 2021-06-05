@@ -63,7 +63,7 @@
     <ClCompile Include="stats.cpp">
       <Filter>Archivos de origen</Filter>
     </ClCompile>
-    <ClCompile Include="OpenGL.cpp">
+    <ClCompile Include="HUD.cpp">
       <Filter>Archivos de origen</Filter>
     </ClCompile>
   </ItemGroup>
@@ -116,7 +116,7 @@
     <ClInclude Include="stats.h">
       <Filter>Archivos de encabezado</Filter>
     </ClInclude>
-    <ClInclude Include="OpenGL.h">
+    <ClInclude Include="HUD.h">
       <Filter>Archivos de encabezado</Filter>
     </ClInclude>
   </ItemGroup>
