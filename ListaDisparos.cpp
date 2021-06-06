@@ -92,3 +92,29 @@ void ListaDisparos::Cooldawn()
 		cout <<"-"<<cooldawn<<"-";
 	}
 }
+
+void ListaDisparos::Disparar(Protagonista p)
+{
+	if (flag == 0)
+	{
+		Vector2D h_pos = p.GetPos();
+		Disparo* d = new Disparo();
+		d->setPos(h_pos.x, h_pos.y);
+
+		switch (p.getDir()) {
+		case 'd':
+			d->setVel(10, 0);
+			break;
+		case 'a':
+			d->setVel(-10, 0);
+			break;
+		case 'w':
+			d->setVel(0, 10);
+			break;
+		case 's':
+			d->setVel(0, -10);
+			break;
+		}
+		agregar(d);
+	};
+}

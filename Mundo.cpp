@@ -77,28 +77,8 @@ void Mundo::tecla(unsigned char key)
 	{
 	case ' ':
 	{
-		if (disparos.flag == 0)
-		{
-			Vector2D h_pos = protagonista.GetPos();
-			Disparo* d = new Disparo();
-			d->setPos(h_pos.x, h_pos.y);
-			
-			switch (protagonista.getDir()) {
-			case 'd':
-				d->setVel(10, 0);
-				break;
-			case 'a':
-				d->setVel(-10, 0);
-				break;
-			case 'w':
-				d->setVel(0, 10);
-				break;
-			case 's':
-				d->setVel(0, -10);
-				break;
-			}
-			disparos.agregar(d);
-		};		
+		disparos.Disparar(protagonista);
+		
 	}
 	break;
 	}

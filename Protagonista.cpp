@@ -1,7 +1,6 @@
 #include "Protagonista.h"
 #include "ETSIDI.h"
 
-
 Protagonista::Protagonista()
 {
 	setDir('d');

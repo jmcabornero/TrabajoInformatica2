@@ -5,6 +5,7 @@
 #include "Interaccion.h"
 #include "ListaEnemigos.h"
 #include "Obstaculos.h"
+#include "Protagonista.h"
 
 class ListaDisparos
 {
@@ -23,6 +24,9 @@ public:
 	void colision(Enemigo *e);
 	void colision(Obstaculos* o);
 	void Cooldawn();
+	void Disparar(Protagonista p);
+	void Disparar(Enemigo e);
+	
 	bool flag;
 private:
 	Disparo* Lista[MAX_DISPAROS];
@@ -30,4 +34,3 @@ private:
 	float cooldawn;
 	
 };
-
