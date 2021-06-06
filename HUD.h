@@ -1,5 +1,6 @@
 #pragma once
 #include "Vector2D.h"
+#include "Protagonista.h"
 #include <iostream>
 #include <fstream>
 using namespace std;
@@ -22,7 +23,8 @@ public:
 	float getAncho() { return ancho; }
 	Vector2D getPos() { return pos; }
 	//dibujo y movimiento en la pantalla
-	void dibuja(char* mensaje);
+	void dibujatexto(char* mensaje);
+	//void dibujaHUD(Protagonista p);
 	void mueve();
 
 };

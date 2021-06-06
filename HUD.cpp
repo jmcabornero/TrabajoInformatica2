@@ -32,7 +32,7 @@ void displayText(float x, float y, float z, int r, int g, int b, const char* str
 	}
 }
 
-void HUD::dibuja(char* mensaje) {
+void HUD::dibujatexto(char* mensaje) {
 	float marco = 0.2;
 	float h = getAlto();
 	float a = getAncho();
@@ -53,6 +53,27 @@ void HUD::dibuja(char* mensaje) {
 	glEnd();
 	displayText(p.x - a/2 + marco, p.y + h/2 - 4*marco, capa3, 255, 255, 255, mensaje);
 }
+
+/*void HUD::dibujaHUD(mundo)
+{
+	Vector2D p = getPos();
+	glBegin(GL_POLYGON);
+	glColor3f(255, 255, 255);
+	Vector2D posprota = p.GetPos();
+	glVertex3d(marco + p.x + a / 2, marco + p.y + h / 2, capa1);
+	glVertex3d(marco + p.x + a / 2, -1 * marco + p.y - h / 2, capa1);
+	glVertex3d(-1 * marco + p.x - a / 2, -1 * marco + p.y - h / 2, capa1);
+	glVertex3d(-1 * marco + p.x - a / 2, marco + p.y + h / 2, capa1);
+	glEnd();
+	glBegin(GL_POLYGON);
+	glColor3f(0, 0, 0);
+	glVertex3d(p.x + a / 2, p.y + h / 2, capa2);
+	glVertex3d(p.x + a / 2, p.y - h / 2, capa2);
+	glVertex3d(p.x - a / 2, p.y - h / 2, capa2);
+	glVertex3d(p.x - a / 2, p.y + h / 2, capa2);
+	glEnd();
+}*/
+
 
 void HUD::mueve() {
 
