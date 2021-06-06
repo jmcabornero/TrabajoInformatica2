@@ -188,9 +188,153 @@ void Mundo::DibujaMensajes()
 	char_arr[0] = '\0';
 	if (protagonista.MensajeBuda(8, 11, 129))
 	{
-		mensaje1.setPos(posicion_ojo.x-5, posicion_ojo.y-6);
+		mensaje1.setPos(posicion_ojo.x, posicion_ojo.y-4);
 		string line;
 		ifstream myfile("textos/TextoTutorial1.txt");
+		if (myfile.is_open())
+		{
+			while (getline(myfile, line))
+			{
+				char_arr2 = &line[0];
+				strcat(char_arr, char_arr2);
+				strcat(char_arr, "\n");
+			}
+			myfile.close();
+		}
+		else cout << "Unable to open file";
+		mensaje1.dibuja(char_arr);
+	}
+	if (protagonista.MensajeBuda(2, 5, 114))
+	{
+		mensaje1.setPos(posicion_ojo.x, posicion_ojo.y - 4);
+		string line;
+		ifstream myfile("textos/TextoTutorial2.txt");
+		if (myfile.is_open())
+		{
+			while (getline(myfile, line))
+			{
+				char_arr2 = &line[0];
+				strcat(char_arr, char_arr2);
+				strcat(char_arr, "\n");
+			}
+			myfile.close();
+		}
+		else cout << "Unable to open file";
+		mensaje1.dibuja(char_arr);
+	}
+	if (protagonista.MensajeBuda(53, 56, 116))
+	{
+		mensaje1.setPos(posicion_ojo.x, posicion_ojo.y - 4);
+		string line;
+		ifstream myfile("textos/TextoTutorial3.txt");
+		if (myfile.is_open())
+		{
+			while (getline(myfile, line))
+			{
+				char_arr2 = &line[0];
+				strcat(char_arr, char_arr2);
+				strcat(char_arr, "\n");
+			}
+			myfile.close();
+		}
+		else cout << "Unable to open file";
+		mensaje1.dibuja(char_arr);
+	}
+	if (protagonista.MensajeBuda(103, 106, 67))
+	{
+		mensaje1.setPos(posicion_ojo.x, posicion_ojo.y - 4);
+		string line;
+		ifstream myfile("textos/TextoTienda1.txt");
+		if (myfile.is_open())
+		{
+			while (getline(myfile, line))
+			{
+				char_arr2 = &line[0];
+				strcat(char_arr, char_arr2);
+				strcat(char_arr, "\n");
+			}
+			myfile.close();
+		}
+		else cout << "Unable to open file";
+		mensaje1.dibuja(char_arr);
+	}
+	if (protagonista.MensajeBuda(112, 115, 67))
+	{
+		mensaje1.setPos(posicion_ojo.x, posicion_ojo.y - 4);
+		string line;
+		ifstream myfile("textos/TextoTienda2.txt");
+		if (myfile.is_open())
+		{
+			while (getline(myfile, line))
+			{
+				char_arr2 = &line[0];
+				strcat(char_arr, char_arr2);
+				strcat(char_arr, "\n");
+			}
+			myfile.close();
+		}
+		else cout << "Unable to open file";
+		mensaje1.dibuja(char_arr);
+	}
+	if (protagonista.MensajeBuda(49, 52, 70))
+	{
+		mensaje1.setPos(posicion_ojo.x, posicion_ojo.y - 4);
+		string line;
+		ifstream myfile("textos/TextoDesierto.txt");
+		if (myfile.is_open())
+		{
+			while (getline(myfile, line))
+			{
+				char_arr2 = &line[0];
+				strcat(char_arr, char_arr2);
+				strcat(char_arr, "\n");
+			}
+			myfile.close();
+		}
+		else cout << "Unable to open file";
+		mensaje1.dibuja(char_arr);
+	}
+	if (protagonista.MensajeBuda(128, 131, 25))
+	{
+		mensaje1.setPos(posicion_ojo.x, posicion_ojo.y - 4);
+		string line;
+		ifstream myfile("textos/TextoNieve.txt");
+		if (myfile.is_open())
+		{
+			while (getline(myfile, line))
+			{
+				char_arr2 = &line[0];
+				strcat(char_arr, char_arr2);
+				strcat(char_arr, "\n");
+			}
+			myfile.close();
+		}
+		else cout << "Unable to open file";
+		mensaje1.dibuja(char_arr);
+	}
+	if (protagonista.MensajeBuda(168, 171, 94))
+	{
+		mensaje1.setPos(posicion_ojo.x, posicion_ojo.y - 4);
+		string line;
+		ifstream myfile("textos/TextoBudaFinal.txt");
+		if (myfile.is_open())
+		{
+			while (getline(myfile, line))
+			{
+				char_arr2 = &line[0];
+				strcat(char_arr, char_arr2);
+				strcat(char_arr, "\n");
+			}
+			myfile.close();
+		}
+		else cout << "Unable to open file";
+		mensaje1.dibuja(char_arr);
+	}
+	if (protagonista.MensajeBuda(168, 171, 100))
+	{
+		mensaje1.setPos(posicion_ojo.x, posicion_ojo.y - 4);
+		string line;
+		ifstream myfile("textos/TextoBossFinal.txt");
 		if (myfile.is_open())
 		{
 			while (getline(myfile, line))

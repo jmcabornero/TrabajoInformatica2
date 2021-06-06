@@ -7,8 +7,8 @@
 #define capa3 0.05f
 
 HUD::HUD() {
-	setAlto(2);
-	setAncho(5);
+	setAlto(4);
+	setAncho(18.5);
 	setPos(3.5, 13.5);
 }
 
@@ -24,11 +24,11 @@ void displayText(float x, float y, float z, int r, int g, int b, const char* str
 	for (int i = 0; i < j; i++) {
 		if (string[i] == '\n')
 		{
-			y=y-0.5;
+			y=y-0.6;
 			glRasterPos3f(x, y, z);
 			continue;
 		}
-		glutBitmapCharacter(GLUT_BITMAP_8_BY_13, string[i]);
+		glutBitmapCharacter(GLUT_BITMAP_HELVETICA_18, string[i]);
 	}
 }
 

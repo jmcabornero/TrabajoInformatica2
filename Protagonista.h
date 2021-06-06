@@ -11,6 +11,7 @@ class Protagonista:public ObjetosMovimiento, public stats
 {
 private:
 	char direccion;
+	float velocidadbruta;
 public:
 	Protagonista();
 	SpriteSequence spriteR{ "imagenes/Player_derecha.png", 3 };
