@@ -11,7 +11,7 @@ class Protagonista:public ObjetosMovimiento, public stats
 {
 private:
 	char direccion;
-	float velocidadbruta;
+	float velabs;
 public:
 	Protagonista();
 	SpriteSequence spriteR{ "imagenes/Player_derecha.png", 3 };
@@ -26,4 +26,6 @@ public:
 	void FuncionTeletransporte();
 	bool MensajeBuda(float inicio_x, float final_x, float inicio_y);
 	void Teletransporte(float inicio_x, float inicio_y, float final_x, float final_y);
+	float GetVelAbs();
+	void SetVelAbs(float vel);
 };

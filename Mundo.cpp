@@ -22,6 +22,7 @@ void Mundo::dibuja()
 	enemigos.dibuja();
 
 	listaobstaculos.Dibuja();
+	listapinchos.Dibuja();
 
 	disparos.dibuja();
 
@@ -34,7 +35,8 @@ void Mundo::dibuja()
 void Mundo::mueve()
 {
 	protagonista.Mueve(0.15f);
-	listaobstaculos.Colision(&protagonista);
+	listaobstaculos.Colision(&protagonista,1);
+	listapinchos.Colision(&protagonista, 2);
 	disparos.mueve(0.025f);
 	CambioCamara();
 	for (int i = 0; i < enemigos.getNumero(); i++)
@@ -52,7 +54,8 @@ void Mundo::mueve()
 
 void Mundo::inicializa()
 {
-	dibObstaculos();
+	dibObstaculos(1);
+	dibObstaculos(2);
 	posicion_ojo.x = 10.25f;    
 	posicion_ojo.y = 7.5f;    
 	z_ojo = 20.5f; //20.5f   
@@ -86,22 +89,23 @@ void Mundo::tecla(unsigned char key)
 
 void Mundo::teclaEspecial(unsigned char key) //al pulsar la tecla
 {
+	float vel = protagonista.GetVelAbs();
 	switch (key)
 	{
 	case GLUT_KEY_LEFT:
-		protagonista.setVelx(-2.0f);
+		protagonista.setVelx(-vel);
 		protagonista.setDir('a');
 		break;
 	case GLUT_KEY_RIGHT:
-		protagonista.setVelx(2.0f);
+		protagonista.setVelx(vel);
 		protagonista.setDir('d');
 		break;
 	case GLUT_KEY_DOWN:
-		protagonista.setVely(-2.0f);
+		protagonista.setVely(-vel);
 		protagonista.setDir('s');
 		break;
 	case GLUT_KEY_UP:
-		protagonista.setVely(2.0f);
+		protagonista.setVely(vel);
 		protagonista.setDir('w');
 		break;
 	}
@@ -127,11 +131,14 @@ void Mundo::teclaEspecialUp(unsigned char key)  //al dejar de pulsar la tecla
 	}
 }
 
-void Mundo::dibObstaculos()
+void Mundo::dibObstaculos(int n)
 {
 	string line;
 	ifstream myfile; //myfile es el fichero (puntero)
-	myfile.open("imagenes/Mapa/estrellas_OBSTACULOS.csv");
+	if (n==1)
+		myfile.open("imagenes/Mapa/estrellas_OBSTACULOS.csv");
+	if (n==2)
+		myfile.open("imagenes/Mapa/estrellas_PINCHOS.csv");
 	if (myfile.is_open())
 	{
 		float i = 0, j, num;
@@ -148,6 +155,10 @@ void Mundo::dibObstaculos()
 				if (num == 478)
 				{
 					listaobstaculos.Agregar(new Obstaculos(-i+134, j));
+				}
+				if (num == 284)
+				{
+					listapinchos.Agregar(new Obstaculos(-i + 134, j));
 				}
 				line.erase(0, pos + delimiter.length());
 				j++;

@@ -16,7 +16,7 @@ public:
 	virtual ~ListaObstaculos();
 	bool Agregar(Obstaculos* o);
 	void Dibuja();
-	void Colision(Protagonista* p);
+	void Colision(Protagonista* p,int n);
 	Obstaculos* operator[](int i);
 	int getNumero() { return numero; };
 

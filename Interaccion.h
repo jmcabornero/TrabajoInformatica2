@@ -17,6 +17,7 @@ class Interaccion
 
 public:
 	static bool colision(Protagonista p, Obstaculos &o);
+	static bool colisionpinchos(Protagonista p, Obstaculos& o);
 	static bool colision(Disparo &d, Enemigo &e);
 	static bool colision(Disparo& d, Obstaculos &o);
 };

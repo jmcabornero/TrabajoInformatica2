@@ -15,7 +15,7 @@ private:
 	Vector2D posicion_ojo, velocidad_ojo;
 	Protagonista protagonista;
 	EscenarioTiles escenariotiles;
-	ListaObstaculos listaobstaculos;
+	ListaObstaculos listaobstaculos, listapinchos;
 	Caja caja;
 	ListaDisparos disparos;
 	ListaEnemigos enemigos;
@@ -23,7 +23,7 @@ private:
 
 	public:
 		Mundo(float x=0);
-		void dibObstaculos();
+		void dibObstaculos(int n); //si n=1, se refiere a obstaculos. Si n=2, se refiere a pinchos
 		void inicializa();
 		//void rotarOjo();
 		void mueve();

@@ -36,38 +36,48 @@ void ListaObstaculos::Dibuja()
 		lista[i]->Dibuja();
 }
 
-void ListaObstaculos::Colision(Protagonista* p)
+void ListaObstaculos::Colision(Protagonista* p, int n) //n=1 si obstaculo	n=2 si pinchos
 {
 	Interaccion inter;
+	bool aux=false;
 	Vector2D pos = (*p).GetPos();
 	Vector2D vel = (*p).GetVel();
+	float velabs=0;
+	if (n==1)
+		velabs = (p->GetVelAbs())/6;
+	if (n == 2)
+		velabs = 1;
 	for (int i = 0;i < numero;i++)
 	{
-		if (inter.colision((*p), *(lista[i])))
+		if (n == 1)
+			aux = inter.colision((*p), *(lista[i]));
+		if (n == 2)
+			aux = inter.colisionpinchos((*p), *(lista[i]));
+		if (aux)
 		{
 			if (vel.x>0)
-				(*p).setPos(pos.x-0.15, pos.y);
+				(*p).setPos(pos.x-velabs, pos.y);
 			if (vel.x < 0)
-				(*p).setPos(pos.x + 0.15, pos.y);
+				(*p).setPos(pos.x + velabs, pos.y);
 			if (vel.y > 0)
-				(*p).setPos(pos.x, pos.y-0.15);
+				(*p).setPos(pos.x, pos.y- velabs);
 			if (vel.y < 0)
-				(*p).setPos(pos.x, pos.y + 0.15);
+				(*p).setPos(pos.x, pos.y + velabs);
 			if ((vel.x > 0) && (vel.y > 0))
 			{
-				(*p).setPos(pos.x-0.15, pos.y - 0.15);
+				(*p).setPos(pos.x- velabs, pos.y - velabs);
 			}
 			if ((vel.x > 0) && (vel.y < 0))
 			{
-				(*p).setPos(pos.x-0.15, pos.y + 0.15);
+				(*p).setPos(pos.x- velabs, pos.y + velabs);
 			}	
 			if ((vel.x < 0) && (vel.y > 0))
 			{
-				(*p).setPos(pos.x + 0.15, pos.y - 0.15);
+				(*p).setPos(pos.x + velabs, pos.y - velabs);
 			}
 			if ((vel.x < 0) && (vel.y < 0))
 			{
-				(*p).setPos(pos.x + 0.15, pos.y + 0.15);
+				(*p).setPos(pos.x + velabs, pos.y + velabs);
 			}
 		}
 	}
