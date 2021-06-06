@@ -13,7 +13,7 @@ Protagonista::Protagonista()
 	spriteDown.setCenter(1, 0);
 	spriteDown.setSize(1, 1);
 
-	posicion.x = 7;posicion.y = 122;velocidad = 0;velocidad = 0;
+	posicion.x = 7;posicion.y = 122;velocidad.x = 0;velocidad.y = 0, velocidadbruta=1;
 }
 
 void Protagonista::Dibuja()
@@ -99,3 +99,5 @@ bool Protagonista::MensajeBuda(float inicio_x, float final_x, float inicio_y)
 	}
 	else return false;
 }
+
+
