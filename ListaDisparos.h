@@ -23,14 +23,15 @@ public:
 
 	void colision(Enemigo *e);
 	void colision(Obstaculos* o);
-	void Cooldawn();
+	void Cooldawn(Protagonista &p);
 	void Disparar(Protagonista p);
 	void Disparar(Enemigo e);
 	
-	bool flag;
+	
 private:
 	Disparo* Lista[MAX_DISPAROS];
 	int num;
-	float cooldawn;
+	//float cooldawn;
+	bool flag;
 	
 };

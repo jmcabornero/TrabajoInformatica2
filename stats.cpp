@@ -9,6 +9,7 @@ stats::stats()
 	defensa = 1;
 	ataque = 1;
 	vel = 0;
+	cd = 2.0;
 }
 
 void stats::ModVida(float ataque, int i)
@@ -27,3 +28,7 @@ void stats::ModVida(float ataque, int i)
 	cout << vida;
 }
 
+void stats::modCooldawn(float cd1)
+{
+	cd= cd1;
+}

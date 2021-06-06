@@ -48,7 +48,7 @@ void Mundo::mueve()
 	{
 		disparos.colision(listaobstaculos[i]);
 	}
-	disparos.Cooldawn();
+	disparos.Cooldawn(protagonista);
 	protagonista.FuncionTeletransporte();
 }
 
@@ -81,7 +81,6 @@ void Mundo::tecla(unsigned char key)
 	case ' ':
 	{
 		disparos.Disparar(protagonista);
-		
 	}
 	break;
 	}

@@ -67,3 +67,4 @@ void ListaEnemigos::eliminar(int index)
 	for (int i = index; i < numero; i++)
 		lista[i] = lista[i + 1];
 }
+

@@ -7,7 +7,7 @@ ListaDisparos::ListaDisparos() {
 	for (int i = 0; i < MAX_DISPAROS; i++)Lista[i] = 0;
 	num = 0;
 	flag = 0;
-	cooldawn = 2.0;
+	//cooldawn = 1.0;
 }
 
 ListaDisparos::~ListaDisparos() {}
@@ -78,18 +78,18 @@ void ListaDisparos::colision(Obstaculos* o)
 		}
 	}
 }
-void ListaDisparos::Cooldawn() 
+void ListaDisparos::Cooldawn(Protagonista &p)
 {
-	if (flag==1)
+	if (flag == 1)
 	{
 		Sleep(0.025);
-		cooldawn = cooldawn - 0.050;
-		if (cooldawn <= 0)
+		p.modCooldawn(p.getcooldawn() - 0.050);
+		if (p.getcooldawn() <= 0)
 		{
 			flag = 0;
-			cooldawn = 1.0;
+			p.modCooldawn(1.0);
 		}
-		cout <<"-"<<cooldawn<<"-";
+		cout << "-" << p.getcooldawn() << "-";
 	}
 }
 
@@ -117,4 +117,6 @@ void ListaDisparos::Disparar(Protagonista p)
 		}
 		agregar(d);
 	};
+
 }
+
