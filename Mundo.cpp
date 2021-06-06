@@ -207,9 +207,9 @@ void Mundo::DibujaMensajes()
 	char* char_arr;
 	if (protagonista.MensajeBuda(8, 11, 129))
 	{
-		mensaje1.setPos(posicion_ojo.x, posicion_ojo.y-6);
+		mensaje1.setPos(posicion_ojo.x-5, posicion_ojo.y-6);
 		string line;
-		ifstream myfile("textos/Texto1.txt");
+		ifstream myfile("textos/TextoTutorial1.txt");
 		if (myfile.is_open())
 		{
 			while (getline(myfile, line))
