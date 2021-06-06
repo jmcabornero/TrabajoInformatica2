@@ -22,7 +22,13 @@ void displayText(float x, float y, float z, int r, int g, int b, const char* str
 	glColor3f(r, g, b);
 	glRasterPos3f(x, y, z);
 	for (int i = 0; i < j; i++) {
-		glutBitmapCharacter(GLUT_BITMAP_HELVETICA_18, string[i]);
+		if (string[i] == '\n')
+		{
+			y=y-0.5;
+			glRasterPos3f(x, y, z);
+			continue;
+		}
+		glutBitmapCharacter(GLUT_BITMAP_8_BY_13, string[i]);
 	}
 }
 

@@ -204,7 +204,9 @@ void Mundo::DibujaMensajes()
 {
 	Vector2D prota = protagonista.GetPos();
 	string mensaje="";
-	char* char_arr;
+	char char_arr[MAX_LENMENSAJE];
+	char* char_arr2;
+	char_arr[0] = '\0';
 	if (protagonista.MensajeBuda(8, 11, 129))
 	{
 		mensaje1.setPos(posicion_ojo.x-5, posicion_ojo.y-6);
@@ -214,12 +216,13 @@ void Mundo::DibujaMensajes()
 		{
 			while (getline(myfile, line))
 			{
-				mensaje.append(line);
+				char_arr2 = &line[0];
+				strcat(char_arr, char_arr2);
+				strcat(char_arr, "\n");
 			}
 			myfile.close();
 		}
 		else cout << "Unable to open file";
-		char_arr = &mensaje[0];
 		mensaje1.dibuja(char_arr);
 	}
 }
