@@ -11,6 +11,7 @@ class Enemigo :public ObjetosMovimiento, public stats
 {
 private:
 	char direccion;
+	int tipo;
 public:
 	Enemigo(float x, float y);
 	virtual ~Enemigo();
