@@ -10,12 +10,13 @@ public:
 	void Dibuja();
 	void Tecla(unsigned char key);
 	void Mueve();
+	void TeclaEspecial(int key);
+	void TeclaEspecialUp(int key);
 
 protected:
-	Mundo mundo;
-
 	enum Estado { INICIO, JUEGO, GAMEOVER, EXITO, PAUSA, DIFICULTAD, HISTORIA };
 	Estado estado;
+	Mundo mundo;
 };
 
 //vicen perro
