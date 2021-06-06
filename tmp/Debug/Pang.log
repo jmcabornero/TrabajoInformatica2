@@ -1,7 +1,73 @@
 ﻿C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\MSBuild\Microsoft\VC\v160\Microsoft.CppBuild.targets(519,5): warning MSB8028: El directorio intermedio (tmp\Debug\) contiene archivos compartidos de otro proyecto (Pang.vcxproj). Esto puede dar lugar a un comportamiento incorrecto de limpieza y recompilación.
+  Caja.cpp
+  Coordinador.cpp
+C:\Users\Usuario\Desktop\UNIVERSIDAD\3º\2º cuatrimestre\Informatica\TRABAJO\GitHub\TrabajoInformatica2\Coordinador.cpp(31,47): warning C4305: 'argumento': truncamiento de 'double' a 'GLfloat'
+C:\Users\Usuario\Desktop\UNIVERSIDAD\3º\2º cuatrimestre\Informatica\TRABAJO\GitHub\TrabajoInformatica2\Coordinador.cpp(32,47): warning C4305: 'argumento': truncamiento de 'double' a 'GLfloat'
+C:\Users\Usuario\Desktop\UNIVERSIDAD\3º\2º cuatrimestre\Informatica\TRABAJO\GitHub\TrabajoInformatica2\Coordinador.cpp(33,46): warning C4305: 'argumento': truncamiento de 'double' a 'GLfloat'
+C:\Users\Usuario\Desktop\UNIVERSIDAD\3º\2º cuatrimestre\Informatica\TRABAJO\GitHub\TrabajoInformatica2\Coordinador.cpp(34,46): warning C4305: 'argumento': truncamiento de 'double' a 'GLfloat'
+C:\Users\Usuario\Desktop\UNIVERSIDAD\3º\2º cuatrimestre\Informatica\TRABAJO\GitHub\TrabajoInformatica2\Coordinador.cpp(56,47): warning C4305: 'argumento': truncamiento de 'double' a 'GLfloat'
+C:\Users\Usuario\Desktop\UNIVERSIDAD\3º\2º cuatrimestre\Informatica\TRABAJO\GitHub\TrabajoInformatica2\Coordinador.cpp(57,47): warning C4305: 'argumento': truncamiento de 'double' a 'GLfloat'
+C:\Users\Usuario\Desktop\UNIVERSIDAD\3º\2º cuatrimestre\Informatica\TRABAJO\GitHub\TrabajoInformatica2\Coordinador.cpp(58,46): warning C4305: 'argumento': truncamiento de 'double' a 'GLfloat'
+C:\Users\Usuario\Desktop\UNIVERSIDAD\3º\2º cuatrimestre\Informatica\TRABAJO\GitHub\TrabajoInformatica2\Coordinador.cpp(59,46): warning C4305: 'argumento': truncamiento de 'double' a 'GLfloat'
+  Disparo.cpp
+C:\Users\Usuario\Desktop\UNIVERSIDAD\3º\2º cuatrimestre\Informatica\TRABAJO\GitHub\TrabajoInformatica2\Disparo.cpp(24,42): warning C4244: 'argumento': conversión de 'double' a 'GLfloat'; posible pérdida de datos
+C:\Users\Usuario\Desktop\UNIVERSIDAD\3º\2º cuatrimestre\Informatica\TRABAJO\GitHub\TrabajoInformatica2\Disparo.cpp(24,25): warning C4244: 'argumento': conversión de 'double' a 'GLfloat'; posible pérdida de datos
+  Enemigo.cpp
+  EscenarioTiles.cpp
+  HUD.cpp
+C:\Users\Usuario\Desktop\UNIVERSIDAD\3º\2º cuatrimestre\Informatica\TRABAJO\GitHub\TrabajoInformatica2\HUD.cpp(20,24): warning C4267: 'inicializando': conversión de 'size_t' a 'int'; posible pérdida de datos
+C:\Users\Usuario\Desktop\UNIVERSIDAD\3º\2º cuatrimestre\Informatica\TRABAJO\GitHub\TrabajoInformatica2\HUD.cpp(22,18): warning C4244: 'argumento': conversión de 'int' a 'GLfloat'; posible pérdida de datos
+C:\Users\Usuario\Desktop\UNIVERSIDAD\3º\2º cuatrimestre\Informatica\TRABAJO\GitHub\TrabajoInformatica2\HUD.cpp(22,15): warning C4244: 'argumento': conversión de 'int' a 'GLfloat'; posible pérdida de datos
+C:\Users\Usuario\Desktop\UNIVERSIDAD\3º\2º cuatrimestre\Informatica\TRABAJO\GitHub\TrabajoInformatica2\HUD.cpp(22,12): warning C4244: 'argumento': conversión de 'int' a 'GLfloat'; posible pérdida de datos
+C:\Users\Usuario\Desktop\UNIVERSIDAD\3º\2º cuatrimestre\Informatica\TRABAJO\GitHub\TrabajoInformatica2\HUD.cpp(27,7): warning C4244: '=': conversión de 'double' a 'float'; posible pérdida de datos
+C:\Users\Usuario\Desktop\UNIVERSIDAD\3º\2º cuatrimestre\Informatica\TRABAJO\GitHub\TrabajoInformatica2\HUD.cpp(36,19): warning C4305: 'inicializando': truncamiento de 'double' a 'float'
+  Interaccion.cpp
+  ListaDisparos.cpp
+C:\Users\Usuario\Desktop\UNIVERSIDAD\3º\2º cuatrimestre\Informatica\TRABAJO\GitHub\TrabajoInformatica2\ListaDisparos.cpp(85,9): warning C4244: 'argumento': conversión de 'double' a 'DWORD'; posible pérdida de datos
+C:\Users\Usuario\Desktop\UNIVERSIDAD\3º\2º cuatrimestre\Informatica\TRABAJO\GitHub\TrabajoInformatica2\ListaDisparos.cpp(86,33): warning C4244: 'argumento': conversión de 'double' a 'float'; posible pérdida de datos
+  ListaEnemigos.cpp
+  ListaObstaculos.cpp
   Mundo.cpp
-C:\Users\jesus\Documents\GitHub\TrabajoInformatica2\Mundo.cpp(63,31): warning C4244: 'argumento': conversión de 'int' a 'float'; posible pérdida de datos
-C:\Users\jesus\Documents\GitHub\TrabajoInformatica2\Mundo.cpp(166,15): warning C4244: '=': conversión de 'int' a 'float'; posible pérdida de datos
-C:\Users\jesus\Documents\GitHub\TrabajoInformatica2\Mundo.cpp(170,53): warning C4244: 'argumento': conversión de 'float' a 'int'; posible pérdida de datos
-C:\Users\jesus\Documents\GitHub\TrabajoInformatica2\Mundo.cpp(170,47): warning C4244: 'argumento': conversión de 'float' a 'int'; posible pérdida de datos
-  Pang.vcxproj -> C:\Users\jesus\Documents\GitHub\TrabajoInformatica2\bin\Juego.exe
+C:\Users\Usuario\Desktop\UNIVERSIDAD\3º\2º cuatrimestre\Informatica\TRABAJO\GitHub\TrabajoInformatica2\Mundo.cpp(66,31): warning C4244: 'argumento': conversión de 'int' a 'float'; posible pérdida de datos
+C:\Users\Usuario\Desktop\UNIVERSIDAD\3º\2º cuatrimestre\Informatica\TRABAJO\GitHub\TrabajoInformatica2\Mundo.cpp(152,15): warning C4244: '=': conversión de 'int' a 'float'; posible pérdida de datos
+C:\Users\Usuario\Desktop\UNIVERSIDAD\3º\2º cuatrimestre\Informatica\TRABAJO\GitHub\TrabajoInformatica2\Mundo.cpp(156,53): warning C4244: 'argumento': conversión de 'float' a 'int'; posible pérdida de datos
+C:\Users\Usuario\Desktop\UNIVERSIDAD\3º\2º cuatrimestre\Informatica\TRABAJO\GitHub\TrabajoInformatica2\Mundo.cpp(156,47): warning C4244: 'argumento': conversión de 'float' a 'int'; posible pérdida de datos
+C:\Users\Usuario\Desktop\UNIVERSIDAD\3º\2º cuatrimestre\Informatica\TRABAJO\GitHub\TrabajoInformatica2\Mundo.cpp(160,52): warning C4244: 'argumento': conversión de 'float' a 'int'; posible pérdida de datos
+C:\Users\Usuario\Desktop\UNIVERSIDAD\3º\2º cuatrimestre\Informatica\TRABAJO\GitHub\TrabajoInformatica2\Mundo.cpp(160,45): warning C4244: 'argumento': conversión de 'float' a 'int'; posible pérdida de datos
+C:\Users\Usuario\Desktop\UNIVERSIDAD\3º\2º cuatrimestre\Informatica\TRABAJO\GitHub\TrabajoInformatica2\Mundo.cpp(210,5): warning C4996: 'strcat': This function or variable may be unsafe. Consider using strcat_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+C:\Users\Usuario\Desktop\UNIVERSIDAD\3º\2º cuatrimestre\Informatica\TRABAJO\GitHub\TrabajoInformatica2\Mundo.cpp(211,5): warning C4996: 'strcat': This function or variable may be unsafe. Consider using strcat_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+C:\Users\Usuario\Desktop\UNIVERSIDAD\3º\2º cuatrimestre\Informatica\TRABAJO\GitHub\TrabajoInformatica2\Mundo.cpp(228,5): warning C4996: 'strcat': This function or variable may be unsafe. Consider using strcat_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+C:\Users\Usuario\Desktop\UNIVERSIDAD\3º\2º cuatrimestre\Informatica\TRABAJO\GitHub\TrabajoInformatica2\Mundo.cpp(229,5): warning C4996: 'strcat': This function or variable may be unsafe. Consider using strcat_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+C:\Users\Usuario\Desktop\UNIVERSIDAD\3º\2º cuatrimestre\Informatica\TRABAJO\GitHub\TrabajoInformatica2\Mundo.cpp(246,5): warning C4996: 'strcat': This function or variable may be unsafe. Consider using strcat_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+C:\Users\Usuario\Desktop\UNIVERSIDAD\3º\2º cuatrimestre\Informatica\TRABAJO\GitHub\TrabajoInformatica2\Mundo.cpp(247,5): warning C4996: 'strcat': This function or variable may be unsafe. Consider using strcat_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+C:\Users\Usuario\Desktop\UNIVERSIDAD\3º\2º cuatrimestre\Informatica\TRABAJO\GitHub\TrabajoInformatica2\Mundo.cpp(264,5): warning C4996: 'strcat': This function or variable may be unsafe. Consider using strcat_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+C:\Users\Usuario\Desktop\UNIVERSIDAD\3º\2º cuatrimestre\Informatica\TRABAJO\GitHub\TrabajoInformatica2\Mundo.cpp(265,5): warning C4996: 'strcat': This function or variable may be unsafe. Consider using strcat_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+C:\Users\Usuario\Desktop\UNIVERSIDAD\3º\2º cuatrimestre\Informatica\TRABAJO\GitHub\TrabajoInformatica2\Mundo.cpp(282,5): warning C4996: 'strcat': This function or variable may be unsafe. Consider using strcat_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+C:\Users\Usuario\Desktop\UNIVERSIDAD\3º\2º cuatrimestre\Informatica\TRABAJO\GitHub\TrabajoInformatica2\Mundo.cpp(283,5): warning C4996: 'strcat': This function or variable may be unsafe. Consider using strcat_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+C:\Users\Usuario\Desktop\UNIVERSIDAD\3º\2º cuatrimestre\Informatica\TRABAJO\GitHub\TrabajoInformatica2\Mundo.cpp(300,5): warning C4996: 'strcat': This function or variable may be unsafe. Consider using strcat_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+C:\Users\Usuario\Desktop\UNIVERSIDAD\3º\2º cuatrimestre\Informatica\TRABAJO\GitHub\TrabajoInformatica2\Mundo.cpp(301,5): warning C4996: 'strcat': This function or variable may be unsafe. Consider using strcat_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+C:\Users\Usuario\Desktop\UNIVERSIDAD\3º\2º cuatrimestre\Informatica\TRABAJO\GitHub\TrabajoInformatica2\Mundo.cpp(318,5): warning C4996: 'strcat': This function or variable may be unsafe. Consider using strcat_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+C:\Users\Usuario\Desktop\UNIVERSIDAD\3º\2º cuatrimestre\Informatica\TRABAJO\GitHub\TrabajoInformatica2\Mundo.cpp(319,5): warning C4996: 'strcat': This function or variable may be unsafe. Consider using strcat_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+C:\Users\Usuario\Desktop\UNIVERSIDAD\3º\2º cuatrimestre\Informatica\TRABAJO\GitHub\TrabajoInformatica2\Mundo.cpp(336,5): warning C4996: 'strcat': This function or variable may be unsafe. Consider using strcat_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+C:\Users\Usuario\Desktop\UNIVERSIDAD\3º\2º cuatrimestre\Informatica\TRABAJO\GitHub\TrabajoInformatica2\Mundo.cpp(337,5): warning C4996: 'strcat': This function or variable may be unsafe. Consider using strcat_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+C:\Users\Usuario\Desktop\UNIVERSIDAD\3º\2º cuatrimestre\Informatica\TRABAJO\GitHub\TrabajoInformatica2\Mundo.cpp(354,5): warning C4996: 'strcat': This function or variable may be unsafe. Consider using strcat_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+C:\Users\Usuario\Desktop\UNIVERSIDAD\3º\2º cuatrimestre\Informatica\TRABAJO\GitHub\TrabajoInformatica2\Mundo.cpp(355,5): warning C4996: 'strcat': This function or variable may be unsafe. Consider using strcat_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+  ObjetosMovimiento.cpp
+  Obstaculos.cpp
+C:\Users\Usuario\Desktop\UNIVERSIDAD\3º\2º cuatrimestre\Informatica\TRABAJO\GitHub\TrabajoInformatica2\Obstaculos.cpp(5,6): warning C4244: '=': conversión de 'int' a 'float'; posible pérdida de datos
+C:\Users\Usuario\Desktop\UNIVERSIDAD\3º\2º cuatrimestre\Informatica\TRABAJO\GitHub\TrabajoInformatica2\Obstaculos.cpp(5,12): warning C4244: '=': conversión de 'int' a 'float'; posible pérdida de datos
+  Pang.cpp
+  Protagonista.cpp
+C:\Users\Usuario\Desktop\UNIVERSIDAD\3º\2º cuatrimestre\Informatica\TRABAJO\GitHub\TrabajoInformatica2\Protagonista.cpp(22,43): warning C4305: 'argumento': truncamiento de 'double' a 'GLfloat'
+C:\Users\Usuario\Desktop\UNIVERSIDAD\3º\2º cuatrimestre\Informatica\TRABAJO\GitHub\TrabajoInformatica2\Protagonista.cpp(81,47): warning C4244: 'argumento': conversión de 'int' a 'float'; posible pérdida de datos
+C:\Users\Usuario\Desktop\UNIVERSIDAD\3º\2º cuatrimestre\Informatica\TRABAJO\GitHub\TrabajoInformatica2\Protagonista.cpp(82,50): warning C4244: 'argumento': conversión de 'int' a 'float'; posible pérdida de datos
+C:\Users\Usuario\Desktop\UNIVERSIDAD\3º\2º cuatrimestre\Informatica\TRABAJO\GitHub\TrabajoInformatica2\Protagonista.cpp(83,50): warning C4244: 'argumento': conversión de 'int' a 'float'; posible pérdida de datos
+  stats.cpp
+C:\Users\Usuario\Desktop\UNIVERSIDAD\3º\2º cuatrimestre\Informatica\TRABAJO\GitHub\TrabajoInformatica2\stats.cpp(19,25): warning C4244: '=': conversión de 'double' a 'float'; posible pérdida de datos
+C:\Users\Usuario\Desktop\UNIVERSIDAD\3º\2º cuatrimestre\Informatica\TRABAJO\GitHub\TrabajoInformatica2\stats.cpp(21,26): warning C4244: '=': conversión de 'double' a 'float'; posible pérdida de datos
+C:\Users\Usuario\Desktop\UNIVERSIDAD\3º\2º cuatrimestre\Informatica\TRABAJO\GitHub\TrabajoInformatica2\stats.cpp(23,26): warning C4244: '=': conversión de 'double' a 'float'; posible pérdida de datos
+  Vector2D.cpp
+  vida.cpp
+C:\Users\Usuario\Desktop\UNIVERSIDAD\3º\2º cuatrimestre\Informatica\TRABAJO\GitHub\TrabajoInformatica2\vida.cpp(12,9): warning C4244: 'return': conversión de 'int' a 'float'; posible pérdida de datos
+  Generando código...
+  Pang.vcxproj -> C:\Users\Usuario\Desktop\UNIVERSIDAD\3º\2º cuatrimestre\Informatica\TRABAJO\GitHub\TrabajoInformatica2\bin\Juego.exe

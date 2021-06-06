@@ -213,7 +213,7 @@ void Mundo::DibujaMensajes()
 			myfile.close();
 		}
 		else cout << "Unable to open file";
-		mensaje1.dibuja(char_arr);
+		mensaje1.dibujatexto(char_arr);
 	}
 	if (protagonista.MensajeBuda(2, 5, 114))
 	{
@@ -231,7 +231,7 @@ void Mundo::DibujaMensajes()
 			myfile.close();
 		}
 		else cout << "Unable to open file";
-		mensaje1.dibuja(char_arr);
+		mensaje1.dibujatexto(char_arr);
 	}
 	if (protagonista.MensajeBuda(53, 56, 116))
 	{
@@ -249,7 +249,7 @@ void Mundo::DibujaMensajes()
 			myfile.close();
 		}
 		else cout << "Unable to open file";
-		mensaje1.dibuja(char_arr);
+		mensaje1.dibujatexto(char_arr);
 	}
 	if (protagonista.MensajeBuda(103, 106, 67))
 	{
@@ -267,7 +267,7 @@ void Mundo::DibujaMensajes()
 			myfile.close();
 		}
 		else cout << "Unable to open file";
-		mensaje1.dibuja(char_arr);
+		mensaje1.dibujatexto(char_arr);
 	}
 	if (protagonista.MensajeBuda(112, 115, 67))
 	{
@@ -285,7 +285,7 @@ void Mundo::DibujaMensajes()
 			myfile.close();
 		}
 		else cout << "Unable to open file";
-		mensaje1.dibuja(char_arr);
+		mensaje1.dibujatexto(char_arr);
 	}
 	if (protagonista.MensajeBuda(49, 52, 70))
 	{
@@ -303,7 +303,7 @@ void Mundo::DibujaMensajes()
 			myfile.close();
 		}
 		else cout << "Unable to open file";
-		mensaje1.dibuja(char_arr);
+		mensaje1.dibujatexto(char_arr);
 	}
 	if (protagonista.MensajeBuda(128, 131, 25))
 	{
@@ -321,7 +321,7 @@ void Mundo::DibujaMensajes()
 			myfile.close();
 		}
 		else cout << "Unable to open file";
-		mensaje1.dibuja(char_arr);
+		mensaje1.dibujatexto(char_arr);
 	}
 	if (protagonista.MensajeBuda(168, 171, 94))
 	{
@@ -339,7 +339,7 @@ void Mundo::DibujaMensajes()
 			myfile.close();
 		}
 		else cout << "Unable to open file";
-		mensaje1.dibuja(char_arr);
+		mensaje1.dibujatexto(char_arr);
 	}
 	if (protagonista.MensajeBuda(168, 171, 100))
 	{
@@ -357,7 +357,7 @@ void Mundo::DibujaMensajes()
 			myfile.close();
 		}
 		else cout << "Unable to open file";
-		mensaje1.dibuja(char_arr);
+		mensaje1.dibujatexto(char_arr);
 	}
 }
 
