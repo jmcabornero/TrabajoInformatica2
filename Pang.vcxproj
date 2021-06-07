@@ -29,6 +29,7 @@
     <ClCompile Include="ListaDisparos.cpp" />
     <ClCompile Include="ListaEnemigos.cpp" />
     <ClCompile Include="ListaObstaculos.cpp" />
+    <ClCompile Include="Moneda.cpp" />
     <ClCompile Include="Mundo.cpp" />
     <ClCompile Include="ObjetosMovimiento.cpp" />
     <ClCompile Include="Obstaculos.cpp" />
@@ -50,6 +51,7 @@
     <ClInclude Include="ListaDisparos.h" />
     <ClInclude Include="ListaEnemigos.h" />
     <ClInclude Include="ListaObstaculos.h" />
+    <ClInclude Include="Moneda.h" />
     <ClInclude Include="Mundo.h" />
     <ClInclude Include="ObjetosMovimiento.h" />
     <ClInclude Include="Obstaculos.h" />
