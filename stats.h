@@ -26,7 +26,7 @@ public:
 	void modDef(float m);
 	void modAtack(float m);
 	void modVel(float m);
-	void ModVida(float ataque=1, int i=1);
+	void ModVida(int i=1, float ataque=1);
 	void modCooldawn(float cd1);
 };
 

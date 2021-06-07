@@ -4,6 +4,7 @@
 #include "ObjetosMovimiento.h"
 #include "vida.h"
 #include "stats.h"
+#include "HUD.h"
 
 using ETSIDI::SpriteSequence;
 
@@ -12,6 +13,7 @@ class Protagonista:public ObjetosMovimiento, public stats
 private:
 	char direccion;
 	float velabs;
+	Vida vida;
 public:
 	Protagonista();
 	SpriteSequence spriteR{ "imagenes/Player_derecha.png", 3 };

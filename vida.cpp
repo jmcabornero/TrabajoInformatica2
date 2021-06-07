@@ -4,7 +4,7 @@ Vida::~Vida() {}
 
 Vida::Vida()
 {
-	Ps = 100;
+	setVida(100);
 }
 
 float Vida::getVida()
@@ -14,7 +14,8 @@ float Vida::getVida()
 
 void Vida::ModVida(int m)
 {
-	Ps = Ps + m;
-	cout << Ps;
+	int aux = getVida() + m;
+	setVida(aux);
+	//cout << Ps << endl;
 }
 
