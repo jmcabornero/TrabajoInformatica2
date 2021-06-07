@@ -79,7 +79,11 @@ void ListaObstaculos::Colision(Protagonista* p, int n) //n=1 si obstaculo	n=2 si
 			{
 				(*p).setPos(pos.x + velabs, pos.y + velabs);
 			}
+			if (n == 2) {
+				p->ModVida(4);
+			}
 		}
+		
 	}
 }
 

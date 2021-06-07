@@ -12,5 +12,6 @@ public:
 	virtual ~Vida();
 	float getVida();
 	void ModVida(int m);
+	void setVida(int v) { Ps = v; }
 };
 

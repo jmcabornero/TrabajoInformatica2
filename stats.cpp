@@ -12,7 +12,7 @@ stats::stats()
 	cd = 2.0;
 }
 
-void stats::ModVida(float ataque, int i)
+void stats::ModVida(int i, float ataque)
 {
 	float dano=0;
 	if (i == 1)
@@ -22,10 +22,10 @@ void stats::ModVida(float ataque, int i)
 	if (i == 3)
 		dano = (45.0 * ataque) / defensa;
 	if (i == 4)
-		dano = -50;
+		dano = 10;
 
 	vida = vida - dano;
-	cout << vida;
+	cout << "vida: " << vida << endl;
 }
 
 void stats::modCooldawn(float cd1)

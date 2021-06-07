@@ -7,6 +7,9 @@
 Mundo::Mundo(float x)
 {
 	z_ojo = x;
+	hud.setAlto(4);
+	hud.setAncho(18.5);
+	hud.setPos(3.5, 7.5);
 }
 
 void Mundo::dibuja()
@@ -26,7 +29,9 @@ void Mundo::dibuja()
 
 	disparos.dibuja();
 
-	//hud.dibuja("hello");
+	char cadena[] = "Hello world";
+	char* c = cadena;
+	hud.dibuja(c);
 
 	DibujaMensajes();
 	

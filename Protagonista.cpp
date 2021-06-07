@@ -1,5 +1,6 @@
 #include "Protagonista.h"
 #include "ETSIDI.h"
+#include <iostream>
 
 Protagonista::Protagonista()
 {
@@ -14,6 +15,8 @@ Protagonista::Protagonista()
 	spriteDown.setSize(1, 1);
 
 	posicion.x = 7;posicion.y = 122;velocidad.x = 0;velocidad.y = 0, velabs=1;
+	vida.setVida(100);
+	std::cout << "Vida: " << vida.getVida() << std::endl;
 }
 
 void Protagonista::Dibuja()
