@@ -25,6 +25,12 @@ void ListaEnemigos::dibuja()
 		lista[i]->Dibuja();
 }
 
+void ListaEnemigos::Perseguir(Protagonista p)
+{
+	for (int i = 0; i < numero; i++)
+		lista[i]->Perseguir(p);
+}
+
 void ListaEnemigos::dano()
 {
 	for (int i = 0; i < numero; i++)

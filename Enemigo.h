@@ -4,6 +4,8 @@
 #include "ObjetosMovimiento.h"
 #include "vida.h"
 #include "stats.h"
+#include "Protagonista.h"
+#include <math.h>
 
 using ETSIDI::SpriteSequence;
 
@@ -23,6 +25,7 @@ public:
 	void Dibuja();
 	void Mueve(float t);
 	void setTam(float anchura, float altura);
+	void Perseguir(Protagonista p);
 	friend class Interaccion;
 };
 

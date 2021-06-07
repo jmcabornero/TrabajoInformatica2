@@ -50,3 +50,16 @@ void Enemigo::setTam(float anchura, float altura)
 	spriteL.setCenter(1, 0);
 	spriteL.setSize(anchura, altura);
 }
+
+void Enemigo::Perseguir(Protagonista p)
+{
+	Vector2D pos_p = p.GetPos();
+	Vector2D pos_e = GetPos();
+	Vector2D delta = pos_p - pos_e;
+	float angulo = atan2(delta.y, delta.x);
+	float distancia = delta.modulo();
+	if (distancia <= 4)
+	{
+		setVel(0.5 * cos(angulo), 0.5 * sin(angulo));
+	}
+}

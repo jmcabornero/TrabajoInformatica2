@@ -6,6 +6,7 @@
 #include "ListaEnemigos.h"
 #include "Obstaculos.h"
 #include "Protagonista.h"
+#include "Vector2D.h"
 
 class ListaDisparos
 {
@@ -25,7 +26,7 @@ public:
 	void colision(Obstaculos* o);
 	void Cooldawn(Protagonista &p);
 	void Disparar(Protagonista p);
-	void Disparar(Enemigo e);
+	//void DispararEnemigo(Enemigo e, Protagonista p);
 	
 	
 private:

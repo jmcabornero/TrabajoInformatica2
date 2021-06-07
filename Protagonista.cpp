@@ -13,7 +13,7 @@ Protagonista::Protagonista()
 	spriteDown.setCenter(1, 0);
 	spriteDown.setSize(1, 1);
 
-	posicion.x = 7;posicion.y = 122;velocidad.x = 0;velocidad.y = 0, velabs=1;
+	posicion.x = 7;posicion.y = 7;velocidad.x = 0;velocidad.y = 0, velabs=1;
 }
 
 void Protagonista::Dibuja()

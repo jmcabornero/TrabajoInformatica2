@@ -20,6 +20,7 @@ public:
 	void eliminar(int index);
 	void destruirContenido();
 	int getNumero() { return numero; }
+	void Perseguir(Protagonista p);
 	friend class Interaccion;
 	Enemigo* operator [](int i);
 };

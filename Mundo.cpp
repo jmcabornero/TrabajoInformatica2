@@ -44,6 +44,7 @@ void Mundo::mueve()
 		disparos.colision(enemigos[i]);
 	}
 	enemigos.dano();
+	enemigos.Perseguir(protagonista);
 	for (int i = 0; i < listaobstaculos.getNumero(); i++)
 	{
 		disparos.colision(listaobstaculos[i]);
@@ -108,7 +109,6 @@ void Mundo::teclaEspecial(unsigned char key) //al pulsar la tecla
 		protagonista.setDir('w');
 		break;
 	}
-	//std::cout << protagonista.getDir() << std::endl;
 }
 
 void Mundo::teclaEspecialUp(unsigned char key)  //al dejar de pulsar la tecla
