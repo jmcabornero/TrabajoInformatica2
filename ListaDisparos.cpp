@@ -89,7 +89,7 @@ void ListaDisparos::Cooldawn(Protagonista &p)
 			flag = 0;
 			p.modCooldawn(1.0);
 		}
-		cout << "-" << p.getcooldawn() << "-";
+		//cout << "-" << p.getcooldawn() << "-";
 	}
 }
 
