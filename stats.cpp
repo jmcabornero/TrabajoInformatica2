@@ -25,7 +25,7 @@ void stats::ModVida(int i, float ataque)
 		dano = 10;
 
 	vida = vida - dano;
-	cout << "vida: " << vida << endl;
+	//cout << "vida: " << vida << endl;
 }
 
 void stats::modCooldawn(float cd1)

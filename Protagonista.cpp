@@ -1,6 +1,7 @@
 #include "Protagonista.h"
 #include "ETSIDI.h"
 #include <iostream>
+#include "HUD.h"
 
 Protagonista::Protagonista()
 {
@@ -16,7 +17,10 @@ Protagonista::Protagonista()
 
 	posicion.x = 7;posicion.y = 7;velocidad.x = 0;velocidad.y = 0, velabs=1;
 	vida.setVida(100);
-	std::cout << "Vida: " << vida.getVida() << std::endl;
+	//std::cout << "Vida: " << vida.getVida() << std::endl;
+	hud.setAlto(0.1);
+	hud.setAncho(3);
+	hud.setPos(posicion.x, posicion.y + 1.5f);
 }
 
 void Protagonista::Dibuja()
@@ -24,7 +28,6 @@ void Protagonista::Dibuja()
 	glPushMatrix();
 	glTranslatef(posicion.x, posicion.y, 0.01);
 	glColor3f(1.0f, 0.0f, 0.0f);
-	//glutSolidSphere(altura, 20, 20);
 //gestion de direccion y animacion
 	if (velocidad.x > 0.01)spriteR.draw();
 	if (velocidad.x < -0.01)spriteL.draw();
@@ -52,10 +55,45 @@ void Protagonista::Dibuja()
 		}
 	}
 	glPopMatrix();
+
+	dibujaHUD();
 }
+
+void Protagonista::dibujaHUD() {
+	float capa1 = 0.03f;
+	float capa2 = 0.04f;
+	float capa3 = 0.05f;
+	float marco = 0.06f;
+	float h = hud.getAlto();
+	float a = hud.getAncho();
+	float hp = getVida()/100;
+	//cout << hp << endl;
+	Vector2D p = hud.getPos();
+	glBegin(GL_POLYGON);
+	glColor3f(0, 0, 0);
+	glVertex3d(marco + p.x + a / 2, marco + p.y + h / 2, capa1);
+	glVertex3d(marco + p.x + a / 2, -1 * marco + p.y - h / 2, capa1);
+	glVertex3d(-1 * marco + p.x - a / 2, -1 * marco + p.y - h / 2, capa1);
+	glVertex3d(-1 * marco + p.x - a / 2, marco + p.y + h / 2, capa1);
+	glEnd();
+	glBegin(GL_POLYGON);
+	if (hp >= 0.66f)glColor3f(0, 255, 0);
+	if ((hp < 0.66f) && (hp >= 0.33f))glColor3f(255, 255, 0);
+	if (hp < 0.33f)glColor3f(255, 0, 0);
+	if (hp > 0) {
+		glVertex3d((p.x + a / 2) - a * (1 - hp), p.y + h / 2, capa2);
+		glVertex3d((p.x + a / 2) - a * (1 - hp), p.y - h / 2, capa2);
+		glVertex3d(p.x - a / 2, p.y - h / 2, capa2);
+		glVertex3d(p.x - a / 2, p.y + h / 2, capa2);
+	}
+	//cout << getVida() << endl;
+	glEnd();
+}
+
 
 void Protagonista::Mueve(float t)
 {
+	hud.setPos(posicion.x, posicion.y + 1.5f);
 	ObjetosMovimiento::mueve(t);
 	spriteR.loop();
 	spriteL.loop();
