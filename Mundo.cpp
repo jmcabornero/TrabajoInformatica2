@@ -20,7 +20,7 @@ void Mundo::dibuja()
 	caja.Dibuja2();
 	
 	enemigos.dibuja();
-
+	listacofres.Dibuja();
 	listaobstaculos.Dibuja();
 	listapinchos.Dibuja();
 	monedas.Dibuja();
@@ -37,6 +37,7 @@ void Mundo::mueve()
 	listaobstaculos.Colision(&protagonista,1);
 	listapinchos.Colision(&protagonista, 2);
 	monedas.Colision(&protagonista);
+	listacofres.Transformacion(&protagonista);
 	disparos.mueve(0.025f);
 	CambioCamara();
 	for (int i = 0; i < enemigos.getNumero(); i++)
@@ -58,6 +59,7 @@ void Mundo::inicializa()
 {
 	dibObstaculos(1);
 	dibObstaculos(2);
+	listacofres.CrearCofres();
 	posicion_ojo.x = 10.25f;    
 	posicion_ojo.y = 7.5f;    
 	z_ojo = 20.5f; //20.5f   

@@ -8,6 +8,7 @@
 #include "ListaEnemigos.h"
 #include "ListaMonedas.h"
 #include "HUD.h"
+#include "ListaCofres.h"
 
 class Mundo
 {
@@ -21,6 +22,7 @@ private:
 	ListaDisparos disparos;
 	ListaEnemigos enemigos;
 	ListaMonedas monedas;
+	ListaCofres listacofres;
 	HUD mensaje1, mensaje2, mensaje3, mensaje4, mensaje5, mensajelibro;
 
 	public:

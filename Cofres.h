@@ -6,11 +6,13 @@
 class Cofres
 {
 private:
-	float j, i;
+	float i, j;
 	int tipo; //1 si esta cerrado 2 si esta abierto
 public:
-	Cofres(int x = 0, int y = 0, int t=0);
+	Cofres(float x = 0, float y = 0, int t = 1);
 	void Dibuja();
+	void SetTipo(int a);
+	int GetTipo();
 	Vector2D GetEsquina();
 };
 

@@ -9,6 +9,7 @@
 #include "Disparo.h"
 #include "Caja.h"
 #include "Moneda.h"
+#include "Cofres.h"
 
 using namespace std;
 
@@ -21,5 +22,6 @@ public:
 	static bool colision(Disparo &d, Enemigo &e);
 	static bool colision(Disparo& d, Obstaculos &o);
 	static bool colision(Protagonista p, Moneda& m);
+	static bool colision(Protagonista p, Cofres& c);
 };
 

@@ -14,7 +14,8 @@ public:
 	virtual ~ListaCofres();
 	bool Agregar(Cofres* o);
 	void Dibuja();
-	void Colision(Protagonista* p, int n);
+	void CrearCofres();
+	void Transformacion(Protagonista*p);
 	Cofres* operator[](int i);
 	int getNumero() { return numero; };
 

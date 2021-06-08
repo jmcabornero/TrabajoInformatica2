@@ -8,7 +8,7 @@ ListaMonedas::ListaMonedas()
 		lista[i] = 0;
 }
 
-ListaMonedas::~ListaMonedas()//
+ListaMonedas::~ListaMonedas()
 {
 
 }
