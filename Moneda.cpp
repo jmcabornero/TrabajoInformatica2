@@ -31,7 +31,7 @@ void Moneda::Dibuja()
 Vector2D Moneda::GetEsquina()
 {
 	Vector2D vec;
-	vec.x = j;
-	vec.y = i;
+	vec.x = i;
+	vec.y = j;
 	return vec;
 }

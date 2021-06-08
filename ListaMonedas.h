@@ -17,6 +17,7 @@ public:
 	bool Agregar(Moneda* o);
 	void Dibuja();
 	void Colision(Protagonista* p);
+	void eliminar(int index);
 	Moneda* operator[](int i);
 	int getNumero() { return numero; };
 

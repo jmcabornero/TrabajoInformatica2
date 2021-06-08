@@ -36,9 +36,14 @@ void ListaMonedas::Dibuja()
 		lista[i]->Dibuja();
 }
 
-void ListaMonedas::Colision(Protagonista* p) 
+void ListaMonedas::Colision(Protagonista* p)  //se elimina la rupia y se suma dinero a la cartera
 {
-	
+	Interaccion inter;
+	for (int i = 0;i < numero;i++)
+	{
+		if (inter.colision(*p, *(lista[i])))
+			eliminar(i);
+	}
 }
 
 Moneda* ListaMonedas::operator[](int i)
@@ -48,4 +53,14 @@ Moneda* ListaMonedas::operator[](int i)
 	if (i < 0) //si el indice es negativo, devuelvo la primera
 		i = 0;
 	return lista[i];
+}
+
+void ListaMonedas::eliminar(int index)
+{
+	if ((index < 0) || (index >= numero))
+		return;
+	delete lista[index];
+	numero--;
+	for (int i = index; i < numero; i++)
+		lista[i] = lista[i + 1];
 }

@@ -57,3 +57,13 @@ bool Interaccion::colision(Disparo& d, Obstaculos& o)
 		return false;
 	}
 }
+
+bool Interaccion::colision(Protagonista p, Moneda& m)
+{
+	Vector2D esquina = m.GetEsquina();
+	Vector2D prota = p.GetPos();
+	if ((((esquina.x + 0.4) <= prota.x) && (prota.x <= (esquina.x + 1.7f))) && (((esquina.y - 0.8f) <= prota.y) && (prota.y <= (esquina.y + 0.8f))))
+		return true;
+	else
+		return false;
+}

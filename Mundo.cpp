@@ -36,6 +36,7 @@ void Mundo::mueve()
 	protagonista.Mueve(0.15f);
 	listaobstaculos.Colision(&protagonista,1);
 	listapinchos.Colision(&protagonista, 2);
+	monedas.Colision(&protagonista);
 	disparos.mueve(0.025f);
 	CambioCamara();
 	for (int i = 0; i < enemigos.getNumero(); i++)

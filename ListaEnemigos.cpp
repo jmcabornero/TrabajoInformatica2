@@ -42,9 +42,7 @@ void ListaEnemigos::dano(ListaMonedas *listamonedas)
 			float posy = lista[i]->getPosy();
 			float valor = ETSIDI::lanzaDado(10.0);
 			if (valor <= 5)
-			{
 				listamonedas->Agregar(new Moneda(posx, posy, 1));
-			}
 			if((valor>5)&&(valor<6))
 				listamonedas->Agregar(new Moneda(posx, posy, 2));
 			eliminar(i);
@@ -60,7 +58,7 @@ void ListaEnemigos::mueve(float t)
 
 void ListaEnemigos::destruirContenido()
 {
-	for (int i = 0; i < numero; i++) // destrucción de esferas contenidas
+	for (int i = 0; i < numero; i++) 
 		delete lista[i];
 	numero = 0;
 }
