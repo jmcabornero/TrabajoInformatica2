@@ -20,12 +20,14 @@
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Caja.cpp" />
+    <ClCompile Include="Cofres.cpp" />
     <ClCompile Include="Coordinador.cpp" />
     <ClCompile Include="Disparo.cpp" />
     <ClCompile Include="Enemigo.cpp" />
     <ClCompile Include="EscenarioTiles.cpp" />
     <ClCompile Include="HUD.cpp" />
     <ClCompile Include="Interaccion.cpp" />
+    <ClCompile Include="ListaCofres.cpp" />
     <ClCompile Include="ListaDisparos.cpp" />
     <ClCompile Include="ListaEnemigos.cpp" />
     <ClCompile Include="ListaMonedas.cpp" />
@@ -41,6 +43,7 @@
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Caja.h" />
+    <ClInclude Include="Cofres.h" />
     <ClInclude Include="ColorRGB.h" />
     <ClInclude Include="Coordinador.h" />
     <ClInclude Include="Disparo.h" />
@@ -48,6 +51,7 @@
     <ClInclude Include="EscenarioTiles.h" />
     <ClInclude Include="HUD.h" />
     <ClInclude Include="Interaccion.h" />
+    <ClInclude Include="ListaCofres.h" />
     <ClInclude Include="ListaDisparos.h" />
     <ClInclude Include="ListaEnemigos.h" />
     <ClInclude Include="ListaMonedas.h" />
