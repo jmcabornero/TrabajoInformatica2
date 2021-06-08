@@ -41,10 +41,9 @@ void ListaEnemigos::dano(ListaMonedas *listamonedas)
 			float posx = lista[i]->GetPosx();
 			float posy = lista[i]->getPosy();
 			float valor = ETSIDI::lanzaDado(10.0);
-			if (valor <= 7)
+			if (valor <= 5)
 			{
 				listamonedas->Agregar(new Moneda(posx, posy, 1));
-				cout << "se mamo";
 			}
 			if((valor>5)&&(valor<6))
 				listamonedas->Agregar(new Moneda(posx, posy, 2));

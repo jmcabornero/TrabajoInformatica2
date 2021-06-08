@@ -29,8 +29,6 @@ void Enemigo::Dibuja()
 	if (velocidad.x < -0.01)spriteL.draw();
 	if ((velocidad.x < 0.01) && (velocidad.x > -0.01))sprite.draw();
 	glPopMatrix();
-	
-
 }
 
 void Enemigo::Mueve(float t)

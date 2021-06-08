@@ -8,18 +8,21 @@ Moneda::Moneda(int x, int y, int t)
 
 void Moneda::Dibuja()
 {
+	glEnable(GL_BLEND);
+	glBlendFunc(GL_SRC_ALPHA, GL_ONE_MINUS_SRC_ALPHA);
+	//dibujo del fondo
 	glEnable(GL_TEXTURE_2D);
-	if (tipo==1)
+	if (tipo == 1)
 		glBindTexture(GL_TEXTURE_2D, ETSIDI::getTexture("imagenes/Monedas/Verde.png").id);
-	if (tipo==2)
+	if (tipo == 2)
 		glBindTexture(GL_TEXTURE_2D, ETSIDI::getTexture("imagenes/Monedas/Roja.png").id);
 	glDisable(GL_LIGHTING);
-	glBegin(GL_POLYGON);
 	glColor3f(1, 1, 1);
-	glTexCoord2d(0, 1); glVertex2f(j, i); //abajo izq
-	glTexCoord2d(1, 1); glVertex2f(j + 1, i);	//abajo drcha
-	glTexCoord2d(1, 0); glVertex2f(j + 1, i + 1);	//arriba drcha
-	glTexCoord2d(0, 0); glVertex2f(j, i + 1);	//arriba izq
+	glBegin(GL_POLYGON);
+	glTexCoord2d(0, 0);glVertex3d(i, j, 0.03);
+	glTexCoord2d(1, 0);glVertex3d(i+0.5, j, 0.03);
+	glTexCoord2d(1, 1);glVertex3d(i+0.5, j+0.5, 0.03);
+	glTexCoord2d(0, 1);glVertex3d(i, j + 0.5, 0.03);
 	glEnd();
 	glEnable(GL_LIGHTING);
 	glDisable(GL_TEXTURE_2D);
