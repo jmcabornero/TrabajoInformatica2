@@ -18,6 +18,7 @@ public:
 	virtual ~stats();
 
 	float getVida() { return vida; };
+	void setVida(float v) { vida = v; }
 	float getDef() { return defensa; };
 	float getAtack() { return ataque; };
 	float getvel() { return vel; };

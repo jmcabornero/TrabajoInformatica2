@@ -13,7 +13,6 @@ class Protagonista:public ObjetosMovimiento, public stats
 private:
 	char direccion;
 	float velabs;
-	Vida vida;
 	HUD hud;
 public:
 	Protagonista();

@@ -16,4 +16,3 @@ public:
 	Vector2D GetVel() { return velocidad; }
 	void mueve(float t);
 };
-
