@@ -54,6 +54,10 @@ void HUD::dibuja(char* mensaje) {
 	displayText(p.x - a/2 + marco, p.y + h/2 - 4*marco, capa3, 255, 255, 255, mensaje);
 }
 
+
+
+
+
 void HUD::mueve() {
 
 }

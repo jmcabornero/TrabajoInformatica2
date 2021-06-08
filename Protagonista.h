@@ -14,6 +14,7 @@ private:
 	char direccion;
 	float velabs;
 	Vida vida;
+	HUD hud;
 public:
 	Protagonista();
 	SpriteSequence spriteR{ "imagenes/Player_derecha.png", 3 };
@@ -29,5 +30,6 @@ public:
 	bool MensajeBuda(float inicio_x, float final_x, float inicio_y);
 	void Teletransporte(float inicio_x, float inicio_y, float final_x, float final_y);
 	float GetVelAbs();
+	void dibujaHUD();
 	void SetVelAbs(float vel);
 };

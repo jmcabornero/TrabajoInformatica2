@@ -1,26 +1,7 @@
-﻿  Mundo.cpp
-C:\Users\jesus\Documents\GitHub\TrabajoInformatica2\Mundo.cpp(71,31): warning C4244: 'argumento': conversión de 'int' a 'float'; posible pérdida de datos
-C:\Users\jesus\Documents\GitHub\TrabajoInformatica2\Mundo.cpp(157,15): warning C4244: '=': conversión de 'int' a 'float'; posible pérdida de datos
-C:\Users\jesus\Documents\GitHub\TrabajoInformatica2\Mundo.cpp(161,53): warning C4244: 'argumento': conversión de 'float' a 'int'; posible pérdida de datos
-C:\Users\jesus\Documents\GitHub\TrabajoInformatica2\Mundo.cpp(161,47): warning C4244: 'argumento': conversión de 'float' a 'int'; posible pérdida de datos
-C:\Users\jesus\Documents\GitHub\TrabajoInformatica2\Mundo.cpp(165,52): warning C4244: 'argumento': conversión de 'float' a 'int'; posible pérdida de datos
-C:\Users\jesus\Documents\GitHub\TrabajoInformatica2\Mundo.cpp(165,45): warning C4244: 'argumento': conversión de 'float' a 'int'; posible pérdida de datos
-C:\Users\jesus\Documents\GitHub\TrabajoInformatica2\Mundo.cpp(215,5): warning C4996: 'strcat': This function or variable may be unsafe. Consider using strcat_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
-C:\Users\jesus\Documents\GitHub\TrabajoInformatica2\Mundo.cpp(216,5): warning C4996: 'strcat': This function or variable may be unsafe. Consider using strcat_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
-C:\Users\jesus\Documents\GitHub\TrabajoInformatica2\Mundo.cpp(233,5): warning C4996: 'strcat': This function or variable may be unsafe. Consider using strcat_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
-C:\Users\jesus\Documents\GitHub\TrabajoInformatica2\Mundo.cpp(234,5): warning C4996: 'strcat': This function or variable may be unsafe. Consider using strcat_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
-C:\Users\jesus\Documents\GitHub\TrabajoInformatica2\Mundo.cpp(251,5): warning C4996: 'strcat': This function or variable may be unsafe. Consider using strcat_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
-C:\Users\jesus\Documents\GitHub\TrabajoInformatica2\Mundo.cpp(252,5): warning C4996: 'strcat': This function or variable may be unsafe. Consider using strcat_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
-C:\Users\jesus\Documents\GitHub\TrabajoInformatica2\Mundo.cpp(269,5): warning C4996: 'strcat': This function or variable may be unsafe. Consider using strcat_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
-C:\Users\jesus\Documents\GitHub\TrabajoInformatica2\Mundo.cpp(270,5): warning C4996: 'strcat': This function or variable may be unsafe. Consider using strcat_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
-C:\Users\jesus\Documents\GitHub\TrabajoInformatica2\Mundo.cpp(287,5): warning C4996: 'strcat': This function or variable may be unsafe. Consider using strcat_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
-C:\Users\jesus\Documents\GitHub\TrabajoInformatica2\Mundo.cpp(288,5): warning C4996: 'strcat': This function or variable may be unsafe. Consider using strcat_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
-C:\Users\jesus\Documents\GitHub\TrabajoInformatica2\Mundo.cpp(305,5): warning C4996: 'strcat': This function or variable may be unsafe. Consider using strcat_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
-C:\Users\jesus\Documents\GitHub\TrabajoInformatica2\Mundo.cpp(306,5): warning C4996: 'strcat': This function or variable may be unsafe. Consider using strcat_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
-C:\Users\jesus\Documents\GitHub\TrabajoInformatica2\Mundo.cpp(323,5): warning C4996: 'strcat': This function or variable may be unsafe. Consider using strcat_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
-C:\Users\jesus\Documents\GitHub\TrabajoInformatica2\Mundo.cpp(324,5): warning C4996: 'strcat': This function or variable may be unsafe. Consider using strcat_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
-C:\Users\jesus\Documents\GitHub\TrabajoInformatica2\Mundo.cpp(341,5): warning C4996: 'strcat': This function or variable may be unsafe. Consider using strcat_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
-C:\Users\jesus\Documents\GitHub\TrabajoInformatica2\Mundo.cpp(342,5): warning C4996: 'strcat': This function or variable may be unsafe. Consider using strcat_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
-C:\Users\jesus\Documents\GitHub\TrabajoInformatica2\Mundo.cpp(359,5): warning C4996: 'strcat': This function or variable may be unsafe. Consider using strcat_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
-C:\Users\jesus\Documents\GitHub\TrabajoInformatica2\Mundo.cpp(360,5): warning C4996: 'strcat': This function or variable may be unsafe. Consider using strcat_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+﻿  Protagonista.cpp
+C:\Users\jesus\Documents\GitHub\TrabajoInformatica2\Protagonista.cpp(21,17): warning C4305: 'argumento': truncamiento de 'double' a 'float'
+C:\Users\jesus\Documents\GitHub\TrabajoInformatica2\Protagonista.cpp(29,43): warning C4305: 'argumento': truncamiento de 'double' a 'GLfloat'
+C:\Users\jesus\Documents\GitHub\TrabajoInformatica2\Protagonista.cpp(122,47): warning C4244: 'argumento': conversión de 'int' a 'float'; posible pérdida de datos
+C:\Users\jesus\Documents\GitHub\TrabajoInformatica2\Protagonista.cpp(123,50): warning C4244: 'argumento': conversión de 'int' a 'float'; posible pérdida de datos
+C:\Users\jesus\Documents\GitHub\TrabajoInformatica2\Protagonista.cpp(124,50): warning C4244: 'argumento': conversión de 'int' a 'float'; posible pérdida de datos
   Pang.vcxproj -> C:\Users\jesus\Documents\GitHub\TrabajoInformatica2\bin\Juego.exe

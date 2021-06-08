@@ -7,9 +7,6 @@
 Mundo::Mundo(float x)
 {
 	z_ojo = x;
-	hud.setAlto(4);
-	hud.setAncho(18.5);
-	hud.setPos(3.5, 7.5);
 }
 
 void Mundo::dibuja()
@@ -28,10 +25,6 @@ void Mundo::dibuja()
 	listapinchos.Dibuja();
 
 	disparos.dibuja();
-
-	char cadena[] = "Hello world";
-	char* c = cadena;
-	hud.dibuja(c);
 
 	DibujaMensajes();
 	
@@ -179,20 +172,16 @@ void Mundo::CambioCamara()//cambio HUD
 	Vector2D prota = protagonista.GetPos();
 	if (prota.x > (posicion_ojo.x + 10.25)) {
 		posicion_ojo.x += 20.0f;
-		hud.setPos(hud.getPos().x + 20.0f, hud.getPos().y);
 	}
 	if (prota.x < (posicion_ojo.x - 10.25)) {
-		posicion_ojo.x -= 20.0f;
-		hud.setPos(hud.getPos().x - 20.0f, hud.getPos().y);
+		posicion_ojo.x -= 20.0f;	
 	}	
 		if (prota.y > (posicion_ojo.y + 7.5)) {
-			posicion_ojo.y += 15.0f;
-			hud.setPos(hud.getPos().x, hud.getPos().y + 15.0f);
-	}
+			posicion_ojo.y += 15.0f;	
+		}
 		if (prota.y < (posicion_ojo.y - 7.5)) {
-			posicion_ojo.y -= 15.0f;
-			hud.setPos(hud.getPos().x, hud.getPos().y - 15.0f);
-	}
+			posicion_ojo.y -= 15.0f;	
+		}
 	}
 
 void Mundo::DibujaMensajes()
