@@ -26,6 +26,7 @@ void Mundo::dibuja()
 
 	listaobstaculos.Dibuja();
 	listapinchos.Dibuja();
+	monedas.Dibuja();
 
 	disparos.dibuja();
 
@@ -48,8 +49,9 @@ void Mundo::mueve()
 	{
 		disparos.colision(enemigos[i]);
 	}
-	enemigos.dano();
+	enemigos.dano(&monedas);
 	enemigos.Perseguir(protagonista);
+	enemigos.mueve(0.15f);
 	for (int i = 0; i < listaobstaculos.getNumero(); i++)
 	{
 		disparos.colision(listaobstaculos[i]);

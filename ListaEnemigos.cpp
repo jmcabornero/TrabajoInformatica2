@@ -1,5 +1,6 @@
 #include "ListaEnemigos.h"
 #include "Interaccion.h"
+#include "ListaMonedas.h"
 
 ListaEnemigos::ListaEnemigos()
 {
@@ -31,12 +32,22 @@ void ListaEnemigos::Perseguir(Protagonista p)
 		lista[i]->Perseguir(p);
 }
 
-void ListaEnemigos::dano()
+void ListaEnemigos::dano(ListaMonedas *listamonedas)
 {
 	for (int i = 0; i < numero; i++)
 	{
 		if (lista[i]->getVida() <= 0)
 		{
+			float posx = lista[i]->GetPosx();
+			float posy = lista[i]->getPosy();
+			float valor = ETSIDI::lanzaDado(10.0);
+			if (valor <= 7)
+			{
+				listamonedas->Agregar(new Moneda(posx, posy, 1));
+				cout << "se mamo";
+			}
+			if((valor>5)&&(valor<6))
+				listamonedas->Agregar(new Moneda(posx, posy, 2));
 			eliminar(i);
 		}
 	}

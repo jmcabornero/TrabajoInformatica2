@@ -59,7 +59,7 @@ void Enemigo::Perseguir(Protagonista p)
 	float angulo = atan2(delta.y, delta.x);
 	float distancia = delta.modulo();
 	if (distancia <= 4)
-	{
 		setVel(0.5 * cos(angulo), 0.5 * sin(angulo));
-	}
+	else
+		setVel(0, 0);
 }

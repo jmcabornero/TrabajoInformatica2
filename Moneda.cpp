@@ -1,16 +1,17 @@
 #include "Moneda.h"
 
-Moneda::Moneda(int x, int y)
+Moneda::Moneda(int x, int y, int t)
 {
 	i = x;j = y;
+	tipo = t; //tipo=1 si es verde  tipo=2 si es roja
 }
 
-void Moneda::Dibuja(int n)
+void Moneda::Dibuja()
 {
 	glEnable(GL_TEXTURE_2D);
-	if (n==1)
+	if (tipo==1)
 		glBindTexture(GL_TEXTURE_2D, ETSIDI::getTexture("imagenes/Monedas/Verde.png").id);
-	if (n=2)
+	if (tipo==2)
 		glBindTexture(GL_TEXTURE_2D, ETSIDI::getTexture("imagenes/Monedas/Roja.png").id);
 	glDisable(GL_LIGHTING);
 	glBegin(GL_POLYGON);
