@@ -9,7 +9,8 @@ stats::stats()
 	defensa = 1;
 	ataque = 1;
 	vel = 0;
-	cd = 2.0;
+	cd= 2.0;
+	attackspeed = 1;
 }
 
 void stats::ModVida(int i, float ataque)

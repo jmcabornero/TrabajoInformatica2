@@ -7,7 +7,6 @@
 #include <string>
 #include "Enemigo.h"
 #include "Disparo.h"
-#include "Vida.h"
 #include "Caja.h"
 #include "Moneda.h"
 

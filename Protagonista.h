@@ -2,7 +2,6 @@
 #include "Vector2D.h"
 #include "ETSIDI.h"
 #include "ObjetosMovimiento.h"
-#include "vida.h"
 #include "stats.h"
 #include "HUD.h"
 
@@ -13,7 +12,6 @@ class Protagonista:public ObjetosMovimiento, public stats
 private:
 	char direccion;
 	float velabs;
-	Vida vida;
 	HUD hud;
 public:
 	Protagonista();

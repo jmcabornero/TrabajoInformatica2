@@ -17,11 +17,13 @@ public:
 	stats();
 	virtual ~stats();
 
-	float getVida() { return vida; };
-	float getDef() { return defensa; };
-	float getAtack() { return ataque; };
-	float getvel() { return vel; };
-	float getcooldawn() { return cd; };
+	float getVida() { return vida; }
+	void setVida(float v) { vida = v; }
+	float getDef() { return defensa; }
+	void setDef(float d) { defensa = d; }
+	float getAtack() { return ataque; }
+	float getvel() { return vel; }
+	float getcooldawn() { return cd; }
 	//float getVida();
 	void modDef(float m);
 	void modAtack(float m);
