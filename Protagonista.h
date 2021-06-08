@@ -2,7 +2,6 @@
 #include "Vector2D.h"
 #include "ETSIDI.h"
 #include "ObjetosMovimiento.h"
-#include "vida.h"
 #include "stats.h"
 #include "HUD.h"
 

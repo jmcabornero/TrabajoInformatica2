@@ -52,7 +52,6 @@ C:\Users\jesus\Documents\GitHub\TrabajoInformatica2\Mundo.cpp(333,5): warning C4
 C:\Users\jesus\Documents\GitHub\TrabajoInformatica2\Mundo.cpp(334,5): warning C4996: 'strcat': This function or variable may be unsafe. Consider using strcat_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
 C:\Users\jesus\Documents\GitHub\TrabajoInformatica2\Mundo.cpp(351,5): warning C4996: 'strcat': This function or variable may be unsafe. Consider using strcat_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
 C:\Users\jesus\Documents\GitHub\TrabajoInformatica2\Mundo.cpp(352,5): warning C4996: 'strcat': This function or variable may be unsafe. Consider using strcat_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
-  ObjetosMovimiento.cpp
   Pang.cpp
   Protagonista.cpp
 C:\Users\jesus\Documents\GitHub\TrabajoInformatica2\Protagonista.cpp(21,17): warning C4305: 'argumento': truncamiento de 'double' a 'float'
@@ -60,5 +59,9 @@ C:\Users\jesus\Documents\GitHub\TrabajoInformatica2\Protagonista.cpp(29,43): war
 C:\Users\jesus\Documents\GitHub\TrabajoInformatica2\Protagonista.cpp(122,47): warning C4244: 'argumento': conversión de 'int' a 'float'; posible pérdida de datos
 C:\Users\jesus\Documents\GitHub\TrabajoInformatica2\Protagonista.cpp(123,50): warning C4244: 'argumento': conversión de 'int' a 'float'; posible pérdida de datos
 C:\Users\jesus\Documents\GitHub\TrabajoInformatica2\Protagonista.cpp(124,50): warning C4244: 'argumento': conversión de 'int' a 'float'; posible pérdida de datos
+  stats.cpp
+C:\Users\jesus\Documents\GitHub\TrabajoInformatica2\stats.cpp(19,25): warning C4244: '=': conversión de 'double' a 'float'; posible pérdida de datos
+C:\Users\jesus\Documents\GitHub\TrabajoInformatica2\stats.cpp(21,26): warning C4244: '=': conversión de 'double' a 'float'; posible pérdida de datos
+C:\Users\jesus\Documents\GitHub\TrabajoInformatica2\stats.cpp(23,26): warning C4244: '=': conversión de 'double' a 'float'; posible pérdida de datos
   Generando código...
   Pang.vcxproj -> C:\Users\jesus\Documents\GitHub\TrabajoInformatica2\bin\Juego.exe
