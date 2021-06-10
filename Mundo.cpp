@@ -21,7 +21,7 @@ void Mundo::dibuja()
 	caja.Dibuja2();
 	
 	enemigos.dibuja();
-	listacofres.Dibuja();
+	listacofres.Dibuja(posicion_ojo.x, posicion_ojo.y);
 	listaobstaculos.Dibuja();
 	listapinchos.Dibuja();
 	monedas.Dibuja();

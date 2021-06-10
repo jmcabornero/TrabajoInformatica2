@@ -24,10 +24,7 @@ void Cofres::Dibuja()
 	glEnd();
 	glEnable(GL_LIGHTING);
 	glDisable(GL_TEXTURE_2D);
-	if (tipo == 3)
-	{
-		
-	}
+
 }
 
 Vector2D Cofres::GetEsquina()
