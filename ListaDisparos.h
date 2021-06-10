@@ -3,10 +3,10 @@
 #define MAX_DISPAROS 20
 #include "enemigo.h"
 #include "Interaccion.h"
-#include "ListaEnemigos.h"
 #include "Obstaculos.h"
 #include "Protagonista.h"
 #include "Vector2D.h"
+#include "Enemigo.h"
 
 class ListaDisparos
 {
@@ -25,13 +25,11 @@ public:
 	void colision(Enemigo *e);
 	void colision(Obstaculos* o);
 	void Cooldown(Protagonista &p);
-	void Disparar(Protagonista p);
+	void Disparar(Protagonista &p);
+	//void Disparar(Enemigo &e);
 	//void DispararEnemigo(Enemigo e, Protagonista p);
 	
 private:
 	Disparo* Lista[MAX_DISPAROS];
 	int num;
-	//float cooldawn;
-	bool flag;
-	
 };

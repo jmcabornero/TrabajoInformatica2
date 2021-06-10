@@ -32,6 +32,9 @@ void Mundo::dibuja()
 	DibujaMensajes();
 
 	protagonista.dibujaStats(posicion_ojo.x - 3, posicion_ojo.y + 6.5);
+
+	enemigos.Disparar(&disparos);
+	enemigos.CoolDown();
 	
 }
 
@@ -46,7 +49,7 @@ void Mundo::mueve()
 	CambioCamara();
 	for (int i = 0; i < enemigos.getNumero(); i++)
 	{
-		disparos.colision(enemigos[i]);
+		//disparos.colision(enemigos[i]);
 	}
 	enemigos.dano(&monedas);
 	enemigos.Perseguir(protagonista);
@@ -92,9 +95,9 @@ void Mundo::inicializa()
 	z_ojo = 20.5f; //20.5f   
 	protagonista.setTam(1, 1);
 
-	for (int i = 0; i < 8; i++)
+	for (int i = 0; i < 2; i++)
 	{
-		Enemigo* aux = new Enemigo(i+2,7);
+		Enemigo* aux = new Enemigo(i+2,123);
 		enemigos.agregar(aux);
 	}
 }

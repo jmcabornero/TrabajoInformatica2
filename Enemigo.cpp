@@ -2,7 +2,6 @@
 
 
 
-
 Enemigo::~Enemigo(){}
 
 
@@ -16,6 +15,7 @@ Enemigo::Enemigo(float x, float y)
 	spriteL.setCenter(1, 0);
 	spriteL.setSize(1, 1);
 	posicion.x = x; posicion.y = y; velocidad = 0; velocidad = 0;
+	setFlag(0);
 }
 
 void Enemigo::Dibuja()

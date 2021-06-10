@@ -1,12 +1,11 @@
 #include "ListaDisparos.h"
-#include "Enemigo.h"
 #include <iostream>
 #include <windows.h>
 
 ListaDisparos::ListaDisparos() {
 	for (int i = 0; i < MAX_DISPAROS; i++)Lista[i] = 0;
 	num = 0;
-	flag = 0;
+	//flag = 0;
 	//cooldawn = 1.0;
 }
 
@@ -15,7 +14,6 @@ ListaDisparos::~ListaDisparos() {}
 bool ListaDisparos::agregar(Disparo *d) {
 	if (num < MAX_DISPAROS) {
 		Lista[num++] = d;
-		flag = 1;
 		return true;
 	}
 	else {
@@ -80,27 +78,27 @@ void ListaDisparos::colision(Obstaculos* o)
 }
 void ListaDisparos::Cooldown(Protagonista &p)
 {
-	if (flag == 1)
+	if (p.getFlag() == 1)
 	{
 		Sleep(0.025);
 		p.setCoolDown(p.getCoolDown() - 0.050);
 		if (p.getCoolDown() <= 0)
 		{
-			flag = 0;
+			p.setFlag(0);
 			p.setCoolDown(1.0);
 		}
-		//cout << "-" << p.getcooldawn() << "-";
+		//cout << "-" << p.getCoolDown() << "-";
 	}
 }
 
-void ListaDisparos::Disparar(Protagonista p)
+void ListaDisparos::Disparar(Protagonista &p)
 {
-	if (flag == 0)
+	if (p.getFlag() == 0)
 	{
 		Vector2D h_pos = p.GetPos();
 		Disparo* d = new Disparo();
 		d->setPos(h_pos.x, h_pos.y);
-
+		p.setFlag(1);
 		switch (p.getDir()) {
 		case 'd':
 			d->setVel(10, 0);
@@ -120,30 +118,33 @@ void ListaDisparos::Disparar(Protagonista p)
 
 }
 
-/*void ListaDisparos::DispararEnemigo(Enemigo e, Protagonista p)
+/*void ListaDisparos::Disparar(Enemigo &e)
 {
-	if (flag == 0)
+	for (int i = 0; i < e.getNumero(); i++)
 	{
-		Vector2D h_pos = p.GetPos();
-		Vector2D e_pos = e.GetPos();
-		float dist = modulo
-		Disparo* d = new Disparo();
-		d->setPos(h_pos.x, h_pos.y);
 
-		switch (p.getDir()) {
-		case 'd':
-			d->setVel(10, 0);
-			break;
-		case 'a':
-			d->setVel(-10, 0);
-			break;
-		case 'w':
-			d->setVel(0, 10);
-			break;
-		case 's':
-			d->setVel(0, -10);
-			break;
-		}
-		agregar(d);
-	};
+		if (flag == 0)
+		{
+			Vector2D e_pos = e.[i].GetPos();
+			Disparo* d = new Disparo();
+			d->setPos(e_pos.x, e_pos.y);
+
+			switch (p.getDir()) {
+			case 'd':
+				d->setVel(10, 0);
+				break;
+			case 'a':
+				d->setVel(-10, 0);
+				break;
+			case 'w':
+				d->setVel(0, 10);
+				break;
+			case 's':
+				d->setVel(0, -10);
+				break;
+			}
+			agregar(d);
+		};
+	}
+	
 }*/
