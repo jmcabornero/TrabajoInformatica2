@@ -1,7 +1,7 @@
 #include "HUD.h"
 #include "freeglut.h"
 #include <string.h>
-
+#define MAX_LENMENSAJE 1000
 #define capa1 0.03f
 #define capa2 0.04f
 #define capa3 0.05f
@@ -81,5 +81,117 @@ void HUD::mueve() {
 
 }
 
+void HUD::DibujaTienda(float camara_x, float camara_y)
+{
+	string mensaje = "";
+	char char_arr[MAX_LENMENSAJE];
+	char* char_arr2;
+	char_arr[0] = '\0';
+	setAlto(4);
+	setAncho(8);
+	setPos(camara_x, camara_y-2);
+	string line;
+	ifstream myfile("textos/TextoComerciante1.txt");
+	if (myfile.is_open())
+	{
+		while (getline(myfile, line))
+		{
+			char_arr2 = &line[0];
+			strcat(char_arr, char_arr2);
+			strcat(char_arr, "\n");
+		}
+		myfile.close();
+	}
+	else cout << "Unable to open file";
+	dibuja(char_arr);
+}
 
+void HUD::DibujaTienda2(float camara_x, float camara_y)
+{
+	string mensaje = "";
+	char char_arr[MAX_LENMENSAJE];
+	char* char_arr2;
+	char_arr[0] = '\0';
+	setAlto(5);
+	setAncho(4);
+	setPos(camara_x+4, camara_y +3);
+	string line;
+	ifstream myfile("textos/TextoComerciante2.txt");
+	if (myfile.is_open())
+	{
+		while (getline(myfile, line))
+		{
+			char_arr2 = &line[0];
+			strcat(char_arr, char_arr2);
+			strcat(char_arr, "\n");
+		}
+		myfile.close();
+	}
+	else cout << "Unable to open file";
+	dibuja(char_arr);
+}
 
+void HUD::DibujaTienda3(float camara_x, float camara_y)
+{
+	string mensaje = "";
+	char char_arr[MAX_LENMENSAJE];
+	char* char_arr2;
+	char_arr[0] = '\0';
+	setAlto(5);
+	setAncho(4);
+	setPos(camara_x + 4, camara_y + 3);
+	string line;
+	ifstream myfile("textos/TextoComerciante3.txt");
+	if (myfile.is_open())
+	{
+		while (getline(myfile, line))
+		{
+			char_arr2 = &line[0];
+			strcat(char_arr, char_arr2);
+			strcat(char_arr, "\n");
+		}
+		myfile.close();
+	}
+	else cout << "Unable to open file";
+	dibuja(char_arr);
+}
+
+void HUD::DibujaTienda4(float camara_x, float camara_y)
+{
+	string mensaje = "";
+	char char_arr[MAX_LENMENSAJE];
+	char* char_arr2;
+	char_arr[0] = '\0';
+	setAlto(5);
+	setAncho(4);
+	setPos(camara_x + 4, camara_y + 3);
+	string line;
+	ifstream myfile("textos/TextoComerciante4.txt");
+	if (myfile.is_open())
+	{
+		while (getline(myfile, line))
+		{
+			char_arr2 = &line[0];
+			strcat(char_arr, char_arr2);
+			strcat(char_arr, "\n");
+		}
+		myfile.close();
+	}
+	else cout << "Unable to open file";
+	dibuja(char_arr);
+}
+
+void HUD::DibujaTiendaMaster(Protagonista *p, float camara_x, float camara_y)
+{
+	Vector2D prota = p->GetPos();
+	if ((prota.x >= 105) && (prota.x <= 107) && (prota.y >= 81) && (prota.y <= 83))
+	{
+		DibujaTienda(camara_x, camara_y);
+		DibujaTienda2(camara_x, camara_y);
+	}
+	if ((prota.x >= 107) && (prota.x <= 109) && (prota.y >= 97) && (prota.y <= 99))
+	{
+		DibujaTienda3(camara_x, camara_y);
+		DibujaTienda4(camara_x, camara_y);
+	}
+}

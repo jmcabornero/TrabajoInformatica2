@@ -2,6 +2,8 @@
 #include "Vector2D.h"
 #include <iostream>
 #include <fstream>
+#include "Protagonista.h"
+#include <sstream>
 using namespace std;
 class HUD
 {
@@ -25,6 +27,10 @@ public:
 	void dibuja(char* mensaje);
 	void dibuja(const char* mensaje);
 	void mueve();
-
+	void DibujaTienda(float camara_x, float camara_y);
+	void DibujaTienda2(float camara_x, float camara_y);
+	void DibujaTienda3(float camara_x, float camara_y);
+	void DibujaTienda4(float camara_x, float camara_y);
+	void DibujaTiendaMaster(Protagonista *p, float camara_x, float camara_y);
 };
 

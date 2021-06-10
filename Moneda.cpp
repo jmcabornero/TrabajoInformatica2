@@ -35,3 +35,8 @@ Vector2D Moneda::GetEsquina()
 	vec.y = j;
 	return vec;
 }
+
+int Moneda::GetTipo()
+{
+	return tipo;
+}

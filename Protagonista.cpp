@@ -2,7 +2,7 @@
 #include "ETSIDI.h"
 #include <iostream>
 #include <sstream>
-#include "HUD.h"
+
 
 Protagonista::Protagonista()
 {

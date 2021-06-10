@@ -42,7 +42,15 @@ void ListaMonedas::Colision(Protagonista* p)  //se elimina la rupia y se suma di
 	for (int i = 0;i < numero;i++)
 	{
 		if (inter.colision(*p, *(lista[i])))
+		{
+			int tipo = lista[i]->GetTipo();
+			if (tipo == 1)
+				p->setDinero(p->getDinero() + 1);
+			if (tipo == 2)
+				p->setDinero(p->getDinero() + 5);
 			eliminar(i);
+		}
+			
 	}
 }
 

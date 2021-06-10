@@ -19,6 +19,7 @@ void Mundo::dibuja()
 	
 	caja.Dibuja();
 	caja.Dibuja2();
+	mensajestienda.DibujaTiendaMaster(&protagonista, posicion_ojo.x, posicion_ojo.y);
 	
 	enemigos.dibuja();
 	listacofres.Dibuja(posicion_ojo.x, posicion_ojo.y);
@@ -138,6 +139,7 @@ void Mundo::teclaEspecial(unsigned char key) //al pulsar la tecla
 		protagonista.setDir('w');
 		break;
 	}
+	
 }
 
 void Mundo::teclaEspecialUp(unsigned char key)  //al dejar de pulsar la tecla
