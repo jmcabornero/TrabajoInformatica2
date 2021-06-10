@@ -11,6 +11,8 @@ stats::stats()
 	vel = 0;
 	cd= 2.0;
 	attackspeed = 1;
+	dinero = 0;
+	pociones = 0;
 }
 
 void stats::ModVida(int i, float ataque)
@@ -24,12 +26,6 @@ void stats::ModVida(int i, float ataque)
 		dano = (45.0 * ataque) / defensa;
 	if (i == 4)
 		dano = 10;
-
 	vida = vida - dano;
 	//cout << "vida: " << vida << endl;
-}
-
-void stats::modCooldawn(float cd1)
-{
-	cd= cd1;
 }

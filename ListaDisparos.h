@@ -24,10 +24,9 @@ public:
 
 	void colision(Enemigo *e);
 	void colision(Obstaculos* o);
-	void Cooldawn(Protagonista &p);
+	void Cooldown(Protagonista &p);
 	void Disparar(Protagonista p);
 	//void DispararEnemigo(Enemigo e, Protagonista p);
-	
 	
 private:
 	Disparo* Lista[MAX_DISPAROS];

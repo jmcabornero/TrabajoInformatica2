@@ -23,6 +23,7 @@ public:
 	Vector2D getPos() { return pos; }
 	//dibujo y movimiento en la pantalla
 	void dibuja(char* mensaje);
+	void dibuja(const char* mensaje);
 	void mueve();
 
 };

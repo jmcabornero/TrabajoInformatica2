@@ -78,16 +78,16 @@ void ListaDisparos::colision(Obstaculos* o)
 		}
 	}
 }
-void ListaDisparos::Cooldawn(Protagonista &p)
+void ListaDisparos::Cooldown(Protagonista &p)
 {
 	if (flag == 1)
 	{
 		Sleep(0.025);
-		p.modCooldawn(p.getcooldawn() - 0.050);
-		if (p.getcooldawn() <= 0)
+		p.setCoolDown(p.getCoolDown() - 0.050);
+		if (p.getCoolDown() <= 0)
 		{
 			flag = 0;
-			p.modCooldawn(1.0);
+			p.setCoolDown(1.0);
 		}
 		//cout << "-" << p.getcooldawn() << "-";
 	}

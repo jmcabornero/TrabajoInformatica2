@@ -81,9 +81,9 @@ void ListaObstaculos::Colision(Protagonista* p, int n) //n=1 si obstaculo	n=2 si
 			}
 			if (n == 2) {
 				p->ModVida(4);
+				//p->setDinero(p->getDinero() + 1);
 			}
 		}
-		
 	}
 }
 

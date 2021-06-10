@@ -2,6 +2,7 @@
 #include "freeglut.h"
 #include <math.h>
 #include <iostream>
+#include <sstream>
 #include <time.h>
 #define MAX_LENMENSAJE 1000
 Mundo::Mundo(float x)
@@ -28,6 +29,8 @@ void Mundo::dibuja()
 	disparos.dibuja();
 
 	DibujaMensajes();
+
+	protagonista.dibujaStats(posicion_ojo.x - 3, posicion_ojo.y + 6.5);
 	
 }
 
@@ -51,9 +54,32 @@ void Mundo::mueve()
 	{
 		disparos.colision(listaobstaculos[i]);
 	}
-	disparos.Cooldawn(protagonista);
+	disparos.Cooldown(protagonista);
 	protagonista.FuncionTeletransporte();
 }
+
+/*std::string getStats(Protagonista &p) {
+	using namespace std;
+	string hp = convert(p.getVida());
+	string def = convert(p.getDef());
+	string att = convert(p.getAttack());
+	string v = convert(p.getVel());
+	string cdown = convert(p.getCoolDown());
+	string as = convert(p.getAttackspeed());
+	string money = convert(p.getDinero());
+
+	string vida = "vida: ";
+	string defensa = "defensa: ";
+	string ataque = "ataque: ";
+	string velocidad = "velocidad: ";
+	string cooldown = "cooldown: ";
+	string vel_ataque = "velocidad de ataque: ";
+	string dinero = "dinero: ";
+	string aux = "/100";
+
+	string str_stats = vida + hp + aux + '\n' + defensa + def + '\n' + ataque + att + '\n' + velocidad + v + '\n' + cooldown + cdown + '\n' + vel_ataque + as + '\n' + dinero + money + '\n';
+	return str_stats;
+}*/
 
 void Mundo::inicializa()
 {

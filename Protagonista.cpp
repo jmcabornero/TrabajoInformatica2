@@ -1,6 +1,7 @@
 #include "Protagonista.h"
 #include "ETSIDI.h"
 #include <iostream>
+#include <sstream>
 #include "HUD.h"
 
 Protagonista::Protagonista()
@@ -15,12 +16,16 @@ Protagonista::Protagonista()
 	spriteDown.setCenter(1, 0);
 	spriteDown.setSize(1, 1);
 
-	posicion.x = 52;posicion.y = 122;velocidad.x = 0;velocidad.y = 0, velabs=1;
+	posicion.x = 7;posicion.y = 122;velocidad.x = 0;velocidad.y = 0, velabs=1;
 	setVida(100);
 	//std::cout << "Vida: " << vida.getVida() << std::endl;
 	hud.setAlto(0.1);
 	hud.setAncho(3);
 	hud.setPos(posicion.x, posicion.y + 1.5f);
+
+	hud_stats.setAlto(1);
+	hud_stats.setAncho(8);
+	hud_stats.setPos(posicion.x, posicion.y);
 }
 
 void Protagonista::Dibuja()
@@ -57,6 +62,8 @@ void Protagonista::Dibuja()
 	glPopMatrix();
 
 	dibujaHUD();
+
+	//dibujaStats();
 }
 
 void Protagonista::dibujaHUD() {
@@ -149,4 +156,36 @@ float Protagonista::GetVelAbs()
 void Protagonista::SetVelAbs(float vel)
 {
 	velabs = vel;
+}
+
+
+std::string convert(float num) {
+	std::ostringstream conv;
+	conv << num;
+	return conv.str();
+}
+
+std::string Protagonista::stringStats() {
+	using namespace std;
+	string hp = convert(getVida());
+	string def = convert(getDef());
+	string att = convert(getAttack());
+	string v = convert(getVel());
+	string as = convert(getAttackspeed());
+	string money = convert(getDinero());
+	string pocs = convert(getPociones());
+
+	string a = "       ";
+	string aux = "/100";
+
+	//string str_stats = vida + hp + aux + '\n' + defensa + def + '\n' + ataque + att + '\n' + velocidad + v + '\n' + cooldown + cdown + '\n' + vel_ataque + as + '\n' + dinero + money + '\n';
+	string str_stats = a + hp + aux + a + def + a + att + a + v + a + as + a + money + a + pocs;
+	return str_stats;
+}
+void Protagonista::dibujaStats(float camara_x, float camara_y) {
+	hud_stats.setPos(camara_x, camara_y);
+	std::string stats = stringStats();
+	const char* c = stats.c_str();
+	hud_stats.dibuja(c);
+	//std::cout << stats << std::endl;
 }
