@@ -12,6 +12,7 @@ protected:
 	float ataque;
 	float vel;
 	float cd;
+	bool flagDisparo;
 	float attackspeed;
 	float dinero;
 	float pociones;
@@ -35,4 +36,6 @@ public:
 	void setAttackspeed(float as) { attackspeed = as; }
 	float getPociones() { return pociones; }
 	void setPociones(float p) { pociones = p; }
+	void setFlag(bool i) { flagDisparo = i; }
+	bool getFlag() { return flagDisparo; }
 };

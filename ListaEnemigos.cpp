@@ -82,3 +82,38 @@ void ListaEnemigos::eliminar(int index)
 		lista[i] = lista[i + 1];
 }
 
+void ListaEnemigos::Disparar(ListaDisparos *ds)
+{
+	for (int i = 0; i < numero; i++)
+	{
+		if (lista[i]->getFlag() == 0)
+		{
+			Vector2D e_pos = lista[i]->GetPos();
+			Disparo* d = new Disparo();
+			d->setPos(e_pos.x, e_pos.y);
+			lista[i]->setFlag(1);
+
+			d->setVel(0, 10);
+
+			ds->agregar(d);
+		}
+	}
+}
+
+void ListaEnemigos::CoolDown()
+{
+	for (int i = 0; i < numero; i++)
+	{
+		if (lista[i]->getFlag() == 1)
+		{
+			Sleep(0.025);
+			lista[i]->setCoolDown(lista[i]->getCoolDown() - 0.050);
+			if (lista[i]->getCoolDown() <= 0)
+			{
+				lista[i]->setFlag(0);
+				lista[i]->setCoolDown(1.0);
+			}
+		}
+	}
+	
+}
