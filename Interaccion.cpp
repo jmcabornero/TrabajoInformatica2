@@ -75,12 +75,10 @@ bool Interaccion::colision(Protagonista p, Cofres& c)
 	if ((((esquina.x + 0.4) <= prota.x) && (prota.x <= (esquina.x + 1.7f))) && (((esquina.y - 0.8f) <= prota.y) && (prota.y <= (esquina.y + 0.8f))))
 	{
 		return true;
-		cout << "lol"; //fallo aqui
 	}
 	else
 	{
 		return false;
-		cout << "no choca";
 	}
 		
 }

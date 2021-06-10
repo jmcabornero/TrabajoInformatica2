@@ -34,8 +34,36 @@ void ListaCofres::Dibuja()
 	for (int i = 0;i < MAX_COFRES;i++)
 	{
 		lista[i]->Dibuja();
-	}
-		
+		int tip = lista[i]->GetTipo();
+		if (tip == 3)
+		{
+			switch (i)
+			{
+			case 0:
+				cout << "+20 monedas";
+			case 1:
+				cout << "+20 monedas";
+			case 2:
+				cout << "+20 monedas";
+			case 3:
+				cout << "+20 monedas";
+			case 4:
+				cout << "+20 monedas";
+			case 5:
+				cout << "+20 monedas";
+			case 6:
+				cout << "+20 monedas";
+			case 7:
+				cout << "+20 monedas";
+			case 8:
+				cout << "+20 monedas";
+			case 9:
+				cout << "+20 monedas";
+			case 10:
+				cout << "+20 monedas";
+			}
+		}
+	}	
 }
 
 void ListaCofres::CrearCofres()
@@ -48,8 +76,8 @@ void ListaCofres::CrearCofres()
 	lista[5] = new Cofres(136.0f, 26.0f, 1);
 	lista[6] = new Cofres(135.0f, 40.0f, 1);
 	lista[7] = new Cofres(137.0f, 58.0f, 1);
-	lista[8] = new Cofres(184.0f, 55.0f, 1);
-	lista[9] = new Cofres(195.0f, 55.0f, 1);
+	lista[8] = new Cofres(184.0f, 54.0f, 1);
+	lista[9] = new Cofres(195.0f, 54.0f, 1);
 	lista[10] = new Cofres(183.0f, 87.0f, 1);
 }
 
@@ -71,9 +99,16 @@ void ListaCofres::Transformacion(Protagonista *p)
 		tipo = lista[i]->GetTipo();
 		if ((inter.colision(*p, (*lista[i])))&&(tipo==1))
 		{
-			lista[i]->SetTipo(2);
-			
+			tiempos[i] = time(NULL);	
+			lista[i]->SetTipo(3);
+		}
+		else if (tipo == 3)
+		{
+			time_t deltatime = time(NULL) - tiempos[i];
+			if (deltatime >= 3)
+			{
+				lista[i]->SetTipo(2);
+			}
 		}
 	}
 }
-
