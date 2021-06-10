@@ -116,6 +116,15 @@ void Mundo::tecla(unsigned char key)
 	{
 		disparos.Disparar(protagonista);
 	}
+	case 'c'||'C':
+	{
+		int npociones = protagonista.getPociones();
+		if (npociones > 0)
+		{
+			protagonista.setVida(protagonista.getVida() + 20);
+			protagonista.setPociones(protagonista.getPociones() - 1);
+		}
+	}
 	break;
 	}
 }
