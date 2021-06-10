@@ -4,10 +4,12 @@
 #include "Protagonista.h"
 #include "Vector2D.h"
 #include "Cofres.h"
+#include <time.h>
 class ListaCofres
 {
 private:
 	Cofres* lista[MAX_COFRES];
+	time_t tiempos[MAX_COFRES];
 	int numero;
 public:
 	ListaCofres();

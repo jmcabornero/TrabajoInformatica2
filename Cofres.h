@@ -2,6 +2,9 @@
 #include "freeglut.h"
 #include "ETSIDI.h"
 #include "Vector2D.h"
+#include <iostream>
+
+using namespace std;
 
 class Cofres
 {

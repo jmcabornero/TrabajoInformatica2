@@ -12,18 +12,22 @@ void Cofres::Dibuja()
 	glEnable(GL_TEXTURE_2D);
 	if (tipo==1)
 		glBindTexture(GL_TEXTURE_2D, ETSIDI::getTexture("imagenes/Cofres/Cerrado.png").id);
-	if (tipo==2)
+	if (tipo==2||tipo==3)
 		glBindTexture(GL_TEXTURE_2D, ETSIDI::getTexture("imagenes/Cofres/Abierto.png").id);
 	glDisable(GL_LIGHTING);
 	glBegin(GL_POLYGON);
 	glColor3f(1, 1, 1);
-	glTexCoord2d(0, 0);glVertex3d(i, j, 0.03);
-	glTexCoord2d(1, 0);glVertex3d(i + 1, j, 0.03);
-	glTexCoord2d(1, 1);glVertex3d(i + 1, j + 1, 0.03);
-	glTexCoord2d(0, 1);glVertex3d(i, j + 1, 0.03);
+	glTexCoord2d(0, 1);glVertex3d(i, j, 0.025);
+	glTexCoord2d(1, 1);glVertex3d(i + 1, j, 0.025);
+	glTexCoord2d(1, 0);glVertex3d(i + 1, j + 1, 0.025);
+	glTexCoord2d(0, 0);glVertex3d(i, j + 1, 0.025);
 	glEnd();
 	glEnable(GL_LIGHTING);
 	glDisable(GL_TEXTURE_2D);
+	if (tipo == 3)
+	{
+		
+	}
 }
 
 Vector2D Cofres::GetEsquina()
@@ -36,7 +40,7 @@ Vector2D Cofres::GetEsquina()
 
 void Cofres::SetTipo(int a)
 {
-	a = tipo;
+	tipo=a;
 }
 
 int Cofres::GetTipo()
