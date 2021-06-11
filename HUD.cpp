@@ -195,3 +195,70 @@ void HUD::DibujaTiendaMaster(Protagonista *p, float camara_x, float camara_y)
 		DibujaTienda4(camara_x, camara_y);
 	}
 }
+
+void HUD::dibujaHUD(Protagonista *prota) {
+	Vector2D prota_pos = prota->GetPos();
+	setAlto(0.1);
+	setAncho(3);
+	setPos(prota_pos.x, prota_pos.y + 1.5f);
+	float marco = 0.06f;
+	float h = alto;
+	float a = ancho;
+	float hp = prota->getVida() / 100;
+	//cout << hp << endl;
+	Vector2D p = pos;
+	glBegin(GL_POLYGON);
+	glColor3f(0, 0, 0);
+	glVertex3d(marco + p.x + a / 2, marco + p.y + h / 2, capa1);
+	glVertex3d(marco + p.x + a / 2, -1 * marco + p.y - h / 2, capa1);
+	glVertex3d(-1 * marco + p.x - a / 2, -1 * marco + p.y - h / 2, capa1);
+	glVertex3d(-1 * marco + p.x - a / 2, marco + p.y + h / 2, capa1);
+	glEnd();
+	glBegin(GL_POLYGON);
+	if (hp >= 0.66f)glColor3f(0, 255, 0);
+	if ((hp < 0.66f) && (hp >= 0.33f))glColor3f(255, 255, 0);
+	if (hp < 0.33f)glColor3f(255, 0, 0);
+	if (hp > 0) {
+		glVertex3d((p.x + a / 2) - a * (1 - hp), p.y + h / 2, capa2);
+		glVertex3d((p.x + a / 2) - a * (1 - hp), p.y - h / 2, capa2);
+		glVertex3d(p.x - a / 2, p.y - h / 2, capa2);
+		glVertex3d(p.x - a / 2, p.y + h / 2, capa2);
+	}
+	//cout << getVida() << endl;
+	glEnd();
+}
+
+std::string convert(float num) {
+	std::ostringstream conv;
+	conv << num;
+	return conv.str();
+}
+
+std::string HUD::stringStats(Protagonista *p) {
+	using namespace std;
+	string hp = convert(p->getVida());
+	string def = convert(p->getDef());
+	string att = convert(p->getAttack());
+	string v = convert(p->getVel());
+	string as = convert(p->getAttackspeed());
+	string money = convert(p->getDinero());
+	string pocs = convert(p->getPociones());
+
+	string a = "       ";
+	string aux = "/100";
+
+	//string str_stats = vida + hp + aux + '\n' + defensa + def + '\n' + ataque + att + '\n' + velocidad + v + '\n' + cooldown + cdown + '\n' + vel_ataque + as + '\n' + dinero + money + '\n';
+	string str_stats = a + hp + aux + a + def + a + att + a + v + a + as + a + money + a + pocs;
+	return str_stats;
+}
+void HUD::dibujaStats(Protagonista *p, float camara_x, float camara_y) {
+	Vector2D prota_pos = p->GetPos();
+	setAlto(1);
+	setAncho(8);
+	setPos(prota_pos.x, prota_pos.y);
+	setPos(camara_x, camara_y);
+	std::string stats = stringStats(p);
+	const char* c = stats.c_str();
+	dibuja(c);
+	//std::cout << stats << std::endl;
+}

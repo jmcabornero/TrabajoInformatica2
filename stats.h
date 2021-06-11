@@ -20,7 +20,7 @@ public:
 	stats();
 	virtual ~stats();
 	float getVida() { return vida; }
-	void setVida(float v) { vida = v; }
+	void setVida(float v) { vida = v; if (getVida() < 0)setVida(0); if (getVida() > 100)setVida(100); }
 	float getDef() { return defensa; }
 	void setDef(float d) { defensa = d; }
 	float getAttack() { return ataque; }

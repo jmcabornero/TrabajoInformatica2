@@ -31,7 +31,9 @@ void Mundo::dibuja()
 
 	DibujaMensajes();
 
-	protagonista.dibujaStats(posicion_ojo.x - 3, posicion_ojo.y + 6.5);
+	//protagonista.dibujaStats(posicion_ojo.x - 3, posicion_ojo.y + 6.5);
+	hud.dibujaHUD(&protagonista);
+	hud_stats.dibujaStats(&protagonista, posicion_ojo.x - 3, posicion_ojo.y + 6.5);
 
 	enemigos.Disparar(&disparos);
 	enemigos.CoolDown();
@@ -60,30 +62,8 @@ void Mundo::mueve()
 	}
 	disparos.Cooldown(protagonista);
 	protagonista.FuncionTeletransporte();
+	hud.setPos(protagonista.GetPosx(), protagonista.getPosy() + 1.5f);
 }
-
-/*std::string getStats(Protagonista &p) {
-	using namespace std;
-	string hp = convert(p.getVida());
-	string def = convert(p.getDef());
-	string att = convert(p.getAttack());
-	string v = convert(p.getVel());
-	string cdown = convert(p.getCoolDown());
-	string as = convert(p.getAttackspeed());
-	string money = convert(p.getDinero());
-
-	string vida = "vida: ";
-	string defensa = "defensa: ";
-	string ataque = "ataque: ";
-	string velocidad = "velocidad: ";
-	string cooldown = "cooldown: ";
-	string vel_ataque = "velocidad de ataque: ";
-	string dinero = "dinero: ";
-	string aux = "/100";
-
-	string str_stats = vida + hp + aux + '\n' + defensa + def + '\n' + ataque + att + '\n' + velocidad + v + '\n' + cooldown + cdown + '\n' + vel_ataque + as + '\n' + dinero + money + '\n';
-	return str_stats;
-}*/
 
 void Mundo::inicializa()
 {

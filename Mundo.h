@@ -25,6 +25,7 @@ private:
 	ListaMonedas monedas;
 	ListaCofres listacofres;
 	HUD mensaje1, mensaje2, mensaje3, mensaje4, mensaje5, mensajelibro, mensajestienda;
+	HUD hud, hud_stats;
 
 	public:
 		Mundo(float x=0);

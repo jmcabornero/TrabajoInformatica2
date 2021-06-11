@@ -19,14 +19,6 @@ Protagonista::Protagonista()
 	posicion.x = 10;posicion.y = 124;velocidad.x = 0;velocidad.y = 0, velabs=1;
 	setVida(100);
 	//std::cout << "Vida: " << vida.getVida() << std::endl;
-	hud.setAlto(0.1);
-	hud.setAncho(3);
-	hud.setPos(posicion.x, posicion.y + 1.5f);
-
-	hud_stats.setAlto(1);
-	hud_stats.setAncho(8);
-	hud_stats.setPos(posicion.x, posicion.y);
-
 	setFlag(0);
 }
 
@@ -63,46 +55,15 @@ void Protagonista::Dibuja()
 	}
 	glPopMatrix();
 
-	dibujaHUD();
-
 	//dibujaStats();
 }
 
-void Protagonista::dibujaHUD() {
-	float capa1 = 0.03f;
-	float capa2 = 0.04f;
-	float capa3 = 0.05f;
-	float marco = 0.06f;
-	float h = hud.getAlto();
-	float a = hud.getAncho();
-	float hp = getVida()/100;
-	//cout << hp << endl;
-	Vector2D p = hud.getPos();
-	glBegin(GL_POLYGON);
-	glColor3f(0, 0, 0);
-	glVertex3d(marco + p.x + a / 2, marco + p.y + h / 2, capa1);
-	glVertex3d(marco + p.x + a / 2, -1 * marco + p.y - h / 2, capa1);
-	glVertex3d(-1 * marco + p.x - a / 2, -1 * marco + p.y - h / 2, capa1);
-	glVertex3d(-1 * marco + p.x - a / 2, marco + p.y + h / 2, capa1);
-	glEnd();
-	glBegin(GL_POLYGON);
-	if (hp >= 0.66f)glColor3f(0, 255, 0);
-	if ((hp < 0.66f) && (hp >= 0.33f))glColor3f(255, 255, 0);
-	if (hp < 0.33f)glColor3f(255, 0, 0);
-	if (hp > 0) {
-		glVertex3d((p.x + a / 2) - a * (1 - hp), p.y + h / 2, capa2);
-		glVertex3d((p.x + a / 2) - a * (1 - hp), p.y - h / 2, capa2);
-		glVertex3d(p.x - a / 2, p.y - h / 2, capa2);
-		glVertex3d(p.x - a / 2, p.y + h / 2, capa2);
-	}
-	//cout << getVida() << endl;
-	glEnd();
-}
+
 
 
 void Protagonista::Mueve(float t)
 {
-	hud.setPos(posicion.x, posicion.y + 1.5f);
+	//hud.setPos(posicion.x, posicion.y + 1.5f);
 	ObjetosMovimiento::mueve(t);
 	spriteR.loop();
 	spriteL.loop();
@@ -160,34 +121,3 @@ void Protagonista::SetVelAbs(float vel)
 	velabs = vel;
 }
 
-
-std::string convert(float num) {
-	std::ostringstream conv;
-	conv << num;
-	return conv.str();
-}
-
-std::string Protagonista::stringStats() {
-	using namespace std;
-	string hp = convert(getVida());
-	string def = convert(getDef());
-	string att = convert(getAttack());
-	string v = convert(getVel());
-	string as = convert(getAttackspeed());
-	string money = convert(getDinero());
-	string pocs = convert(getPociones());
-
-	string a = "       ";
-	string aux = "/100";
-
-	//string str_stats = vida + hp + aux + '\n' + defensa + def + '\n' + ataque + att + '\n' + velocidad + v + '\n' + cooldown + cdown + '\n' + vel_ataque + as + '\n' + dinero + money + '\n';
-	string str_stats = a + hp + aux + a + def + a + att + a + v + a + as + a + money + a + pocs;
-	return str_stats;
-}
-void Protagonista::dibujaStats(float camara_x, float camara_y) {
-	hud_stats.setPos(camara_x, camara_y);
-	std::string stats = stringStats();
-	const char* c = stats.c_str();
-	hud_stats.dibuja(c);
-	//std::cout << stats << std::endl;
-}

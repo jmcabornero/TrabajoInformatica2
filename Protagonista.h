@@ -3,7 +3,6 @@
 #include "ETSIDI.h"
 #include "ObjetosMovimiento.h"
 #include "stats.h"
-#include "HUD.h"
 
 using ETSIDI::SpriteSequence;
 
@@ -12,7 +11,7 @@ class Protagonista:public ObjetosMovimiento, public stats
 private:
 	char direccion;
 	float velabs;
-	HUD hud, hud_stats;
+	
 public:
 	Protagonista();
 	SpriteSequence spriteR{ "imagenes/Player_derecha.png", 3 };
@@ -28,8 +27,6 @@ public:
 	bool MensajeBuda(float inicio_x, float final_x, float inicio_y);
 	void Teletransporte(float inicio_x, float inicio_y, float final_x, float final_y);
 	float GetVelAbs();
-	void dibujaHUD();
-	void dibujaStats(float camara_x, float camara_y);
-	std::string stringStats();
+	
 	void SetVelAbs(float vel);
 };
