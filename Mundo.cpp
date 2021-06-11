@@ -121,6 +121,7 @@ void Mundo::tecla(unsigned char key)
 	}
 	Vector2D prota = protagonista.GetPos();
 	int dinero = protagonista.getDinero();
+	float vel = protagonista.GetVelAbs();
 	if ((prota.x >= 105) && (prota.x <= 109) && (prota.y >= 80) && (prota.y <= 84))
 	{
 		switch (key)
@@ -159,9 +160,9 @@ void Mundo::tecla(unsigned char key)
 			}
 			case '3':
 			{
-				if (dinero > 20)
+				if ((dinero > 20)&&(vel<2))
 				{
-					protagonista.SetVelAbs(protagonista.GetVelAbs() + 1);
+					protagonista.SetVelAbs(protagonista.GetVelAbs() + 0.1);
 					protagonista.setDinero(protagonista.getDinero() - 20);
 				}
 				break;

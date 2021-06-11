@@ -3,6 +3,6 @@
 (2) Fuerza - 40$
     +20 Fuerza
 (3) Velocidad - 40$
-    +20 Velocidad
+    +0.1 Velocidad
 (4) Cadencia - 40$
     +20 Cadencia
