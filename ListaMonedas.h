@@ -20,6 +20,7 @@ public:
 	void eliminar(int index);
 	Moneda* operator[](int i);
 	int getNumero() { return numero; };
+	void destruirContenido();
 
 };
 

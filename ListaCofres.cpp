@@ -151,3 +151,10 @@ void ListaCofres::Transformacion(Protagonista *p)
 		}
 	}
 }
+
+void ListaCofres::destruirContenido()
+{
+	for (int i = 0; i < numero; i++)
+		delete lista[i];
+	numero = 0;
+}

@@ -72,3 +72,10 @@ void ListaMonedas::eliminar(int index)
 	for (int i = index; i < numero; i++)
 		lista[i] = lista[i + 1];
 }
+
+void ListaMonedas::destruirContenido()
+{
+	for (int i = 0; i < numero; i++)
+		delete lista[i];
+	numero = 0;
+}

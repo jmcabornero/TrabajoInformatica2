@@ -24,6 +24,7 @@ public:
 	Cofres* operator[](int i);
 	int getNumero() { return numero; };
 	HUD mensaje;
+	void destruirContenido();
 
 };
 

@@ -19,5 +19,6 @@ public:
 	void Colision(Protagonista* p,int n);
 	Obstaculos* operator[](int i);
 	int getNumero() { return numero; };
+	void destruirContenido();
 };
 

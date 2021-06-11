@@ -95,3 +95,10 @@ Obstaculos* ListaObstaculos::operator[](int i)
 		i = 0;
 	return lista[i];
 }
+
+void ListaObstaculos::destruirContenido()
+{
+	for (int i = 0; i < numero; i++)
+		delete lista[i];
+	numero = 0;
+}
