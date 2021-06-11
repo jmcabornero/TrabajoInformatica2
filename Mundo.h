@@ -9,6 +9,7 @@
 #include "ListaMonedas.h"
 #include "HUD.h"
 #include "ListaCofres.h"
+#include "ETSIDI.h"
 
 class Mundo
 {

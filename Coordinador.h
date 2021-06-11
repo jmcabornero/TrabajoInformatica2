@@ -14,9 +14,9 @@ public:
 	void TeclaEspecialUp(int key);
 
 protected:
-	enum Estado { INICIO, JUEGO, GAMEOVER, EXITO, PAUSA, DIFICULTAD, HISTORIA };
+	enum Estado { INICIO, JUEGO, INSTRUCCIONES, HISTORIA, EXITO, PAUSA, GAMEOVER };
 	Estado estado;
 	Mundo mundo;
+	int ContadorHisoria;
 };
 
-//vicen perro
