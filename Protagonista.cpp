@@ -16,7 +16,7 @@ Protagonista::Protagonista()
 	spriteDown.setCenter(1, 0);
 	spriteDown.setSize(1, 1);
 
-	posicion.x = 105;posicion.y = 80;velocidad.x = 0;velocidad.y = 0, velabs=1;
+	posicion.x = 111;posicion.y = 80;velocidad.x = 0;velocidad.y = 0, velabs=1;
 	setVida(100);
 	//std::cout << "Vida: " << vida.getVida() << std::endl;
 	setFlag(0);

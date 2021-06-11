@@ -100,16 +100,73 @@ void Mundo::tecla(unsigned char key)
 	{
 		disparos.Disparar(protagonista);
 	}
-	case 'c'||'C':
+	case 'c':
+	case 'C':
 	{
 		int npociones = protagonista.getPociones();
-		if (npociones > 0)
+		int vida = protagonista.getVida();
+		if ((npociones > 0)&&(vida<100))
 		{
 			protagonista.setVida(protagonista.getVida() + 20);
-			protagonista.setPociones(protagonista.getPociones() - 1);
+			protagonista.setPociones(npociones - 1);
 		}
 	}
 	break;
+	}
+	Vector2D prota = protagonista.GetPos();
+	int dinero = protagonista.getDinero();
+	if ((prota.x >= 105) && (prota.x <= 109) && (prota.y >= 80) && (prota.y <= 84))
+	{
+		switch (key)
+		{
+		case '1':
+		{
+			if (dinero > 20)
+			{
+				protagonista.setPociones(protagonista.getPociones() + 1);
+				protagonista.setDinero(protagonista.getDinero() - 20);
+			}
+		}
+		}
+		if ((prota.x >= 107) && (prota.x <= 111) && (prota.y >= 96) && (prota.y <= 100))
+		{
+			switch (key)
+			{
+			case '1':
+			{
+				if (dinero > 20)
+				{
+					protagonista.setDef(protagonista.getDef() + 1);
+					protagonista.setDinero(protagonista.getDinero() - 20);
+				}
+			}
+			case '2':
+			{
+				if (dinero > 20)
+				{
+					protagonista.setAttack(protagonista.getAttack() + 1);
+					protagonista.setDinero(protagonista.getDinero() - 20);
+				}
+			}
+			case '3':
+			{
+				if (dinero > 20)
+				{
+					protagonista.SetVelAbs(protagonista.GetVelAbs() + 1);
+					protagonista.setDinero(protagonista.getDinero() - 20);
+				}
+			}
+			case '4':
+			{
+				if (dinero > 20)
+				{
+					protagonista.setAttackspeed(protagonista.getAttackspeed() + 1);
+					protagonista.setDinero(protagonista.getDinero() - 20);
+				}
+			}
+			}
+		}
+
 	}
 }
 
