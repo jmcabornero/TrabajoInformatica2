@@ -54,6 +54,8 @@ void ListaDisparos::colision(Enemigo *e)
 {
 	for (int i = 0; i < num; i++)
 	{
+		if (Lista[i]->getP() == 1)
+		{
 			bool x;
 			x = Interaccion::colision(*(Lista[i]), *e);
 			if (x == 1)
@@ -61,6 +63,24 @@ void ListaDisparos::colision(Enemigo *e)
 				(*e).ModVida(1, Lista[i]->getIdent());
 				elimina(Lista[i]);
 			}
+		}
+	}
+}
+
+void ListaDisparos::colision(Protagonista *e)
+{
+	for (int i = 0; i < num; i++)
+	{
+		if (Lista[i]->getP() == 2)
+		{
+			bool x;
+			x = Interaccion::colision(*(Lista[i]), *e);
+			if (x == 1)
+			{
+				(*e).ModVida(1, Lista[i]->getIdent());
+				elimina(Lista[i]);
+			}
+		}
 	}
 }
 
@@ -99,6 +119,7 @@ void ListaDisparos::Disparar(Protagonista &p)
 		Disparo* d = new Disparo();
 		d->setPos(h_pos.x, h_pos.y);
 		p.setFlag(1);
+		
 		switch (p.getDir()) {
 		case 'd':
 			d->setVel(10, 0);

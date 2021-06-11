@@ -18,6 +18,7 @@ public:
 private:
 	float radio;
 	int ident;
+	int p; //nos sirve para identificar quien realiza el disparo (1::personaje; 2::Enemigos)
 public:
 	void setRadio(float r) { radio = r; }
 	float getRadio() { return radio; }
@@ -25,5 +26,7 @@ public:
 	void mueve(float t);
 	int getIdent() { return ident; };
 	void modIdent(int i);
+	void setP(int m) { p = m; };
+	int getP() { return p; }
 };
 

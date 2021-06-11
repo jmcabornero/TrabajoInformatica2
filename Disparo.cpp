@@ -13,6 +13,7 @@ Disparo::Disparo() {
 	setPos(5, 5);
 	setVel(5, 0);
 	setRadio(0.25);
+	setP(1);
 }
 
 Disparo::~Disparo() {

@@ -90,8 +90,10 @@ void ListaEnemigos::Disparar(ListaDisparos *ds)
 		{
 			Vector2D e_pos = lista[i]->GetPos();
 			Disparo* d = new Disparo();
+			d->setP(2);
 			d->setPos(e_pos.x, e_pos.y);
 			lista[i]->setFlag(1);
+
 
 			d->setVel(0, 10);
 

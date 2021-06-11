@@ -42,6 +42,19 @@ bool Interaccion::colision(Disparo &d, Enemigo &e)
 		return false;
 }
 
+bool Interaccion::colision(Disparo& d, Protagonista& e)
+{
+	Vector2D aux = (d.GetPos() - e.GetPos());
+	float distancia = aux.modulo();
+
+	if (distancia <= 0.6)
+	{
+		return true;
+	}
+	else
+		return false;
+}
+
 
 bool Interaccion::colision(Disparo& d, Obstaculos& o)
 {

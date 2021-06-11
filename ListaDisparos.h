@@ -24,6 +24,7 @@ public:
 
 	void colision(Enemigo *e);
 	void colision(Obstaculos* o);
+	void colision(Protagonista *p);
 	void Cooldown(Protagonista &p);
 	void Disparar(Protagonista &p);
 	//void Disparar(Enemigo &e);

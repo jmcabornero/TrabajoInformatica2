@@ -51,8 +51,9 @@ void Mundo::mueve()
 	CambioCamara();
 	for (int i = 0; i < enemigos.getNumero(); i++)
 	{
-		//disparos.colision(enemigos[i]);
+		disparos.colision(enemigos[i]);
 	}
+	disparos.colision(&protagonista);
 	enemigos.dano(&monedas);
 	enemigos.Perseguir(protagonista);
 	enemigos.mueve(0.15f);
