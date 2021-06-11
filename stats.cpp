@@ -27,5 +27,7 @@ void stats::ModVida(int i, float ataque)
 	if (i == 4)
 		dano = 10;
 	vida = vida - dano;
+	if (getVida() < 0)setVida(0); 
+	if (getVida() > 100)setVida(100);
 	//cout << "vida: " << vida << endl;
 }
