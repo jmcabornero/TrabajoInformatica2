@@ -33,7 +33,7 @@ void Mundo::dibuja()
 
 	//protagonista.dibujaStats(posicion_ojo.x - 3, posicion_ojo.y + 6.5);
 	hud.dibujaHUD(&protagonista);
-	hud_stats.dibujaStats(&protagonista, posicion_ojo.x - 3, posicion_ojo.y + 6.5);
+	hud_stats.dibujaStats(&protagonista, posicion_ojo.x - 4.5, posicion_ojo.y + 6.5);
 
 	enemigos.Disparar(&disparos);
 	enemigos.CoolDown();

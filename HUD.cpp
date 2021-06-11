@@ -5,6 +5,7 @@
 #define capa1 0.03f
 #define capa2 0.04f
 #define capa3 0.05f
+#define capa4 0.06f
 
 HUD::HUD() {
 	setAlto(4);
@@ -73,9 +74,8 @@ void HUD::dibuja(const char* mensaje) {
 	glVertex3d(p.x - a / 2, p.y - h / 2, capa2);
 	glVertex3d(p.x - a / 2, p.y + h / 2, capa2);
 	glEnd();
-	displayText(p.x - a / 2 + marco, p.y + h / 2 - 4 * marco, capa3, 255, 255, 255, mensaje);
+	displayText(p.x - a / 2 + marco, p.y + h / 2 - 4 * marco, capa3, 1, 1, 1, mensaje);
 }
-
 
 void HUD::mueve() {
 
@@ -244,21 +244,29 @@ std::string HUD::stringStats(Protagonista *p) {
 	string money = convert(p->getDinero());
 	string pocs = convert(p->getPociones());
 
-	string a = "       ";
+	string vida = "HP: ";
+	string defensa = "DEF: ";
 	string aux = "/100";
+	string ataque = "ATT: ";
+	string velocidad = "VEL: ";
+	string vel_ataque = "ATT VEL:";
+	string dinero = "$: ";
+	string potis = "P's: ";
 
-	//string str_stats = vida + hp + aux + '\n' + defensa + def + '\n' + ataque + att + '\n' + velocidad + v + '\n' + cooldown + cdown + '\n' + vel_ataque + as + '\n' + dinero + money + '\n';
-	string str_stats = a + hp + aux + a + def + a + att + a + v + a + as + a + money + a + pocs;
+	string str_stats = vida + hp + aux + '\n' + defensa + def + '\n' + ataque + att + '\n' + velocidad + v + '\n' + vel_ataque + as + '\n' + dinero + money + '\n' + potis + pocs;
+	//string str_stats = a + hp + aux + a + def + a + att + a + v + a + as + a + money + a + pocs;
 	return str_stats;
 }
 void HUD::dibujaStats(Protagonista *p, float camara_x, float camara_y) {
 	Vector2D prota_pos = p->GetPos();
-	setAlto(1);
-	setAncho(8);
+	float marco = 0.7;
+	setAlto(5);
+	setAncho(5);
 	setPos(prota_pos.x, prota_pos.y);
 	setPos(camara_x, camara_y);
 	std::string stats = stringStats(p);
 	const char* c = stats.c_str();
 	dibuja(c);
+
 	//std::cout << stats << std::endl;
 }
