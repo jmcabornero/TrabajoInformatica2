@@ -44,26 +44,37 @@ void ListaCofres::Dibuja(float posicion_ojo_x, float posicion_ojo_y)
 			{
 			case 0:
 				mensaje.dibuja("+20 Monedas     +1 pocion");
+				break;
 			case 1:
 				mensaje.dibuja("+20 Monedas     +1 pocion");
+				break;
 			case 2:
 				mensaje.dibuja("+20 Monedas     +1 pocion");
+				break;
 			case 3:
 				mensaje.dibuja("+20 Monedas     +1 pocion");
+				break;
 			case 4:
 				mensaje.dibuja("+20 Monedas     +1 pocion");
+				break;
 			case 5:
 				mensaje.dibuja("+20 Monedas     +1 pocion");
+				break;
 			case 6:
 				mensaje.dibuja("+20 Monedas     +1 pocion");
+				break;
 			case 7:
 				mensaje.dibuja("+20 Monedas     +1 pocion");
+				break;
 			case 8:
 				mensaje.dibuja("+20 Monedas     +1 pocion");
+				break;
 			case 9:
 				mensaje.dibuja("+20 Monedas     +1 pocion");
+				break;
 			case 10:
 				mensaje.dibuja("+20 Monedas     +1 pocion");
+				break;
 			}
 		}
 	}	
@@ -108,36 +119,47 @@ void ListaCofres::Transformacion(Protagonista *p)
 			case 0:
 				p->setDinero(p->getDinero() + 20);
 				p->setPociones(p->getPociones() + 1);
+				break;
 			case 1:
 				p->setDinero(p->getDinero() + 20);
 				p->setPociones(p->getPociones() + 1);
+				break;
 			case 2:
 				p->setDinero(p->getDinero() + 20);
 				p->setPociones(p->getPociones() + 1);
+				break;
 			case 3:
 				p->setDinero(p->getDinero() + 20);
 				p->setPociones(p->getPociones() + 1);
+				break;
 			case 4:
 				p->setDinero(p->getDinero() + 20);
 				p->setPociones(p->getPociones() + 1);
+				break;
 			case 5:
 				p->setDinero(p->getDinero() + 20);
 				p->setPociones(p->getPociones() + 1);
+				break;
 			case 6:
 				p->setDinero(p->getDinero() + 20);
 				p->setPociones(p->getPociones() + 1);
+				break;
 			case 7:
 				p->setDinero(p->getDinero() + 20);
 				p->setPociones(p->getPociones() + 1);
+				break;
 			case 8:
 				p->setDinero(p->getDinero() + 20);
 				p->setPociones(p->getPociones() + 1);
+				break;
 			case 9:
 				p->setDinero(p->getDinero() + 20);
 				p->setPociones(p->getPociones() + 1);
+				break;
 			case 10:
 				p->setDinero(p->getDinero() + 20);
 				p->setPociones(p->getPociones() + 1);
+				break;
 			}
 			lista[i]->SetTipo(3);
 		}
