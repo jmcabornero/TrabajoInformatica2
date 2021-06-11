@@ -1,6 +1,9 @@
 #include "ListaEnemigos.h"
 #include "Interaccion.h"
 #include "ListaMonedas.h"
+#include "ETSIDI.h"
+#define _USE_MATH_DEFINES
+#include <math.h>
 
 ListaEnemigos::ListaEnemigos()
 {
@@ -29,7 +32,7 @@ void ListaEnemigos::dibuja()
 void ListaEnemigos::Perseguir(Protagonista p)
 {
 	for (int i = 0; i < numero; i++)
-		if (lista[i]->getTipo()==2)
+		if (lista[i]->getTipo()==2|| lista[i]->getTipo() == 3)
 		lista[i]->Perseguir(p);
 }
 
@@ -87,7 +90,7 @@ void ListaEnemigos::Disparar(ListaDisparos *ds)
 {
 	for (int i = 0; i < numero; i++)
 	{
-		if (lista[i]->getTipo() == 1)
+		if (lista[i]->getTipo() == 1 || lista[i]->getTipo() == 3)
 		{
 			if (lista[i]->getFlag() == 0)
 			{
@@ -96,9 +99,20 @@ void ListaEnemigos::Disparar(ListaDisparos *ds)
 				d->setP(2);
 				d->setPos(e_pos.x, e_pos.y);
 				lista[i]->setFlag(1);
-				d->setVel(0, 10);
 
+				Vector2D vel = lista[i]->GetVel();
+				float angulo = atan2(vel.y, vel.x);
 
+				if((angulo < M_PI/4 )&& (angulo >-( M_PI / 4)))
+					d->setVel(10, 0);
+				if ((angulo > M_PI / 4) && (angulo <3 * (M_PI / 4)))
+					d->setVel(0, 10);
+				if (angulo < -3 * (M_PI / 4) || angulo > 3 * (M_PI / 4)) 
+					d->setVel(-10, 0);
+				if ((angulo > -3 * (M_PI / 4)) && (angulo <-  (M_PI / 4)))
+					d->setVel(0, -10);
+
+				cout << angulo;
 				ds->agregar(d);
 			}
 		}
@@ -122,3 +136,20 @@ void ListaEnemigos::CoolDown()
 	}
 	
 }
+
+void ListaEnemigos::kamikaze(Protagonista &p)
+{
+	for (int i = 0; i < numero; i++)
+	{
+		bool ix = Interaccion::colision(*(lista[i]), p);
+		if (ix == 1)
+		{
+			if (lista[i]->getTipo() == 2 || lista[i]->getTipo() == 3)
+			{
+				p.ModVida(5);
+				eliminar(i);
+			}
+		}
+	}
+}
+

@@ -4,6 +4,7 @@
 #include "Interaccion.h"
 #include "ListaMonedas.h"
 #include "ListaDisparos.h"
+#include "Protagonista.h"
 
 class ListaEnemigos
 {
@@ -25,4 +26,5 @@ public:
 	void CoolDown();
 	friend class Interaccion;
 	Enemigo* operator [](int i);
+	void kamikaze(Protagonista &p);
 };

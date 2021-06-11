@@ -24,5 +24,6 @@ public:
 	static bool colision(Protagonista p, Moneda& m);
 	static bool colision(Protagonista p, Cofres& c);
 	static bool colision(Disparo& d, Protagonista& e);
+	static bool colision(Enemigo &e, Protagonista& p);
 };
 

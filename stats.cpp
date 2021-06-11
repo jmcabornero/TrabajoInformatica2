@@ -26,6 +26,8 @@ void stats::ModVida(int i, float ataque)
 		dano = (45.0 * ataque) / defensa;
 	if (i == 4)
 		dano = 10;
+	if (i == 5)
+		dano = 50;
 	vida = vida - dano;
 	if (getVida() < 0)setVida(0); 
 	if (getVida() > 100)setVida(100);

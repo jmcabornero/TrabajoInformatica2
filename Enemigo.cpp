@@ -5,7 +5,7 @@
 Enemigo::~Enemigo(){}
 
 
-Enemigo::Enemigo(float x, float y, int t, int b)
+Enemigo::Enemigo(float x, float y, int b, int t)
 {
 	setDir('d');
 	sprite.setCenter(1, 0);
@@ -33,6 +33,7 @@ Enemigo::Enemigo(float x, float y, int t, int b)
 		case 3:
 			setDef(0.25);
 			setAttack(0.75);
+			setCoolDown(4.0);
 			break;
 		}
 		break;
@@ -51,6 +52,7 @@ Enemigo::Enemigo(float x, float y, int t, int b)
 			setDef(0.5);
 			setAttack(1);
 			modVel(1.25);
+			setCoolDown(4.0);
 			break;
 		}
 		break;
@@ -68,6 +70,7 @@ Enemigo::Enemigo(float x, float y, int t, int b)
 		case 3:
 			setDef(0.75);
 			setAttack(1.5);
+			setCoolDown(4.0);
 			break;
 		}
 		break;
@@ -123,3 +126,5 @@ void Enemigo::Perseguir(Protagonista p)
 	else
 		setVel(0, 0);
 }
+
+

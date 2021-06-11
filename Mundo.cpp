@@ -64,6 +64,7 @@ void Mundo::mueve()
 	disparos.Cooldown(protagonista);
 	protagonista.FuncionTeletransporte();
 	hud.setPos(protagonista.GetPosx(), protagonista.getPosy() + 1.5f);
+	enemigos.kamikaze(protagonista);
 }
 
 void Mundo::inicializa()
@@ -86,7 +87,7 @@ void Mundo::inicializa()
 
 	for (int i = 0; i < 2; i++)
 	{
-		Enemigo* aux = new Enemigo(i+2,123,2,2);
+		Enemigo* aux = new Enemigo(i+2,123,1,3);
 		enemigos.agregar(aux);
 	}
 }
