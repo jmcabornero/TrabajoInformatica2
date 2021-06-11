@@ -27,8 +27,6 @@ public:
 	void colision(Protagonista *p);
 	void Cooldown(Protagonista &p);
 	void Disparar(Protagonista &p);
-	//void Disparar(Enemigo &e);
-	//void DispararEnemigo(Enemigo e, Protagonista p);
 	
 private:
 	Disparo* Lista[MAX_DISPAROS];

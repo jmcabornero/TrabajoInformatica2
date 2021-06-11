@@ -5,7 +5,7 @@
 Enemigo::~Enemigo(){}
 
 
-Enemigo::Enemigo(float x, float y)
+Enemigo::Enemigo(float x, float y, int t, int b)
 {
 	setDir('d');
 	sprite.setCenter(1, 0);
@@ -16,6 +16,67 @@ Enemigo::Enemigo(float x, float y)
 	spriteL.setSize(1, 1);
 	posicion.x = x; posicion.y = y; velocidad = 0; velocidad = 0;
 	setFlag(0);
+	setTipo(t);
+	setBioma(b);
+	vel = 1;
+	switch (getBioma())
+	{
+	case 1:
+		switch (getTipo())
+		{
+		case 1:
+			break;
+		case 2:
+			setDef(0.5);
+			modVel(2);
+			break;
+		case 3:
+			setDef(0.25);
+			setAttack(0.75);
+			break;
+		}
+		break;
+	case 2:
+		switch (getTipo())
+		{
+		case 1:
+			setDef(1.5);
+			setAttack(1.5);
+			break;
+		case 2:
+			setDef(0.75);
+			modVel(1.25);
+			break;
+		case 3:
+			setDef(0.5);
+			setAttack(1);
+			modVel(1.25);
+			break;
+		}
+		break;
+	case 3:
+		switch (getTipo())
+		{
+		case 1:
+			setDef(2.5);
+			setAttack(2.5);
+			break;
+		case 2:
+			setDef(1);
+			modVel(2);
+			break;
+		case 3:
+			setDef(0.75);
+			setAttack(1.5);
+			break;
+		}
+		break;
+	}
+
+
+
+
+
 }
 
 void Enemigo::Dibuja()
@@ -57,7 +118,8 @@ void Enemigo::Perseguir(Protagonista p)
 	float angulo = atan2(delta.y, delta.x);
 	float distancia = delta.modulo();
 	if (distancia <= 4)
-		setVel(0.5 * cos(angulo), 0.5 * sin(angulo));
+		setVel(vel * cos(angulo), vel * sin(angulo));
+		
 	else
 		setVel(0, 0);
 }
