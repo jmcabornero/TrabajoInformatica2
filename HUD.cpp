@@ -88,8 +88,8 @@ void HUD::DibujaTienda(float camara_x, float camara_y)
 	char* char_arr2;
 	char_arr[0] = '\0';
 	setAlto(4);
-	setAncho(8);
-	setPos(camara_x, camara_y-2);
+	setAncho(18);
+	setPos(camara_x, camara_y-4);
 	string line;
 	ifstream myfile("textos/TextoComerciante1.txt");
 	if (myfile.is_open())
@@ -112,9 +112,9 @@ void HUD::DibujaTienda2(float camara_x, float camara_y)
 	char char_arr[MAX_LENMENSAJE];
 	char* char_arr2;
 	char_arr[0] = '\0';
-	setAlto(5);
-	setAncho(4);
-	setPos(camara_x+4, camara_y +3);
+	setAlto(4);
+	setAncho(6);
+	setPos(camara_x+5, camara_y +3);
 	string line;
 	ifstream myfile("textos/TextoComerciante2.txt");
 	if (myfile.is_open())
@@ -137,9 +137,9 @@ void HUD::DibujaTienda3(float camara_x, float camara_y)
 	char char_arr[MAX_LENMENSAJE];
 	char* char_arr2;
 	char_arr[0] = '\0';
-	setAlto(5);
-	setAncho(4);
-	setPos(camara_x + 4, camara_y + 3);
+	setAlto(4);
+	setAncho(18);
+	setPos(camara_x, camara_y - 4);
 	string line;
 	ifstream myfile("textos/TextoComerciante3.txt");
 	if (myfile.is_open())
@@ -162,9 +162,9 @@ void HUD::DibujaTienda4(float camara_x, float camara_y)
 	char char_arr[MAX_LENMENSAJE];
 	char* char_arr2;
 	char_arr[0] = '\0';
-	setAlto(5);
-	setAncho(4);
-	setPos(camara_x + 4, camara_y + 3);
+	setAlto(7);
+	setAncho(5);
+	setPos(camara_x + 5, camara_y + 3);
 	string line;
 	ifstream myfile("textos/TextoComerciante4.txt");
 	if (myfile.is_open())
@@ -184,12 +184,12 @@ void HUD::DibujaTienda4(float camara_x, float camara_y)
 void HUD::DibujaTiendaMaster(Protagonista *p, float camara_x, float camara_y)
 {
 	Vector2D prota = p->GetPos();
-	if ((prota.x >= 105) && (prota.x <= 107) && (prota.y >= 81) && (prota.y <= 83))
+	if ((prota.x >= 105) && (prota.x <= 109) && (prota.y >= 80) && (prota.y <= 84))
 	{
 		DibujaTienda(camara_x, camara_y);
 		DibujaTienda2(camara_x, camara_y);
 	}
-	if ((prota.x >= 107) && (prota.x <= 109) && (prota.y >= 97) && (prota.y <= 99))
+	if ((prota.x >= 107) && (prota.x <= 111) && (prota.y >= 96) && (prota.y <= 100))
 	{
 		DibujaTienda3(camara_x, camara_y);
 		DibujaTienda4(camara_x, camara_y);
