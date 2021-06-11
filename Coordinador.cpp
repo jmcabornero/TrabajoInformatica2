@@ -304,7 +304,6 @@ void Coordinador::Mueve() {
 	if (estado == JUEGO) {
 		mundo.mueve();
 
-
 	}
 }
 void Coordinador::Tecla(unsigned char key)

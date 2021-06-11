@@ -67,6 +67,10 @@ void Mundo::mueve()
 
 void Mundo::inicializa()
 {
+	protagonista.setPos(7,125); //nuevo
+	enemigos.destruirContenido(); //nuevo, seguir con esto
+	
+
 	dibObstaculos(1);
 	dibObstaculos(2);
 	listacofres.CrearCofres();
