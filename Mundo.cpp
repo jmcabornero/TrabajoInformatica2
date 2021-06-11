@@ -86,7 +86,7 @@ void Mundo::inicializa()
 
 	for (int i = 0; i < 2; i++)
 	{
-		Enemigo* aux = new Enemigo(i+2,123);
+		Enemigo* aux = new Enemigo(i+2,123,2,2);
 		enemigos.agregar(aux);
 	}
 }

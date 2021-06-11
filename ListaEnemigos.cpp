@@ -29,6 +29,7 @@ void ListaEnemigos::dibuja()
 void ListaEnemigos::Perseguir(Protagonista p)
 {
 	for (int i = 0; i < numero; i++)
+		if (lista[i]->getTipo()==2)
 		lista[i]->Perseguir(p);
 }
 
@@ -86,18 +87,20 @@ void ListaEnemigos::Disparar(ListaDisparos *ds)
 {
 	for (int i = 0; i < numero; i++)
 	{
-		if (lista[i]->getFlag() == 0)
+		if (lista[i]->getTipo() == 1)
 		{
-			Vector2D e_pos = lista[i]->GetPos();
-			Disparo* d = new Disparo();
-			d->setP(2);
-			d->setPos(e_pos.x, e_pos.y);
-			lista[i]->setFlag(1);
+			if (lista[i]->getFlag() == 0)
+			{
+				Vector2D e_pos = lista[i]->GetPos();
+				Disparo* d = new Disparo();
+				d->setP(2);
+				d->setPos(e_pos.x, e_pos.y);
+				lista[i]->setFlag(1);
+				d->setVel(0, 10);
 
 
-			d->setVel(0, 10);
-
-			ds->agregar(d);
+				ds->agregar(d);
+			}
 		}
 	}
 }
