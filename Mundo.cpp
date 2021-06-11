@@ -67,9 +67,13 @@ void Mundo::mueve()
 
 void Mundo::inicializa()
 {
-	protagonista.setPos(7,125); //nuevo
+	protagonista.setPos(7, 125); //nuevo
 	enemigos.destruirContenido(); //nuevo, seguir con esto
-	
+	monedas.destruirContenido(); //subir esto
+	listaobstaculos.destruirContenido();
+	listapinchos.destruirContenido();
+	listacofres.destruirContenido();
+
 
 	dibObstaculos(1);
 	dibObstaculos(2);
