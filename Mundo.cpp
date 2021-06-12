@@ -453,6 +453,13 @@ void Mundo::DibujaMensajes()
 	}
 }
 
+
+float Mundo::GetVidas()
+{
+	return protagonista.getVida();
+
+}
+
 Mundo::~Mundo()
 {
 	disparos.destruirContenido();

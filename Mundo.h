@@ -41,4 +41,5 @@ private:
 		void CambioCamara();
 		void DibujaMensajes();
 		virtual ~Mundo();
+		float GetVidas();
 };

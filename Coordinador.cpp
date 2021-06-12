@@ -304,6 +304,11 @@ void Coordinador::Mueve() {
 	if (estado == JUEGO) {
 		mundo.mueve();
 
+		if (mundo.GetVidas() <= 0)
+		{
+
+			estado = GAMEOVER;
+		}
 	}
 }
 void Coordinador::Tecla(unsigned char key)
@@ -372,7 +377,7 @@ void Coordinador::Tecla(unsigned char key)
 			// saltar toda la historia e ir a la última página
 			ContadorHisoria = 5;
 		}
-
+		/*
 		if (key == GLUT_KEY_RIGHT && ContadorHisoria != 5)
 		{
 			ContadorHisoria++;
@@ -381,7 +386,7 @@ void Coordinador::Tecla(unsigned char key)
 		if (key == GLUT_KEY_LEFT && ContadorHisoria != 1)
 		{
 			ContadorHisoria--;
-		}
+		} */
 		if (ContadorHisoria == 5)
 		{
 			switch (key) {
@@ -398,6 +403,19 @@ void Coordinador::Tecla(unsigned char key)
 			}
 
 			key = 'Q';			//LIMPIAR BUFFER TECLADO
+		}
+	}
+
+	else if (estado == GAMEOVER) {
+		switch (key) {
+		case 'S':
+		case 's':
+			exit(0);
+			break;
+		case 'M':
+		case 'm':
+			estado = INICIO;
+			break;
 		}
 	}
 };
