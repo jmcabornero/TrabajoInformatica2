@@ -130,7 +130,7 @@ void ListaEnemigos::CoolDown()
 			if (lista[i]->getCoolDown() <= 0)
 			{
 				lista[i]->setFlag(0);
-				lista[i]->setCoolDown(1.0);
+				lista[i]->setCoolDown(lista[i]->getCoolDownPref());
 			}
 		}
 	}
