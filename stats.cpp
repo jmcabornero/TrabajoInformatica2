@@ -8,7 +8,7 @@ stats::stats()
 	vida = 100;
 	defensa = 1;
 	ataque = 1;
-	vel = 0;
+	vel = 1;
 	cd= 2.0;
 	attackspeed = 1;
 	dinero = 0;
@@ -28,7 +28,9 @@ void stats::ModVida(int i, float ataque)
 		dano = 10;
 	if (i == 5)
 		dano = 50;
+	
 	vida = vida - dano;
+	//cout << vida;
 	if (getVida() < 0)setVida(0); 
 	if (getVida() > 100)setVida(100);
 	//cout << "vida: " << vida << endl;

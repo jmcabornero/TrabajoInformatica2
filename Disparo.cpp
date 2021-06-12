@@ -32,7 +32,6 @@ void Disparo::dibuja() {
 	if (velocidad.y > 0.01)disparo_up.draw();
 	if (velocidad.y < -0.01)disparo_down.draw();
 	glPopMatrix();
-	ident = 1;
 }
 
 void Disparo::mueve(float t) {
@@ -43,11 +42,3 @@ void Disparo::mueve(float t) {
 	disparo_down.loop();
 }
 
-
-void Disparo::modIdent(int i)
-{
-	if (i > 3 || i < 0)
-		ident = 1;
-	else
-		ident = i;
-}

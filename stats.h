@@ -31,7 +31,7 @@ public:
 	void setCoolDown(float c) { cd = c; }
 	
 	void modVel(float m) { vel = vel*m; }
-	void ModVida(int i = 1, float ataque = 1);
+	void ModVida(int i , float ataque=1);
 	void setDinero(int d) { dinero = d; }
 	float getDinero() { return dinero; }
 	float getAttackspeed() { return attackspeed; }

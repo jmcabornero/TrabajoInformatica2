@@ -27,7 +27,6 @@ public:
 	void mueve(float t);
 	int getIdent() { return ident; };
 	void setIdent(int i) { ident = i; }
-	void modIdent(int i);
 	void setP(int m) { p = m; };
 	int getP() { return p; }
 	void setAtaque(float a) { ataque = a; }

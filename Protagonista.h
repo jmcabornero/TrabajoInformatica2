@@ -28,6 +28,6 @@ public:
 	void Teletransporte(float inicio_x, float inicio_y, float final_x, float final_y);
 	float GetVelAbs();
 	int getTdis() { return Tdis; }
-	void setTdis(int t=1) { Tdis = t; }
+	void setTdis(int t = 1) { Tdis = t; }
 	void SetVelAbs(float vel);
 };

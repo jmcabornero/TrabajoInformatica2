@@ -60,8 +60,11 @@ void ListaDisparos::colision(Enemigo *e)
 			x = Interaccion::colision(*(Lista[i]), *e);
 			if (x == 1)
 			{
+				
 				(*e).ModVida(Lista[i]->getIdent(), Lista[i]->getAtaque());
+				
 				elimina(Lista[i]);
+				
 			}
 		}
 	}
@@ -78,7 +81,9 @@ void ListaDisparos::colision(Protagonista *e)
 			if (x == 1)
 			{
 				(*e).ModVida(Lista[i]->getIdent(), Lista[i]->getAtaque());
+				cout << Lista[i]->getIdent();
 				elimina(Lista[i]);
+				
 			}
 		}
 	}
@@ -93,9 +98,9 @@ void ListaDisparos::colision(Obstaculos* o)
 		int tip = o->GetTipo();
 		if (x == 1)
 		{
-			if (tip == 2)
+			if (tip == 2 && (Lista[i]->getIdent()>=2))
 				delete o;
-			if (tip == 3)
+			if (tip == 3 && (Lista[i]->getIdent() == 3))
 				delete o;
 			elimina(Lista[i]); /////////
 		}
@@ -144,6 +149,3 @@ void ListaDisparos::Disparar(Protagonista &p)
 	};
 
 }
-
-
-
