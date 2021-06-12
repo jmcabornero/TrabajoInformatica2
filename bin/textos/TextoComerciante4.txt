@@ -1,8 +1,8 @@
-(1) Armadura - 40$
+(1) Armadura - 20$
     +20 Armadura 
-(2) Fuerza - 40$
+(2) Fuerza - 20$
     +20 Fuerza
-(3) Velocidad - 40$
+(3) Velocidad - 20$
     +0.1 Velocidad
-(4) Cadencia - 40$
+(4) Cadencia - 20$
     +20 Cadencia

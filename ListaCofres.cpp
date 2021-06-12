@@ -43,37 +43,37 @@ void ListaCofres::Dibuja(float posicion_ojo_x, float posicion_ojo_y)
 			switch (i)
 			{
 			case 0:
-				mensaje.dibuja("+20 Monedas     +1 pocion");
+				mensaje.dibuja("+20 Monedas     +3 pociones");
 				break;
 			case 1:
 				mensaje.dibuja("Mejora de Diparo a Nivel 2");
 				break;
 			case 2:
-				mensaje.dibuja("+20 Monedas     +1 pocion");
+				mensaje.dibuja("+30 Monedas     +3 pociones");
 				break;
 			case 3:
-				mensaje.dibuja("+20 Monedas     +1 pocion");
+				mensaje.dibuja("+20 Monedas     +2 pociones");
 				break;
 			case 4:
-				mensaje.dibuja("+20 Monedas     +1 pocion");
+				mensaje.dibuja("+20 Monedas     +2 pociones");
 				break;
 			case 5:
 				mensaje.dibuja("Mejora de Disparo a Nivel 3");
 				break;
 			case 6:
-				mensaje.dibuja("+20 Monedas     +1 pocion");
+				mensaje.dibuja("+20 Monedas     +2 pociones");
 				break;
 			case 7:
-				mensaje.dibuja("+20 Monedas     +1 pocion");
+				mensaje.dibuja("+20 Monedas     +2 pociones");
 				break;
 			case 8:
-				mensaje.dibuja("+20 Monedas     +1 pocion");
+				mensaje.dibuja("+10 Monedas     +3 pociones");
 				break;
 			case 9:
-				mensaje.dibuja("+20 Monedas     +1 pocion");
+				mensaje.dibuja("+10 Monedas     +3 pociones");
 				break;
 			case 10:
-				mensaje.dibuja("+20 Monedas     +1 pocion");
+				mensaje.dibuja("+50 Monedas     +4 pociones");
 				break;
 			}
 		}
@@ -118,45 +118,45 @@ void ListaCofres::Transformacion(Protagonista *p)
 			{
 			case 0:
 				p->setDinero(p->getDinero() + 20);
-				p->setPociones(p->getPociones() + 1);
+				p->setPociones(p->getPociones() + 3);
 				break;
 			case 1:
 				p->setTdis(2);
 				break;
 			case 2:
-				p->setDinero(p->getDinero() + 20);
-				p->setPociones(p->getPociones() + 1);
+				p->setDinero(p->getDinero() + 30);
+				p->setPociones(p->getPociones() + 3);
 				break;
 			case 3:
 				p->setDinero(p->getDinero() + 20);
-				p->setPociones(p->getPociones() + 1);
+				p->setPociones(p->getPociones() + 2);
 				break;
 			case 4:
 				p->setDinero(p->getDinero() + 20);
-				p->setPociones(p->getPociones() + 1);
+				p->setPociones(p->getPociones() + 2);
 				break;
 			case 5:
 				p->setTdis(3);
 				break;
 			case 6:
 				p->setDinero(p->getDinero() + 20);
-				p->setPociones(p->getPociones() + 1);
+				p->setPociones(p->getPociones() + 2);
 				break;
 			case 7:
 				p->setDinero(p->getDinero() + 20);
-				p->setPociones(p->getPociones() + 1);
+				p->setPociones(p->getPociones() + 2);
 				break;
 			case 8:
-				p->setDinero(p->getDinero() + 20);
-				p->setPociones(p->getPociones() + 1);
+				p->setDinero(p->getDinero() + 10);
+				p->setPociones(p->getPociones() + 3);
 				break;
 			case 9:
-				p->setDinero(p->getDinero() + 20);
-				p->setPociones(p->getPociones() + 1);
+				p->setDinero(p->getDinero() + 10);
+				p->setPociones(p->getPociones() + 3);
 				break;
 			case 10:
-				p->setDinero(p->getDinero() + 20);
-				p->setPociones(p->getPociones() + 1);
+				p->setDinero(p->getDinero() + 50);
+				p->setPociones(p->getPociones() + 4);
 				break;
 			}
 			lista[i]->SetTipo(3);

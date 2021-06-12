@@ -143,7 +143,7 @@ void Mundo::tecla(unsigned char key)
 			if (dinero > 20)
 			{
 				protagonista.setPociones(protagonista.getPociones() + 1);
-				protagonista.setDinero(protagonista.getDinero() - 20);	
+				protagonista.setDinero(protagonista.getDinero() - 10);	
 			}
 			break;
 		}
