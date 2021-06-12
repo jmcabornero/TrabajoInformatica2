@@ -288,23 +288,23 @@ void Mundo::dibEnemigos()
 				num = stoi(token);
 				glEnable(GL_TEXTURE_2D);
 				if (num == 89)
-					enemigos.agregar(new Enemigo(-i + 134, j,1,1));
+					enemigos.agregar(new Enemigo(j, -i + 134,1,1));
 				if (num == 90)
-					enemigos.agregar(new Enemigo(-i + 134, j,1,2));
+					enemigos.agregar(new Enemigo(j, -i + 134,1,2));
 				if (num == 91)
-					enemigos.agregar(new Enemigo(-i + 134, j,1,3));
+					enemigos.agregar(new Enemigo(j, -i + 134,1,3));
 				if (num == 92)
-					enemigos.agregar(new Enemigo(-i + 134, j,2,1));
+					enemigos.agregar(new Enemigo(j, -i + 134,2,1));
 				if (num == 93)
-					enemigos.agregar(new Enemigo(-i + 134, j,2,2));
+					enemigos.agregar(new Enemigo(j, -i + 134,2,2));
 				if (num == 94)
-					enemigos.agregar(new Enemigo(-i + 134, j,2,3));
+					enemigos.agregar(new Enemigo(j, -i + 134,2,3));
 				if (num == 95)
-					enemigos.agregar(new Enemigo(-i + 134, j,3,1));
+					enemigos.agregar(new Enemigo(j, -i + 134,3,1));
 				if (num == 104)
-					enemigos.agregar(new Enemigo(-i + 134, j,3,2));
+					enemigos.agregar(new Enemigo(j, -i + 134,3,2));
 				if (num == 105)
-					enemigos.agregar(new Enemigo(-i + 134, j,3,3));
+					enemigos.agregar(new Enemigo(j, -i + 134,3,3));
 				line.erase(0, pos + delimiter.length());
 				j++;
 			}
