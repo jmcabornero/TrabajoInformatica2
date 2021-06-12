@@ -100,6 +100,7 @@ void Protagonista::FuncionTeletransporte()
 	Teletransporte(115, 54, 104, 51); //cueva de tierra a montaña
 	Teletransporte(104, 50, 115, 53); //cueva de montaña a tierra
 	Teletransporte(110, 71, 109, 76); //entrar tienda
+	for (int i = 168; i <= 171; i++)Teletransporte(i, 104, 170, 106);//entrar al boss
 	for (int i = 108;i <= 111;i++)Teletransporte(i, 75, 110, 70); //salir tienda
 	for (int i = 88;i <= 89;i++)Teletransporte(114, i, 112, 93); //subir tienda
 	for (int i = 92;i <= 93;i++)Teletransporte(114, i, 117, 87);; //bajar tienda
