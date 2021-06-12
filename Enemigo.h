@@ -14,6 +14,7 @@ private:
 	char direccion;
 	int tipo;
 	int bioma;
+	bool flagDist;
 public:
 	Enemigo(float x, float y, int b=1, int t=1);
 	virtual ~Enemigo();
@@ -32,6 +33,8 @@ public:
 	void setTam(float anchura, float altura);
 	void Perseguir(Protagonista p);
 	friend class Interaccion;
+	bool getFlagDist() { return flagDist; }
+	void setgetFlagDist(Protagonista p);
 	
 };
 
