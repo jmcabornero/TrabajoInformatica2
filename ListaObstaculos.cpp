@@ -42,7 +42,11 @@ void ListaObstaculos::Colision(Protagonista* p, int n) //n=1 si obstaculo	n=2 si
 	bool aux=false;
 	Vector2D pos = (*p).GetPos();
 	Vector2D vel = (*p).GetVel();
-	float velabs= (p->GetVelAbs()) / 6;
+	float velabs = 0;
+	if (n == 1)
+		velabs = (p->GetVelAbs()) / 6;
+	if (n == 2)
+		velabs = 1;
 	for (int i = 0;i < numero;i++)
 	{
 		if (n == 1)
