@@ -97,7 +97,7 @@ void ListaEnemigos::Disparar(ListaDisparos *ds)
 			if (lista[i]->getFlag() == 0 && lista[i]->getFlagDist()==1)
 			{
 				Vector2D e_pos = lista[i]->GetPos();
-				Disparo* d = new Disparo();
+				Disparo* d = new Disparo(1, lista[i]->getAttack());
 				d->setP(2);
 				d->setPos(e_pos.x, e_pos.y);
 				lista[i]->setFlag(1);

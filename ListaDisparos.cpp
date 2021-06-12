@@ -60,7 +60,7 @@ void ListaDisparos::colision(Enemigo *e)
 			x = Interaccion::colision(*(Lista[i]), *e);
 			if (x == 1)
 			{
-				(*e).ModVida(1, Lista[i]->getIdent());
+				(*e).ModVida(Lista[i]->getIdent(), Lista[i]->getAtaque());
 				elimina(Lista[i]);
 			}
 		}
@@ -77,7 +77,7 @@ void ListaDisparos::colision(Protagonista *e)
 			x = Interaccion::colision(*(Lista[i]), *e);
 			if (x == 1)
 			{
-				(*e).ModVida(1, Lista[i]->getIdent());
+				(*e).ModVida(Lista[i]->getIdent(), Lista[i]->getAtaque());
 				elimina(Lista[i]);
 			}
 		}
@@ -116,8 +116,9 @@ void ListaDisparos::Disparar(Protagonista &p)
 	if (p.getFlag() == 0)
 	{
 		Vector2D h_pos = p.GetPos();
-		Disparo* d = new Disparo();
+		Disparo* d = new Disparo(p.getTdis(),p.getAttack());
 		d->setPos(h_pos.x, h_pos.y);
+		d->setP(1);
 		p.setFlag(1);
 		
 		switch (p.getDir()) {
@@ -139,34 +140,5 @@ void ListaDisparos::Disparar(Protagonista &p)
 
 }
 
-/*void ListaDisparos::Disparar(Enemigo &e)
-{
-	for (int i = 0; i < e.getNumero(); i++)
-	{
 
-		if (flag == 0)
-		{
-			Vector2D e_pos = e.[i].GetPos();
-			Disparo* d = new Disparo();
-			d->setPos(e_pos.x, e_pos.y);
-
-			switch (p.getDir()) {
-			case 'd':
-				d->setVel(10, 0);
-				break;
-			case 'a':
-				d->setVel(-10, 0);
-				break;
-			case 'w':
-				d->setVel(0, 10);
-				break;
-			case 's':
-				d->setVel(0, -10);
-				break;
-			}
-			agregar(d);
-		};
-	}
-	
-}*/
 

@@ -37,6 +37,7 @@ Enemigo::Enemigo(float x, float y, int b, int t)
 			setDef(0.25);
 			setAttack(0.75);
 			setCoolDown(4.0);
+			modVel(0.75);
 			break;
 		}
 		break;
