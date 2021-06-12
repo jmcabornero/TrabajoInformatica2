@@ -241,28 +241,37 @@ std::string HUD::stringStats(Protagonista *p) {
 	string att = convert(p->getAttack());
 	string v = convert(p->getVel());
 	string as = convert(p->getAttackspeed());
-	string money = convert(p->getDinero());
-	string pocs = convert(p->getPociones());
-
-	string a = "   ";
+	
+	string a = " ";
 	string vida = "HP: ";
 	string defensa = "DEF: ";
 	string aux = "/100";
 	string ataque = "ATT: ";
 	string velocidad = "VEL: ";
-	string vel_ataque = "ATT VEL:";
-	string dinero = "$: ";
-	string potis = "P's: ";
-
+	string vel_ataque = "CD:";
+	
 	//string str_stats = vida + hp + aux + '\n' + defensa + def + '\n' + ataque + att + '\n' + velocidad + v + '\n' + vel_ataque + as + '\n' + dinero + money + '\n' + potis + pocs;
-	string str_stats = vida + hp + aux + a + defensa + def + a + ataque + att + a + velocidad + v + a + vel_ataque + as + a + dinero + money + a + potis + pocs;
+	string str_stats = vida + hp + aux + a + defensa + def + '\n' + ataque + att + a + velocidad + v + a + vel_ataque + as + a;
 	//string str_stats = a + hp + aux + a + def + a + att + a + v + a + as + a + money + a + pocs;
 	return str_stats;
 }
+
+std::string HUD::stringCons(Protagonista* p) {
+	string a = "   ";
+	string money = convert(p->getDinero());
+	string pocs = convert(p->getPociones());
+
+	string dinero = "$: ";
+	string potis = "P's: ";
+
+	string str_stats = dinero + money + '\n' + potis + pocs;
+	return str_stats;
+}
+
 void HUD::dibujaStats(Protagonista *p, float camara_x, float camara_y) {
 	Vector2D prota_pos = p->GetPos();
-	setAlto(0.7);
-	setAncho(13.5);
+	setAlto(1.4);
+	setAncho(4.2);
 	setPos(prota_pos.x, prota_pos.y);
 	setPos(camara_x, camara_y);
 	std::string stats = stringStats(p);
@@ -270,4 +279,15 @@ void HUD::dibujaStats(Protagonista *p, float camara_x, float camara_y) {
 	dibuja(c);
 
 	//std::cout << stats << std::endl;
+}
+
+void HUD::dibujaCons(Protagonista* p, float camara_x, float camara_y) {
+	Vector2D prota_pos = p->GetPos();
+	setAlto(1.4);
+	setAncho(1.5);
+	setPos(prota_pos.x, prota_pos.y);
+	setPos(camara_x, camara_y);
+	std::string stats = stringCons(p);
+	const char* c = stats.c_str();
+	dibuja(c);
 }

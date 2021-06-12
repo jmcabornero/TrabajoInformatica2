@@ -33,7 +33,8 @@ void Mundo::dibuja()
 
 	//protagonista.dibujaStats(posicion_ojo.x - 3, posicion_ojo.y + 6.5);
 	hud.dibujaHUD(&protagonista);
-	hud_stats.dibujaStats(&protagonista, posicion_ojo.x - 3, posicion_ojo.y + 6.8);
+	hud_stats.dibujaStats(&protagonista, posicion_ojo.x - 7.5, posicion_ojo.y + 6.3);
+	hud_cons.dibujaCons(&protagonista, posicion_ojo.x + 9, posicion_ojo.y + 6.3);
 
 	enemigos.Disparar(&disparos);
 	enemigos.CoolDown();
@@ -55,7 +56,6 @@ void Mundo::mueve()
 	disparos.colision(&protagonista);
 	enemigos.dano(&monedas);
 	enemigos.Perseguir(protagonista);
-	enemigos.mueve(0.15f);
 	for (int i = 0; i < listaobstaculos.getNumero(); i++)
 	{
 		disparos.colision(listaobstaculos[i]);
@@ -64,7 +64,7 @@ void Mundo::mueve()
 	protagonista.FuncionTeletransporte();
 	hud.setPos(protagonista.GetPosx(), protagonista.getPosy() + 1.5f);
 	enemigos.kamikaze(protagonista);
-	enemigos.mueve(0.025f);
+	enemigos.mueve(0.1f);
 }
 
 void Mundo::inicializa()

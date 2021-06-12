@@ -1,7 +1,4 @@
 #include "Enemigo.h"
-
-
-
 Enemigo::~Enemigo(){}
 
 
@@ -90,24 +87,28 @@ void Enemigo::Dibuja()
 	glTranslatef(posicion.x, posicion.y, 1);
 	glColor3f(1.0f, 0.0f, 0.0f);
 	//gestion de direccion y animacion
-	if (velocidad.x > 0.01) {
+	if (velocidad.x > 0.001) {
 		setDir('d');
 		spriteR.draw();
+		//cout << "sprite D" << endl;
 	}
-	if (velocidad.x < -0.01) {
+	if (velocidad.x < -0.001) {
 		setDir('a');
 		spriteL.draw();
+		//cout << "sprite A" << endl;
 	}
-	if ((velocidad.y > 0.01) && (velocidad.x < 0.01) && (velocidad.x > -0.01)) {
+	if ((velocidad.y > 0.001) && (velocidad.x < 0.001) && (velocidad.x > -0.001)) {
 		setDir('w');
 		spriteUp.draw();
+		//cout << "sprite W" << endl;
 	}
-	if ((velocidad.y < -0.01) && (velocidad.x < 0.01) && (velocidad.x > -0.01)) {
+	if ((velocidad.y < -0.001) && (velocidad.x < 0.001) && (velocidad.x > -0.001)) {
 		setDir('s');
 		spriteDown.draw();
+		//cout << "sprite S" << endl;
 	}
 
-	if ((velocidad.x < 0.01) && (velocidad.x > -0.01) && (velocidad.y < 0.01) && (velocidad.y > -0.01)) {
+	if ((velocidad.x < 0.001) && (velocidad.x > -0.001) && (velocidad.y < 0.001) && (velocidad.y > -0.001)) {
 		switch (direccion) {
 		case 'a':
 			spriteL.setState(1, false);
@@ -128,6 +129,8 @@ void Enemigo::Dibuja()
 		}
 	}
 	glPopMatrix();
+	//std::cout << "velocidad: ( " << velocidad.x << " , " << velocidad.y << " )" << std::endl;
+	//std::cout << "direccion: " << direccion << std::endl;
 }
 
 void Enemigo::Mueve(float t)

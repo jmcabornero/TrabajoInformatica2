@@ -56,8 +56,10 @@ void ListaEnemigos::dano(ListaMonedas *listamonedas)
 
 void ListaEnemigos::mueve(float t)
 {
-	for (int i = 0; i < numero; i++)
-		lista[i]->mueve(0.025f);
+	for (int i = 0; i < numero; i++) {
+		lista[i]->mueve(t);
+	}
+		
 }
 
 void ListaEnemigos::destruirContenido()
