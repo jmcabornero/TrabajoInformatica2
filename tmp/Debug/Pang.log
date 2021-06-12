@@ -1,31 +1,48 @@
-﻿  Coordinador.cpp
+﻿  ListaEnemigos.cpp
 C:\Users\jesus\Documents\GitHub\TrabajoInformatica2\stats.h(33,35): warning C4244: '=': conversión de 'int' a 'float'; posible pérdida de datos
-C:\Users\jesus\Documents\GitHub\TrabajoInformatica2\Coordinador.cpp(32,47): warning C4305: 'argumento': truncamiento de 'double' a 'GLfloat'
-C:\Users\jesus\Documents\GitHub\TrabajoInformatica2\Coordinador.cpp(33,47): warning C4305: 'argumento': truncamiento de 'double' a 'GLfloat'
-C:\Users\jesus\Documents\GitHub\TrabajoInformatica2\Coordinador.cpp(34,46): warning C4305: 'argumento': truncamiento de 'double' a 'GLfloat'
-C:\Users\jesus\Documents\GitHub\TrabajoInformatica2\Coordinador.cpp(35,46): warning C4305: 'argumento': truncamiento de 'double' a 'GLfloat'
-C:\Users\jesus\Documents\GitHub\TrabajoInformatica2\Coordinador.cpp(99,47): warning C4305: 'argumento': truncamiento de 'double' a 'GLfloat'
-C:\Users\jesus\Documents\GitHub\TrabajoInformatica2\Coordinador.cpp(100,47): warning C4305: 'argumento': truncamiento de 'double' a 'GLfloat'
-C:\Users\jesus\Documents\GitHub\TrabajoInformatica2\Coordinador.cpp(101,46): warning C4305: 'argumento': truncamiento de 'double' a 'GLfloat'
-C:\Users\jesus\Documents\GitHub\TrabajoInformatica2\Coordinador.cpp(102,46): warning C4305: 'argumento': truncamiento de 'double' a 'GLfloat'
-C:\Users\jesus\Documents\GitHub\TrabajoInformatica2\Coordinador.cpp(133,47): warning C4305: 'argumento': truncamiento de 'double' a 'GLfloat'
-C:\Users\jesus\Documents\GitHub\TrabajoInformatica2\Coordinador.cpp(134,47): warning C4305: 'argumento': truncamiento de 'double' a 'GLfloat'
-C:\Users\jesus\Documents\GitHub\TrabajoInformatica2\Coordinador.cpp(135,46): warning C4305: 'argumento': truncamiento de 'double' a 'GLfloat'
-C:\Users\jesus\Documents\GitHub\TrabajoInformatica2\Coordinador.cpp(136,46): warning C4305: 'argumento': truncamiento de 'double' a 'GLfloat'
-C:\Users\jesus\Documents\GitHub\TrabajoInformatica2\Coordinador.cpp(167,47): warning C4305: 'argumento': truncamiento de 'double' a 'GLfloat'
-C:\Users\jesus\Documents\GitHub\TrabajoInformatica2\Coordinador.cpp(168,47): warning C4305: 'argumento': truncamiento de 'double' a 'GLfloat'
-C:\Users\jesus\Documents\GitHub\TrabajoInformatica2\Coordinador.cpp(169,46): warning C4305: 'argumento': truncamiento de 'double' a 'GLfloat'
-C:\Users\jesus\Documents\GitHub\TrabajoInformatica2\Coordinador.cpp(170,46): warning C4305: 'argumento': truncamiento de 'double' a 'GLfloat'
-C:\Users\jesus\Documents\GitHub\TrabajoInformatica2\Coordinador.cpp(196,47): warning C4305: 'argumento': truncamiento de 'double' a 'GLfloat'
-C:\Users\jesus\Documents\GitHub\TrabajoInformatica2\Coordinador.cpp(197,47): warning C4305: 'argumento': truncamiento de 'double' a 'GLfloat'
-C:\Users\jesus\Documents\GitHub\TrabajoInformatica2\Coordinador.cpp(198,46): warning C4305: 'argumento': truncamiento de 'double' a 'GLfloat'
-C:\Users\jesus\Documents\GitHub\TrabajoInformatica2\Coordinador.cpp(199,46): warning C4305: 'argumento': truncamiento de 'double' a 'GLfloat'
-C:\Users\jesus\Documents\GitHub\TrabajoInformatica2\Coordinador.cpp(225,47): warning C4305: 'argumento': truncamiento de 'double' a 'GLfloat'
-C:\Users\jesus\Documents\GitHub\TrabajoInformatica2\Coordinador.cpp(226,47): warning C4305: 'argumento': truncamiento de 'double' a 'GLfloat'
-C:\Users\jesus\Documents\GitHub\TrabajoInformatica2\Coordinador.cpp(227,46): warning C4305: 'argumento': truncamiento de 'double' a 'GLfloat'
-C:\Users\jesus\Documents\GitHub\TrabajoInformatica2\Coordinador.cpp(228,46): warning C4305: 'argumento': truncamiento de 'double' a 'GLfloat'
-C:\Users\jesus\Documents\GitHub\TrabajoInformatica2\Coordinador.cpp(253,47): warning C4305: 'argumento': truncamiento de 'double' a 'GLfloat'
-C:\Users\jesus\Documents\GitHub\TrabajoInformatica2\Coordinador.cpp(254,47): warning C4305: 'argumento': truncamiento de 'double' a 'GLfloat'
-C:\Users\jesus\Documents\GitHub\TrabajoInformatica2\Coordinador.cpp(255,46): warning C4305: 'argumento': truncamiento de 'double' a 'GLfloat'
-C:\Users\jesus\Documents\GitHub\TrabajoInformatica2\Coordinador.cpp(256,46): warning C4305: 'argumento': truncamiento de 'double' a 'GLfloat'
+C:\Users\jesus\Documents\GitHub\TrabajoInformatica2\ListaEnemigos.cpp(47,16): warning C4244: 'inicializando': conversión de 'double' a 'float'; posible pérdida de datos
+C:\Users\jesus\Documents\GitHub\TrabajoInformatica2\ListaEnemigos.cpp(49,44): warning C4244: 'argumento': conversión de 'float' a 'int'; posible pérdida de datos
+C:\Users\jesus\Documents\GitHub\TrabajoInformatica2\ListaEnemigos.cpp(49,38): warning C4244: 'argumento': conversión de 'float' a 'int'; posible pérdida de datos
+C:\Users\jesus\Documents\GitHub\TrabajoInformatica2\ListaEnemigos.cpp(51,44): warning C4244: 'argumento': conversión de 'float' a 'int'; posible pérdida de datos
+C:\Users\jesus\Documents\GitHub\TrabajoInformatica2\ListaEnemigos.cpp(51,38): warning C4244: 'argumento': conversión de 'float' a 'int'; posible pérdida de datos
+C:\Users\jesus\Documents\GitHub\TrabajoInformatica2\ListaEnemigos.cpp(128,10): warning C4244: 'argumento': conversión de 'double' a 'DWORD'; posible pérdida de datos
+C:\Users\jesus\Documents\GitHub\TrabajoInformatica2\ListaEnemigos.cpp(129,50): warning C4244: 'argumento': conversión de 'double' a 'float'; posible pérdida de datos
+  Mundo.cpp
+C:\Users\jesus\Documents\GitHub\TrabajoInformatica2\stats.h(33,35): warning C4244: '=': conversión de 'int' a 'float'; posible pérdida de datos
+C:\Users\jesus\Documents\GitHub\TrabajoInformatica2\Mundo.cpp(36,74): warning C4244: 'argumento': conversión de 'double' a 'float'; posible pérdida de datos
+C:\Users\jesus\Documents\GitHub\TrabajoInformatica2\Mundo.cpp(94,31): warning C4244: 'argumento': conversión de 'int' a 'float'; posible pérdida de datos
+C:\Users\jesus\Documents\GitHub\TrabajoInformatica2\Mundo.cpp(116,17): warning C4244: 'inicializando': conversión de 'float' a 'int'; posible pérdida de datos
+C:\Users\jesus\Documents\GitHub\TrabajoInformatica2\Mundo.cpp(117,12): warning C4244: 'inicializando': conversión de 'float' a 'int'; posible pérdida de datos
+C:\Users\jesus\Documents\GitHub\TrabajoInformatica2\Mundo.cpp(121,39): warning C4244: 'argumento': conversión de 'int' a 'float'; posible pérdida de datos
+C:\Users\jesus\Documents\GitHub\TrabajoInformatica2\Mundo.cpp(127,13): warning C4244: 'inicializando': conversión de 'float' a 'int'; posible pérdida de datos
+C:\Users\jesus\Documents\GitHub\TrabajoInformatica2\Mundo.cpp(138,53): warning C4244: 'argumento': conversión de 'float' a 'int'; posible pérdida de datos
+C:\Users\jesus\Documents\GitHub\TrabajoInformatica2\Mundo.cpp(152,54): warning C4244: 'argumento': conversión de 'float' a 'int'; posible pérdida de datos
+C:\Users\jesus\Documents\GitHub\TrabajoInformatica2\Mundo.cpp(161,54): warning C4244: 'argumento': conversión de 'float' a 'int'; posible pérdida de datos
+C:\Users\jesus\Documents\GitHub\TrabajoInformatica2\Mundo.cpp(169,54): warning C4244: 'argumento': conversión de 'double' a 'float'; posible pérdida de datos
+C:\Users\jesus\Documents\GitHub\TrabajoInformatica2\Mundo.cpp(170,54): warning C4244: 'argumento': conversión de 'float' a 'int'; posible pérdida de datos
+C:\Users\jesus\Documents\GitHub\TrabajoInformatica2\Mundo.cpp(179,54): warning C4244: 'argumento': conversión de 'float' a 'int'; posible pérdida de datos
+C:\Users\jesus\Documents\GitHub\TrabajoInformatica2\Mundo.cpp(248,15): warning C4244: '=': conversión de 'int' a 'float'; posible pérdida de datos
+C:\Users\jesus\Documents\GitHub\TrabajoInformatica2\Mundo.cpp(252,53): warning C4244: 'argumento': conversión de 'float' a 'int'; posible pérdida de datos
+C:\Users\jesus\Documents\GitHub\TrabajoInformatica2\Mundo.cpp(252,47): warning C4244: 'argumento': conversión de 'float' a 'int'; posible pérdida de datos
+C:\Users\jesus\Documents\GitHub\TrabajoInformatica2\Mundo.cpp(256,52): warning C4244: 'argumento': conversión de 'float' a 'int'; posible pérdida de datos
+C:\Users\jesus\Documents\GitHub\TrabajoInformatica2\Mundo.cpp(256,45): warning C4244: 'argumento': conversión de 'float' a 'int'; posible pérdida de datos
+C:\Users\jesus\Documents\GitHub\TrabajoInformatica2\Mundo.cpp(302,5): warning C4996: 'strcat': This function or variable may be unsafe. Consider using strcat_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+C:\Users\jesus\Documents\GitHub\TrabajoInformatica2\Mundo.cpp(303,5): warning C4996: 'strcat': This function or variable may be unsafe. Consider using strcat_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+C:\Users\jesus\Documents\GitHub\TrabajoInformatica2\Mundo.cpp(320,5): warning C4996: 'strcat': This function or variable may be unsafe. Consider using strcat_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+C:\Users\jesus\Documents\GitHub\TrabajoInformatica2\Mundo.cpp(321,5): warning C4996: 'strcat': This function or variable may be unsafe. Consider using strcat_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+C:\Users\jesus\Documents\GitHub\TrabajoInformatica2\Mundo.cpp(338,5): warning C4996: 'strcat': This function or variable may be unsafe. Consider using strcat_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+C:\Users\jesus\Documents\GitHub\TrabajoInformatica2\Mundo.cpp(339,5): warning C4996: 'strcat': This function or variable may be unsafe. Consider using strcat_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+C:\Users\jesus\Documents\GitHub\TrabajoInformatica2\Mundo.cpp(356,5): warning C4996: 'strcat': This function or variable may be unsafe. Consider using strcat_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+C:\Users\jesus\Documents\GitHub\TrabajoInformatica2\Mundo.cpp(357,5): warning C4996: 'strcat': This function or variable may be unsafe. Consider using strcat_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+C:\Users\jesus\Documents\GitHub\TrabajoInformatica2\Mundo.cpp(374,5): warning C4996: 'strcat': This function or variable may be unsafe. Consider using strcat_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+C:\Users\jesus\Documents\GitHub\TrabajoInformatica2\Mundo.cpp(375,5): warning C4996: 'strcat': This function or variable may be unsafe. Consider using strcat_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+C:\Users\jesus\Documents\GitHub\TrabajoInformatica2\Mundo.cpp(392,5): warning C4996: 'strcat': This function or variable may be unsafe. Consider using strcat_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+C:\Users\jesus\Documents\GitHub\TrabajoInformatica2\Mundo.cpp(393,5): warning C4996: 'strcat': This function or variable may be unsafe. Consider using strcat_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+C:\Users\jesus\Documents\GitHub\TrabajoInformatica2\Mundo.cpp(410,5): warning C4996: 'strcat': This function or variable may be unsafe. Consider using strcat_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+C:\Users\jesus\Documents\GitHub\TrabajoInformatica2\Mundo.cpp(411,5): warning C4996: 'strcat': This function or variable may be unsafe. Consider using strcat_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+C:\Users\jesus\Documents\GitHub\TrabajoInformatica2\Mundo.cpp(428,5): warning C4996: 'strcat': This function or variable may be unsafe. Consider using strcat_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+C:\Users\jesus\Documents\GitHub\TrabajoInformatica2\Mundo.cpp(429,5): warning C4996: 'strcat': This function or variable may be unsafe. Consider using strcat_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+C:\Users\jesus\Documents\GitHub\TrabajoInformatica2\Mundo.cpp(446,5): warning C4996: 'strcat': This function or variable may be unsafe. Consider using strcat_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+C:\Users\jesus\Documents\GitHub\TrabajoInformatica2\Mundo.cpp(447,5): warning C4996: 'strcat': This function or variable may be unsafe. Consider using strcat_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+  Generando código...
   Pang.vcxproj -> C:\Users\jesus\Documents\GitHub\TrabajoInformatica2\bin\Juego.exe

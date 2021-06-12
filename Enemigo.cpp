@@ -8,12 +8,14 @@ Enemigo::~Enemigo(){}
 Enemigo::Enemigo(float x, float y, int b, int t)
 {
 	setDir('d');
-	sprite.setCenter(1, 0);
-	sprite.setSize(1, 1);
 	spriteR.setCenter(1, 0);
-	spriteR.setSize(1, 1);
+	spriteR.setSize(2, 2);
 	spriteL.setCenter(1, 0);
-	spriteL.setSize(1, 1);
+	spriteL.setSize(2, 2);
+	spriteUp.setCenter(1, 0);
+	spriteUp.setSize(2, 2);
+	spriteDown.setCenter(1, 0);
+	spriteDown.setSize(2, 2);
 	posicion.x = x; posicion.y = y; velocidad = 0; velocidad = 0;
 	setFlag(0);
 	setTipo(t);
@@ -87,30 +89,66 @@ void Enemigo::Dibuja()
 	glPushMatrix();
 	glTranslatef(posicion.x, posicion.y, 1);
 	glColor3f(1.0f, 0.0f, 0.0f);
-	//glutSolidSphere(altura, 20, 20);
-//gestion de direccion y animacion
-	if (velocidad.x > 0.01)spriteR.draw();
-	if (velocidad.x < -0.01)spriteL.draw();
-	if ((velocidad.x < 0.01) && (velocidad.x > -0.01))sprite.draw();
+	//gestion de direccion y animacion
+	if (velocidad.x > 0.01) {
+		setDir('d');
+		spriteR.draw();
+	}
+	if (velocidad.x < -0.01) {
+		setDir('a');
+		spriteL.draw();
+	}
+	if ((velocidad.y > 0.01) && (velocidad.x < 0.01) && (velocidad.x > -0.01)) {
+		setDir('w');
+		spriteUp.draw();
+	}
+	if ((velocidad.y < -0.01) && (velocidad.x < 0.01) && (velocidad.x > -0.01)) {
+		setDir('s');
+		spriteDown.draw();
+	}
+
+	if ((velocidad.x < 0.01) && (velocidad.x > -0.01) && (velocidad.y < 0.01) && (velocidad.y > -0.01)) {
+		switch (direccion) {
+		case 'a':
+			spriteL.setState(1, false);
+			spriteL.draw();
+			break;
+		case 'd':
+			spriteR.setState(1, false);
+			spriteR.draw();
+			break;
+		case 'w':
+			spriteUp.setState(1, false);
+			spriteUp.draw();
+			break;
+		case 's':
+			spriteDown.setState(1, false);
+			spriteDown.draw();
+			break;
+		}
+	}
 	glPopMatrix();
 }
 
 void Enemigo::Mueve(float t)
 {
 	ObjetosMovimiento::mueve(t);
-	sprite.loop();
 	spriteR.loop();
 	spriteL.loop();
+	spriteUp.loop();
+	spriteDown.loop();
 }
 
 void Enemigo::setTam(float anchura, float altura)
 {
-	sprite.setCenter(1, 0);
-	sprite.setSize(anchura, altura);
 	spriteR.setCenter(1, 0);
 	spriteR.setSize(anchura, altura);
 	spriteL.setCenter(1, 0);
 	spriteL.setSize(anchura, altura);
+	spriteUp.setCenter(1, 0);
+	spriteUp.setSize(anchura, altura);
+	spriteDown.setCenter(1, 0);
+	spriteDown.setSize(anchura, altura);
 }
 
 void Enemigo::Perseguir(Protagonista p)

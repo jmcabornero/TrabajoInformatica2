@@ -33,11 +33,10 @@ void Mundo::dibuja()
 
 	//protagonista.dibujaStats(posicion_ojo.x - 3, posicion_ojo.y + 6.5);
 	hud.dibujaHUD(&protagonista);
-	hud_stats.dibujaStats(&protagonista, posicion_ojo.x - 4.5, posicion_ojo.y + 6.5);
+	hud_stats.dibujaStats(&protagonista, posicion_ojo.x - 3, posicion_ojo.y + 6.8);
 
 	enemigos.Disparar(&disparos);
 	enemigos.CoolDown();
-	
 }
 
 void Mundo::mueve()
@@ -65,6 +64,7 @@ void Mundo::mueve()
 	protagonista.FuncionTeletransporte();
 	hud.setPos(protagonista.GetPosx(), protagonista.getPosy() + 1.5f);
 	enemigos.kamikaze(protagonista);
+	enemigos.mueve(0.025f);
 }
 
 void Mundo::inicializa()
@@ -76,14 +76,13 @@ void Mundo::inicializa()
 	listapinchos.destruirContenido();
 	listacofres.destruirContenido();
 
-
 	dibObstaculos(1);
 	dibObstaculos(2);
 	listacofres.CrearCofres();
 	posicion_ojo.x = 10.25f;
 	posicion_ojo.y = 7.5f;
 	z_ojo = 20.5f; //20.5f   
-	protagonista.setTam(1, 1);
+	protagonista.setTam(2, 2);
 	protagonista.setVida(100);
 	protagonista.setVel(0, 0);
 	protagonista.SetVelAbs(1);
@@ -194,19 +193,15 @@ void Mundo::teclaEspecial(unsigned char key) //al pulsar la tecla
 	{
 	case GLUT_KEY_LEFT:
 		protagonista.setVelx(-vel);
-		protagonista.setDir('a');
 		break;
 	case GLUT_KEY_RIGHT:
 		protagonista.setVelx(vel);
-		protagonista.setDir('d');
 		break;
 	case GLUT_KEY_DOWN:
 		protagonista.setVely(-vel);
-		protagonista.setDir('s');
 		break;
 	case GLUT_KEY_UP:
 		protagonista.setVely(vel);
-		protagonista.setDir('w');
 		break;
 	}
 	

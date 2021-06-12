@@ -14,10 +14,10 @@ private:
 	
 public:
 	Protagonista();
-	SpriteSequence spriteR{ "imagenes/Player_derecha.png", 3 };
-	SpriteSequence spriteL{ "imagenes/Player_izquierda.png", 3 };
-	SpriteSequence spriteUp{ "imagenes/Player_arriba.png", 3 };
-	SpriteSequence spriteDown{ "imagenes/Player_abajo.png", 3 };
+	SpriteSequence spriteR{ "imagenes/Player/WarriorRightWalk.png", 8 };
+	SpriteSequence spriteL{ "imagenes/Player/WarriorLeftWalk.png", 8 };
+	SpriteSequence spriteUp{ "imagenes/Player/WarriorUpWalk.png", 8 };
+	SpriteSequence spriteDown{ "imagenes/Player/WarriorDownWalk.png", 8 };
 	char getDir() { return direccion; }
 	void setDir(char d) { direccion = d; }
 	void Dibuja();

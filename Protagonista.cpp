@@ -8,13 +8,13 @@ Protagonista::Protagonista()
 {
 	setDir('d');
 	spriteR.setCenter(1, 0);
-	spriteR.setSize(1, 1);
+	spriteR.setSize(2, 2);
 	spriteL.setCenter(1, 0);
-	spriteL.setSize(1, 1);
+	spriteL.setSize(2, 2);
 	spriteUp.setCenter(1, 0);
-	spriteUp.setSize(1, 1);
+	spriteUp.setSize(2, 2);
 	spriteDown.setCenter(1, 0);
-	spriteDown.setSize(1, 1);
+	spriteDown.setSize(2, 2);
 
 	posicion.x = 111;posicion.y = 80;velocidad.x = 0;velocidad.y = 0, velabs=1;
 	setVida(100);
@@ -28,10 +28,22 @@ void Protagonista::Dibuja()
 	glTranslatef(posicion.x, posicion.y, 0.01);
 	glColor3f(1.0f, 0.0f, 0.0f);
 //gestion de direccion y animacion
-	if (velocidad.x > 0.01)spriteR.draw();
-	if (velocidad.x < -0.01)spriteL.draw();
-	if ((velocidad.y > 0.01)&& (velocidad.x < 0.01) && (velocidad.x > -0.01))spriteUp.draw();
-	if ((velocidad.y < -0.01)&&(velocidad.x < 0.01) && (velocidad.x > -0.01))spriteDown.draw();
+	if (velocidad.x > 0.01) {
+		setDir('d');
+		spriteR.draw();
+	}
+	if (velocidad.x < -0.01) {
+		setDir('a');
+		spriteL.draw();
+	}
+	if ((velocidad.y > 0.01) && (velocidad.x < 0.01) && (velocidad.x > -0.01)) {
+		setDir('w');
+		spriteUp.draw();
+	}
+	if ((velocidad.y < -0.01) && (velocidad.x < 0.01) && (velocidad.x > -0.01)) {
+		setDir('s');
+		spriteDown.draw();
+	}
 
 	if ((velocidad.x < 0.01) && (velocidad.x > -0.01)&& (velocidad.y < 0.01) && (velocidad.y > -0.01)) {
 		switch (direccion) {
@@ -54,8 +66,6 @@ void Protagonista::Dibuja()
 		}
 	}
 	glPopMatrix();
-
-	//dibujaStats();
 }
 
 

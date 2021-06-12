@@ -56,7 +56,7 @@ void HUD::dibuja(char* mensaje) {
 }
 
 void HUD::dibuja(const char* mensaje) {
-	float marco = 0.2;
+	float marco = 0.1;
 	float h = getAlto();
 	float a = getAncho();
 	Vector2D p = getPos();
@@ -200,7 +200,7 @@ void HUD::dibujaHUD(Protagonista *prota) {
 	Vector2D prota_pos = prota->GetPos();
 	setAlto(0.1);
 	setAncho(3);
-	setPos(prota_pos.x, prota_pos.y + 1.5f);
+	setPos(prota_pos.x, prota_pos.y + 2.0f);
 	float marco = 0.06f;
 	float h = alto;
 	float a = ancho;
@@ -244,6 +244,7 @@ std::string HUD::stringStats(Protagonista *p) {
 	string money = convert(p->getDinero());
 	string pocs = convert(p->getPociones());
 
+	string a = "   ";
 	string vida = "HP: ";
 	string defensa = "DEF: ";
 	string aux = "/100";
@@ -253,15 +254,15 @@ std::string HUD::stringStats(Protagonista *p) {
 	string dinero = "$: ";
 	string potis = "P's: ";
 
-	string str_stats = vida + hp + aux + '\n' + defensa + def + '\n' + ataque + att + '\n' + velocidad + v + '\n' + vel_ataque + as + '\n' + dinero + money + '\n' + potis + pocs;
+	//string str_stats = vida + hp + aux + '\n' + defensa + def + '\n' + ataque + att + '\n' + velocidad + v + '\n' + vel_ataque + as + '\n' + dinero + money + '\n' + potis + pocs;
+	string str_stats = vida + hp + aux + a + defensa + def + a + ataque + att + a + velocidad + v + a + vel_ataque + as + a + dinero + money + a + potis + pocs;
 	//string str_stats = a + hp + aux + a + def + a + att + a + v + a + as + a + money + a + pocs;
 	return str_stats;
 }
 void HUD::dibujaStats(Protagonista *p, float camara_x, float camara_y) {
 	Vector2D prota_pos = p->GetPos();
-	float marco = 0.7;
-	setAlto(5);
-	setAncho(5);
+	setAlto(0.7);
+	setAncho(13.5);
 	setPos(prota_pos.x, prota_pos.y);
 	setPos(camara_x, camara_y);
 	std::string stats = stringStats(p);
