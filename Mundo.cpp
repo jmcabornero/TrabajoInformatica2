@@ -252,13 +252,13 @@ void Mundo::dibObstaculos(int n)
 				num = stoi(token);
 				glEnable(GL_TEXTURE_2D);
 				if (num == 478)
-				{
-					listaobstaculos.Agregar(new Obstaculos(-i+134, j));
-				}
+					listaobstaculos.Agregar(new Obstaculos(-i+134, j,1));
 				if (num == 284)
-				{
-					listapinchos.Agregar(new Obstaculos(-i + 134, j));
-				}
+					listapinchos.Agregar(new Obstaculos(-i + 134, j,1));
+				if (num == 50)
+					listaobstaculos.Agregar(new Obstaculos(-i + 134, j,2));
+				if (num == 269)
+					listaobstaculos.Agregar(new Obstaculos(-i + 134, j,3));
 				line.erase(0, pos + delimiter.length());
 				j++;
 			}

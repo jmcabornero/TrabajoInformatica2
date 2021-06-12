@@ -90,9 +90,14 @@ void ListaDisparos::colision(Obstaculos* o)
 	{
 		bool x;
 		x = Interaccion::colision(*(Lista[i]), *o);
+		int tip = o->GetTipo();
 		if (x == 1)
 		{
-			elimina(Lista[i]);
+			if (tip == 2)
+				delete o;
+			if (tip == 3)
+				delete o;
+			elimina(Lista[i]); /////////
 		}
 	}
 }
