@@ -20,7 +20,6 @@ Protagonista::Protagonista()
 	setVida(100);
 	//std::cout << "Vida: " << vida.getVida() << std::endl;
 	setFlag(0);
-	setCoolDownPref(1.0);
 }
 
 void Protagonista::Dibuja()

@@ -20,6 +20,8 @@ Enemigo::Enemigo(float x, float y, int b, int t)
 	setFlag(0);
 	setTipo(t);
 	setBioma(b);
+	setFlagDist(0);
+
 	vel = 1;
 	switch (getBioma())
 	{
@@ -28,6 +30,8 @@ Enemigo::Enemigo(float x, float y, int b, int t)
 		{
 		case 1:
 			break;
+			setCoolDown(4.0);
+
 		case 2:
 			setDef(0.5);
 			modVel(2);
@@ -36,7 +40,6 @@ Enemigo::Enemigo(float x, float y, int b, int t)
 			setDef(0.25);
 			setAttack(0.75);
 			setCoolDown(4.0);
-			setCoolDownPref(4.0);
 			break;
 		}
 		break;
@@ -46,6 +49,7 @@ Enemigo::Enemigo(float x, float y, int b, int t)
 		case 1:
 			setDef(1.5);
 			setAttack(1.5);
+			setCoolDown(4.0);
 			break;
 		case 2:
 			setDef(0.75);
@@ -65,6 +69,7 @@ Enemigo::Enemigo(float x, float y, int b, int t)
 		case 1:
 			setDef(2.5);
 			setAttack(2.5);
+			setCoolDown(4.0);
 			break;
 		case 2:
 			setDef(1);
@@ -167,3 +172,14 @@ void Enemigo::Perseguir(Protagonista p)
 }
 
 
+void Enemigo::distProta(Protagonista p)
+{
+	Vector2D pos_p = p.GetPos();
+	Vector2D pos_e = GetPos();
+	Vector2D dir = pos_p - pos_e;
+	float dist = dir.modulo();
+	if (dist < 15)
+		setFlagDist(1);
+	else
+		setFlagDist(0);
+}

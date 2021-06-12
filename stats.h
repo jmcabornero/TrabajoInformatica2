@@ -12,7 +12,7 @@ protected:
 	float ataque;
 	float vel;
 	float cd;
-	float cdpref;
+	
 	bool flagDisparo;
 	float attackspeed;
 	float dinero;
@@ -29,8 +29,7 @@ public:
 	float getVel() { return vel; }
 	float getCoolDown() { return cd; }
 	void setCoolDown(float c) { cd = c; }
-	float getCoolDownPref() { return cdpref; }
-	void setCoolDownPref(float c) { cdpref = c; }
+	
 	void modVel(float m) { vel = vel*m; }
 	void ModVida(int i = 1, float ataque = 1);
 	void setDinero(int d) { dinero = d; }

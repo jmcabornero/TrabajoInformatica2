@@ -28,4 +28,5 @@ public:
 	friend class Interaccion;
 	Enemigo* operator [](int i);
 	void kamikaze(Protagonista &p);
+	void distProta(Protagonista p);
 };

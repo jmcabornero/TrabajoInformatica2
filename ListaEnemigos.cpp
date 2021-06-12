@@ -92,7 +92,7 @@ void ListaEnemigos::Disparar(ListaDisparos *ds)
 	{
 		if (lista[i]->getTipo() == 1 || lista[i]->getTipo() == 3)
 		{
-			if (lista[i]->getFlag() == 0)
+			if (lista[i]->getFlag() == 0 && lista[i]->getFlagDist()==1)
 			{
 				Vector2D e_pos = lista[i]->GetPos();
 				Disparo* d = new Disparo();
@@ -112,6 +112,7 @@ void ListaEnemigos::Disparar(ListaDisparos *ds)
 				if ((angulo > -3 * (M_PI / 4)) && (angulo <-  (M_PI / 4)))
 					d->setVel(0, -10);
 
+
 				//cout << angulo;
 				ds->agregar(d);
 			}
@@ -130,11 +131,10 @@ void ListaEnemigos::CoolDown()
 			if (lista[i]->getCoolDown() <= 0)
 			{
 				lista[i]->setFlag(0);
-				lista[i]->setCoolDown(lista[i]->getCoolDownPref());
+				lista[i]->setCoolDown(4.0);
 			}
 		}
 	}
-	
 }
 
 void ListaEnemigos::kamikaze(Protagonista &p)
@@ -153,3 +153,8 @@ void ListaEnemigos::kamikaze(Protagonista &p)
 	}
 }
 
+void ListaEnemigos::distProta(Protagonista p)
+{
+	for (int i = 0; i < numero; i++)
+		lista[i]->distProta(p);
+}
