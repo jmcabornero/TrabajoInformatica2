@@ -36,7 +36,7 @@ void Mundo::dibuja()
 	hud_stats.dibujaStats(&protagonista, posicion_ojo.x - 7.5, posicion_ojo.y + 6.3);
 	hud_cons.dibujaCons(&protagonista, posicion_ojo.x + 9, posicion_ojo.y + 6.3);
 
-	enemigos.Disparar(&disparos);
+	//enemigos.Disparar(&disparos);
 	enemigos.CoolDown();
 }
 
@@ -78,6 +78,7 @@ void Mundo::inicializa()
 
 	dibObstaculos(1);
 	dibObstaculos(2);
+	dibEnemigos();
 	listacofres.CrearCofres();
 	posicion_ojo.x = 10.25f;
 	posicion_ojo.y = 7.5f;
@@ -258,6 +259,52 @@ void Mundo::dibObstaculos(int n)
 				{
 					listapinchos.Agregar(new Obstaculos(-i + 134, j));
 				}
+				line.erase(0, pos + delimiter.length());
+				j++;
+			}
+			i++;
+		}
+		myfile.close();
+	}
+	else cout << "Unable to open file";
+}
+
+void Mundo::dibEnemigos()
+{
+	string line;
+	ifstream myfile; //myfile es el fichero (puntero)
+		myfile.open("imagenes/Mapa/estrellas_ENEMIGOS.csv");
+	if (myfile.is_open())
+	{
+		float i = 0, j, num;
+		while (getline(myfile, line)) // line es una str con la siguiente linea
+		{
+			std::string delimiter = ",";
+			size_t pos = 0;
+			std::string token;
+			j = 0;
+			while ((pos = line.find(delimiter)) != std::string::npos) {
+				token = line.substr(0, pos);
+				num = stoi(token);
+				glEnable(GL_TEXTURE_2D);
+				if (num == 89)
+					enemigos.agregar(new Enemigo(j, -i + 134,1,1));
+				if (num == 90)
+					enemigos.agregar(new Enemigo(j, -i + 134,1,2));
+				if (num == 91)
+					enemigos.agregar(new Enemigo(j, -i + 134,1,3));
+				if (num == 92)
+					enemigos.agregar(new Enemigo(j, -i + 134,2,1));
+				if (num == 93)
+					enemigos.agregar(new Enemigo(j, -i + 134,2,2));
+				if (num == 94)
+					enemigos.agregar(new Enemigo(j, -i + 134,2,3));
+				if (num == 95)
+					enemigos.agregar(new Enemigo(j, -i + 134,3,1));
+				if (num == 104)
+					enemigos.agregar(new Enemigo(j, -i + 134,3,2));
+				if (num == 105)
+					enemigos.agregar(new Enemigo(j, -i + 134,3,3));
 				line.erase(0, pos + delimiter.length());
 				j++;
 			}

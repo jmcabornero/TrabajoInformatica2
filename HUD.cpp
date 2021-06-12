@@ -239,7 +239,7 @@ std::string HUD::stringStats(Protagonista *p) {
 	string hp = convert(p->getVida());
 	string def = convert(p->getDef());
 	string att = convert(p->getAttack());
-	string v = convert(p->getVel());
+	string v = convert(p->GetVelAbs());
 	string as = convert(p->getAttackspeed());
 	
 	string a = " ";

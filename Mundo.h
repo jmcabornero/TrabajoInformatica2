@@ -30,6 +30,7 @@ private:
 	public:
 		Mundo(float x=0);
 		void dibObstaculos(int n); //si n=1, se refiere a obstaculos. Si n=2, se refiere a pinchos
+		void dibEnemigos();
 		void inicializa();
 		//void rotarOjo();
 		void mueve();

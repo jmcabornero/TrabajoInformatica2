@@ -105,7 +105,7 @@ void ListaDisparos::Cooldown(Protagonista &p)
 		if (p.getCoolDown() <= 0)
 		{
 			p.setFlag(0);
-			p.setCoolDown(1.0);
+			p.setCoolDown(p.getCoolDownPref()/p.getAttackspeed());
 		}
 		//cout << "-" << p.getCoolDown() << "-";
 	}
