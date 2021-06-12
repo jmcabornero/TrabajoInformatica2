@@ -46,7 +46,7 @@ void ListaCofres::Dibuja(float posicion_ojo_x, float posicion_ojo_y)
 				mensaje.dibuja("+20 Monedas     +1 pocion");
 				break;
 			case 1:
-				mensaje.dibuja("+20 Monedas     +1 pocion");
+				mensaje.dibuja("Mejora de Diparo a Nivel 2");
 				break;
 			case 2:
 				mensaje.dibuja("+20 Monedas     +1 pocion");
@@ -58,7 +58,7 @@ void ListaCofres::Dibuja(float posicion_ojo_x, float posicion_ojo_y)
 				mensaje.dibuja("+20 Monedas     +1 pocion");
 				break;
 			case 5:
-				mensaje.dibuja("+20 Monedas     +1 pocion");
+				mensaje.dibuja("Mejora de Disparo a Nivel 3");
 				break;
 			case 6:
 				mensaje.dibuja("+20 Monedas     +1 pocion");
@@ -121,8 +121,7 @@ void ListaCofres::Transformacion(Protagonista *p)
 				p->setPociones(p->getPociones() + 1);
 				break;
 			case 1:
-				p->setDinero(p->getDinero() + 20);
-				p->setPociones(p->getPociones() + 1);
+				p->setTdis(2);
 				break;
 			case 2:
 				p->setDinero(p->getDinero() + 20);
@@ -137,8 +136,7 @@ void ListaCofres::Transformacion(Protagonista *p)
 				p->setPociones(p->getPociones() + 1);
 				break;
 			case 5:
-				p->setDinero(p->getDinero() + 20);
-				p->setPociones(p->getPociones() + 1);
+				p->setTdis(3);
 				break;
 			case 6:
 				p->setDinero(p->getDinero() + 20);

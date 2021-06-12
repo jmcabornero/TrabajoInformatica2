@@ -18,9 +18,8 @@ Protagonista::Protagonista()
 
 	posicion.x = 111;posicion.y = 80;velocidad.x = 0;velocidad.y = 0, velabs=1;
 	setVida(100);
-	//std::cout << "Vida: " << vida.getVida() << std::endl;
 	setFlag(0);
-	setTdis(2);
+	setTdis();
 }
 
 void Protagonista::Dibuja()
