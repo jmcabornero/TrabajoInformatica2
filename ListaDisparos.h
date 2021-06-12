@@ -1,6 +1,6 @@
 #pragma once
 #include "Disparo.h"
-#define MAX_DISPAROS 20
+#define MAX_DISPAROS 1000
 #include "enemigo.h"
 #include "Interaccion.h"
 #include "Obstaculos.h"

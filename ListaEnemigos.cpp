@@ -8,7 +8,7 @@
 ListaEnemigos::ListaEnemigos()
 {
 	numero = 0;
-	for (int i = 0; i < 40; i++)
+	for (int i = 0; i < MAX_ENEMIGOS; i++)
 		lista[i] = 0;
 }
 
@@ -16,7 +16,7 @@ ListaEnemigos::~ListaEnemigos(){}
 
 bool ListaEnemigos::agregar(Enemigo *e)
 {
-	if (numero < 40)
+	if (numero < MAX_ENEMIGOS)
 		lista[numero++] = e; // último puesto sin rellenar
 	else
 		return false; // capacidad máxima alcanzada
