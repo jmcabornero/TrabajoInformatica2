@@ -1,7 +1,7 @@
 #include "Disparo.h"
 #include "freeglut.h"
 
-Disparo::Disparo() {
+Disparo::Disparo(int i, float a) {
 	disparo_dcha.setCenter(0.5, 0.5);
 	disparo_dcha.setSize(1, 1);
 	disparo_izda.setCenter(0.5, 0.5);
@@ -14,6 +14,8 @@ Disparo::Disparo() {
 	setVel(5, 0);
 	setRadio(0.25);
 	setP(1);
+	setIdent(i);
+	setAtaque(a);
 }
 
 Disparo::~Disparo() {

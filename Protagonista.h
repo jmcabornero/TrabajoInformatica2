@@ -11,7 +11,7 @@ class Protagonista:public ObjetosMovimiento, public stats
 private:
 	char direccion;
 	float velabs;
-	
+	int Tdis;
 public:
 	Protagonista();
 	SpriteSequence spriteR{ "imagenes/Player/WarriorRightWalk.png", 8 };
@@ -27,6 +27,7 @@ public:
 	bool MensajeBuda(float inicio_x, float final_x, float inicio_y);
 	void Teletransporte(float inicio_x, float inicio_y, float final_x, float final_y);
 	float GetVelAbs();
-	
+	int getTdis() { return Tdis; }
+	void setTdis(int t=1) { Tdis = t; }
 	void SetVelAbs(float vel);
 };

@@ -20,7 +20,7 @@ Protagonista::Protagonista()
 	setVida(100);
 	//std::cout << "Vida: " << vida.getVida() << std::endl;
 	setFlag(0);
-	setCoolDownPref(1.0);
+	setTdis();
 }
 
 void Protagonista::Dibuja()
@@ -67,6 +67,8 @@ void Protagonista::Dibuja()
 		}
 	}
 	glPopMatrix();
+	//std::cout << "velocidad: ( " << velocidad.x << " , " << velocidad.y << " )" << std::endl;
+	//std::cout << "direccion: " << direccion << std::endl;
 }
 
 
@@ -74,7 +76,6 @@ void Protagonista::Dibuja()
 
 void Protagonista::Mueve(float t)
 {
-	//hud.setPos(posicion.x, posicion.y + 1.5f);
 	ObjetosMovimiento::mueve(t);
 	spriteR.loop();
 	spriteL.loop();

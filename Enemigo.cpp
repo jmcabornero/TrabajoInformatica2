@@ -1,7 +1,4 @@
 #include "Enemigo.h"
-
-
-
 Enemigo::~Enemigo(){}
 
 
@@ -20,6 +17,8 @@ Enemigo::Enemigo(float x, float y, int b, int t)
 	setFlag(0);
 	setTipo(t);
 	setBioma(b);
+	setFlagDist(0);
+
 	vel = 1;
 	switch (getBioma())
 	{
@@ -28,6 +27,8 @@ Enemigo::Enemigo(float x, float y, int b, int t)
 		{
 		case 1:
 			break;
+			setCoolDown(4.0);
+
 		case 2:
 			setDef(0.5);
 			modVel(2);
@@ -36,7 +37,7 @@ Enemigo::Enemigo(float x, float y, int b, int t)
 			setDef(0.25);
 			setAttack(0.75);
 			setCoolDown(4.0);
-			setCoolDownPref(4.0);
+			modVel(0.75);
 			break;
 		}
 		break;
@@ -46,6 +47,7 @@ Enemigo::Enemigo(float x, float y, int b, int t)
 		case 1:
 			setDef(1.5);
 			setAttack(1.5);
+			setCoolDown(4.0);
 			break;
 		case 2:
 			setDef(0.75);
@@ -65,6 +67,7 @@ Enemigo::Enemigo(float x, float y, int b, int t)
 		case 1:
 			setDef(2.5);
 			setAttack(2.5);
+			setCoolDown(4.0);
 			break;
 		case 2:
 			setDef(1);
@@ -91,24 +94,28 @@ void Enemigo::Dibuja()
 	glTranslatef(posicion.x, posicion.y, 1);
 	glColor3f(1.0f, 0.0f, 0.0f);
 	//gestion de direccion y animacion
-	if (velocidad.x > 0.01) {
+	if (velocidad.x > 0.001) {
 		setDir('d');
 		spriteR.draw();
+		//cout << "sprite D" << endl;
 	}
-	if (velocidad.x < -0.01) {
+	if (velocidad.x < -0.001) {
 		setDir('a');
 		spriteL.draw();
+		//cout << "sprite A" << endl;
 	}
-	if ((velocidad.y > 0.01) && (velocidad.x < 0.01) && (velocidad.x > -0.01)) {
+	if ((velocidad.y > 0.001) && (velocidad.x < 0.001) && (velocidad.x > -0.001)) {
 		setDir('w');
 		spriteUp.draw();
+		//cout << "sprite W" << endl;
 	}
-	if ((velocidad.y < -0.01) && (velocidad.x < 0.01) && (velocidad.x > -0.01)) {
+	if ((velocidad.y < -0.001) && (velocidad.x < 0.001) && (velocidad.x > -0.001)) {
 		setDir('s');
 		spriteDown.draw();
+		//cout << "sprite S" << endl;
 	}
 
-	if ((velocidad.x < 0.01) && (velocidad.x > -0.01) && (velocidad.y < 0.01) && (velocidad.y > -0.01)) {
+	if ((velocidad.x < 0.001) && (velocidad.x > -0.001) && (velocidad.y < 0.001) && (velocidad.y > -0.001)) {
 		switch (direccion) {
 		case 'a':
 			spriteL.setState(1, false);
@@ -129,6 +136,8 @@ void Enemigo::Dibuja()
 		}
 	}
 	glPopMatrix();
+	//std::cout << "velocidad: ( " << velocidad.x << " , " << velocidad.y << " )" << std::endl;
+	//std::cout << "direccion: " << direccion << std::endl;
 }
 
 void Enemigo::Mueve(float t)
@@ -167,3 +176,14 @@ void Enemigo::Perseguir(Protagonista p)
 }
 
 
+void Enemigo::distProta(Protagonista p)
+{
+	Vector2D pos_p = p.GetPos();
+	Vector2D pos_e = GetPos();
+	Vector2D dir = pos_p - pos_e;
+	float dist = dir.modulo();
+	if (dist < 15)
+		setFlagDist(1);
+	else
+		setFlagDist(0);
+}

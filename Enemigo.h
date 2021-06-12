@@ -34,7 +34,7 @@ public:
 	void Perseguir(Protagonista p);
 	friend class Interaccion;
 	bool getFlagDist() { return flagDist; }
-	void setgetFlagDist(Protagonista p);
-	
+	void setFlagDist(bool i) { flagDist = i; }
+	void distProta(Protagonista p);
 };
 

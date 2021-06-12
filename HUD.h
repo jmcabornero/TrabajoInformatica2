@@ -29,7 +29,9 @@ public:
 	void mueve();
 	void dibujaHUD(Protagonista *prota);
 	void dibujaStats(Protagonista *p, float camara_x, float camara_y);
+	void dibujaCons(Protagonista* p, float camara_x, float camara_y);
 	std::string stringStats(Protagonista *p);
+	std::string stringCons(Protagonista* p);
 	void DibujaTienda(float camara_x, float camara_y);
 	void DibujaTienda2(float camara_x, float camara_y);
 	void DibujaTienda3(float camara_x, float camara_y);

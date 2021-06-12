@@ -27,6 +27,8 @@ void Mundo::dibuja()
 	listapinchos.Dibuja();
 	monedas.Dibuja();
 
+	
+
 	disparos.dibuja();
 
 	DibujaMensajes();
@@ -35,7 +37,7 @@ void Mundo::dibuja()
 	hud.dibujaHUD(&protagonista);
 	hud_stats.dibujaStats(&protagonista, posicion_ojo.x - 3, posicion_ojo.y + 6.8);
 
-	//enemigos.Disparar(&disparos);
+	enemigos.Disparar(&disparos);
 	enemigos.CoolDown();
 }
 
@@ -65,6 +67,8 @@ void Mundo::mueve()
 	hud.setPos(protagonista.GetPosx(), protagonista.getPosy() + 1.5f);
 	enemigos.kamikaze(protagonista);
 	enemigos.mueve(0.025f);
+
+	enemigos.distProta(protagonista);
 }
 
 void Mundo::inicializa()
