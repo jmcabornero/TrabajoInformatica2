@@ -89,6 +89,9 @@ void Mundo::inicializa()
 	protagonista.SetVelAbs(1);
 	protagonista.setPociones(0);
 	protagonista.setDinero(0);
+	protagonista.setAttackspeed(1);
+	protagonista.setAttack(1);
+	protagonista.setDef(1);
 
 	for (int i = 0; i < 2; i++)
 	{
