@@ -80,10 +80,15 @@ void Mundo::inicializa()
 	dibObstaculos(1);
 	dibObstaculos(2);
 	listacofres.CrearCofres();
-	posicion_ojo.x = 10.25f;    
-	posicion_ojo.y = 7.5f;    
+	posicion_ojo.x = 10.25f;
+	posicion_ojo.y = 7.5f;
 	z_ojo = 20.5f; //20.5f   
 	protagonista.setTam(1, 1);
+	protagonista.setVida(100);
+	protagonista.setVel(0, 0);
+	protagonista.SetVelAbs(1);
+	protagonista.setPociones(0);
+	protagonista.setDinero(0);
 
 	for (int i = 0; i < 2; i++)
 	{
