@@ -82,17 +82,17 @@ void ListaCofres::Dibuja(float posicion_ojo_x, float posicion_ojo_y)
 
 void ListaCofres::CrearCofres()
 {
-	lista[0]=new Cofres(57.0f, 117.0f, 1);
-	lista[1] = new Cofres(42.0f, 71.0f, 1);
-	lista[2] = new Cofres(7.0f, 71.0f, 1);
-	lista[3] = new Cofres(85.0f, 2.0f, 1);
-	lista[4] = new Cofres(94.0f, 2.0f, 1);
-	lista[5] = new Cofres(136.0f, 26.0f, 1);
-	lista[6] = new Cofres(135.0f, 40.0f, 1);
-	lista[7] = new Cofres(137.0f, 58.0f, 1);
-	lista[8] = new Cofres(184.0f, 54.0f, 1);
-	lista[9] = new Cofres(195.0f, 54.0f, 1);
-	lista[10] = new Cofres(183.0f, 87.0f, 1);
+	lista[0]=new Cofres(57.0f, 117.0f, 1); //tutorial
+	lista[1] = new Cofres(42.0f, 71.0f, 1); //buda desierto
+	lista[2] = new Cofres(7.0f, 71.0f, 1); //isla desierto
+	lista[3] = new Cofres(85.0f, 2.0f, 1); //sala nieve aislada
+	lista[4] = new Cofres(94.0f, 2.0f, 1); //sala nive aislada
+	lista[5] = new Cofres(136.0f, 26.0f, 1); //buda nieve
+	lista[6] = new Cofres(135.0f, 40.0f, 1); //lava nieve 
+	lista[7] = new Cofres(137.0f, 58.0f, 1); //pinchos catacumbas
+	lista[8] = new Cofres(184.0f, 54.0f, 1); //catacumbas estatua
+	lista[9] = new Cofres(195.0f, 54.0f, 1); //catacumbas estatua
+	lista[10] = new Cofres(183.0f, 87.0f, 1); //antes del tiburon
 }
 
 Cofres* ListaCofres::operator[](int i)
