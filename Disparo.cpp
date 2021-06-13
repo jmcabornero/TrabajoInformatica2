@@ -16,6 +16,7 @@ Disparo::Disparo(int i, float a) {
 	setP(1);
 	setIdent(i);
 	setAtaque(a);
+	ETSIDI::play("sonidos/disparo.mp3");
 }
 
 Disparo::~Disparo() {
