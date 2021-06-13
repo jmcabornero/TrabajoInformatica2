@@ -4,6 +4,7 @@ Coordinador::Coordinador()
 {
 	estado = INICIO;
 	ContadorHisoria = 1;
+	ETSIDI::playMusica("sonidos/No Place For Straw Cowboys.mp3", TRUE);
 };
 
 Coordinador::~Coordinador()
@@ -308,6 +309,8 @@ void Coordinador::Mueve() {
 		{
 
 			estado = GAMEOVER;
+			ETSIDI::stopMusica();
+			ETSIDI::playMusica("sonidos/gameover.mp3");
 		}
 	}
 }
@@ -318,14 +321,20 @@ void Coordinador::Tecla(unsigned char key)
 		switch (key) {
 		case 'H':
 		case 'h':
+			ETSIDI::stopMusica();
+			ETSIDI::playMusica("sonidos/Spring Village.mp3", TRUE);
 			estado = HISTORIA;
 			break;
 		case 'I':
 		case 'i':
+			ETSIDI::stopMusica();
+			ETSIDI::playMusica("sonidos/Flutes for Misha.mp3", TRUE);
 			estado = INSTRUCCIONES;
 			break;
 		case 'E':
 		case 'e':
+			ETSIDI::stopMusica();
+			ETSIDI::playMusica("sonidos/zelda.mp3", TRUE);
 			mundo.inicializa();
 			estado = JUEGO;
 			break;
@@ -339,6 +348,7 @@ void Coordinador::Tecla(unsigned char key)
 		mundo.tecla(key);
 		switch (key) {
 		case 27:
+			ETSIDI::stopMusica();
 			estado = PAUSA;
 			break;
 		}
@@ -352,10 +362,13 @@ void Coordinador::Tecla(unsigned char key)
 			break;
 		case 'J':
 		case 'j':
+			ETSIDI::playMusica("sonidos/zelda.mp3", TRUE);
 			estado = JUEGO;
 			break;
 		case 'M':
 		case 'm':
+			ETSIDI::stopMusica();
+			ETSIDI::playMusica("sonidos/No Place For Straw Cowboys.mp3", TRUE);
 			estado = INICIO;
 			break;
 		}
@@ -365,6 +378,8 @@ void Coordinador::Tecla(unsigned char key)
 		switch (key) {
 		case 'M':
 		case 'm':
+			ETSIDI::stopMusica();
+			ETSIDI::playMusica("sonidos/No Place For Straw Cowboys.mp3", TRUE);
 			estado = INICIO;
 			break;
 		}
@@ -392,11 +407,15 @@ void Coordinador::Tecla(unsigned char key)
 			switch (key) {
 			case 'J': //empezar el juego
 			case 'j':
+				ETSIDI::stopMusica();
+				ETSIDI::playMusica("sonidos/zelda.mp3", TRUE);
 				mundo.inicializa();
 				estado = JUEGO;
 				break;
 			case 'M':  // volver al menú principal
 			case 'm':
+				ETSIDI::stopMusica();
+				ETSIDI::playMusica("sonidos/No Place For Straw Cowboys.mp3", TRUE);
 				ContadorHisoria = 1;
 				estado = INICIO;
 				break;
@@ -414,6 +433,8 @@ void Coordinador::Tecla(unsigned char key)
 			break;
 		case 'M':
 		case 'm':
+			ETSIDI::stopMusica();
+			ETSIDI::playMusica("sonidos/No Place For Straw Cowboys.mp3", TRUE);
 			estado = INICIO;
 			break;
 		}

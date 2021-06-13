@@ -116,6 +116,7 @@ void Mundo::tecla(unsigned char key)
 	{
 	case ' ':
 	{
+		ETSIDI::play("sonidos/disparo.mp3");
 		disparos.Disparar(protagonista);
 	}
 	case 'c':
