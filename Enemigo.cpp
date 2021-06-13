@@ -620,6 +620,7 @@ void Enemigo::Dibuja()
 		}
 	}
 	glPopMatrix();
+	
 	//std::cout << "velocidad: ( " << velocidad.x << " , " << velocidad.y << " )" << std::endl;
 	//std::cout << "direccion: " << direccion << std::endl;
 }
