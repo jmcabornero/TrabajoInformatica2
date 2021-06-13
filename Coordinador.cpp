@@ -150,8 +150,7 @@ void Coordinador::Dibuja()
 		//ETSIDI::printxy("                 -I-  PARA LEER LAS INSTRUCCIONES", -8, 0);
 		ETSIDI::printxy("PARA OMITIR LA HISTORIA PULSE LA TECLA S", -9, 5);
 		//ETSIDI::printxy("                 -S- PARA SALIR DEL JUEGO", -8, -2);
-		ETSIDI::printxy("PARA PAUSAR EL JUEGO PULSE LA TECLA 'ESC'", -9, 2);
-		ETSIDI::printxy("PARA VOLVER AL MENÚ PRINCIPAL PULSE LA TECLA M", -9, -1);
+		
 	}
 
 	else if (estado == HISTORIA && ContadorHisoria == 2) {
@@ -175,12 +174,14 @@ void Coordinador::Dibuja()
 
 		ETSIDI::setTextColor(0, 0, 0);
 		ETSIDI::setFont("fuentes/Cardinal.ttf", 34);
-		ETSIDI::printxy("HISTORIA 2", -6, 14);
+		ETSIDI::printxy("HISTORIA", -6, 14);
 
 		ETSIDI::setTextColor(0, 0, 0);
 		ETSIDI::setFont("fuentes/ThrowMyHandsUpintheAir.ttf", 14);
-		ETSIDI::printxy("PARTE 1", -9, 8);
-
+		ETSIDI::printxy("Erase una vez, en un mundo muy muy lejano, un reino en paz ", -9, 8);
+		ETSIDI::printxy("gobernado por un rey bueno, piadoso. Un dia, el reino fue atacado ", -9, 6);
+		ETSIDI::printxy("por una horda de esqueletos, duendes y criaturas perversas", -9, 4);
+		ETSIDI::printxy("lideradas por un malvado lider. Este ser se hace llamar Tiburon.", -9, 2);
 	}
 
 	else if (estado == HISTORIA && ContadorHisoria == 3) {
@@ -204,12 +205,14 @@ void Coordinador::Dibuja()
 
 		ETSIDI::setTextColor(0, 0, 0);
 		ETSIDI::setFont("fuentes/Cardinal.ttf", 34);
-		ETSIDI::printxy("HISTORIA 3", -6, 14);
+		ETSIDI::printxy("HISTORIA", -6, 14);
 
 		ETSIDI::setTextColor(0, 0, 0);
 		ETSIDI::setFont("fuentes/ThrowMyHandsUpintheAir.ttf", 14);
-		ETSIDI::printxy("PARTE 2", -9, 8);
-
+		ETSIDI::printxy("El Reino de los Tres Biomas, como los aldeanos lo solian llamar,", -9, 8);
+		ETSIDI::printxy("fue invadido y su rey muerto en combate.De los aldeanos", -9, 6);
+		ETSIDI::printxy("supervivientes, solo quedan pequenas casas alejadas unas de otras", -9, 4);
+		ETSIDI::printxy("y sus habitantes, prefieren no hablar ni abrir la puerta a nadie.", -9, 2);
 	}
 
 	else if (estado == HISTORIA && ContadorHisoria == 4) {
@@ -233,11 +236,14 @@ void Coordinador::Dibuja()
 
 		ETSIDI::setTextColor(0, 0, 0);
 		ETSIDI::setFont("fuentes/Cardinal.ttf", 34);
-		ETSIDI::printxy("HISTORIA 4", -6, 14);
+		ETSIDI::printxy("HISTORIA", -6, 14);
 
 		ETSIDI::setTextColor(0, 0, 0);
 		ETSIDI::setFont("fuentes/ThrowMyHandsUpintheAir.ttf", 14);
-		ETSIDI::printxy("PARTE 3", -9, 8);
+		ETSIDI::printxy("Ahora el reino espera un heroe para ver derrotado al malvado", -9, 8);
+		ETSIDI::printxy("Tiburon y por fin coronar un rey que traiga paz a la tierra.Lucha", -9, 6);
+		ETSIDI::printxy("contra sus subditos, mejora tu equipamiento y prueba suerte en", -9, 4);
+		ETSIDI::printxy("esta epoca de miseria.Quien sabe si podras coronarte rey del reino...", -9, 2);
 	}
 
 	else if (estado == HISTORIA && ContadorHisoria == 5) {
