@@ -143,12 +143,13 @@ void Mundo::tecla(unsigned char key)
 			if (dinero > 20)
 			{
 				protagonista.setPociones(protagonista.getPociones() + 1);
-				protagonista.setDinero(protagonista.getDinero() - 10);	
+				protagonista.setDinero(protagonista.getDinero() - 10);
 			}
 			break;
 		}
 		}
-		if ((prota.x >= 107) && (prota.x <= 111) && (prota.y >= 96) && (prota.y <= 100))
+	}
+	if ((prota.x >= 107) && (prota.x <= 111) && (prota.y >= 96) && (prota.y <= 100))
 		{
 			switch (key)
 			{
@@ -190,8 +191,6 @@ void Mundo::tecla(unsigned char key)
 			}
 			}
 		}
-
-	}
 }
 
 void Mundo::teclaEspecial(unsigned char key) //al pulsar la tecla
