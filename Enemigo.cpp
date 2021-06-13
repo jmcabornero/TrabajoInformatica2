@@ -1,4 +1,7 @@
 #include "Enemigo.h"
+#include "ETSIDI.h"
+#include <math.h>
+
 Enemigo::~Enemigo(){}
 
 
@@ -819,6 +822,9 @@ void Enemigo::distProta(Protagonista p)
 	Vector2D pos_e = GetPos();
 	Vector2D dir = pos_p - pos_e;
 	float dist = dir.modulo();
+	float ang = atan2(dir.y, dir.x);
+	setAngulo(ang);
+
 	if (dist < 15)
 		setFlagDist(1);
 	else

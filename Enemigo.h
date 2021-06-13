@@ -15,6 +15,7 @@ private:
 	int tipo;
 	int bioma;
 	bool flagDist;
+	float angulo;
 public:
 	Enemigo(float x, float y, int b=1, int t=1);
 	virtual ~Enemigo();
@@ -77,5 +78,7 @@ public:
 	bool getFlagDist() { return flagDist; }
 	void setFlagDist(bool i) { flagDist = i; }
 	void distProta(Protagonista p);
+	void setAngulo(float s) { angulo = s;}
+	float getAngulo() { return angulo; }
 };
 
