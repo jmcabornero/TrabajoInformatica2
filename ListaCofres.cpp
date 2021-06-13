@@ -159,6 +159,7 @@ void ListaCofres::Transformacion(Protagonista *p)
 				p->setPociones(p->getPociones() + 4);
 				break;
 			}
+			ETSIDI::play("sonidos/recogerCofre.mp3");
 			lista[i]->SetTipo(3);
 		}
 		else if (tipo == 3)
