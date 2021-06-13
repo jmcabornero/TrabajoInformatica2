@@ -116,7 +116,7 @@ void Coordinador::Dibuja()
 		ETSIDI::printxy("PARA DISPARAR:    CON LA BARRA ESPACIADORA", -9, 5);
 
 		ETSIDI::printxy("PARA PAUSAR EL JUEGO PULSE LA TECLA 'ESC'", -9, 2);
-		ETSIDI::printxy("PARA VOLVER AL MENÚ PRINCIPAL PULSE LA TECLA M", -9, -1);
+		ETSIDI::printxy("PARA VOLVER AL MENU PRINCIPAL PULSE LA TECLA M", -9, -1);
 
 	}
 
@@ -300,7 +300,7 @@ void Coordinador::Dibuja()
 
 		ETSIDI::setTextColor(1, 0, 1);
 		ETSIDI::setFont("fuentes/Bitwise.ttf", 14);
-		ETSIDI::printxy("PULSA LA TECLA M PARA IR AL MEN PRINCIPAL", -9, 2);
+		ETSIDI::printxy("PULSA LA TECLA M PARA IR AL MENU PRINCIPAL", -9, 2);
 
 		ETSIDI::printxy("PULSA LA TECLA S PARA SALIR DEL JUEGO", -9, 0);
 
@@ -398,16 +398,7 @@ void Coordinador::Tecla(unsigned char key)
 			// saltar toda la historia e ir a la última página
 			ContadorHisoria = 5;
 		}
-		/*
-		if (key == GLUT_KEY_RIGHT && ContadorHisoria != 5)
-		{
-			ContadorHisoria++;
-			key = 'Q';			//LIMPIAR BUFFER TECLADO
-		}
-		if (key == GLUT_KEY_LEFT && ContadorHisoria != 1)
-		{
-			ContadorHisoria--;
-		} */
+		
 		if (ContadorHisoria == 5)
 		{
 			switch (key) {
