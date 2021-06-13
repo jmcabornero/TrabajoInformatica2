@@ -134,6 +134,9 @@ void Mundo::tecla(unsigned char key)
 	Vector2D prota = protagonista.GetPos();
 	int dinero = protagonista.getDinero();
 	float vel = protagonista.GetVelAbs();
+	float def = protagonista.getDef();
+	float att = protagonista.getAttack();
+	float cad = protagonista.getAttackspeed();
 	if ((prota.x >= 105) && (prota.x <= 109) && (prota.y >= 80) && (prota.y <= 84))
 	{
 		switch (key)
@@ -143,29 +146,30 @@ void Mundo::tecla(unsigned char key)
 			if (dinero > 20)
 			{
 				protagonista.setPociones(protagonista.getPociones() + 1);
-				protagonista.setDinero(protagonista.getDinero() - 10);	
+				protagonista.setDinero(protagonista.getDinero() - 10);
 			}
 			break;
 		}
 		}
-		if ((prota.x >= 107) && (prota.x <= 111) && (prota.y >= 96) && (prota.y <= 100))
+	}
+	if ((prota.x >= 107) && (prota.x <= 111) && (prota.y >= 96) && (prota.y <= 100))
 		{
 			switch (key)
 			{
 			case '1':
 			{
-				if (dinero > 20)
+				if ((dinero > 20) && (def < 2))
 				{
-					protagonista.setDef(protagonista.getDef() + 1);
+					protagonista.setDef(protagonista.getDef() + 0.2);
 					protagonista.setDinero(protagonista.getDinero() - 20);
 				}
 				break;
 			}
 			case '2':
 			{
-				if (dinero > 20)
+				if ((dinero > 20) && (att < 2))
 				{
-					protagonista.setAttack(protagonista.getAttack() + 1);
+					protagonista.setAttack(protagonista.getAttack() + 0.2);
 					protagonista.setDinero(protagonista.getDinero() - 20);
 				}
 				break;
@@ -174,24 +178,22 @@ void Mundo::tecla(unsigned char key)
 			{
 				if ((dinero > 20)&&(vel<2))
 				{
-					protagonista.SetVelAbs(protagonista.GetVelAbs() + 0.1);
+					protagonista.SetVelAbs(protagonista.GetVelAbs() + 0.2);
 					protagonista.setDinero(protagonista.getDinero() - 20);
 				}
 				break;
 			}
 			case '4':
 			{
-				if (dinero > 20)
+				if ((dinero > 20) && (cad < 2))
 				{
-					protagonista.setAttackspeed(protagonista.getAttackspeed() + 1);
+					protagonista.setAttackspeed(protagonista.getAttackspeed() + 0.2);
 					protagonista.setDinero(protagonista.getDinero() - 20);
 				}
 				break;
 			}
 			}
 		}
-
-	}
 }
 
 void Mundo::teclaEspecial(unsigned char key) //al pulsar la tecla

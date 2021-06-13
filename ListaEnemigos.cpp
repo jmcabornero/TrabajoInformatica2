@@ -45,9 +45,9 @@ void ListaEnemigos::dano(ListaMonedas *listamonedas)
 			float posx = lista[i]->GetPosx();
 			float posy = lista[i]->getPosy();
 			float valor = ETSIDI::lanzaDado(10.0);
-			if (valor <= 5)
+			if (valor <= 6)
 				listamonedas->Agregar(new Moneda(posx, posy, 1));
-			if((valor>5)&&(valor<6))
+			if(valor>6)
 				listamonedas->Agregar(new Moneda(posx, posy, 2));
 			eliminar(i);
 		}
