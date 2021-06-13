@@ -118,6 +118,7 @@ void Mundo::tecla(unsigned char key)
 	{
 		
 		disparos.Disparar(protagonista);
+		break;
 	}
 	case 'c':
 	case 'C':
