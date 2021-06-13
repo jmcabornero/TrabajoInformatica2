@@ -251,11 +251,7 @@ void ListaEnemigos::movBoss()
 	{
 		if (lista[i]->getBioma() == 4)
 		{
-			Vector2D pos = lista[i]->GetPos();
-			if (pos.x == 161)
-				lista[i]->setVel(0.8, 0);
-			if (pos.x == 178)
-				lista[i]->setVel(-0.8, 0);
+			
 			
 		}
 	}
