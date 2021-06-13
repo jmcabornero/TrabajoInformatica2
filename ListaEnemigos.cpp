@@ -103,18 +103,18 @@ void ListaEnemigos::Disparar(ListaDisparos *ds)
 				lista[i]->setFlag(1);
 
 				Vector2D vel = lista[i]->GetVel();
-				float angulo = atan2(vel.y, vel.x);
+				
 
-				if((angulo < M_PI/4 )&& (angulo >-( M_PI / 4)))
+				if((lista[i]->getAngulo() < M_PI/4 )&& (lista[i]->getAngulo() >-( M_PI / 4)))
 					d->setVel(10, 0);
-				if ((angulo > M_PI / 4) && (angulo <3 * (M_PI / 4)))
+				if ((lista[i]->getAngulo() > M_PI / 4) && (lista[i]->getAngulo() <3 * (M_PI / 4)))
 					d->setVel(0, 10);
-				if (angulo < -3 * (M_PI / 4) || angulo > 3 * (M_PI / 4)) 
+				if (lista[i]->getAngulo() < -3 * (M_PI / 4) || lista[i]->getAngulo() > 3 * (M_PI / 4))
 					d->setVel(-10, 0);
-				if ((angulo > -3 * (M_PI / 4)) && (angulo <-  (M_PI / 4)))
+				if ((lista[i]->getAngulo() > -3 * (M_PI / 4)) && (lista[i]->getAngulo() <-  (M_PI / 4)))
 					d->setVel(0, -10);
 
-
+					
 				//cout << angulo;
 				ds->agregar(d);
 			}
