@@ -87,31 +87,6 @@ void ListaObstaculos::Colision(Protagonista* p, int n) //n=1 si obstaculo	n=2 si
 	}
 }
 
-void ListaObstaculos::Colision(Enemigo* e, int n) //n=1 si obstaculo	n=2 si pinchos
-{
-	Interaccion inter;
-	bool aux = false;
-	Vector2D pos = (*e).GetPos();
-	Vector2D vel = (*e).GetVel();
-	if(e->getBioma()==4)
-	{
-		for (int i = 0;i < numero;i++)
-		{
-			aux = inter.colision((*e), *(lista[i]));
-			if (aux)
-			{
-				Vector2D vel=e->GetVel();
-				e->setVelx(-vel.x);
-				/*if (vel.x > 0)
-					(*e).setPos(pos.x - velabs, pos.y);
-				if (vel.x < 0)
-					(*e).setPos(pos.x + velabs, pos.y);*/
-			}
-		}
-		
-	}
-}
-
 Obstaculos* ListaObstaculos::operator[](int i)
 {
 	if (i >= numero)//si me paso, devuelvo la ultima

@@ -15,13 +15,11 @@ bool Interaccion::colision(Protagonista p, Obstaculos &o)
 	}		
 }
 
-bool Interaccion::colision(Enemigo e, Obstaculos& o)
+bool Interaccion::colision(Enemigo *e) 
 {
-	Vector2D esquina = o.GetEsquina();
-	Vector2D prota = e.GetPos();
-	if ((((esquina.x + 0.3) <= prota.x) && (prota.x <= (esquina.x + 1.8f))) && (((esquina.y - 0.9f) <= prota.y) && (prota.y <= (esquina.y + 0.9f))))
+	Vector2D prota = e->GetPos();
+	if (((179 <= prota.x) || (prota.x <= 162)))
 	{
-		cout << "colisiono"<<e.getTipo();
 		return true;
 	}
 	else
@@ -34,20 +32,6 @@ bool Interaccion::colisionpinchos(Protagonista p, Obstaculos& o)
 {
 	Vector2D esquina = o.GetEsquina();
 	Vector2D prota = p.GetPos();
-	if ((((esquina.x + 0.4) <= prota.x) && (prota.x <= (esquina.x + 1.7f))) && (((esquina.y - 0.8f) <= prota.y) && (prota.y <= (esquina.y + 0.8f))))
-	{
-		return true;
-	}
-	else
-	{
-		return false;
-	}
-}
-
-bool Interaccion::colisionpinchos(Enemigo e, Obstaculos& o)
-{
-	Vector2D esquina = o.GetEsquina();
-	Vector2D prota = e.GetPos();
 	if ((((esquina.x + 0.4) <= prota.x) && (prota.x <= (esquina.x + 1.7f))) && (((esquina.y - 0.8f) <= prota.y) && (prota.y <= (esquina.y + 0.8f))))
 	{
 		return true;

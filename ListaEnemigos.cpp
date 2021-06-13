@@ -245,15 +245,19 @@ void ListaEnemigos::especialBoss()
 	}
 }
 
-void ListaEnemigos::movBoss()
+void ListaEnemigos::colisionBoss()
 {
 	for (int i = 0; i < numero; i++)
 	{
 		if (lista[i]->getBioma() == 4)
 		{
 			
-			
+			bool b=Interaccion::colision(lista[i]);
+			if (b == 1)
+			{
+				Vector2D vel = lista[i]->GetVel();
+				lista[i]->setVelx(-vel.x);
+			}
 		}
 	}
-
 }

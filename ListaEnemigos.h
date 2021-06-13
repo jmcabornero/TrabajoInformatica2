@@ -32,7 +32,7 @@ public:
 	Enemigo* operator [](int i);
 	void kamikaze(Protagonista &p);
 	void distProta(Protagonista p);
-	void movBoss();
+	void colisionBoss();
 
 	void especialBoss();
 };

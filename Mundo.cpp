@@ -20,7 +20,7 @@ void Mundo::dibuja()
 	caja.Dibuja();
 	caja.Dibuja2();
 	mensajestienda.DibujaTiendaMaster(&protagonista, posicion_ojo.x, posicion_ojo.y);
-	
+	enemigos.especialBoss();
 	enemigos.dibuja();
 	listacofres.Dibuja(posicion_ojo.x, posicion_ojo.y);
 	listaobstaculos.Dibuja();
@@ -49,13 +49,10 @@ void Mundo::mueve()
 	listacofres.Transformacion(&protagonista);
 	disparos.mueve(0.025f);
 	CambioCamara();
+	enemigos.colisionBoss();
 	for (int i = 0; i < enemigos.getNumero(); i++)
 	{
 		disparos.colision(enemigos[i]);
-	}
-	for (int i = 0; i < enemigos.getNumero(); i++)
-	{
-		listaobstaculos.Colision(enemigos[i], 1);
 	}
 	disparos.colision(&protagonista);
 	enemigos.dano(&monedas);
@@ -75,7 +72,7 @@ void Mundo::mueve()
 
 void Mundo::inicializa()
 {
-	protagonista.setPos(167, 115); //nuevo
+	protagonista.setPos(7, 124); //nuevo
 	enemigos.destruirContenido(); //nuevo, seguir con esto
 	monedas.destruirContenido(); //subir esto
 	listaobstaculos.destruirContenido();
@@ -98,11 +95,8 @@ void Mundo::inicializa()
 	protagonista.setAttackspeed(1);
 	protagonista.setAttack(1);
 	protagonista.setDef(1);
-	for (int i = 0; i < 2; i++)
-	{
-		Enemigo* aux = new Enemigo(i+2,123,1,3);
-		enemigos.agregar(aux);
-	}
+	Enemigo* aux = new Enemigo(169, 113, 4);
+	enemigos.agregar(aux);
 }
 
 void Mundo::setPos(float x, float y)
