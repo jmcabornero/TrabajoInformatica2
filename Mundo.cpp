@@ -71,9 +71,9 @@ void Mundo::mueve()
 
 void Mundo::inicializa()
 {
-	protagonista.setPos(7, 125); //nuevo
-	enemigos.destruirContenido(); //nuevo, seguir con esto
-	monedas.destruirContenido(); //subir esto
+	protagonista.setPos(7, 124); 
+	enemigos.destruirContenido(); 
+	monedas.destruirContenido(); 
 	listaobstaculos.destruirContenido();
 	listapinchos.destruirContenido();
 	listacofres.destruirContenido();
@@ -95,11 +95,10 @@ void Mundo::inicializa()
 	protagonista.setAttack(1);
 	protagonista.setDef(1);
 
-	for (int i = 0; i < 2; i++)
-	{
-		Enemigo* aux = new Enemigo(i+2,123,1,3);
-		enemigos.agregar(aux);
-	}
+	
+	Enemigo* aux = new Enemigo(169,113,4);
+	enemigos.agregar(aux);
+	
 }
 
 void Mundo::setPos(float x, float y)
