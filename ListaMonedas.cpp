@@ -43,6 +43,7 @@ void ListaMonedas::Colision(Protagonista* p)  //se elimina la rupia y se suma di
 	{
 		if (inter.colision(*p, *(lista[i])))
 		{
+			ETSIDI::play("sonidos/recogerMoneda.mp3");
 			int tipo = lista[i]->GetTipo();
 			if (tipo == 1)
 				p->setDinero(p->getDinero() + 5);

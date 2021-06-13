@@ -45,6 +45,7 @@ void ListaEnemigos::dano(ListaMonedas *listamonedas)
 	{
 		if (lista[i]->getVida() <= 0)
 		{
+			ETSIDI::play("sonidos/muerteEnemigo.mp3");
 			float posx = lista[i]->GetPosx();
 			float posy = lista[i]->getPosy();
 			float valor = ETSIDI::lanzaDado(10.0);

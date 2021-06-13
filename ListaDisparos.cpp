@@ -60,6 +60,7 @@ void ListaDisparos::colision(Enemigo *e)
 			x = Interaccion::colision(*(Lista[i]), *e);
 			if (x == 1)
 			{
+				ETSIDI::play("sonidos/golpe.mp3");
 				(*e).ModVida(Lista[i]->getIdent(), Lista[i]->getAtaque());
 				elimina(Lista[i]);
 			}
@@ -77,6 +78,7 @@ void ListaDisparos::colision(Protagonista *e)
 			x = Interaccion::colision(*(Lista[i]), *e);
 			if (x == 1)
 			{
+				ETSIDI::play("sonidos/golpe.mp3");
 				(*e).ModVida(Lista[i]->getIdent(), Lista[i]->getAtaque());
 				cout << Lista[i]->getIdent();
 				elimina(Lista[i]);
