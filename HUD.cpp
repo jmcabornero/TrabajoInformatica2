@@ -6,6 +6,7 @@
 #define capa2 0.04f
 #define capa3 0.05f
 #define capa4 0.06f
+#define capa5 0.07f
 
 HUD::HUD() {
 	setAlto(4);
@@ -40,19 +41,19 @@ void HUD::dibuja(char* mensaje) {
 	Vector2D p = getPos();
 	glBegin(GL_POLYGON);
 	glColor3f(255, 255, 255);
-	glVertex3d(marco + p.x + a / 2, marco + p.y + h / 2, capa1);
-	glVertex3d(marco + p.x + a / 2, -1*marco + p.y - h / 2, capa1);
-	glVertex3d(-1*marco + p.x - a / 2, -1*marco + p.y - h / 2, capa1);
-	glVertex3d(-1*marco + p.x - a / 2, marco + p.y + h / 2, capa1);
+	glVertex3d(marco + p.x + a / 2, marco + p.y + h / 2, capa2);
+	glVertex3d(marco + p.x + a / 2, -1*marco + p.y - h / 2, capa2);
+	glVertex3d(-1*marco + p.x - a / 2, -1*marco + p.y - h / 2, capa2);
+	glVertex3d(-1*marco + p.x - a / 2, marco + p.y + h / 2, capa2);
 	glEnd();
 	glBegin(GL_POLYGON);
 	glColor3f(0, 0, 0);
-	glVertex3d(p.x + a / 2, p.y + h / 2, capa2);
-	glVertex3d(p.x + a / 2, p.y - h / 2, capa2);
-	glVertex3d(p.x - a / 2, p.y - h / 2, capa2);
-	glVertex3d(p.x - a / 2, p.y + h / 2, capa2);
+	glVertex3d(p.x + a / 2, p.y + h / 2, capa3);
+	glVertex3d(p.x + a / 2, p.y - h / 2, capa3);
+	glVertex3d(p.x - a / 2, p.y - h / 2, capa3);
+	glVertex3d(p.x - a / 2, p.y + h / 2, capa3);
 	glEnd();
-	displayText(p.x - a/2 + marco, p.y + h/2 - 4*marco, capa3, 255, 255, 255, mensaje);
+	displayText(p.x - a/2 + marco, p.y + h/2 - 4*marco, capa4, 255, 255, 255, mensaje);
 }
 
 void HUD::dibuja(const char* mensaje) {
@@ -62,19 +63,19 @@ void HUD::dibuja(const char* mensaje) {
 	Vector2D p = getPos();
 	glBegin(GL_POLYGON);
 	glColor3f(255, 255, 255);
-	glVertex3d(marco + p.x + a / 2, marco + p.y + h / 2, capa1);
-	glVertex3d(marco + p.x + a / 2, -1 * marco + p.y - h / 2, capa1);
-	glVertex3d(-1 * marco + p.x - a / 2, -1 * marco + p.y - h / 2, capa1);
-	glVertex3d(-1 * marco + p.x - a / 2, marco + p.y + h / 2, capa1);
+	glVertex3d(marco + p.x + a / 2, marco + p.y + h / 2, capa2);
+	glVertex3d(marco + p.x + a / 2, -1 * marco + p.y - h / 2, capa2);
+	glVertex3d(-1 * marco + p.x - a / 2, -1 * marco + p.y - h / 2, capa2);
+	glVertex3d(-1 * marco + p.x - a / 2, marco + p.y + h / 2, capa2);
 	glEnd();
 	glBegin(GL_POLYGON);
 	glColor3f(0, 0, 0);
-	glVertex3d(p.x + a / 2, p.y + h / 2, capa2);
-	glVertex3d(p.x + a / 2, p.y - h / 2, capa2);
-	glVertex3d(p.x - a / 2, p.y - h / 2, capa2);
-	glVertex3d(p.x - a / 2, p.y + h / 2, capa2);
+	glVertex3d(p.x + a / 2, p.y + h / 2, capa3);
+	glVertex3d(p.x + a / 2, p.y - h / 2, capa3);
+	glVertex3d(p.x - a / 2, p.y - h / 2, capa3);
+	glVertex3d(p.x - a / 2, p.y + h / 2, capa3);
 	glEnd();
-	displayText(p.x - a / 2 + marco, p.y + h / 2 - 4 * marco, capa3, 1, 1, 1, mensaje);
+	displayText(p.x - a / 2 + marco, p.y + h / 2 - 4 * marco, capa4, 1, 1, 1, mensaje);
 }
 
 void HUD::mueve() {

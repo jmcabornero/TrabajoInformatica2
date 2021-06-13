@@ -9,86 +9,95 @@ Enemigo::Enemigo(float x, float y, int b, int t)
 {
 	setDir('d');
 
-	spriteRD.setCenter(1, 0);
+	spriteRD.setCenter(1.5, 0);
 	spriteRD.setSize(2, 2);
-	spriteLD.setCenter(1, 0);
+	spriteLD.setCenter(1.5, 0);
 	spriteLD.setSize(2, 2);
-	spriteUpD.setCenter(1, 0);
+	spriteUpD.setCenter(1.5, 0);
 	spriteUpD.setSize(2, 2);
-	spriteDownD.setCenter(1, 0);
+	spriteDownD.setCenter(1.5, 0);
 	spriteDownD.setSize(2, 2);
 
-	spriteRK.setCenter(1, 0);
+	spriteRK.setCenter(1.5, 0);
 	spriteRK.setSize(2, 2);
-	spriteLK.setCenter(1, 0);
+	spriteLK.setCenter(1.5, 0);
 	spriteLK.setSize(2, 2);
-	spriteUpK.setCenter(1, 0);
+	spriteUpK.setCenter(1.5, 0);
 	spriteUpK.setSize(2, 2);
-	spriteDownK.setCenter(1, 0);
+	spriteDownK.setCenter(1.5, 0);
 	spriteDownK.setSize(2, 2);
 
-	spriteRE.setCenter(1, 0);
+	spriteRE.setCenter(1.5, 0);
 	spriteRE.setSize(2, 2);
-	spriteLE.setCenter(1, 0);
+	spriteLE.setCenter(1.5, 0);
 	spriteLE.setSize(2, 2);
-	spriteUpE.setCenter(1, 0);
+	spriteUpE.setCenter(1.5, 0);
 	spriteUpE.setSize(2, 2);
-	spriteDownE.setCenter(1, 0);
+	spriteDownE.setCenter(1.5, 0);
 	spriteDownE.setSize(2, 2);
 
-	spriteRD1.setCenter(1, 0);
+	spriteRD1.setCenter(1.5, 0);
 	spriteRD1.setSize(2, 2);
-	spriteLD1.setCenter(1, 0);
+	spriteLD1.setCenter(1.5, 0);
 	spriteLD1.setSize(2, 2);
-	spriteUpD1.setCenter(1, 0);
+	spriteUpD1.setCenter(1.5, 0);
 	spriteUpD1.setSize(2, 2);
-	spriteDownD1.setCenter(1, 0);
+	spriteDownD1.setCenter(1.5, 0);
 	spriteDownD1.setSize(2, 2);
 
-	spriteRK1.setCenter(1, 0);
+	spriteRK1.setCenter(1.5, 0);
 	spriteRK1.setSize(2, 2);
-	spriteLK1.setCenter(1, 0);
+	spriteLK1.setCenter(1.5, 0);
 	spriteLK1.setSize(2, 2);
-	spriteUpK1.setCenter(1, 0);
+	spriteUpK1.setCenter(1.5, 0);
 	spriteUpK1.setSize(2, 2);
-	spriteDownK1.setCenter(1, 0);
+	spriteDownK1.setCenter(1.5, 0);
 	spriteDownK1.setSize(2, 2);
 
-	spriteRE1.setCenter(1, 0);
+	spriteRE1.setCenter(1.5, 0);
 	spriteRE1.setSize(2, 2);
-	spriteLE1.setCenter(1, 0);
+	spriteLE1.setCenter(1.5, 0);
 	spriteLE1.setSize(2, 2);
-	spriteUpE1.setCenter(1, 0);
+	spriteUpE1.setCenter(1.5, 0);
 	spriteUpE1.setSize(2, 2);
-	spriteDownE1.setCenter(1, 0);
+	spriteDownE1.setCenter(1.5, 0);
 	spriteDownE1.setSize(2, 2);
 
-	spriteRD2.setCenter(1, 0);
+	spriteRD2.setCenter(1.5, 0);
 	spriteRD2.setSize(2, 2);
-	spriteLD2.setCenter(1, 0);
+	spriteLD2.setCenter(1.5, 0);
 	spriteLD2.setSize(2, 2);
-	spriteUpD2.setCenter(1, 0);
+	spriteUpD2.setCenter(1.5, 0);
 	spriteUpD2.setSize(2, 2);
-	spriteDownD2.setCenter(1, 0);
+	spriteDownD2.setCenter(1.5, 0);
 	spriteDownD2.setSize(2, 2);
 
-	spriteRK2.setCenter(1, 0);
+	spriteRK2.setCenter(1.5, 0);
 	spriteRK2.setSize(2, 2);
-	spriteLK2.setCenter(1, 0);
+	spriteLK2.setCenter(1.5, 0);
 	spriteLK2.setSize(2, 2);
-	spriteUpK2.setCenter(1, 0);
+	spriteUpK2.setCenter(1.5, 0);
 	spriteUpK2.setSize(2, 2);
-	spriteDownK2.setCenter(1, 0);
+	spriteDownK2.setCenter(1.5, 0);
 	spriteDownK2.setSize(2, 2);
 
-	spriteRE2.setCenter(1, 0);
+	spriteRE2.setCenter(1.5, 0);
 	spriteRE2.setSize(2, 2);
-	spriteLE2.setCenter(1, 0);
+	spriteLE2.setCenter(1.5, 0);
 	spriteLE2.setSize(2, 2);
-	spriteUpE2.setCenter(1, 0);
+	spriteUpE2.setCenter(1.5, 0);
 	spriteUpE2.setSize(2, 2);
-	spriteDownE2.setCenter(1, 0);
+	spriteDownE2.setCenter(1.5, 0);
 	spriteDownE2.setSize(2, 2);
+
+	spriteBoss1L.setCenter(1.5, 0);
+	spriteBoss1L.setSize(2, 2);
+	spriteBoss1R.setCenter(1.5, 0);
+	spriteBoss1R.setSize(2, 2);
+	spriteBoss1Up.setCenter(1.5, 0);
+	spriteBoss1Up.setSize(2, 2);
+	spriteBoss1Down.setCenter(1.5, 0);
+	spriteBoss1Down.setSize(2, 2);
 
 	posicion.x = x; posicion.y = y; velocidad = 0; velocidad = 0;
 	setFlag(0);
@@ -156,6 +165,12 @@ Enemigo::Enemigo(float x, float y, int b, int t)
 			break;
 		}
 		break;
+	case 4:
+		setDef(10);
+		setAttack(1.5);
+		setCoolDown(4.0);
+		setVel(0.8, 0);
+		break;
 	}
 }
 
@@ -216,6 +231,9 @@ void Enemigo::Dibuja()
 				break;
 			}
 			break;
+		case 4:
+			spriteBoss1R.draw();
+			break;
 		}
 		//cout << "sprite D" << endl;
 	}
@@ -271,6 +289,9 @@ void Enemigo::Dibuja()
 				spriteLE2.draw();
 				break;
 			}
+			break;
+		case 4:
+			spriteBoss1L.draw();
 			break;
 		}
 		//cout << "sprite A" << endl;
@@ -328,6 +349,9 @@ void Enemigo::Dibuja()
 				break;
 			}
 			break;
+		case 4:
+			spriteBoss1Up.draw();
+			break;
 		}
 		//cout << "sprite W" << endl;
 	}
@@ -384,6 +408,8 @@ void Enemigo::Dibuja()
 				break;
 			}
 			break;
+		case 4:
+			spriteBoss1Down.draw();
 		}
 		//cout << "sprite S" << endl;
 	}
@@ -444,6 +470,10 @@ void Enemigo::Dibuja()
 					break;
 				}
 				break;
+			case 4:
+				spriteBoss1L.setState(1, false);
+				spriteBoss1L.draw();
+				break;
 			}
 			
 			break;
@@ -501,6 +531,10 @@ void Enemigo::Dibuja()
 					break;
 				}
 				break;
+			case 4:
+				spriteBoss1R.setState(1, false);
+				spriteBoss1R.draw();
+				break;
 			}
 
 			break;
@@ -557,6 +591,10 @@ void Enemigo::Dibuja()
 					spriteUpE2.draw();
 					break;
 				}
+				break;
+			case 4:
+				spriteBoss1Up.setState(1, false);
+				spriteBoss1Up.draw();
 				break;
 			}
 
@@ -617,9 +655,14 @@ void Enemigo::Dibuja()
 				break;
 			}
 			break;
+		case 4:
+			spriteBoss1Down.setState(1, false);
+			spriteBoss1Down.draw();
+			break;
 		}
 	}
 	glPopMatrix();
+	
 	//std::cout << "velocidad: ( " << velocidad.x << " , " << velocidad.y << " )" << std::endl;
 	//std::cout << "direccion: " << direccion << std::endl;
 }
@@ -671,90 +714,104 @@ void Enemigo::Mueve(float t)
 	spriteLE2.loop();
 	spriteUpE2.loop();
 	spriteDownE2.loop();
+
+	spriteBoss1Down.loop();
+	spriteBoss1R.loop();
+	spriteBoss1L.loop();
+	spriteBoss1R.loop();
 }
 
 void Enemigo::setTam(float anchura, float altura)
 {
-	spriteRD.setCenter(1, 0);
+	spriteRD.setCenter(1.5, 0);
 	spriteRD.setSize(anchura, altura);
-	spriteLD.setCenter(1, 0);
+	spriteLD.setCenter(1.5, 0);
 	spriteLD.setSize(anchura, altura);
-	spriteUpD.setCenter(1, 0);
+	spriteUpD.setCenter(1.5, 0);
 	spriteUpD.setSize(anchura, altura);
-	spriteDownD.setCenter(1, 0);
+	spriteDownD.setCenter(1.5, 0);
 	spriteDownD.setSize(anchura, altura);
 
-	spriteRK.setCenter(1, 0);
+	spriteRK.setCenter(1.5, 0);
 	spriteRK.setSize(anchura, altura);
-	spriteLK.setCenter(1, 0);
+	spriteLK.setCenter(1.5, 0);
 	spriteLK.setSize(anchura, altura);
-	spriteUpK.setCenter(1, 0);
+	spriteUpK.setCenter(1.5, 0);
 	spriteUpK.setSize(anchura, altura);
-	spriteDownK.setCenter(1, 0);
+	spriteDownK.setCenter(1.5, 0);
 	spriteDownK.setSize(anchura, altura);
 
-	spriteRE.setCenter(1, 0);
+	spriteRE.setCenter(1.5, 0);
 	spriteRE.setSize(anchura, altura);
-	spriteLE.setCenter(1, 0);
+	spriteLE.setCenter(1.5, 0);
 	spriteLE.setSize(anchura, altura);
-	spriteUpE.setCenter(1, 0);
+	spriteUpE.setCenter(1.5, 0);
 	spriteUpE.setSize(anchura, altura);
-	spriteDownE.setCenter(1, 0);
+	spriteDownE.setCenter(1.5, 0);
 	spriteDownE.setSize(anchura, altura);
 
-	spriteRD1.setCenter(1, 0);
+	spriteRD1.setCenter(1.5, 0);
 	spriteRD1.setSize(anchura, altura);
-	spriteLD1.setCenter(1, 0);
+	spriteLD1.setCenter(1.5, 0);
 	spriteLD1.setSize(anchura, altura);
-	spriteUpD1.setCenter(1, 0);
+	spriteUpD1.setCenter(1.5, 0);
 	spriteUpD1.setSize(anchura, altura);
-	spriteDownD1.setCenter(1, 0);
+	spriteDownD1.setCenter(1.5, 0);
 	spriteDownD1.setSize(anchura, altura);
 
-	spriteRK1.setCenter(1, 0);
+	spriteRK1.setCenter(1.5, 0);
 	spriteRK1.setSize(anchura, altura);
-	spriteLK1.setCenter(1, 0);
+	spriteLK1.setCenter(1.5, 0);
 	spriteLK1.setSize(anchura, altura);
-	spriteUpK1.setCenter(1, 0);
+	spriteUpK1.setCenter(1.5, 0);
 	spriteUpK1.setSize(anchura, altura);
-	spriteDownK1.setCenter(1, 0);
+	spriteDownK1.setCenter(1.5, 0);
 	spriteDownK1.setSize(anchura, altura);
 
-	spriteRE1.setCenter(1, 0);
+	spriteRE1.setCenter(1.5, 0);
 	spriteRE1.setSize(anchura, altura);
-	spriteLE1.setCenter(1, 0);
+	spriteLE1.setCenter(1.5, 0);
 	spriteLE1.setSize(anchura, altura);
-	spriteUpE1.setCenter(1, 0);
+	spriteUpE1.setCenter(1.5, 0);
 	spriteUpE1.setSize(anchura, altura);
-	spriteDownE1.setCenter(1, 0);
+	spriteDownE1.setCenter(1.5, 0);
 	spriteDownE1.setSize(anchura, altura);
 
-	spriteRD2.setCenter(1, 0);
+	spriteRD2.setCenter(1.5, 0);
 	spriteRD2.setSize(anchura, altura);
-	spriteLD2.setCenter(1, 0);
+	spriteLD2.setCenter(1.5, 0);
 	spriteLD2.setSize(anchura, altura);
-	spriteUpD2.setCenter(1, 0);
+	spriteUpD2.setCenter(1.5, 0);
 	spriteUpD2.setSize(anchura, altura);
-	spriteDownD2.setCenter(1, 0);
+	spriteDownD2.setCenter(1.5, 0);
 	spriteDownD2.setSize(anchura, altura);
 
-	spriteRK2.setCenter(1, 0);
+	spriteRK2.setCenter(1.5, 0);
 	spriteRK2.setSize(anchura, altura);
-	spriteLK2.setCenter(1, 0);
+	spriteLK2.setCenter(1.5, 0);
 	spriteLK2.setSize(anchura, altura);
-	spriteUpK2.setCenter(1, 0);
+	spriteUpK2.setCenter(1.5, 0);
 	spriteUpK2.setSize(anchura, altura);
-	spriteDownK2.setCenter(1, 0);
+	spriteDownK2.setCenter(1.5, 0);
 	spriteDownK2.setSize(anchura, altura);
 
-	spriteRE2.setCenter(1, 0);
+	spriteRE2.setCenter(1.5, 0);
 	spriteRE2.setSize(anchura, altura);
-	spriteLE2.setCenter(1, 0);
+	spriteLE2.setCenter(1.5, 0);
 	spriteLE2.setSize(anchura, altura);
-	spriteUpE2.setCenter(1, 0);
+	spriteUpE2.setCenter(1.5, 0);
 	spriteUpE2.setSize(anchura, altura);
-	spriteDownE2.setCenter(1, 0);
+	spriteDownE2.setCenter(1.5, 0);
 	spriteDownE2.setSize(anchura, altura);
+
+	spriteBoss1L.setCenter(1.5, 0);
+	spriteBoss1L.setSize(anchura, altura);
+	spriteBoss1R.setCenter(1.5, 0);
+	spriteBoss1R.setSize(anchura, altura);
+	spriteBoss1Up.setCenter(1.5, 0);
+	spriteBoss1Up.setSize(anchura, altura);
+	spriteBoss1Down.setCenter(1.5, 0);
+	spriteBoss1Down.setSize(anchura, altura);
 }
 
 void Enemigo::Perseguir(Protagonista p)
@@ -813,6 +870,11 @@ void Enemigo::Perseguir(Protagonista p)
 	spriteLE2.loop();
 	spriteUpE2.loop();
 	spriteDownE2.loop();
+
+	spriteBoss1L.loop();
+	spriteBoss1R.loop();
+	spriteBoss1Up.loop();
+	spriteBoss1Down.loop();
 }
 
 

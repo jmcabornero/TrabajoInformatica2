@@ -5,6 +5,7 @@
 #include "stats.h"
 #include "Protagonista.h"
 #include <math.h>
+#include "HUD.h"
 
 using ETSIDI::SpriteSequence;
 
@@ -63,6 +64,11 @@ public:
 	SpriteSequence spriteLE2{ "imagenes/esqueleto/SkeletonWithSwordLefttRun2.png", 6 };
 	SpriteSequence spriteUpE2{ "imagenes/esqueleto/SkeletonWithSwordUpWalk2.png", 6 };
 	SpriteSequence spriteDownE2{ "imagenes/esqueleto/SkeletonWithSwordDownWalk2.png", 6 };
+
+	SpriteSequence spriteBoss1Up{ "imagenes/boss/Boss1Up.png", 6 };
+	SpriteSequence spriteBoss1Down{ "imagenes/boss/Boss1Down.png", 6 };
+	SpriteSequence spriteBoss1L{ "imagenes/boss/Boss1L.png", 6 };
+	SpriteSequence spriteBoss1R{ "imagenes/boss/Boss1R.png", 6 };
 
 	char getDir() { return direccion; }
 	void setDir(char d) { direccion = d; }

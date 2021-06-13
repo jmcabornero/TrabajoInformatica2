@@ -27,8 +27,6 @@ void Mundo::dibuja()
 	listapinchos.Dibuja();
 	monedas.Dibuja();
 
-	
-
 	disparos.dibuja();
 
 	DibujaMensajes();
