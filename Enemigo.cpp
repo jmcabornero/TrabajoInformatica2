@@ -90,6 +90,15 @@ Enemigo::Enemigo(float x, float y, int b, int t)
 	spriteDownE2.setCenter(1.5, 0);
 	spriteDownE2.setSize(2, 2);
 
+	spriteBoss1L.setCenter(1.5, 0);
+	spriteBoss1L.setSize(2, 2);
+	spriteBoss1R.setCenter(1.5, 0);
+	spriteBoss1R.setSize(2, 2);
+	spriteBoss1Up.setCenter(1.5, 0);
+	spriteBoss1Up.setSize(2, 2);
+	spriteBoss1Down.setCenter(1.5, 0);
+	spriteBoss1Down.setSize(2, 2);
+
 	posicion.x = x; posicion.y = y; velocidad = 0; velocidad = 0;
 	setFlag(0);
 	setTipo(t);
@@ -161,10 +170,8 @@ Enemigo::Enemigo(float x, float y, int b, int t)
 		setAttack(1.5);
 		setCoolDown(4.0);
 		setVel(0.8, 0);
-
 		break;
 	}
-
 }
 
 void Enemigo::Dibuja()
@@ -224,6 +231,9 @@ void Enemigo::Dibuja()
 				break;
 			}
 			break;
+		case 4:
+			spriteBoss1R.draw();
+			break;
 		}
 		//cout << "sprite D" << endl;
 	}
@@ -279,6 +289,9 @@ void Enemigo::Dibuja()
 				spriteLE2.draw();
 				break;
 			}
+			break;
+		case 4:
+			spriteBoss1L.draw();
 			break;
 		}
 		//cout << "sprite A" << endl;
@@ -336,6 +349,9 @@ void Enemigo::Dibuja()
 				break;
 			}
 			break;
+		case 4:
+			spriteBoss1Up.draw();
+			break;
 		}
 		//cout << "sprite W" << endl;
 	}
@@ -392,6 +408,8 @@ void Enemigo::Dibuja()
 				break;
 			}
 			break;
+		case 4:
+			spriteBoss1Down.draw();
 		}
 		//cout << "sprite S" << endl;
 	}
@@ -452,6 +470,10 @@ void Enemigo::Dibuja()
 					break;
 				}
 				break;
+			case 4:
+				spriteBoss1L.setState(1, false);
+				spriteBoss1L.draw();
+				break;
 			}
 			
 			break;
@@ -509,6 +531,10 @@ void Enemigo::Dibuja()
 					break;
 				}
 				break;
+			case 4:
+				spriteBoss1R.setState(1, false);
+				spriteBoss1R.draw();
+				break;
 			}
 
 			break;
@@ -565,6 +591,10 @@ void Enemigo::Dibuja()
 					spriteUpE2.draw();
 					break;
 				}
+				break;
+			case 4:
+				spriteBoss1Up.setState(1, false);
+				spriteBoss1Up.draw();
 				break;
 			}
 
@@ -625,6 +655,10 @@ void Enemigo::Dibuja()
 				break;
 			}
 			break;
+		case 4:
+			spriteBoss1Down.setState(1, false);
+			spriteBoss1Down.draw();
+			break;
 		}
 	}
 	glPopMatrix();
@@ -680,6 +714,11 @@ void Enemigo::Mueve(float t)
 	spriteLE2.loop();
 	spriteUpE2.loop();
 	spriteDownE2.loop();
+
+	spriteBoss1Down.loop();
+	spriteBoss1R.loop();
+	spriteBoss1L.loop();
+	spriteBoss1R.loop();
 }
 
 void Enemigo::setTam(float anchura, float altura)
@@ -764,6 +803,15 @@ void Enemigo::setTam(float anchura, float altura)
 	spriteUpE2.setSize(anchura, altura);
 	spriteDownE2.setCenter(1.5, 0);
 	spriteDownE2.setSize(anchura, altura);
+
+	spriteBoss1L.setCenter(1.5, 0);
+	spriteBoss1L.setSize(anchura, altura);
+	spriteBoss1R.setCenter(1.5, 0);
+	spriteBoss1R.setSize(anchura, altura);
+	spriteBoss1Up.setCenter(1.5, 0);
+	spriteBoss1Up.setSize(anchura, altura);
+	spriteBoss1Down.setCenter(1.5, 0);
+	spriteBoss1Down.setSize(anchura, altura);
 }
 
 void Enemigo::Perseguir(Protagonista p)
@@ -822,6 +870,11 @@ void Enemigo::Perseguir(Protagonista p)
 	spriteLE2.loop();
 	spriteUpE2.loop();
 	spriteDownE2.loop();
+
+	spriteBoss1L.loop();
+	spriteBoss1R.loop();
+	spriteBoss1Up.loop();
+	spriteBoss1Down.loop();
 }
 
 
