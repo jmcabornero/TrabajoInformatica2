@@ -35,7 +35,8 @@ void Mundo::dibuja()
 
 	//protagonista.dibujaStats(posicion_ojo.x - 3, posicion_ojo.y + 6.5);
 	hud.dibujaHUD(&protagonista);
-	hud_stats.dibujaStats(&protagonista, posicion_ojo.x - 3, posicion_ojo.y + 6.8);
+	hud_stats.dibujaStats(&protagonista, posicion_ojo.x - 7.5, posicion_ojo.y + 6.3);
+	hud_cons.dibujaCons(&protagonista, posicion_ojo.x + 9, posicion_ojo.y + 6.3);
 
 	enemigos.Disparar(&disparos);
 	enemigos.CoolDown();
@@ -57,7 +58,7 @@ void Mundo::mueve()
 	disparos.colision(&protagonista);
 	enemigos.dano(&monedas);
 	enemigos.Perseguir(protagonista);
-	enemigos.mueve(0.15f);
+	enemigos.mueve(0.1f);
 	for (int i = 0; i < listaobstaculos.getNumero(); i++)
 	{
 		disparos.colision(listaobstaculos[i]);
@@ -66,7 +67,6 @@ void Mundo::mueve()
 	protagonista.FuncionTeletransporte();
 	hud.setPos(protagonista.GetPosx(), protagonista.getPosy() + 1.5f);
 	enemigos.kamikaze(protagonista);
-	enemigos.mueve(0.025f);
 
 	enemigos.distProta(protagonista);
 }
@@ -135,6 +135,9 @@ void Mundo::tecla(unsigned char key)
 	Vector2D prota = protagonista.GetPos();
 	int dinero = protagonista.getDinero();
 	float vel = protagonista.GetVelAbs();
+	float def = protagonista.getDef();
+	float att = protagonista.getAttack();
+	float cad = protagonista.getAttackspeed();
 	if ((prota.x >= 105) && (prota.x <= 109) && (prota.y >= 80) && (prota.y <= 84))
 	{
 		switch (key)
@@ -144,29 +147,30 @@ void Mundo::tecla(unsigned char key)
 			if (dinero > 20)
 			{
 				protagonista.setPociones(protagonista.getPociones() + 1);
-				protagonista.setDinero(protagonista.getDinero() - 10);	
+				protagonista.setDinero(protagonista.getDinero() - 10);
 			}
 			break;
 		}
 		}
-		if ((prota.x >= 107) && (prota.x <= 111) && (prota.y >= 96) && (prota.y <= 100))
+	}
+	if ((prota.x >= 107) && (prota.x <= 111) && (prota.y >= 96) && (prota.y <= 100))
 		{
 			switch (key)
 			{
 			case '1':
 			{
-				if (dinero > 20)
+				if ((dinero > 20) && (def < 2))
 				{
-					protagonista.setDef(protagonista.getDef() + 1);
+					protagonista.setDef(protagonista.getDef() + 0.2);
 					protagonista.setDinero(protagonista.getDinero() - 20);
 				}
 				break;
 			}
 			case '2':
 			{
-				if (dinero > 20)
+				if ((dinero > 20) && (att < 2))
 				{
-					protagonista.setAttack(protagonista.getAttack() + 1);
+					protagonista.setAttack(protagonista.getAttack() + 0.2);
 					protagonista.setDinero(protagonista.getDinero() - 20);
 				}
 				break;
@@ -175,24 +179,22 @@ void Mundo::tecla(unsigned char key)
 			{
 				if ((dinero > 20)&&(vel<2))
 				{
-					protagonista.SetVelAbs(protagonista.GetVelAbs() + 0.1);
+					protagonista.SetVelAbs(protagonista.GetVelAbs() + 0.2);
 					protagonista.setDinero(protagonista.getDinero() - 20);
 				}
 				break;
 			}
 			case '4':
 			{
-				if (dinero > 20)
+				if ((dinero > 20) && (cad < 2))
 				{
-					protagonista.setAttackspeed(protagonista.getAttackspeed() + 1);
+					protagonista.setAttackspeed(protagonista.getAttackspeed() + 0.2);
 					protagonista.setDinero(protagonista.getDinero() - 20);
 				}
 				break;
 			}
 			}
 		}
-
-	}
 }
 
 void Mundo::teclaEspecial(unsigned char key) //al pulsar la tecla
@@ -488,7 +490,7 @@ void Mundo::DibujaMensajes()
 		else cout << "Unable to open file";
 		mensaje1.dibuja(char_arr);
 	}
-	if (protagonista.MensajeBuda(168, 171, 100))
+	if (protagonista.MensajeBuda(168, 171, 99))
 	{
 		mensaje1.setPos(posicion_ojo.x, posicion_ojo.y - 4);
 		string line;

@@ -24,7 +24,11 @@ Disparo::~Disparo() {
 
 void Disparo::dibuja() {
 	glPushMatrix();
-	glTranslatef(posicion.x-0.35, posicion.y+0.35, 1);
+	if (velocidad.x > 0.01)glTranslatef(posicion.x - 0.35, posicion.y + 1, 1);
+	if (velocidad.x < -0.01)glTranslatef(posicion.x - 0.35, posicion.y + 1, 1);
+	if (velocidad.y > 0.01)glTranslatef(posicion.x - 0.5, posicion.y + 0.35, 1);
+	if (velocidad.y < -0.01)glTranslatef(posicion.x - 0.5, posicion.y + 0.35, 1);
+	
 	glColor3f(1.0f, 0.0f, 0.0f);
 	//glutSolidSphere(radio, 20, 20);
 	if (velocidad.x > 0.01)disparo_dcha.draw();
