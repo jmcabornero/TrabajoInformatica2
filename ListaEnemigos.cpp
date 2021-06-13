@@ -8,6 +8,9 @@
 ListaEnemigos::ListaEnemigos()
 {
 	numero = 0;
+	FlagBoss1 = 1;
+	FlagBoss2 = 1;
+	FlagBoss3 = 1;
 	for (int i = 0; i < MAX_ENEMIGOS; i++)
 		lista[i] = 0;
 }
@@ -82,6 +85,7 @@ void ListaEnemigos::eliminar(int index)
 {
 	if ((index < 0) || (index >= numero))
 		return;
+
 	delete lista[index];
 	numero--;
 	for (int i = index; i < numero; i++)
@@ -92,7 +96,7 @@ void ListaEnemigos::Disparar(ListaDisparos *ds)
 {
 	for (int i = 0; i < numero; i++)
 	{
-		if (lista[i]->getTipo() == 1 || lista[i]->getTipo() == 3)
+		if ((lista[i]->getTipo() == 1 || lista[i]->getTipo() == 3) && lista[i]->getBioma() != 4)
 		{
 			if (lista[i]->getFlag() == 0 && lista[i]->getFlagDist()==1)
 			{
@@ -118,6 +122,40 @@ void ListaEnemigos::Disparar(ListaDisparos *ds)
 				//cout << angulo;
 				ds->agregar(d);
 			}
+		}
+		if (lista[i]->getBioma() == 4)
+		{
+
+			if (lista[i]->getFlag() == 0 && lista[i]->getFlagDist() == 1)
+			{
+				Vector2D e_pos = lista[i]->GetPos();
+
+				for (int j = 0; j < 4; j++)
+				{
+					Disparo* d = new Disparo(1, lista[i]->getAttack());
+					d->setP(2);
+					d->setPos(e_pos.x, e_pos.y);
+					lista[i]->setFlag(1);
+					switch (j)
+					{
+					case 0: 
+						d->setVel(10, 0);
+						break;
+					case 1:
+						d->setVel(0, 10);
+						break;
+					case 2:
+						d->setVel(-10, 0);
+						break;
+					case 3:
+						d->setVel(0, -10);
+						break;
+
+					}
+					ds->agregar(d);
+				}
+			}
+
 		}
 	}
 }
@@ -159,4 +197,67 @@ void ListaEnemigos::distProta(Protagonista p)
 {
 	for (int i = 0; i < numero; i++)
 		lista[i]->distProta(p);
+}
+
+void ListaEnemigos::especialBoss()
+{
+	for (int i = 0; i < numero; i++)
+	{
+		if (lista[i]->getBioma() == 4)
+		{
+			float v = lista[i]->getVida();
+			int j;
+			Vector2D pos = lista[i]->GetPos();
+			if (FlagBoss1 && v <= 50)
+			{
+				
+				Enemigo *e1 = new Enemigo(172,115,3,3);
+				
+				Enemigo* e2 = new Enemigo(167,115, 3, 3);
+
+				agregar(e1); 
+				agregar(e2);
+				FlagBoss1 = 0;
+			}
+			if (FlagBoss2 && v <= 25)
+			{
+				
+				Enemigo* e3 = new Enemigo(172, 115,3,3);
+				
+				Enemigo* e4 = new Enemigo(167, 115, 3, 3);
+
+				agregar(e3);
+				agregar(e4);
+				FlagBoss2 = 0;
+			}
+			if (FlagBoss3 && v <= 10)
+			{
+				
+				Enemigo* e5 = new Enemigo(172, 115,3,3);
+				
+				Enemigo* e6 = new Enemigo(167, 115, 3, 3);
+				
+				agregar(e5);
+				agregar(e6);
+				FlagBoss3 = 0;
+			}
+		}
+	}
+}
+
+void ListaEnemigos::movBoss()
+{
+	for (int i = 0; i < numero; i++)
+	{
+		if (lista[i]->getBioma() == 4)
+		{
+			Vector2D pos = lista[i]->GetPos();
+			if (pos.x == 161)
+				lista[i]->setVel(0.8, 0);
+			if (pos.x == 178)
+				lista[i]->setVel(-0.8, 0);
+			
+		}
+	}
+
 }

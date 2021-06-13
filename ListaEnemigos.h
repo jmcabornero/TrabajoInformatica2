@@ -12,6 +12,9 @@ class ListaEnemigos
 private:
 	Enemigo* lista[MAX_ENEMIGOS];
 	int numero;
+	bool FlagBoss1;
+	bool FlagBoss2;
+	bool FlagBoss3;
 public:
 	ListaEnemigos();
 	virtual ~ListaEnemigos();
@@ -29,4 +32,7 @@ public:
 	Enemigo* operator [](int i);
 	void kamikaze(Protagonista &p);
 	void distProta(Protagonista p);
+	void movBoss();
+
+	void especialBoss();
 };

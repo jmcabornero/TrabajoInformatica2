@@ -156,7 +156,15 @@ Enemigo::Enemigo(float x, float y, int b, int t)
 			break;
 		}
 		break;
+	case 4:
+		setDef(10);
+		setAttack(1.5);
+		setCoolDown(4.0);
+		setVel(0.8, 0);
+
+		break;
 	}
+
 }
 
 void Enemigo::Dibuja()

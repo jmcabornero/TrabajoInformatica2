@@ -143,6 +143,8 @@ void ListaDisparos::Disparar(Protagonista &p)
 			break;
 		}
 		agregar(d);
+
 	};
+
 
 }
