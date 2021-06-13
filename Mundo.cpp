@@ -487,7 +487,7 @@ void Mundo::DibujaMensajes()
 		else cout << "Unable to open file";
 		mensaje1.dibuja(char_arr);
 	}
-	if (protagonista.MensajeBuda(168, 171, 100))
+	if (protagonista.MensajeBuda(168, 171, 99))
 	{
 		mensaje1.setPos(posicion_ojo.x, posicion_ojo.y - 4);
 		string line;
