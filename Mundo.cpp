@@ -53,6 +53,10 @@ void Mundo::mueve()
 	{
 		disparos.colision(enemigos[i]);
 	}
+	for (int i = 0; i < enemigos.getNumero(); i++)
+	{
+		listaobstaculos.Colision(enemigos[i], 1);
+	}
 	disparos.colision(&protagonista);
 	enemigos.dano(&monedas);
 	enemigos.Perseguir(protagonista);
@@ -71,7 +75,7 @@ void Mundo::mueve()
 
 void Mundo::inicializa()
 {
-	protagonista.setPos(7, 125); //nuevo
+	protagonista.setPos(167, 115); //nuevo
 	enemigos.destruirContenido(); //nuevo, seguir con esto
 	monedas.destruirContenido(); //subir esto
 	listaobstaculos.destruirContenido();
