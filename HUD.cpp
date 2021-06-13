@@ -257,7 +257,6 @@ std::string HUD::stringStats(Protagonista *p) {
 }
 
 std::string HUD::stringCons(Protagonista* p) {
-	string a = "   ";
 	string money = convert(p->getDinero());
 	string pocs = convert(p->getPociones());
 

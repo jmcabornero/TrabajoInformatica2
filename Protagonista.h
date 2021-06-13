@@ -3,6 +3,7 @@
 #include "ETSIDI.h"
 #include "ObjetosMovimiento.h"
 #include "stats.h"
+#include "freeglut.h"
 
 using ETSIDI::SpriteSequence;
 
