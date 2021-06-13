@@ -27,8 +27,6 @@ void Mundo::dibuja()
 	listapinchos.Dibuja();
 	monedas.Dibuja();
 
-	
-
 	disparos.dibuja();
 
 	DibujaMensajes();
@@ -118,6 +116,7 @@ void Mundo::tecla(unsigned char key)
 	{
 		
 		disparos.Disparar(protagonista);
+		break;
 	}
 	case 'c':
 	case 'C':

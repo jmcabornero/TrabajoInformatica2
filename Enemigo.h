@@ -5,6 +5,7 @@
 #include "stats.h"
 #include "Protagonista.h"
 #include <math.h>
+#include "HUD.h"
 
 using ETSIDI::SpriteSequence;
 
