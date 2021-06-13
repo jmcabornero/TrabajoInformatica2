@@ -5,9 +5,10 @@
 #include <sstream>
 #include <time.h>
 #define MAX_LENMENSAJE 1000
-Mundo::Mundo(float x)
+Mundo::Mundo(float x, bool y)
 {
 	z_ojo = x;
+	flagfinal = y;
 }
 
 void Mundo::dibuja()
@@ -68,6 +69,17 @@ void Mundo::mueve()
 	enemigos.kamikaze(protagonista);
 
 	enemigos.distProta(protagonista);
+
+	Vector2D protafinal = protagonista.GetPos();
+	if ((protafinal.x >= 159) && (protafinal.x <= 180) && (protafinal.y >= 106) && (protafinal.y <= 121))
+	{
+		if (flagfinal == 0)
+		{
+			ETSIDI::stopMusica();
+			ETSIDI::playMusica("sonidos/JefeFinal.mp3");
+			flagfinal = 1;
+		}
+	}
 }
 
 void Mundo::inicializa()
@@ -86,6 +98,8 @@ void Mundo::inicializa()
 	posicion_ojo.x = 10.25f;
 	posicion_ojo.y = 7.5f;
 	z_ojo = 20.5f; //20.5f   
+
+	bool flagfinal = 0;
 	protagonista.setTam(2, 2);
 	protagonista.setVida(100);
 	protagonista.setVel(0, 0);
