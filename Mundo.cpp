@@ -96,7 +96,6 @@ void Mundo::inicializa()
 	protagonista.setAttackspeed(1);
 	protagonista.setAttack(1);
 	protagonista.setDef(1);
-
 	for (int i = 0; i < 2; i++)
 	{
 		Enemigo* aux = new Enemigo(i+2,123,1,3);

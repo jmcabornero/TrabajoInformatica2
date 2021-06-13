@@ -39,3 +39,4 @@ public:
 	void DibujaTiendaMaster(Protagonista *p, float camara_x, float camara_y);
 };
 
+	
