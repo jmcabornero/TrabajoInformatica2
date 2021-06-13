@@ -270,7 +270,7 @@ std::string HUD::stringCons(Protagonista* p) {
 void HUD::dibujaStats(Protagonista *p, float camara_x, float camara_y) {
 	Vector2D prota_pos = p->GetPos();
 	setAlto(1.4);
-	setAncho(4.2);
+	setAncho(4.8);
 	setPos(prota_pos.x, prota_pos.y);
 	setPos(camara_x, camara_y);
 	std::string stats = stringStats(p);
