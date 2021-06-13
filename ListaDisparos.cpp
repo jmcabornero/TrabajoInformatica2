@@ -17,7 +17,7 @@ bool ListaDisparos::agregar(Disparo *d) {
 		return true;
 	}
 	else {
-		std::cout << "numero maximo de disparos alcanzado (20)" << std::endl;
+		std::cout << "numero maximo de disparos alcanzado (1000)" << std::endl;
 		return false;
 	}
 }
@@ -60,11 +60,8 @@ void ListaDisparos::colision(Enemigo *e)
 			x = Interaccion::colision(*(Lista[i]), *e);
 			if (x == 1)
 			{
-				
 				(*e).ModVida(Lista[i]->getIdent(), Lista[i]->getAtaque());
-				
 				elimina(Lista[i]);
-				
 			}
 		}
 	}

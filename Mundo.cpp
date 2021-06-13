@@ -144,7 +144,7 @@ void Mundo::tecla(unsigned char key)
 		{
 		case '1':
 		{
-			if (dinero > 20)
+			if (dinero >= 20)
 			{
 				protagonista.setPociones(protagonista.getPociones() + 1);
 				protagonista.setDinero(protagonista.getDinero() - 10);
@@ -159,7 +159,7 @@ void Mundo::tecla(unsigned char key)
 			{
 			case '1':
 			{
-				if ((dinero > 20) && (def < 2))
+				if ((dinero >= 20) && (def < 2))
 				{
 					protagonista.setDef(protagonista.getDef() + 0.2);
 					protagonista.setDinero(protagonista.getDinero() - 20);
@@ -168,7 +168,7 @@ void Mundo::tecla(unsigned char key)
 			}
 			case '2':
 			{
-				if ((dinero > 20) && (att < 2))
+				if ((dinero >= 20) && (att < 2))
 				{
 					protagonista.setAttack(protagonista.getAttack() + 0.2);
 					protagonista.setDinero(protagonista.getDinero() - 20);
@@ -177,7 +177,7 @@ void Mundo::tecla(unsigned char key)
 			}
 			case '3':
 			{
-				if ((dinero > 20)&&(vel<2))
+				if ((dinero >= 20)&&(vel<2))
 				{
 					protagonista.SetVelAbs(protagonista.GetVelAbs() + 0.2);
 					protagonista.setDinero(protagonista.getDinero() - 20);
@@ -186,7 +186,7 @@ void Mundo::tecla(unsigned char key)
 			}
 			case '4':
 			{
-				if ((dinero > 20) && (cad < 2))
+				if ((dinero >= 20) && (cad < 2))
 				{
 					protagonista.setAttackspeed(protagonista.getAttackspeed() + 0.2);
 					protagonista.setDinero(protagonista.getDinero() - 20);
