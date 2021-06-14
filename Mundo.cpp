@@ -32,7 +32,6 @@ void Mundo::dibuja()
 
 	DibujaMensajes();
 
-	//protagonista.dibujaStats(posicion_ojo.x - 3, posicion_ojo.y + 6.5);
 	hud.dibujaHUD(&protagonista);
 	hud_stats.dibujaStats(&protagonista, posicion_ojo.x - 7.5, posicion_ojo.y + 6.3);
 	hud_cons.dibujaCons(&protagonista, posicion_ojo.x + 9, posicion_ojo.y + 6.3);
@@ -57,6 +56,7 @@ void Mundo::mueve()
 	listacofres.Transformacion(&protagonista);
 	disparos.mueve(0.025f);
 	CambioCamara();
+	GetVidasBoss();
 	enemigos.colisionBoss();
 	for (int i = 0; i < enemigos.getNumero(); i++)
 	{
@@ -92,7 +92,7 @@ void Mundo::mueve()
 void Mundo::inicializa()
 {
 	//protagonista.setPos(7, 124); // posicion inicial
-	protagonista.setPos(10, 129); //posicion del boss
+	protagonista.setPos(167, 115); //posicion del boss
 	enemigos.destruirContenido(); //nuevo, seguir con esto
 	monedas.destruirContenido(); //subir esto
 	listaobstaculos.destruirContenido();
@@ -106,7 +106,7 @@ void Mundo::inicializa()
 	posicion_ojo.x = 10.25f;
 	posicion_ojo.y = 7.5f;
 	z_ojo = 20.5f; //20.5f   
-
+	
 	bool flagfinal = 0;
 	protagonista.setTam(2, 2);
 	protagonista.setVida(100);
@@ -115,7 +115,7 @@ void Mundo::inicializa()
 	protagonista.setPociones(0);
 	protagonista.setDinero(0);
 	protagonista.setAttackspeed(1);
-	protagonista.setAttack(1);
+	protagonista.setAttack(10);
 	protagonista.setDef(1);
 	Enemigo* aux = new Enemigo(169, 113, 4);
 	enemigos.agregar(aux);
@@ -528,19 +528,20 @@ void Mundo::DibujaMensajes()
 	}
 }
 
-
 float Mundo::GetVidas()
 {
 	return protagonista.getVida();
 
 }
 
-/*float Mundo::GetVidasBoss()
+int Mundo::GetVidasBoss()
 {
-	//return Boss.VidaJefe;
-	//return Boss.getVida();
-
-}*/
+	for (int i = 0; i < enemigos.getNumero(); i++) {
+		if (enemigos[i]->getBioma() == 4) {
+			return enemigos[i]->getVida();
+		}
+	}
+}
 
 Mundo::~Mundo()
 {
@@ -548,5 +549,4 @@ Mundo::~Mundo()
 }
 
 
-//float t1 = time();
 

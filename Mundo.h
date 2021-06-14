@@ -45,5 +45,5 @@ private:
 		void DibujaMensajes();
 		virtual ~Mundo();
 		float GetVidas();
-		float GetVidasBoss();
+		int GetVidasBoss();
 };

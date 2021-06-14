@@ -43,7 +43,7 @@ void ListaEnemigos::dano(ListaMonedas *listamonedas)
 {
 	for (int i = 0; i < numero; i++)
 	{
-		if (lista[i]->getVida() <= 0)
+		if ((lista[i]->getVida() <= 0)&&(lista[i]->getBioma()!=4))
 		{
 			ETSIDI::play("sonidos/muerteEnemigo.mp3");
 			float posx = lista[i]->GetPosx();
