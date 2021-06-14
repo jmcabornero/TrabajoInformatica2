@@ -201,7 +201,7 @@ void HUD::dibujaHUD(Protagonista *prota) {
 	Vector2D prota_pos = prota->GetPos();
 	setAlto(0.1);
 	setAncho(3);
-	setPos(prota_pos.x, prota_pos.y + 2.0f);
+	setPos(prota_pos.x - 0.4f, prota_pos.y + 2.0f);
 	float marco = 0.06f;
 	float h = alto;
 	float a = ancho;
@@ -233,7 +233,7 @@ void HUD::dibujaHUD(Enemigo* enem) {
 	Vector2D enem_pos = enem->GetPos();
 	setAlto(0.2);
 	setAncho(5);
-	setPos(enem_pos.x, enem_pos.y + 3.0f);
+	setPos(enem_pos.x - 0.4f, enem_pos.y + 3.0f);
 	float marco = 0.06f;
 	float h = alto;
 	float a = ancho;
