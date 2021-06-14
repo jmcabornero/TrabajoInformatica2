@@ -40,7 +40,7 @@ void Coordinador::Dibuja()
 
 		ETSIDI::setTextColor(0, 0, 1);
 		ETSIDI::setFont("fuentes/valuoldcaps.ttf", 34);
-		ETSIDI::printxy("JUEGO SUPER CHULO", -9, 14);
+		ETSIDI::printxy("Z E L D O", -5, 14);
 
 		ETSIDI::setTextColor(1, 0, 1);
 		ETSIDI::setFont("fuentes/Bitwise.ttf", 14);

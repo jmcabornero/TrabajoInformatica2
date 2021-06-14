@@ -91,8 +91,8 @@ void Mundo::mueve()
 
 void Mundo::inicializa()
 {
-	//protagonista.setPos(7, 124); // posicion inicial
-	protagonista.setPos(167, 115); //posicion del boss
+	protagonista.setPos(11, 129); // posicion inicial
+	//protagonista.setPos(167, 115); //posicion del boss
 	enemigos.destruirContenido(); //nuevo, seguir con esto
 	monedas.destruirContenido(); //subir esto
 	listaobstaculos.destruirContenido();
@@ -115,7 +115,7 @@ void Mundo::inicializa()
 	protagonista.setPociones(0);
 	protagonista.setDinero(0);
 	protagonista.setAttackspeed(1);
-	protagonista.setAttack(10);
+	protagonista.setAttack(1);
 	protagonista.setDef(1);
 	Enemigo* aux = new Enemigo(169, 113, 4);
 	enemigos.agregar(aux);
