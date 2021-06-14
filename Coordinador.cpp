@@ -92,6 +92,7 @@ void Coordinador::Dibuja()
 			0.0, 7.5, 0.0,
 			0.0, 1.0, 0.0);
 
+
 		glEnable(GL_TEXTURE_2D);
 		glBindTexture(GL_TEXTURE_2D, ETSIDI::getTexture("imagenes/fondo_inst.png").id);
 		glDisable(GL_LIGHTING);
@@ -305,6 +306,35 @@ void Coordinador::Dibuja()
 		ETSIDI::printxy("PULSA LA TECLA S PARA SALIR DEL JUEGO", -9, 0);
 
 	}
+
+	else if (estado == EXITO) {
+
+	gluLookAt(0.0, 7.5, 38.5,
+		0.0, 7.5, 0.0,
+		0.0, 1.0, 0.0);
+
+	glEnable(GL_TEXTURE_2D);
+	glBindTexture(GL_TEXTURE_2D, ETSIDI::getTexture("imagenes/victoria.png").id);
+	glDisable(GL_LIGHTING);
+	glBegin(GL_POLYGON);
+	glColor3f(1, 1, 1);
+	glTexCoord2d(0, 1); glVertex2f(-10, 0);
+	glTexCoord2d(1, 1); glVertex2f(10, 0);
+	glTexCoord2d(1, 0); glVertex2f(10, 15);
+	glTexCoord2d(0, 0); glVertex2f(-10, 15);
+	glEnd();
+	glEnable(GL_LIGHTING);
+	glDisable(GL_TEXTURE_2D);
+
+
+	ETSIDI::setTextColor(1, 0, 1);
+	ETSIDI::setFont("fuentes/Bitwise.ttf", 14);
+	ETSIDI::printxy("PULSA LA TECLA M PARA IR AL MENU PRINCIPAL", -9, -2);
+
+	ETSIDI::printxy("PULSA LA TECLA S PARA SALIR DEL JUEGO", -9, -4);
+
+
+	}
 };
 
 void Coordinador::Mueve() {
@@ -423,6 +453,21 @@ void Coordinador::Tecla(unsigned char key)
 	}
 
 	else if (estado == GAMEOVER) {
+		switch (key) {
+		case 'S':
+		case 's':
+			exit(0);
+			break;
+		case 'M':
+		case 'm':
+			ETSIDI::stopMusica();
+			ETSIDI::playMusica("sonidos/No Place For Straw Cowboys.mp3", TRUE);
+			estado = INICIO;
+			break;
+		}
+	}
+
+	else if (estado == EXITO) {
 		switch (key) {
 		case 'S':
 		case 's':
