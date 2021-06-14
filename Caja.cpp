@@ -1,7 +1,6 @@
 #include "Caja.h"
 #include "freeglut.h"
 #include "ETSIDI.h"
-#include "GLAUX.h" 
 
 Caja::Caja()
 {
@@ -20,10 +19,6 @@ void Caja::Dibuja()
 	glTexCoord2d(1, 0);glVertex3d(201, 135, 0);
 	glTexCoord2d(1, 1);glVertex3d(201, 0, 0);
 	glTexCoord2d(0, 1);glVertex3d(0, 0, 0);
-	//glTexCoord2d(0, 1); glVertex2f(0, 0);
-	//glTexCoord2d(1, 1); glVertex2f(41, 0);
-	//glTexCoord2d(1, 0); glVertex2f(41, 30);
-	//glTexCoord2d(0, 0); glVertex2f(0, 30);
 	glEnd();
 	glEnable(GL_LIGHTING);
 	glDisable(GL_TEXTURE_2D);
@@ -45,10 +40,6 @@ void Caja::Dibuja2() //dibuaj encima cabeza
 	glTexCoord2d(1, 0);glVertex3d(201, 135, 0.02);
 	glTexCoord2d(1, 1);glVertex3d(201, 0, 0.02);
 	glTexCoord2d(0, 1);glVertex3d(0, 0, 0.02);
-	//glTexCoord2d(0, 1); glVertex2f(0, 0);
-	//glTexCoord2d(1, 1); glVertex2f(41, 0);
-	//glTexCoord2d(1, 0); glVertex2f(41, 30);
-	//glTexCoord2d(0, 0); glVertex2f(0, 30);
 	glEnd();
 	glEnable(GL_LIGHTING);
 	glDisable(GL_TEXTURE_2D);
