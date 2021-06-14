@@ -40,6 +40,7 @@ void Mundo::dibuja()
 	for (int i = 0; i < enemigos.getNumero(); i++) {
 		if (enemigos[i]->getBioma() == 4) {
 			hud_enem.dibujaHUD(enemigos[i]);
+			enemigos[i]->spriteLoop();
 		}
 	}
 
@@ -90,7 +91,8 @@ void Mundo::mueve()
 
 void Mundo::inicializa()
 {
-	protagonista.setPos(167, 115); //nuevo. Posicion inicial (7, 124)
+	//protagonista.setPos(7, 124); // posicion inicial
+	protagonista.setPos(167, 115); //posicion del boss
 	enemigos.destruirContenido(); //nuevo, seguir con esto
 	monedas.destruirContenido(); //subir esto
 	listaobstaculos.destruirContenido();

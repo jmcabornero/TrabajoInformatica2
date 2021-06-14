@@ -667,9 +667,7 @@ void Enemigo::Dibuja()
 	//std::cout << "direccion: " << direccion << std::endl;
 }
 
-void Enemigo::Mueve(float t)
-{
-	ObjetosMovimiento::mueve(t);
+void Enemigo::spriteLoop() {
 	spriteRD.loop();
 	spriteLD.loop();
 	spriteUpD.loop();
@@ -719,6 +717,12 @@ void Enemigo::Mueve(float t)
 	spriteBoss1R.loop();
 	spriteBoss1L.loop();
 	spriteBoss1R.loop();
+}
+
+void Enemigo::Mueve(float t)
+{
+	ObjetosMovimiento::mueve(t);
+	spriteLoop();
 }
 
 void Enemigo::setTam(float anchura, float altura)
@@ -826,55 +830,8 @@ void Enemigo::Perseguir(Protagonista p)
 		
 	else
 		setVel(0, 0);
-	spriteRD.loop();
-	spriteLD.loop();
-	spriteUpD.loop();
-	spriteDownD.loop();
 
-	spriteRK.loop();
-	spriteLK.loop();
-	spriteUpK.loop();
-	spriteDownK.loop();
-
-	spriteRE.loop();
-	spriteLE.loop();
-	spriteUpE.loop();
-	spriteDownE.loop();
-
-	spriteRD1.loop();
-	spriteLD1.loop();
-	spriteUpD1.loop();
-	spriteDownD1.loop();
-
-	spriteRK1.loop();
-	spriteLK1.loop();
-	spriteUpK1.loop();
-	spriteDownK1.loop();
-
-	spriteRE1.loop();
-	spriteLE1.loop();
-	spriteUpE1.loop();
-	spriteDownE1.loop();
-
-	spriteRD2.loop();
-	spriteLD2.loop();
-	spriteUpD2.loop();
-	spriteDownD2.loop();
-
-	spriteRK2.loop();
-	spriteLK2.loop();
-	spriteUpK2.loop();
-	spriteDownK2.loop();
-
-	spriteRE2.loop();
-	spriteLE2.loop();
-	spriteUpE2.loop();
-	spriteDownE2.loop();
-
-	spriteBoss1L.loop();
-	spriteBoss1R.loop();
-	spriteBoss1Up.loop();
-	spriteBoss1Down.loop();
+	spriteLoop();
 }
 
 

@@ -85,5 +85,6 @@ public:
 	void distProta(Protagonista p);
 	void setAngulo(float s) { angulo = s;}
 	float getAngulo() { return angulo; }
+	void spriteLoop();
 };
 
