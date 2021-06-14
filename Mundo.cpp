@@ -527,6 +527,13 @@ float Mundo::GetVidas()
 
 }
 
+float Mundo::GetVidasBoss()
+{
+	//return Boss.VidaJefe;
+	//return Boss.getVida();
+
+}
+
 Mundo::~Mundo()
 {
 	disparos.destruirContenido();

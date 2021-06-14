@@ -348,6 +348,14 @@ void Coordinador::Mueve() {
 			ETSIDI::stopMusica();
 			ETSIDI::playMusica("sonidos/gameover.mp3");
 		}
+
+		if (mundo.GetVidasBoss() <= 0)
+		{
+
+			estado = EXITO;
+			ETSIDI::stopMusica();
+			ETSIDI::playMusica("sonidos/Victory sound effect.mp3");
+		}
 	}
 }
 void Coordinador::Tecla(unsigned char key)
