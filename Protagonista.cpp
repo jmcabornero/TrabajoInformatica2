@@ -16,6 +16,7 @@ Protagonista::Protagonista()
 	spriteDown.setCenter(1.5, 0);
 	spriteDown.setSize(2, 2);
 
+	//posicion inicial (111,80)
 	posicion.x = 111;posicion.y = 80;velocidad.x = 0;velocidad.y = 0, velabs=1;
 	setVida(100);
 	setFlag(0);

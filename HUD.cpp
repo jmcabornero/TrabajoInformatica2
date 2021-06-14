@@ -229,6 +229,36 @@ void HUD::dibujaHUD(Protagonista *prota) {
 	glEnd();
 }
 
+void HUD::dibujaHUD(Enemigo* enem) {
+	Vector2D enem_pos = enem->GetPos();
+	setAlto(0.2);
+	setAncho(5);
+	setPos(enem_pos.x, enem_pos.y + 3.0f);
+	float marco = 0.06f;
+	float h = alto;
+	float a = ancho;
+	float hp = enem->getVida() / 100;
+	//cout << hp << endl;
+	Vector2D p = pos;
+	glBegin(GL_POLYGON);
+	glColor3f(0, 0, 0);
+	glVertex3d(marco + p.x + a / 2, marco + p.y + h / 2, capa1);
+	glVertex3d(marco + p.x + a / 2, -1 * marco + p.y - h / 2, capa1);
+	glVertex3d(-1 * marco + p.x - a / 2, -1 * marco + p.y - h / 2, capa1);
+	glVertex3d(-1 * marco + p.x - a / 2, marco + p.y + h / 2, capa1);
+	glEnd();
+	glBegin(GL_POLYGON);
+	glColor3f(255, 0, 0);
+	if (hp > 0) {
+		glVertex3d((p.x + a / 2) - a * (1 - hp), p.y + h / 2, capa2);
+		glVertex3d((p.x + a / 2) - a * (1 - hp), p.y - h / 2, capa2);
+		glVertex3d(p.x - a / 2, p.y - h / 2, capa2);
+		glVertex3d(p.x - a / 2, p.y + h / 2, capa2);
+	}
+	//cout << getVida() << endl;
+	glEnd();
+}
+
 std::string convert(float num) {
 	std::ostringstream conv;
 	conv << num;

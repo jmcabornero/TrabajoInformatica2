@@ -30,6 +30,7 @@ public:
 	void dibuja(const char* mensaje);
 	void mueve();
 	void dibujaHUD(Protagonista *prota);
+	void dibujaHUD(Enemigo* enem);
 	//void dibujaHUD(Enemigo* prota);
 	void dibujaStats(Protagonista *p, float camara_x, float camara_y);
 	void dibujaCons(Protagonista* p, float camara_x, float camara_y);

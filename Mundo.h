@@ -27,6 +27,7 @@ private:
 	ListaCofres listacofres;
 	HUD mensaje1, mensaje2, mensaje3, mensaje4, mensaje5, mensajelibro, mensajestienda;
 	HUD hud, hud_stats, hud_cons;
+	HUD hud_enem;
 
 	public:
 		Mundo(float x=0, bool y=false);

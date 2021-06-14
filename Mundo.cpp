@@ -37,6 +37,12 @@ void Mundo::dibuja()
 	hud_stats.dibujaStats(&protagonista, posicion_ojo.x - 7.5, posicion_ojo.y + 6.3);
 	hud_cons.dibujaCons(&protagonista, posicion_ojo.x + 9, posicion_ojo.y + 6.3);
 
+	for (int i = 0; i < enemigos.getNumero(); i++) {
+		if (enemigos[i]->getBioma() == 4) {
+			hud_enem.dibujaHUD(enemigos[i]);
+		}
+	}
+
 	enemigos.Disparar(&disparos);
 	enemigos.CoolDown();
 }
@@ -84,7 +90,7 @@ void Mundo::mueve()
 
 void Mundo::inicializa()
 {
-	protagonista.setPos(7, 124); //nuevo
+	protagonista.setPos(167, 115); //nuevo. Posicion inicial (7, 124)
 	enemigos.destruirContenido(); //nuevo, seguir con esto
 	monedas.destruirContenido(); //subir esto
 	listaobstaculos.destruirContenido();
