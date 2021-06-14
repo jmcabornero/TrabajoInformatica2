@@ -92,7 +92,7 @@ void Mundo::mueve()
 void Mundo::inicializa()
 {
 	//protagonista.setPos(7, 124); // posicion inicial
-	protagonista.setPos(167, 115); //posicion del boss
+	protagonista.setPos(10, 129); //posicion del boss
 	enemigos.destruirContenido(); //nuevo, seguir con esto
 	monedas.destruirContenido(); //subir esto
 	listaobstaculos.destruirContenido();
