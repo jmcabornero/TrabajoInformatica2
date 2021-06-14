@@ -527,12 +527,12 @@ float Mundo::GetVidas()
 
 }
 
-float Mundo::GetVidasBoss()
+/*float Mundo::GetVidasBoss()
 {
 	//return Boss.VidaJefe;
 	//return Boss.getVida();
 
-}
+}*/
 
 Mundo::~Mundo()
 {
