@@ -1,6 +1,5 @@
 #pragma once
 #include "Protagonista.h"
-#include "EscenarioTiles.h"
 #include "Caja.h"
 #include "ListaObstaculos.h"
 #include "ListaDisparos.h"
@@ -18,7 +17,6 @@ private:
 	bool flagfinal;
 	Vector2D posicion_ojo, velocidad_ojo;
 	Protagonista protagonista;
-	EscenarioTiles escenariotiles;
 	ListaObstaculos listaobstaculos, listapinchos;
 	Caja caja;
 	ListaDisparos disparos;
