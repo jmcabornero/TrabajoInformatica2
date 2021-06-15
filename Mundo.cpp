@@ -166,7 +166,7 @@ void Mundo::tecla(unsigned char key)
 		{
 		case '1':
 		{
-			if (dinero >= 20)
+			if (dinero >= 10)
 			{
 				protagonista.setPociones(protagonista.getPociones() + 1);
 				protagonista.setDinero(protagonista.getDinero() - 10);
