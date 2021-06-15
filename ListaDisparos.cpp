@@ -88,8 +88,9 @@ void ListaDisparos::colision(Protagonista *e)
 	}
 }
 
-void ListaDisparos::colision(Obstaculos* o)
+int ListaDisparos::colision(Obstaculos* o)
 {
+	int flag = 0;
 	for (int i = 0; i < num; i++)
 	{
 		bool x;
@@ -97,14 +98,16 @@ void ListaDisparos::colision(Obstaculos* o)
 		int tip = o->GetTipo();
 		if (x == 1)
 		{
-			if (tip == 2 && (Lista[i]->getIdent()>=2))
-				delete o;
+			if (tip == 2 && (Lista[i]->getIdent() >= 2))
+				flag = 1;
 			if (tip == 3 && (Lista[i]->getIdent() == 3))
-				delete o;
+				flag = 1;
 			elimina(Lista[i]); /////////
 		}
 	}
+	return flag;
 }
+
 void ListaDisparos::Cooldown(Protagonista &p)
 {
 	if (p.getFlag() == 1)

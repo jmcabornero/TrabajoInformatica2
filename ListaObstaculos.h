@@ -20,5 +20,7 @@ public:
 	Obstaculos* operator[](int i);
 	int getNumero() { return numero; };
 	void destruirContenido();
+	void elimina(int index);
+	void elimina(Obstaculos* d);
 };
 

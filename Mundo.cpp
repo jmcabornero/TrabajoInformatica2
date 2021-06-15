@@ -68,7 +68,10 @@ void Mundo::mueve()
 	enemigos.mueve(0.1f);
 	for (int i = 0; i < listaobstaculos.getNumero(); i++)
 	{
-		disparos.colision(listaobstaculos[i]);
+		int flag = 0;
+		flag = disparos.colision(listaobstaculos[i]);
+		if (flag == 1)
+			listaobstaculos.elimina(listaobstaculos[i]);
 	}
 	disparos.Cooldown(protagonista);
 	protagonista.FuncionTeletransporte();
@@ -117,6 +120,7 @@ void Mundo::inicializa()
 	protagonista.setAttackspeed(1);
 	protagonista.setAttack(1);
 	protagonista.setDef(1);
+	protagonista.setTdis(1);
 	Enemigo* aux = new Enemigo(169, 113, 4);
 	enemigos.agregar(aux);
 }

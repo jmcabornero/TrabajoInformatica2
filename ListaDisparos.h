@@ -23,10 +23,11 @@ public:
 	void elimina(Disparo* d);
 
 	void colision(Enemigo *e);
-	void colision(Obstaculos* o);
+	int colision(Obstaculos* o);
 	void colision(Protagonista *p);
 	void Cooldown(Protagonista &p);
 	void Disparar(Protagonista &p);
+
 	
 private:
 	Disparo* Lista[MAX_DISPAROS];
