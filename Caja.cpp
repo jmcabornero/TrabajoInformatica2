@@ -4,7 +4,7 @@
 
 Caja::Caja()
 {
-	
+	//
 }
 
 void Caja::Dibuja()
