@@ -12,10 +12,6 @@ Coordinador::~Coordinador()
 
 };
 
-void Coordinador::Inicializa()
-{
-
-};
 
 void Coordinador::Dibuja()
 {
@@ -148,9 +144,9 @@ void Coordinador::Dibuja()
 		ETSIDI::setFont("fuentes/ThrowMyHandsUpintheAir.ttf", 14);
 		ETSIDI::printxy("PARA AVANZAR Y VOLVER EN LA HISTORIA", -9, 8);
 		ETSIDI::printxy("PULSE LAS FLECHAS IZQ Y DCH", -9, 7);
-		//ETSIDI::printxy("                 -I-  PARA LEER LAS INSTRUCCIONES", -8, 0);
+		
 		ETSIDI::printxy("PARA OMITIR LA HISTORIA PULSE LA TECLA S", -9, 5);
-		//ETSIDI::printxy("                 -S- PARA SALIR DEL JUEGO", -8, -2);
+	
 		
 	}
 
